@@ -62,13 +62,13 @@ var respecConfig =
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
   issueBase: "https://github.com/geonovum/HR-CRS-Gebruik/issues",
   //-- edDraftURI: de URI van de werkversie van het document
-  edDraftURI: "https://github/geonovum/HR-CRS-Gebruik",
+  edDraftURI: "https://github.com/geonovum/HR-CRS-Gebruik",
   //-- de namen van de Editor(s) ------------------------------------------------------
   //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
   editors: 
  [
     {
-      name:       "Naam Editor-1",
+      name:       "Lennard Huisman",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     }, 
@@ -83,7 +83,7 @@ var respecConfig =
   authors: 
   [
     {
-      name:       "Naam Auteur-1",
+      name:       "Lennard Huisman",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     }, 
