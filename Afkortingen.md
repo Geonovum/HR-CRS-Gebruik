@@ -1,7 +1,7 @@
 ## Lijst met afkortingen
-| Afkortig | Omschrijving |
+| Afkorting | Omschrijving |
 |----------|--------------|
-|CRS       |Coordinaatreferentiesysteem|
+|CRS       |Coördinaatreferentiesysteem|
 |EPSG      | |
 |ETRS89    |European Terrestrial Reference System 1989|
 |RD        |Stelsel van de Rijksdriehoeksmeting|
