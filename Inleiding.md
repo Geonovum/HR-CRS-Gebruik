@@ -6,6 +6,39 @@ Voor de inwinning, verwerking, opslag, uitwisseling en visualisatie van geo-info
 _VOORBEELD_ 
 Als voorbeeld wordt hieronder het gebruik van CRSen bij keten van inwinning tot uitwisseling en visualisatie van de Basisregistratie Grootschalige Topografie geïllustreerd:
 
+<div class="mermaid">
+graph LR
+  subgraph Bronhouder
+  subgraph Inwinning
+    A1["ETRS89 <br> (GNSS-RTK)"] 
+        A2["RD <br> (Luchtfoto)"]
+    A3["Lokaal <br> (Tachymetrie <br> Meetband)"]
+  end
+  subgraph Verwerking en opslag
+    B[RD]
+  end
+  end
+  subgraph Landelijke Voorziening
+  subgraph Opslag
+    D[RD]
+  end
+  end
+  subgraph Visualisatie
+    E1[ETRS89]
+    E2[RD]
+    E3[WGS84]
+  end
+  A1-->B
+  A2-->B
+  A3-->B
+  B-->|Uitwisseling|D
+  D-->|Uitwisseling|E1
+  D-->|Uitwisseling|E2
+  D-->|Uitwisseling|E3
+  
+
+</div>
+
 ```code
 ETRS89------\                                        
 (GNSS-RTK)   \                                      /--ETRS89
