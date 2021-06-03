@@ -1,6 +1,7 @@
 ## Lijst met afkortingen
 | Afkorting | Omschrijving |
 |----------|--------------|
+|BGT       |Basisregistratie Grootschalige Topografie|
 |CRS       |Coördinaatreferentiesysteem|
 |EPSG      | |
 |ETRS89    |European Terrestrial Reference System 1989|
