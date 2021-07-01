@@ -21,7 +21,7 @@ Bij uitwisseling en visualisatie van geo-informatie is het van belang om een CRS
 
 ### Doel
 
- Deze Handreiking heeft als doel om gebruikers vanuit het GIS / geo-informatie werkveld te voorzien van adviezen hoe om te gaan met met CRS-en bij uitwisseling en visualisatie van geo-informatie in de context an Landelijke Voorzieningen en vergelijkbare digitale stelsels.
+ Deze Handreiking heeft als doel om gebruikers vanuit het GIS / geo-informatie werkveld te voorzien van adviezen hoe om te gaan met met CRS-en bij uitwisseling en visualisatie van geo-informatie in de context van Landelijke Voorzieningen en vergelijkbare digitale stelsels.
 
 <div class="example">
 _VOORBEELD_ 
@@ -36,21 +36,33 @@ De handreiking richt zich niet op adviezen voor het omgaan met CRS-en bij inwinn
 of opslag wel i.r.t. informatiemodel?)
 </div>
 
-De Handreiking maakt voor de adviezen een onderscheid tussen de (authentieke) dataset en visualatieservices (of informatiemodel, berichtenmodel en presentatiemodel?).  Bij uitwisseling is het van belang dat er een eenduidige nauwkeurige relatie bestaat tussen het CRS van de brondata en het CRS van uitwisseling, zodat het voor het gebruik niet uitmaakt in welk CRS de dataset is uitgewisseld. Voor visualisatieservices heeft is de beoogde toepassing en de mogelijkheid van eenvoudig gebruik óók voor niet-specialisten een belangrijke afweging. Vooral wanneer de juiste topologische weergave van data van belang is, of datasets worden gecombineerd in de visualisatie gaat eenvoudig niet altijd samen met het gebruik van precieze eenduidige transformaties en conversies. Bij minder precieze transformaties en conversies kunnen (toelaatbare) visuele verschillen  onstaan die afhankelijk zijn van de keuze van CRS en implementatie. 
+De Handreiking maakt voor de adviezen een onderscheid tussen de (authentieke) dataset en visualisatieservices (of informatiemodel, berichtenmodel en presentatiemodel?).  Bij uitwisseling is het van belang dat er een eenduidige nauwkeurige relatie bestaat tussen het CRS van de brondata en het CRS van uitwisseling, zodat het voor het gebruik niet uitmaakt in welk CRS de dataset is uitgewisseld. Voor visualisatieservices heeft is de beoogde toepassing en de mogelijkheid van eenvoudig gebruik óók voor niet-specialisten een belangrijke afweging. Vooral wanneer de juiste topologische weergave van data van belang is, of datasets worden gecombineerd in de visualisatie gaat eenvoudig niet altijd samen met het gebruik van precieze eenduidige transformaties en conversies. Bij minder precieze transformaties en conversies kunnen (toelaatbare) visuele verschillen  onstaan die afhankelijk zijn van de keuze van CRS en implementatie.
 ### Leeswijzer
 
 
 Het document heeft de volgende opbouw
 - [CRS-en in Nederland](#crs-en-in-nederland) 
-  - [Veelgebruikte CRS-en in Nederland](#veelgebruikte-crs-en-in-nederland) (toepassingsgebied, beheer)
+  - [Veelgebruikte CRS-en in Nederland](#veelgebruikte-crs-en-in-nederland) 
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mark>(toepassingsgebied, beheer)</mark>
   - [Aandachtspunten bij gebruik van meerdere CRS-en](#aandachtspunten-bij-gebruik-van-meerdere-crs-en)
-    - Relaties tussen CRSen (vereenvoudigde versie van [Conversie en Transformatie](#conversie-en-transformatie) en [Relaties](#overzicht-conversie-en-transformaties))
-    - Geometrie/topologie <mark>([samenvatting lange lijnen advies](https://geoforum.nl/t/spatial-selectie-geeft-niet-alle-punten-die-op-een-lijn-liggen-in-qgis-waarom/5388/11) en voorbeelden mbt vervorming van weergaven en oppervlakten (LAEA vs ..), ook voorbeeld waar ETRS89=WGS84 acceptabel is?)</mark>
+  - Relaties tussen CRSen 
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mark>(vereenvoudigde versie van [Conversie en Transformatie](#conversie-en-transformatie) en [Relaties](#overzicht-conversie-en-transformaties))</mark>
+    - Geometrie/topologie 
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mark>([samenvatting lange lijnen advies](https://geoforum.nl/t/spatial-selectie-geeft-niet-alle-punten-die-op-een-lijn-liggen-in-qgis-waarom/5388/11) en voorbeelden mbt vervorming van weergaven en oppervlakten (LAEA vs ..), ook voorbeeld waar ETRS89=WGS84 acceptabel is?)</mark>
 - Specificatie CRS: 
-  - Naamgeving van CRS-en ([advies voor naamgeving](#urn-codes-crs-en) en [bijbehorende URN/EPSG codes](#urn-codes-conversie-en-transformaties))
+  - Naamgeving van CRS-en 
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mark>([advies voor naamgeving](#urn-codes-crs-en) en [bijbehorende URN/EPSG codes](#urn-codes-conversie-en-transformaties))</mark>
   - Hoe worden Crsen eenduidig gespecificeerd en vastgelegd voor uitwisseling en visualisatie in:
-    - Registraties (voorbeeld INSPIRE, BRO?)
-    - Uitwisselingsformaten (bestandfromaten, OGC API, vector tiling). 
+    - Registraties 
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mark>(voorbeeld INSPIRE, BRO?)</mark>
+    - Uitwisselingsformaten 
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mark>(bestandsformaten, OGC API, vector tiling)</mark>
 - Bijlagen met achtergrondinformatie
     - [Concept van transformatie en conversie](#conversie-en-transformatie)
     - EPSG concept van datum ensembles (nauwkeurigheids verlies door meerduidigheid)
