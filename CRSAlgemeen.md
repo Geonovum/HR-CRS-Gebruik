@@ -5,6 +5,9 @@ Geo-informatie is direct gekoppeld aan locaties op aarde. De wijze waarop dat ge
 
 CRS-en nemen de vorm van de aarde als uitgangspunt om de locaties vast te leggen. Maar niets is zo ingewikkeld als meten op een bol met de bedoeling dit in een plat vlak (kaart) weer te geven. Zeker niet als die bol niet een exacte bol is.
 
+### <mark>Defintie CRS</mark>
+
+Defintie CRS met datum en CS geven volgens crs-eu.eu
 ### Geografisch en geprojecteerd CRS
 
 <div class="note">

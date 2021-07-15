@@ -119,38 +119,41 @@ var respecConfig =
   //-- NB: kijk eesrt naar de beschikbare www.specref.org voor verwijziging 
   localBiblio: 
   {
-    "PUB-1":
+    "NSGI":
       {
-        title:      "Titel van Publicatie-1",
-        href:       "https://www.link-naar-publicatie-1.nl",
-        status:     "V1.0.1",
-        publisher:  "Publisher-1",
-        company:    "Companynaam",
+        title:      "Website NSGI",
+        href:       "https://nsgi.nl",
     },
-    "PUB-2":
+    "RDNAPTRANS™":
       {
-        title:      "Titel van Publicatie-2",
-        href:       "https://www.link-naar-publicatie-2.nl",
+        title:      "Website over RDNAPTRANS™",
+        href:       "https://nsgi.nl/rdnaptrans",
         status:     "V1.0.1",
         publisher:  "Publisher-2",
         company:    "Companynaam",
     },
-    "PUB-3":
+    "EUREF":
       {
-        title:      "Titel van Publicatie-3",
-        href:       "https://www.link-naar-publicatie-3.nl",
+        title:      "Website EUREF",
+        href:       "http://www.euref.eu",
         status:     "V1.0.1",
         publisher:  "Publisher-3",
         company:    "Companynaam",
     },
-    "PUB-4":
+    "EUREF-TN1":
       {
-        title:      "Titel van Publicatie-4",
-        href:       "https://www.link-naar-publicatie-4.nl",
-        status:     "V1.0.1",
-        publisher:  "Publisher-4",
-        company:    "Companynaam",
+        title:      "EUREF Technical Note 1: Relationship and Transformation between the International and the European Terrestrial Reference Systems",
+        href:       "http://etrs89.ensg.ign.fr/pub/EUREF-TN-1.pdfTitel",
+        status:     "28 juni 2018",
     },
+    "NCG-GR-43":
+      {
+        title:      "De geodetische referentiestelsels van Nederland",
+        href:       "https://ncgeo.nl/index.php/nl/publicaties/groene-serie/item/2361-gs-43-a-de-bruijne-de-geodetische-referentiestelsels-van-nederland",
+        publisher:  "NCG",
+    },
+
+    
   },
   postProcess:[custGHPG],   //-- Optioneel voor een multi document repository
 
