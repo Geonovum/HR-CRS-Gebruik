@@ -30,7 +30,9 @@ Coördinaten in de Nederlandse Stelsel van de Rijksdriehoeksmeting (RD) zijn de 
 
 De verschillen in de realisatie van RD tussen de oude en de nieuwe definitie van 2000 zijn gemodelleerd in een correctiegrid, zodat bij de introductie van ETRS9 de RD-coördinaten niet wijzigden. Dit correctiegrid is onderdeel van de procedure RDNAPTRANS™ die wordt gebruikt voor het omzetten van ETRS89 naar RD/NAP en vice-versa. De NSGI publiceert de procedure RDNAPTRANS™ op haar website. 
 
+<div class="note">
 Voor de uitwisseling van geo-informatie binnen Europa is het nadrukkelijke advies om altijd de weg via ETRS89 te kiezen. Bij gebruik van de procedure RDNAPTRANS™ is daarbij voor het Nederlandse deel een nauwkeurigheid op centimeterniveau gewaarborgd. 
+</div>
 
 Uitgebreide informatie over de achtergrond van de relatie tussen RD (NAP) en ETRS89 is beschikbaar in de publicatie De geodetische referentiestelsels van Nederland [[NCG-GR-43]].
 
@@ -46,14 +48,30 @@ Ellipsoïde hoogten in ETRS89 kunnen met het quasi-geoïde model naar NAP worden
 
 Het World Geodetic System 1984 (WGS84) is het mondiale driedimensionale CRS dat wordt gebruikt door het Amerikaanse GNSS-systeem GPS. Toegang tot WGS84 is in Nederland alleen mogelijk via het stand-alone gebruik van de GPS-satellieten. WGS84-posities kunnen daarom alleen op meterniveau m.b.v. GPS-metingen worden verkregen. 
 
-Voor de realisaites van WGS84 zijn in het verleden op verschillende strategien gebruikt waarbij een beperkt aantal stations wereldwijd zijn gebruikt. Hierdoor zijn er verschillen op decimeter niveau tussen de realisaties.  Voor nauwkeurige eenduidige definitie van het CRS is het daarom nodig een specifieke realisatie van WGS84 te vermelden (bijvoorbeeld WGS84-G1762, EPSG:9057). Sinds 1994 is WGS84 indirect gekoppeld aan ITRS. WGS84 en ITRS-realisaties op hetzelfde epoche komen momenteel op centimeterniveau overeen. Het verschil tussen WGS85/ITRS en ETRS89 op 1 januari 2025 is ongeveer 86 centimeter, dit neemt toe met 2,4 centimeter per jaar. 
+Voor de realisaites van WGS84 zijn in het verleden op verschillende strategieën gebruikt waarbij een beperkt aantal stations wereldwijd zijn gebruikt. Hierdoor zijn er verschillen op decimeter niveau tussen de realisaties.  Voor nauwkeurige eenduidige definitie van het CRS is het daarom nodig een specifieke realisatie van WGS84 te vermelden (bijvoorbeeld WGS84-G1762, EPSG:9057). Sinds 1994 is WGS84 indirect gekoppeld aan ITRS. WGS84 en ITRS-realisaties op hetzelfde epoche komen momenteel op centimeterniveau overeen. Het verschil tussen WGS85/ITRS en ETRS89 op 1 januari 2025 is ongeveer 86 centimeter, dit neemt toe met 2,4 centimeter per jaar.
 
 In de praktijk wordt vaak over WGS84 gesproken, ook als het onderliggende CRS eigenlijk ITRS of ETRS89 is. WGS84 wordt dan ook niet aanbevolen voor uitwisseling van data. Voor visualisatie op het web ondersteunt de tooling vaak direct kaartprojecties op basis van WGS84. OGC richtlijnen bevelen WGS84 aan voor laagdrempelige visualisatie van geo-data op het web. Vanwege het niet eenduidige gebruik van WGS84 wordt geadviseerd data alleen te visualiseren in WGS84 wanneer de toepassing geen hoge nauwkeurigheid vereisen.
 
-Wanneer na zorgvuldige afweging toch gebruik wordt gemaakt van WGS84 bij uitwisseling en visualisatie is het advies van de NSGI om WGS84 gelijk te stellen aan ETRS89, tenzij de dataspecificatie expliciet een realisatie en epoche van ITRS benoemd. Daarnaast adviseert de NSGI de informatie over het CRS van de brondata en de gekozen transformatieparameters als metadata op te nemen. Bij tijdsafhankelijke transformaties, zoals van ETRS89 naar WGS84 moet dan ook het referentieepoche worden opgenomen.
+Wanneer na zorgvuldige afweging toch gebruik wordt gemaakt van WGS84 bij uitwisseling en visualisatie van data waarbij de bron in RD of ETRS89 is, zijn de volgende strategieën mogelijk
 
+##### WGS84 gelijkstellen aan ETRS89
+
+Wanneer het beoogd gebruik van de data bestaat uit visualisatie of combinatie met andere datasets kan worden gekozen om WGS84 en ETRS89 aan elkaar gelijk te stellen. Dit is de standaard implementatie in meerdere GIS-paketten, omdat zonder expliciete melding van de WGS84 en ETRS89 realisaties de EPSG-parameters voor de transformatie een nultransformatie geven.
+
+##### Transformatie van ETRS89 naar het epoche van publicatie of specificatie
+
+Wanneer de dataspecificatie expliciet een realisatie van WGS84 benoemd, of data gecombineerd wordt met de locatieinformatie van de eindgebruiker kan worden gekozen de transformatie tussen ETRS89 en WGS84 uit te voeren op voor een specifieke realisatie op een specifiek epoche. 
+
+Voor Nederlandse data mag voor ETRS89 de realisatie ETRF2000 worden gekozen. Wanneer de WGS84 realisatie niet is gespecificeerd wordt dan de meest recente realisatie gekozen (WGS84-1762, EPSG:9057). 
+
+Om te kunnen transformeren worden de door [[EUREF]] gepubliceerde tijdsafhankelijke transformatieparameters van ETRF2000 naar ITRS gebruikt [[EUREF-TN1]] die ook in EPSG zijn opgenomen. Bij deze transformatie wordt de WGS84-realisatie dan wordt dan aan de bijbehorende ITRS-realistie (ITRF2008 voor WGS84-G1762). De keuze van het epoche kan voortkomen uit de specificatie, wanneer geen epoche is gespecificeerd wordt <mark>(door NSGI?)</mark> als epoche geadviseerd de publicatiedatum van de dataset te gebruiken, zodat bij regelmatige updates (bijvoorbeeld) jaarlijks de WGS84 coördinaten worden bijgesteld als gevolg van de platentektoniek.
+
+<div class="note">
+Bij publicatie van data in WGS84 is het <mark>NSGI?</mark> advies om de informatie over het CRS van de brondata en de te gebruiken of gekozen transformatieparameters naar WGS84 in het model en/of metadata op te nemen. Bij tijdsafhankelijke transformaties, zoals van ETRS89 naar WGS84 moet dan ook het referentieepoche worden opgenomen.
+</div>
+<div class="note">
 Bij gebruik van data waarbij het aangegeven CRS WGS84 is zonder duidelijke informatie over het CRS van de brondata en gebruikte transformaties moet de gebruiker er rekening mee houden dat de data systematische fouten in de orde van 1 meter kan bevatten. 
-
+</div>
 ### Aandachtspunten bij gebruik van meerdere CRS-en
 
 Wanneer voor uitwisseling en visualisatie andere CRS-en worden gebruikt dan voor de opslag zijn er een aantal aandachtspunten, de belangrijkste zijn:
@@ -68,5 +86,5 @@ Wanneer voor uitwisseling en visualisatie andere CRS-en worden gebruikt dan voor
     
 #### Geometrie en topologie
 
-- Samenvatting langelijnenadvies
+- <mark>([samenvatting lange lijnen advies](https://geoforum.nl/t/spatial-selectie-geeft-niet-alle-punten-die-op-een-lijn-liggen-in-qgis-waarom/5388/11) en voorbeelden mbt vervorming van weergaven en oppervlakten (LAEA vs ..), ook voorbeeld waar ETRS89=WGS84 acceptabel is?)</mark>
 

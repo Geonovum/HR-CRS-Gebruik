@@ -11,14 +11,17 @@ Voor de inwinning, verwerking, uitwisseling en visualisatie van geo-informatie w
 _VOORBEELD_ 
 Het gebruik van CRS-en bij keten van inwinning tot uitwisseling en visualisatie van de Basisregistratie Grootschalige Topografie (BGT) kan als volgt worden geïnterpreteerd:
 
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFJcbiAgc3ViZ3JhcGggQnJvbmhvdWRlclxuICBzdWJncmFwaCBJbndpbm5pbmdcbiAgICBBMVtcIkVUUlM4OSA8YnI-IChHTlNTLVJUSylcIl0gXG4gICAgICAgIEEyW1wiUkQgPGJyPiAoTHVjaHRmb3RvKVwiXVxuICAgIEEzW1wiTG9rYWFsIDxicj4gKFRhY2h5bWV0cmllIDxicj4gTWVldGJhbmQpXCJdXG4gIGVuZFxuICBzdWJncmFwaCBWZXJ3ZXJraW5nIGVuIG9wc2xhZ1xuICAgIEJbUkRdXG4gIGVuZFxuICBlbmRcbiAgc3ViZ3JhcGggTGFuZGVsaWprZSBWb29yemllbmluZ1xuICBzdWJncmFwaCBPcHNsYWdcbiAgICBEW1JEXVxuICBlbmRcbiAgZW5kXG4gIHN1YmdyYXBoIFZpc3VhbGlzYXRpZVxuICAgIEUxW0VUUlM4OV1cbiAgICBFMltSRF1cbiAgICBFM1tXR1M4NF1cbiAgZW5kXG4gIEExLS0-QlxuICBBMi0tPkJcbiAgQTMtLT5CXG4gIEItLT58VWl0d2lzc2VsaW5nfERcbiAgRC0tPnxVaXR3aXNzZWxpbmd8RTFcbiAgRC0tPnxVaXR3aXNzZWxpbmd8RTJcbiAgRC0tPnxVaXR3aXNzZWxpbmd8RTMiLCJtZXJtYWlkIjp7fSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFJcbiAgc3ViZ3JhcGggQnJvbmhvdWRlclxuICBzdWJncmFwaCBJbndpbm5pbmdcbiAgICBBMVtcIkVUUlM4OSA8YnI-IChHTlNTLVJUSylcIl0gXG4gICAgICAgIEEyW1wiUkQgPGJyPiAoTHVjaHRmb3RvKVwiXVxuICAgIEEzW1wiTG9rYWFsIDxicj4gKFRhY2h5bWV0cmllIDxicj4gTWVldGJhbmQpXCJdXG4gIGVuZFxuICBzdWJncmFwaCBWZXJ3ZXJraW5nIGVuIG9wc2xhZ1xuICAgIEJbUkRdXG4gIGVuZFxuICBlbmRcbiAgc3ViZ3JhcGggTGFuZGVsaWprZSBWb29yemllbmluZ1xuICBzdWJncmFwaCBPcHNsYWdcbiAgICBEW1JEXVxuICBlbmRcbiAgZW5kXG4gIHN1YmdyYXBoIFZpc3VhbGlzYXRpZVxuICAgIEUxW0VUUlM4OV1cbiAgICBFMltSRF1cbiAgICBFM1tXR1M4NF1cbiAgZW5kXG4gIEExLS0-QlxuICBBMi0tPkJcbiAgQTMtLT5CXG4gIEItLT58VWl0d2lzc2VsaW5nfERcbiAgRC0tPnxVaXR3aXNzZWxpbmd8RTFcbiAgRC0tPnxVaXR3aXNzZWxpbmd8RTJcbiAgRC0tPnxVaXR3aXNzZWxpbmd8RTMiLCJtZXJtYWlkIjp7fSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFJcbiAgc3ViZ3JhcGggQnJvbmhvdWRlclxuICBzdWJncmFwaCBJbndpbm5pbmdcbiAgICBBMVtcIkVUUlM4OSA8YnI-IChHTlNTLVJUSylcIl0gXG4gICAgICAgIEEyW1wiUkQgPGJyPiAoTHVjaHRmb3RvKVwiXVxuICAgIEEzW1wiTG9rYWFsIDxicj4gKFRhY2h5bWV0cmllIDxicj4gTWVldGJhbmQpXCJdXG4gIGVuZFxuICBzdWJncmFwaCBWZXJ3ZXJraW5nIGVuIG9wc2xhZ1xuICAgIEJbUkRdXG4gIGVuZFxuICBlbmRcbiAgc3ViZ3JhcGggXCJMYW5kZWxpamtlIFZvb3J6aWVuaW5nXCJcbiAgc3ViZ3JhcGggXCJPcHNsYWcgTFZcIlxuICAgIEQxW1JEXVxuICBlbmRcbiAgZW5kXG4gIHN1YmdyYXBoIFwiRGF0YXBsYXRmb3JtIChQRE9LKVwiXG4gIHN1YmdyYXBoIFwiT3BzbGFnIFBET0tcIlxuICAgIERbUkRdXG4gIGVuZFxuICBlbmRcbiAgc3ViZ3JhcGggR2VicnVpa2VyXG4gIHN1YmdyYXBoIFZpc3VhbGlzYXRpZVxuICAgIEUxW0VUUlM4OV1cbiAgICBFMltSRF1cbiAgICBFM1tXR1M4NF1cbiAgZW5kXG4gIGVuZFxuICBBMS0tPkJcbiAgQTItLT5CXG4gIEEzLS0-QlxuICBCLS0-fFVpdHdpc3NlbGluZ3xEMVxuICBEMS0tPnxVaXR3aXNzZWxpbmd8RFxuICBELS0-fFVpdHdpc3NlbGluZ3xFMVxuICBELS0-fFVpdHdpc3NlbGluZ3xFMlxuICBELS0-fFVpdHdpc3NlbGluZ3xFMyIsIm1lcm1haWQiOnt9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6ZmFsc2UsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/edit##eyJjb2RlIjoiZ3JhcGggTFJcbiAgc3ViZ3JhcGggQnJvbmhvdWRlclxuICBzdWJncmFwaCBJbndpbm5pbmdcbiAgICBBMVtcIkVUUlM4OSA8YnI-IChHTlNTLVJUSylcIl0gXG4gICAgICAgIEEyW1wiUkQgPGJyPiAoTHVjaHRmb3RvKVwiXVxuICAgIEEzW1wiTG9rYWFsIDxicj4gKFRhY2h5bWV0cmllIDxicj4gTWVldGJhbmQpXCJdXG4gIGVuZFxuICBzdWJncmFwaCBWZXJ3ZXJraW5nIGVuIG9wc2xhZ1xuICAgIEJbUkRdXG4gIGVuZFxuICBlbmRcbiAgc3ViZ3JhcGggXCJMYW5kZWxpamtlIFZvb3J6aWVuaW5nXCJcbiAgc3ViZ3JhcGggXCJPcHNsYWcgTFZcIlxuICAgIEQxW1JEXVxuICBlbmRcbiAgZW5kXG4gIHN1YmdyYXBoIFwiRGF0YXBsYXRmb3JtIChQRE9LKVwiXG4gIHN1YmdyYXBoIFwiT3BzbGFnIFBET0tcIlxuICAgIERbUkRdXG4gIGVuZFxuICBlbmRcbiAgc3ViZ3JhcGggR2VicnVpa2VyXG4gIHN1YmdyYXBoIFZpc3VhbGlzYXRpZVxuICAgIEUxW0VUUlM4OV1cbiAgICBFMltSRF1cbiAgICBFM1tXR1M4NF1cbiAgZW5kXG4gIGVuZFxuICBBMS0tPkJcbiAgQTItLT5CXG4gIEEzLS0-QlxuICBCLS0-fFVpdHdpc3NlbGluZ3xEMVxuICBEMS0tPnxVaXR3aXNzZWxpbmd8RFxuICBELS0-fFVpdHdpc3NlbGluZ3xFMVxuICBELS0-fFVpdHdpc3NlbGluZ3xFMlxuICBELS0-fFVpdHdpc3NlbGluZ3xFMyIsIm1lcm1haWQiOiJ7fSIsInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjpmYWxzZSwidXBkYXRlRGlhZ3JhbSI6dHJ1ZX0)
 
 
-Bij de inwinning van de BGT worden ETRS89, RD en lokale CRS-en gebruikt. Voor de opslag bij bronhouders en de Landelijke Voorziening en de uitwisseling daartussen wordt RD gebruikt. Voor uitwisseling en visualisatie worden ETRS89, RD en WGS84 gebruikt, waarbij voor ETRS89 en WGS84 verschillende projecties mogelijk zijn. 
+Bij de inwinning van de BGT worden ETRS89, RD en lokale CRS-en gebruikt. Voor de opslag bij bronhouders, de Landelijke Voorziening en het dataplatform wordt voor de uitwisseling  RD gebruikt. Voor uitwisseling en visualisatie worden tussen dataplatform en gebruiker ETRS89, RD en WGS84 gebruikt, waarbij voor ETRS89 en WGS84 verschillende projecties mogelijk zijn. 
 </div>
 
-Bij uitwisseling en visualisatie van geo-informatie is het van belang om een CRS te kiezen dat geschikt is voor de toepassing en de gebruiker. Eenduidig gebruik van CRS-en en transformaties voorkomt  systematische effecten bij gebruik van meerdere datasets. Voor het voorkomen van systematische effecten en een juiste implementatie van de Nederlandse CRS-en zijn inspanningen nodig die het gebruik door niet-specialisten ingewikkeld maken. Spatial Data on the Web Best Practices raden aan om data voor visualisatie te publiceren in wereldwijd bruikbare CRS-en. De wereldwijdbruikbare CRS-en hebben als voordeel dat gebruik voor niet-specialisten laagdrempeliger wordt, maar gebruik van deze CRS-en geven risico op systematische fouten of inconsistenties wanneer de data niet alleen wordt gebruikt voor visualisatie of datasets worden gecombineerd. Hiervoor moeten zowel aanbieder, ontwikkelaar als eindgebruiker keuzes maken.
+Bij uitwisseling en visualisatie van geo-informatie is het van belang om een CRS te kiezen dat geschikt is voor de toepassing en de gebruiker. Eenduidig gebruik van CRS-en en transformaties voorkomt systematische effecten bij gebruik van meerdere datasets. Voor het voorkomen van systematische effecten en een juiste implementatie van de Nederlandse CRS-en zijn inspanningen nodig die het gebruik door niet-specialisten ingewikkeld maken. 
 
+Bij de keuze van het CRS is ook een onderscheid tussen de (authentieke) dataset en visualisatieservices (of informatiemodel, berichtenmodel en presentatiemodel?). Bij uitwisseling is het van belang dat er een eenduidige nauwkeurige relatie bestaat tussen het CRS van de brondata en het CRS van uitwisseling, zodat het voor het gebruik niet uitmaakt in welk CRS de dataset is uitgewisseld. Voor visualisatieservices heeft is de beoogde toepassing en de mogelijkheid van eenvoudig gebruik óók voor niet-specialisten een belangrijke afweging. Vooral wanneer de juiste topologische weergave van data van belang is, of datasets worden gecombineerd in de visualisatie gaat eenvoudig niet altijd samen met het gebruik van precieze eenduidige transformaties en conversies. Bij minder precieze transformaties en conversies kunnen (toelaatbare) visuele verschillen  onstaan die afhankelijk zijn van de keuze van CRS en implementatie.
+
+Spatial Data on the Web Best Practices [[SDW-BP]] raden aan om data voor visualisatie te publiceren in wereldwijd bruikbare CRS-en. De wereldwijdbruikbare CRS-en hebben als voordeel dat gebruik voor niet-specialisten laagdrempeliger wordt, maar gebruik van deze CRS-en geven risico op systematische fouten of inconsistenties wanneer de data niet alleen wordt gebruikt voor visualisatie of datasets worden gecombineerd. Hiervoor moeten zowel aanbieder, ontwikkelaar als eindgebruiker keuzes maken.
 ### Doel
 
  Deze Handreiking heeft als doel om gebruikers vanuit het GIS / geo-informatie werkveld te voorzien van adviezen hoe om te gaan met met CRS-en bij uitwisseling en visualisatie van geo-informatie in de context van Landelijke Voorzieningen en vergelijkbare digitale stelsels.
@@ -27,8 +30,8 @@ Bij uitwisseling en visualisatie van geo-informatie is het van belang om een CRS
 _VOORBEELD_ 
 In het voorbeeld van de BGT gaat het dus om adviezen voor het omgaan met CRS-en bij:
 
-1. uitwisseling tussen Bronhouder en Landelijke Voorziening
-2. uitwisseling en visualisatie van Landelijke Voorziening naar gebruiker
+1. uitwisseling tussen Bronhouder, Landelijke Voorziening en Dataplatform
+2. uitwisseling en visualisatie van Dataplatform naar Gebruiker
 </div>
 
 De handreiking richt zich niet op adviezen voor het omgaan met CRS-en bij inwinning, verwerking en opslag van geo-informatie. 
@@ -36,47 +39,13 @@ De handreiking richt zich niet op adviezen voor het omgaan met CRS-en bij inwinn
 of opslag wel i.r.t. informatiemodel?)
 </div>
 
-De Handreiking maakt voor de adviezen een onderscheid tussen de (authentieke) dataset en visualisatieservices (of informatiemodel, berichtenmodel en presentatiemodel?).  Bij uitwisseling is het van belang dat er een eenduidige nauwkeurige relatie bestaat tussen het CRS van de brondata en het CRS van uitwisseling, zodat het voor het gebruik niet uitmaakt in welk CRS de dataset is uitgewisseld. Voor visualisatieservices heeft is de beoogde toepassing en de mogelijkheid van eenvoudig gebruik óók voor niet-specialisten een belangrijke afweging. Vooral wanneer de juiste topologische weergave van data van belang is, of datasets worden gecombineerd in de visualisatie gaat eenvoudig niet altijd samen met het gebruik van precieze eenduidige transformaties en conversies. Bij minder precieze transformaties en conversies kunnen (toelaatbare) visuele verschillen  onstaan die afhankelijk zijn van de keuze van CRS en implementatie.
 ### Leeswijzer
 
+Het hoofdstuk [CRS-en in Nederland](#crs-en-in-nederland) geeft een overzicht van de huidige veel gebruikte CRS-en in Nederland en de relatie met andere CRS-en. Het hoofdtuk is gericht op nieuwkomers in de geo-wereld, dataaanbieders, GIS-gebruikes en modelleurs die hun kennis willen opfrissen.
 
-Het document heeft de volgende opbouw
-- [CRS-en in Nederland](#crs-en-in-nederland) 
-  - [Veelgebruikte CRS-en in Nederland](#veelgebruikte-crs-en-in-nederland) 
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mark>(toepassingsgebied, beheer)</mark>
-  - [Aandachtspunten bij gebruik van meerdere CRS-en](#aandachtspunten-bij-gebruik-van-meerdere-crs-en)
-  - Relaties tussen CRSen 
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mark>(vereenvoudigde versie van [Conversie en Transformatie](#conversie-en-transformatie) en [Relaties](#overzicht-conversie-en-transformaties))</mark>
-    - Geometrie/topologie 
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mark>([samenvatting lange lijnen advies](https://geoforum.nl/t/spatial-selectie-geeft-niet-alle-punten-die-op-een-lijn-liggen-in-qgis-waarom/5388/11) en voorbeelden mbt vervorming van weergaven en oppervlakten (LAEA vs ..), ook voorbeeld waar ETRS89=WGS84 acceptabel is?)</mark>
-- Specificatie CRS: 
-  - Naamgeving van CRS-en 
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mark>([advies voor naamgeving](#urn-codes-crs-en) en [bijbehorende URN/EPSG codes](#urn-codes-conversie-en-transformaties))</mark>
-  - Hoe worden Crsen eenduidig gespecificeerd en vastgelegd voor uitwisseling en visualisatie in:
-    - Registraties 
-  
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mark>(voorbeeld INSPIRE, BRO?)</mark>
-    - Uitwisselingsformaten 
-  
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mark>(bestandsformaten, OGC API, vector tiling)</mark>
-- Bijlagen met achtergrondinformatie
-    - [Concept van transformatie en conversie](#conversie-en-transformatie)
-    - EPSG concept van datum ensembles (nauwkeurigheids verlies door meerduidigheid)
-    - Langelijnen advies ([NSGI advies](https://forum.pdok.nl/uploads/default/original/2X/c/c0795baa683bf3845c866ae4c576a880455be02a.pdf))
-    - Advies gebruik RDNAPTRANS met referentieimplementatie (sinds proj xx gaat het goed, QGIS versie yy doet het goed als je deze optie selecteert) en verwijzing validatieservice
-    - Validatiedata voor ITRS/WGS84/INSPIRE projecties?
-    
-Het onderdeel [CRS-en in Nederland](#crs-en-in-nederland) geeft een overzicht van de huidige situatie in Nederland en is bedoeld voor nieuwkomers in de geo-wereld, dataaanbieders, GIS-gebruikes en modelleurs die hun kennis willen opfrissen.
-
-Het onderdeel Specificatie CRS geeft aan hoe CRSen eenduidig worden gespecificeerd. De paragraaf naamgeving is voor alle lezers bedoeld, de overige paragraven zijn gericht op  dataaanbieders, modelleurs, en applicatieontwikkelaars.
+Het onderdeel Specificatie CRS geeft aan hoe CRSen eenduidig worden gespecificeerd en vastgelegd voor uitwisseling en visualisatie. De paragraaf naamgeving is voor alle lezers bedoeld, de overige paragraven zijn gericht op  dataaanbieders, modelleurs, en applicatieontwikkelaars.
 
 De bijlagen met achtergrondinformatie geven een uitgebreidere toelichting op onderdelen die in specifieke gevallen relevant is of te uitgebreid voor de algemene tekst.
-  
-
 ### Adviezen/opmerkingen die ergens een plek moeten krijgen
 
 - Dataanbieder (welk CRS mogelijk voor visualisatie, hoe transformeer je, welke formaten ondersteunen CRS-en, hierbij denken aan gebruik)

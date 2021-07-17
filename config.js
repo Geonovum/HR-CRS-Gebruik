@@ -119,6 +119,20 @@ var respecConfig =
   //-- NB: kijk eesrt naar de beschikbare www.specref.org voor verwijziging 
   localBiblio: 
   {
+    "SDW-BP": {
+      title: "Spatial Data on the Web Best Practices",
+      href: "https://www.w3.org/TR/sdw-bp/",
+      status: "Best practice",
+      publisher: "W3C en OGC",
+    },
+    "BRO-CAT": {
+      title: "Basisregistratie Ondergrond Catalogus Booronderzoek",
+      href: "https://broprogramma.github.io/BHR-G/",
+      status: "Werkversie Informatiemodel",
+      publisher: "BRO",
+    },
+
+
     "NSGI":
       {
         title:      "Website NSGI",

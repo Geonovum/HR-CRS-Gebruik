@@ -24,7 +24,7 @@
 
 ### CRS in het informatiemodel
 
-[Voorbeeld BRO](https://broprogramma.github.io/BHR-G/#co%C3%B6rdinaten-en-referentiestelsels)
+[Voorbeeld BRO](https://broprogramma.github.io/BHR-G/#co%C3%B6rdinaten-en-referentiestelsels) [[BRO-CAT]]
 ### CRS bij uitwisselingsformaten
 
 #### GeoJson
