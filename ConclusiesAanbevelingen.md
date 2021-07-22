@@ -1,5 +1,9 @@
 ## Conclusies en aanbevelingen
 
+<div class="advisement">
+Neem bij twijfel over de keuze van CRS-en contact op met de NSGI
+</div>
+
 ### Conclusies
 
 *Beschrijf hier de belangrijkste conclusies:* 

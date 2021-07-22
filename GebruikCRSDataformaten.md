@@ -30,9 +30,31 @@
 
 ### CRS in het informatiemodel
 
+Bij nieuw informatiemodel kijk welke CRS-en al gebruikt worden in het domein en waarom. 
+
 <mark style="background-color: SpringGreen">Voorbeeld(en?) van tekst die wordt gebruikt voor beschrijven van CRS-en in het informatiemodel</mark>
 
 [Voorbeeld BRO](https://broprogramma.github.io/BHR-G/#co%C3%B6rdinaten-en-referentiestelsels) [[BRO-CAT]]
+
+Ook mooi vorbeeld vergelijk keuzes BGT (bron historisch in RD) en DSO (bronnen in verschillende CRS-en)
+### Aandachtspunten bij gebruik van meerdere CRS-en
+
+Wanneer voor uitwisseling en visualisatie andere CRS-en worden gebruikt dan voor de opslag zijn er een aantal aandachtspunten, de belangrijkste zijn:
+
+- Maak gebruik van een eenduidige transformatie en conversie
+- Voorkom dat geometrische of topologische verschillen ontstaan
+
+#### Transformatie en conversie
+
+- Afwegingen
+ - Wel/niet
+ - On-the-fly
+ - Dubbel opslaan
+  
+#### Geometrie en topologie
+
+- <mark>([samenvatting lange lijnen advies](https://geoforum.nl/t/spatial-selectie-geeft-niet-alle-punten-die-op-een-lijn-liggen-in-qgis-waarom/5388/11) en voorbeelden mbt vervorming van weergaven en oppervlakten (LAEA vs ..), ook voorbeeld waar ETRS89=WGS84 acceptabel is?)</mark>
+
 ### CRS bij uitwisselingsformaten
 
 <mark style="background-color: SpringGreen">Voorbeeld(en?) hoe CRS-en worden gespecificeerd in uitwisselingsformaten</mark>
