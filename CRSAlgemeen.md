@@ -40,6 +40,11 @@ De aarde kan eenvoudig worden gemodelleerd door een ellipsoïde, waarvan het sni
 
 Geocentrische coördinaten, aangeduid met X, Y en Z, geven de positievector ten opzichte van het middelpunt van de aarde. Geografische coördinaten geven de positie ten opzichte van de ellipsoïde in geodetische breedte (φ), geodetische lengte (λ) en hoogte boven de ellipsoïde (h). Rechthoekige coördinaten (x en y) geven de positie ten opzichte van oorsprong van het geprojecteerde vlak. 
 
+### Notatie van coördinaten
+
+- decimale graden en graden, minuten en seconden
+- significatne decimalen
+
 ### Conversie en transformatie
 
 [logica dictaat TU](http://gnss1.tudelft.nl/pub/vdmarel/reader/CTB3310_RefSystems_1-2a_online.pdf#page=33)

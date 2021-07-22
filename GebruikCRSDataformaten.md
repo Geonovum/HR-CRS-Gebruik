@@ -3,6 +3,12 @@
 
 
 ### Naamgeving van CRS
+
+<mark style="background-color: SpringGreen">Verschillende manieren die worden gebruikt om CRS-en te specificeren</mark>
+- Opengis URI
+- URN
+- EPSG
+
 |CRS-naam|URN           |Datum1          | CS1     |Datum2 | CS2 |Opmerking|
 |--------|--------------|----------------|---------|-------|------|------|
 |RD|urn:ogc:def:crs:EPSG::28992|RD Bessel| Stereografische dubbelprojectie|
@@ -24,8 +30,12 @@
 
 ### CRS in het informatiemodel
 
+<mark style="background-color: SpringGreen">Voorbeeld(en?) van tekst die wordt gebruikt voor beschrijven van CRS-en in het informatiemodel</mark>
+
 [Voorbeeld BRO](https://broprogramma.github.io/BHR-G/#co%C3%B6rdinaten-en-referentiestelsels) [[BRO-CAT]]
 ### CRS bij uitwisselingsformaten
+
+<mark style="background-color: SpringGreen">Voorbeeld(en?) hoe CRS-en worden gespecificeerd in uitwisselingsformaten</mark>
 
 #### GeoJson
 

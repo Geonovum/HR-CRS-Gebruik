@@ -1,11 +1,12 @@
 ## Inleiding
 
+<mark style="background-color: SpringGreen">Waarom CRS-en</mark>
+
 Geo-informatie is direct gekoppeld aan locaties op aarde. De wijze waarop dat gebeurt wordt beschreven in het ruimtelijk-referentie systeem. Er zijn meerdere methoden om de locatie van objecten vast te leggen. De meest bekende methode is het gebruik van een coördinaatreferentiesysteem (CRS) waarbij coördinaten van een locatie worden vastgelegd. 
 
-CRS-en nemen de vorm van de aarde als uitgangspunt om de locaties vast te leggen. Maar niets is zo ingewikkeld als meten op een bol met de bedoeling dit in een plat vlak (kaart) weer te geven. Zeker niet als die bol niet een exacte bol is.
+CRS-en nemen de vorm van de aarde als uitgangspunt om de locaties vast te leggen. Maar niets is zo ingewikkeld als meten op een bol met de bedoeling dit in een plat vlak (kaart) weer te geven. Zeker niet als die bol niet een exacte bol is. Voor het weergeven van geo-informatie op een plat vlak worden [kaartprojecties](#kaartprojecties-de-aarde-plat-slaan) gebruikt. De weergave in het platte vlak is niet mogelijk zonder verstoringen die afhankelijk is van de keuze van de kaartprojectie. En kaarprojectie bevat altijd minimaal een verstoring in hoeken, afstanden of oppervlakten. Dat wil zeggen dat gelijke hoeken, afstanden of oppervlakten in werkelijkheid op de kaart niet allemaal gelijk aan elkaar zijn.
 
-Voor de inwinning, verwerking, uitwisseling en visualisatie van geo-informatie worden in de praktijk voor dezelfde dataset verschillende CRS-en gebruikt. In veel gevallen wordt de dataset opgeslagen in één CRS. 
-
+Voor de inwinning, verwerking, uitwisseling en visualisatie van geo-informatie worden in de praktijk voor dezelfde dataset verschillende CRS-en gebruikt. In veel gevallen wordt de dataset opgeslagen in één CRS.
 
 <div class="example">
 _VOORBEELD_ 
@@ -17,11 +18,13 @@ Het gebruik van CRS-en bij keten van inwinning tot uitwisseling en visualisatie 
 Bij de inwinning van de BGT worden ETRS89, RD en lokale CRS-en gebruikt. Voor de opslag bij bronhouders, de Landelijke Voorziening en het dataplatform wordt voor de uitwisseling  RD gebruikt. Voor uitwisseling en visualisatie worden tussen dataplatform en gebruiker ETRS89, RD en WGS84 gebruikt, waarbij voor ETRS89 en WGS84 verschillende projecties mogelijk zijn. 
 </div>
 
-Bij uitwisseling en visualisatie van geo-informatie is het van belang om een CRS te kiezen dat geschikt is voor de toepassing en de gebruiker. Eenduidig gebruik van CRS-en en transformaties voorkomt systematische effecten bij gebruik van meerdere datasets. Voor het voorkomen van systematische effecten en een juiste implementatie van de Nederlandse CRS-en zijn inspanningen nodig die het gebruik door niet-specialisten ingewikkeld maken. 
+<mark style="background-color: SpringGreen">Waarom verschillende CRS-en</mark>
 
-Bij de keuze van het CRS is ook een onderscheid tussen de (authentieke) dataset en visualisatieservices (of informatiemodel, berichtenmodel en presentatiemodel?). Bij uitwisseling is het van belang dat er een eenduidige nauwkeurige relatie bestaat tussen het CRS van de brondata en het CRS van uitwisseling, zodat het voor het gebruik niet uitmaakt in welk CRS de dataset is uitgewisseld. Voor visualisatieservices heeft is de beoogde toepassing en de mogelijkheid van eenvoudig gebruik óók voor niet-specialisten een belangrijke afweging. Vooral wanneer de juiste topologische weergave van data van belang is, of datasets worden gecombineerd in de visualisatie gaat eenvoudig niet altijd samen met het gebruik van precieze eenduidige transformaties en conversies. Bij minder precieze transformaties en conversies kunnen (toelaatbare) visuele verschillen  onstaan die afhankelijk zijn van de keuze van CRS en implementatie.
+Bij uitwisseling en visualisatie van geo-informatie is het van belang om een CRS te kiezen dat geschikt is voor de toepassing en de gebruiker, dit wordt onder andere geadviseerd in [[SDW-BP]]. Eenduidig gebruik van CRS-en en transformaties voorkomt systematische effecten bij gebruik van meerdere datasets. Eenduidig gebruik is mogelijk door het maken van afspraken over het gebruik van eenduidige CRS-en en [transformaties](#conversie-en-transformatie).
 
-Spatial Data on the Web Best Practices [[SDW-BP]] raden aan om data voor visualisatie te publiceren in wereldwijd bruikbare CRS-en. De wereldwijdbruikbare CRS-en hebben als voordeel dat gebruik voor niet-specialisten laagdrempeliger wordt, maar gebruik van deze CRS-en geven risico op systematische fouten of inconsistenties wanneer de data niet alleen wordt gebruikt voor visualisatie of datasets worden gecombineerd. Hiervoor moeten zowel aanbieder, ontwikkelaar als eindgebruiker keuzes maken.
+Bij de keuze van het CRS is ook een onderscheid tussen de (authentieke) dataset en visualisatieservices (of informatiemodel, berichtenmodel en presentatiemodel?). Bij uitwisseling is het van belang dat er een eenduidige nauwkeurige relatie bestaat tussen het CRS van de brondata en het CRS van uitwisseling, zodat het voor het gebruik niet uitmaakt in welk CRS de dataset is uitgewisseld. Voor visualisatieservices is de beoogde toepassing en de mogelijkheid van eenvoudig gebruik óók voor niet-specialisten een belangrijke afweging. Vooral wanneer de juiste topologische weergave van data van belang is, of datasets worden gecombineerd in de visualisatie gaat eenvoudig niet altijd samen met het gebruik van precieze eenduidige transformaties en conversies. Bij minder precieze transformaties en conversies kunnen (toelaatbare) visuele verschillen  onstaan die afhankelijk zijn van de keuze van CRS en implementatie.
+
+Spatial Data on the Web Best Practices [[SDW-BP]] raden aan om data voor visualisatie te publiceren in wereldwijd bruikbare CRS-en. De wereldwijdbruikbare CRS-en hebben als voordeel dat gebruik voor niet-specialisten laagdrempeliger wordt, maar deze CRS-en zijn bedeold vor gebruik op kleine (wereldwijde) schaal en voor grootschalige toepassingen. Het gebruik van deze wereldwijde CRS-en geeft risico op systematische fouten of inconsistenties wanneer de data niet alleen wordt gebruikt voor visualisatie of datasets worden gecombineerd. Hiervoor moeten zowel aanbieder, ontwikkelaar als eindgebruiker een afweging maken tussen laagdrempelig gebruik van geo-informatie en mogelijke gevolgen voor de beoogde toepassingen van de data.
 ### Doel
 
  Deze Handreiking heeft als doel om gebruikers vanuit het GIS / geo-informatie werkveld te voorzien van adviezen hoe om te gaan met met CRS-en bij uitwisseling en visualisatie van geo-informatie in de context van Landelijke Voorzieningen en vergelijkbare digitale stelsels.
@@ -43,7 +46,7 @@ of opslag wel i.r.t. informatiemodel?)
 
 Het hoofdstuk [CRS-en in Nederland](#crs-en-in-nederland) geeft een overzicht van de huidige veel gebruikte CRS-en in Nederland en de relatie met andere CRS-en. Het hoofdtuk is gericht op nieuwkomers in de geo-wereld, dataaanbieders, GIS-gebruikes en modelleurs die hun kennis willen opfrissen.
 
-Het onderdeel Specificatie CRS geeft aan hoe CRSen eenduidig worden gespecificeerd en vastgelegd voor uitwisseling en visualisatie. De paragraaf naamgeving is voor alle lezers bedoeld, de overige paragraven zijn gericht op  dataaanbieders, modelleurs, en applicatieontwikkelaars.
+Het onderdeel [Specificatie CRS](#specificeren-van-crs) geeft aan hoe CRS-en eenduidig worden gespecificeerd en vastgelegd voor uitwisseling en visualisatie. De paragraaf naamgeving is voor alle lezers bedoeld, de overige paragraven zijn gericht op  dataaanbieders, modelleurs, en applicatieontwikkelaars.
 
 De bijlagen met achtergrondinformatie geven een uitgebreidere toelichting op onderdelen die in specifieke gevallen relevant is of te uitgebreid voor de algemene tekst.
 ### Adviezen/opmerkingen die ergens een plek moeten krijgen
@@ -60,7 +63,7 @@ Vraag data op in zelfde CRS zeker bij gebruik ensembles
 <div class="example">
 De paradox is datJe weet niet wie je data gebruikt. 
 </div>
-- Architect/Modelleur van registraties (CRS-ondersteuning registraties --> standaardparagraaf maken?)
+- Architect/Modelleur van registraties (CRS-ondersteuning registraties --> [standaardparagraaf](#crs-in-het-informatiemodel) maken?)
 
 
 
