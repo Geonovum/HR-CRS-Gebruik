@@ -1,12 +1,16 @@
 ## Inleiding
 
-<mark style="background-color: SpringGreen">Waarom CRS-en</mark>
+<!--- Waarom CRS-en -->
 
-Geo-informatie is direct gekoppeld aan locaties op aarde. De wijze waarop dat gebeurt wordt beschreven in het ruimtelijk-referentie systeem. Er zijn meerdere methoden om de locatie van objecten vast te leggen. De meest bekende methode is het gebruik van een coördinaatreferentiesysteem (CRS) waarbij coördinaten van een locatie worden vastgelegd. 
+Geo-informatie is direct gekoppeld aan locaties op aarde. De wijze waarop dat gebeurt wordt beschreven in het ruimtelijk-referentie systeem. Er zijn meerdere methoden om de locatie van objecten vast te leggen. De meest bekende methode is het gebruik van een coördinaatreferentiesysteem (CRS) waarbij coördinaten van een locatie worden vastgelegd. RD en ETRS89 zijn voorbeelden van CRS-en in Nederland.
 
-CRS-en nemen de vorm van de aarde als uitgangspunt om de locaties vast te leggen. Maar niets is zo ingewikkeld als meten op een bol met de bedoeling dit in een plat vlak (kaart) weer te geven. Zeker niet als die bol niet een exacte bol is. Voor het weergeven van geo-informatie op een plat vlak worden [kaartprojecties](#kaartprojecties-de-aarde-plat-slaan) gebruikt. De weergave in het platte vlak is niet mogelijk zonder verstoringen die afhankelijk is van de keuze van de kaartprojectie. En kaarprojectie bevat altijd minimaal een verstoring in hoeken, afstanden of oppervlakten. Dat wil zeggen dat gelijke hoeken, afstanden of oppervlakten in werkelijkheid op de kaart niet allemaal gelijk aan elkaar zijn.
+CRS-en nemen de vorm van de aarde als uitgangspunt om de locaties vast te leggen. Maar niets is zo ingewikkeld als meten op een bol met de bedoeling dit in een plat vlak (kaart) weer te geven. Zeker niet als die bol niet een exacte bol is. Voor het weergeven van geo-informatie op een plat vlak worden [kaartprojecties](#kaartprojecties-de-aarde-plat-slaan) gebruikt. De weergave in het platte vlak is niet mogelijk zonder verstoringen die afhankelijk is van de keuze van de kaartprojectie. Een kaarprojectie kan hoekgetrouw, afstandsgetrouw en/of oppervlakte getrouw zijn, maar niet alle drie eigenschappen tegelijk hebben. Een kaartprojectie bevat dus altijd minimaal een verstoring in hoeken, afstanden of oppervlakten. Dat wil zeggen dat gelijke hoeken, afstanden of oppervlakten in werkelijkheid op de kaart niet allemaal gelijk aan elkaar zijn.
 
-Voor de inwinning, verwerking, uitwisseling en visualisatie van geo-informatie worden in de praktijk voor dezelfde dataset verschillende CRS-en gebruikt. In veel gevallen wordt de dataset opgeslagen in één CRS.
+<div class="note">
+Figuur toevoegen van verschillende projecties voor zelfde gebied?
+</div>
+
+Voor de inwinning, verwerking, uitwisseling en visualisatie van geo-informatie worden in de praktijk voor dezelfde dataset verschillende CRS-en gebruikt. De keuze van het meest geschikte hangt af van de toepassing en het gebied, voor afbeelding van geo-data van alleen Nederland is een ander CRS geschikt dan afbeelden van heel Europa of de hele wereld. In veel gevallen wordt de dataset opgeslagen in één CRS.
 
 <div class="example">
 _VOORBEELD_ 
@@ -18,16 +22,23 @@ Het gebruik van CRS-en bij keten van inwinning tot uitwisseling en visualisatie 
 Bij de inwinning van de BGT worden ETRS89, RD en lokale CRS-en gebruikt. Voor de opslag bij bronhouders, de Landelijke Voorziening en het dataplatform wordt voor de uitwisseling  RD gebruikt. Voor uitwisseling en visualisatie worden tussen dataplatform en gebruiker ETRS89, RD en WGS84 gebruikt, waarbij voor ETRS89 en WGS84 verschillende projecties mogelijk zijn. 
 </div>
 
-<mark style="background-color: SpringGreen">Waarom verschillende CRS-en</mark>
+<!-- Waarom verschillende CRS-en -->
 
 Bij uitwisseling en visualisatie van geo-informatie is het van belang om een CRS te kiezen dat geschikt is voor de toepassing en de gebruiker, dit wordt onder andere geadviseerd in [[SDW-BP]]. Eenduidig gebruik van CRS-en en transformaties voorkomt systematische effecten bij gebruik van meerdere datasets. Eenduidig gebruik is mogelijk door het maken van afspraken over het gebruik van eenduidige CRS-en en [transformaties](#conversie-en-transformatie).
+
+
+<div class="note">
+hier al één / enkele voorbeelden toevoegen waarom goed omgaan met CRS belangrijk is: wat kan er misgaan / is er al misgegaan door fouten hiermee? 
+</div>
 
 Bij de keuze van het CRS is ook een onderscheid tussen de (authentieke) dataset en visualisatieservices (of informatiemodel, berichtenmodel en presentatiemodel?). Bij uitwisseling is het van belang dat er een eenduidige nauwkeurige relatie bestaat tussen het CRS van de brondata en het CRS van uitwisseling, zodat het voor het gebruik niet uitmaakt in welk CRS de dataset is uitgewisseld. Voor visualisatieservices is de beoogde toepassing en de mogelijkheid van eenvoudig gebruik óók voor niet-specialisten een belangrijke afweging. Vooral wanneer de juiste topologische weergave van data van belang is, of datasets worden gecombineerd in de visualisatie gaat eenvoudig niet altijd samen met het gebruik van precieze eenduidige transformaties en conversies. Bij minder precieze transformaties en conversies kunnen (toelaatbare) visuele verschillen  onstaan die afhankelijk zijn van de keuze van CRS en implementatie.
 
 Spatial Data on the Web Best Practices [[SDW-BP]] raden aan om data voor visualisatie te publiceren in wereldwijd bruikbare CRS-en. De wereldwijdbruikbare CRS-en hebben als voordeel dat gebruik voor niet-specialisten laagdrempeliger wordt, maar deze CRS-en zijn bedeold vor gebruik op kleine (wereldwijde) schaal en voor grootschalige toepassingen. Het gebruik van deze wereldwijde CRS-en geeft risico op systematische fouten of inconsistenties wanneer de data niet alleen wordt gebruikt voor visualisatie of datasets worden gecombineerd. Hiervoor moeten zowel aanbieder, ontwikkelaar als eindgebruiker een afweging maken tussen laagdrempelig gebruik van geo-informatie en mogelijke gevolgen voor de beoogde toepassingen van de data.
 ### Doel
 
- Deze Handreiking heeft als doel om gebruikers vanuit het GIS / geo-informatie werkveld te voorzien van adviezen hoe om te gaan met met CRS-en bij uitwisseling en visualisatie van geo-informatie in de context van Landelijke Voorzieningen en vergelijkbare digitale stelsels.
+Geo-data wordt steeds vaker grensoverschrijdend, zowel landgrenzen and land-water, en tussen verschillende domeinen geïntegreerd. Voor deze verschillende toepassingen en domeinen zijn gebruikers gewend te werken in verschillende CRS-en. Hierdoor is bewustzijn van CRSen niet alleen meer relevant bij de inwinning, maar ook bij opslag, uitwisseling, gebruik en visualisatie. Op land wordt bijvoorbeeld vaak RD gebruikt en op zee ETRS89, voor Europese uitwisseling wordt ETRS89 gebruikt. Binnen het DSO wordt data gecombineerd waarvan de bron in verschillende CRS-en kan zijn.
+
+Deze Handreiking heeft als doel om gebruikers vanuit het GIS / geo-informatie werkveld te voorzien van adviezen hoe om te gaan met met CRS-en bij uitwisseling en visualisatie van geo-informatie in de context van Landelijke Voorzieningen en vergelijkbare digitale stelsels.
 
 <div class="example">
 _VOORBEELD_ 
@@ -37,7 +48,7 @@ In het voorbeeld van de BGT gaat het dus om adviezen voor het omgaan met CRS-en 
 2. uitwisseling en visualisatie van Dataplatform naar Gebruiker
 </div>
 
-De handreiking richt zich niet op adviezen voor het omgaan met CRS-en bij inwinning, verwerking en opslag van geo-informatie. 
+De handreiking richt zich niet op adviezen voor het omgaan met CRS-en bij inwinning, verwerking en opslag van geo-informatie door bronhouders. 
 <div class="note">
 of opslag wel i.r.t. informatiemodel?)
 </div>
