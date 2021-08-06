@@ -75,5 +75,5 @@ De EPSG geodetische parameter dataset is een verzameling van datumdefinities, pr
 
 
 #### Overig te noemen
-    - Advies gebruik RDNAPTRANS met referentieimplementatie (sinds proj xx gaat het goed, QGIS versie yy doet het goed als je deze optie selecteert) en verwijzing validatieservice
+    - Advies gebruik RDNAPTRANS met voorbeeld referentieimplementatie (sinds proj xx gaat het goed, QGIS versie yy doet het goed als je deze optie selecteert) en verwijzing validatieservice
     - Validatiedata voor ITRS/WGS84/INSPIRE projecties?
