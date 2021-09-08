@@ -73,26 +73,26 @@ var respecConfig =
       companyURL: "https://www.geonovum.nl"
     }, 
     {
-      name:       "Naam Editor-n",
+      name:       "Friso Penninga",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     }, 
   ],
   //-- de namen van de Author(s) ------------------------------------------------------
   //-- vul in: per Author: name:, company:, companyURL: -------------------------------
-  authors: 
-  [
-    {
-      name:       "Lennard Huisman",
-      company:    "Geonovum",
-      companyURL: "https://www.geonovum.nl"
-    }, 
-    {
-      name:       "Naam Auteur-2",
-      company:    "Geonovum",
-      companyURL: "https://www.geonovum.nl"
-    }, 
-  ],
+ // authors: 
+ // [
+ //   {
+ //     name:       "Lennard Huisman",
+ //     company:    "Geonovum",
+ //     companyURL: "https://www.geonovum.nl"
+ //   }, 
+ //   {
+ //     name:       "Naam Auteur-2",
+ //     company:    "Geonovum",
+ //     companyURL: "https://www.geonovum.nl"
+ //   }, 
+ // ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
   shortName: "crs",  	              // Wordt gebruikt in de document URL
   //-- pubDomain is verplicht! (komt in de URL: Activeer 1 van de volgende) ------------
