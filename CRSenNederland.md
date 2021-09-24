@@ -15,7 +15,7 @@ Het Europese ETRS89 (European Terrestrial Reference System 1989) is sinds 1 okto
 ETRS89 wordt gebruikt voor uitwisseling van Europese geo-informatie in het kader van INSPIRE. Geo-informatie in geografische ETRS89-coördinaten kan niet worden gevisualiseerd op een papieren kaart of een kaart op een plat computerscherm zonder kaartprojectie, omdat deze coördinaten refereren naar een 3D ellipsoïde. INSPIRE raadt voor het projecteren van ETRS89, afhankelijk van de toepassing, een aantal kaartprojecties aan. Daarnaast zijn voor toepassing binnen het Europese deel van Nederland, inclusief de Nederlandse Exclusieve Economische Zone (EEZ) van de Noordzee, RD-coördinaten zeer geschikt als kaartprojectie voor visualisatie van geo-informatie in ETRS89-coördinaten. De relatie tussen ETRS89 en RD/NAP is vastgelegd in de procedure [[RDNAPTRANS™]].
 
 <div class="advisement">
-_ADVIES_ Gebruik voor visualisatie van ETRS89 data een kaartprojectie. Aanbevolen projecties zijn de RD-projectie voor Nederland inclusief de Exclusieve Economische Zone of INSPIRE-projecties voor groter gebieden binnen Europa.
+_ADVIES_ Gebruik voor visualisatie van ETRS89 data een aanbevolen kaartprojectie. Aanbevolen projecties zijn de RD-projectie voor Nederland inclusief de Exclusieve Economische Zone of INSPIRE-projecties voor groter gebieden binnen Europa.
 </div>
 
 <!-- Realisaties ETRS89 -->
