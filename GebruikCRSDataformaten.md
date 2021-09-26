@@ -1,9 +1,13 @@
 ## CRS gebruik
+
 Dit hoofdstuk gaat in op gebruik van de beschreven CRS-en. 
 
 
 ### Opbouw en naamgeving van CRS
-Een CRS is opgebouwd uit een datum en een coördinaat systeem (CS). Het datum geeft 
+
+Een CRS is opgebouwd uit een datum en een coördinaat systeem (CS). <mark>Het datum geeft </mark>
+
+
 CRS-en worden in de praktijk op verschillende manieren aangeduidt. In hoofdstuk 2 zijn de officiële benamingen gebruikt, bij opslag en uitwisseling van geo-informatie wordt vaak gebruik gemaakt van gestandaardiseerde aanduiding van de CRS-en in de vorm van een OGC URN of Name Type Specification (NTS) voor CRS-en. Deze hebben de volgende structuur:
 
 |Type aanduiding|structuur|
@@ -12,39 +16,13 @@ CRS-en worden in de praktijk op verschillende manieren aangeduidt. In hoofdstuk 
 |NTS|http://www.opengis.net/def/crs/\<authority\>/\<version\>/\<code\>|
 |NTS|http://www.opengis.net/def/crs?authority=\<authority\>&version=\<version\>&code=\<code\> |
 
-In deze aanduiding wordt meestal EPSG als de-facto autoriteit gebruikt, maar ook ISO is een voorbeeld van een autoriteit. Bij gebruik van de laatste versie van de database van de authority wordt bij URN \<version\> leeg gelaten, terwijl bij de NTS \<version\>=0 wordt gebruikt. Voor het RD, waarvoor de EPSG code 28992 is, resulteert dit in de volgende aanduidingen.
+In deze aanduiding wordt meestal EPSG als de-facto autoriteit gebruikt, maar ook ISO is een voorbeeld van een autoriteit. Bij gebruik van de laatste versie van de database van de authority wordt bij URN \<version\> leeg gelaten, terwijl bij de NTS \<version\>=0 wordt gebruikt. In [Bijlage C](#crs-overzicht-tabel) is een tabel opgenomen met de EPSG-codes voor veelgebruikte CRS-en in Nederland. Met behulp van deze tabel kan de URN en NTS worden afgeleidt, bijvoorbeeld voor het RD (EPSG:code 28992), resulteert dit in de volgende aanduidingen.
 
 |Type aanduiding|structuur|
 |----|----|
 |URN|urn:ogc:def:crs:EPSG::28992|
 |NTS|http://www.opengis.net/def/crs/ESPG/0/28992|
 |NTS|http://www.opengis.net/def/crs?authority=EPSG&version=0&code=28992|
-
-<div class="note">
-tabel naar bijlage
-</div>
-
-Onderstaande tabel geeft EPSG-code, het datum en het coördinaat systeem voor veelgebruikte CRS-en in Nederland. Wanneer ook de kolommen Datum2 en CS2 zijn ingevuld is sprake van een samengesteld (compound) CRS.
-
-|CRS-naam|EPSG-code            |Datum1          | CS1     |Datum2 | CS2 |Opmerking|
-|--------|--------------|----------------|---------|-------|------|------|
-|RD|28992|RD Bessel| Dubbelprojectie van Schreiber(x, y)|
-|NAP|5709|NAP| Waterpashoogte (H)||||
-|ETRS89|4258|ETRS89 |Geografisch 2D (ϕ, λ)|||Ensemble|
-|ETRS89|4937|ETRS89 |Geografisch 3D (ϕ, λ, h)|||Ensemble|
-|ETRS89|4936|ETRS89 |Geocentrisch (X, Y, Z)|||Ensemble|
-|ETRF2000|7931|ETRS89|Geografisch 3D (ϕ, λ, h)|||Aanbevolen ETRS89 realisatie voor geo-informatie|
-|ETRF2000|9067|ETRS89|Geografisch 2D (ϕ, λ)|||Aanbevolen ETRS89 realisatie voor geo-informatie|
-|ETRF2000|7930|ETRS89|Geocentrisch (X, Y ,Z)|||Aanbevolen ETRS89 realisatie voor geo-informatie|
-|EVRF2007|5621|NAP|Normaal hoogte (H)|||||
-|EVRF2019|9389|NAP|Normaal hoogte (H)|||||
-|RD + NAP|7415|RD Bessel|Geprojecteerd|NAP|Waterpashoogte (H)||
-|ETRS89 + NAP|7432|ETRS89|Geografisch|NAP|Waterpashoogte (H)|ETRS89=Ensemble|
-|ETRS89 + EVRF2007|7423|ETRS89|Geografisch|NAP|Normaal hoogte (H)|ETRS89=Ensemble|
-|ETRS89 + EVRF2019|9422|ETRS89|Geografisch|NAP|Normaal hoogte (H)|ETRS89=Ensemble|
-|ETRF2000 + NAP||ETRS89|Geografisch|NAP|Waterpashoogte (H)||
-|WGS 84|4258|WGS 84|Geografisch 2D (ϕ, λ)|||Ensemble|
-|WGS 84 (G2139)|9755|WGS 84|Geografisch 2D|||WGS 84 realisatie va 3 januari 2021|
 
 ### CRS in het informatiemodel
 
@@ -55,9 +33,23 @@ In een informatiemodel voor geo-informatie worden regels opgenomen voor het te g
 |Omgevingswet|Gebruik van RD en ETRS89 in GML-bestanden|https://geonovum.github.io/TPOD/CIMOW/IMOW_v2.0.0.pdf#page=15|
 |BRO Booronderzoek|2D: Gebruik van ETRS89 voor opslag, aanlevering toegestaan in RD, ETRS89 en WGS 84|https://docs.geostandaarden.nl/bro/bhr-g/#referentiestelsels-voor-de-horizontale-positie|
 
+<mark>Hier nog en bulletlist met dingen die genoemd moeten/kunnen worden</mark>
+
 ### Aandachtspunten bij gebruik van meerdere CRS-en
 
-Wanneer voor uitwisseling en visualisatie andere CRS-en worden gebruikt dan voor de opslag zijn er een aantal aandachtspunten, de belangrijkste zijn:
+Bij het gebruik van meerdere CRS-en bestaat risico op introductie van fouten of verstoringen door onjuiste implementatie an de realties tussen CRS-en. Eindgebruikers worden geadviseerd data waar mogeijk op te vragen in hetzelfde CRS.
+
+<div class="advisement">
+_ADVIES_ Vraag als eindgebruiker data zoveel mogelijk op in hetzelfde CRS.
+</div>
+
+Aanbieder van data worden geadviseerd om data aan te bieden in de verschilende CRS-en gericht op de eindgebruikers. Hierbij is het advies zo nauwkeurig mogelijk te transformeren, omdat het niet altijd duidelijk is wie de eindgebruiker is.
+
+<div class="advisement">
+_ADVIES_ Biedt data aan in CRS-en gericht op het eindgebruik en transformeer hierbij zo nauwkeurig mogelijk.
+</div>
+
+Wanneer voor opslag, uitwisseling en/of visualisatie andere CRS-en worden gebruikt zijn er een aantal aandachtspunten, de belangrijkste zijn:
 
 - Maak gebruik van een eenduidige coördinatentransformatie en coördinatenconversie |(en leg dit vast)
 - Voorkom dat geometrische of topologische verschillen ontstaan
@@ -94,16 +86,21 @@ Een rechte lijn in werkelijkheid is meestal geen rechte lijn in een kaart, maar 
 |10 m                    |20 km   |
 |100 m                   |50 km   |
 
-Voor een nauwkeurigheid van 1 mm zijn dus punten met 200 m tussenafstand nodig voor in Nederland gangbare projecties.
+Voor een nauwkeurigheid van 1 mm zijn dus punten met 200 m tussenafstand nodig voor in Nederland gangbare projecties. 
 
-### Nauwkeurigheid van coördinaten.
+
+<div class="advisement">
+_ADVIES_ Wanneer lijnen worden getransfomeerd met behulp van RDNAPTRANS mogen de lijnsegmenten niet langer zijn dan 200 meter om de geometrie eenduidig te transformeneren met nauwkeurigheid van RDNAPTRANS.
+</div>
+
+#### Nauwkeurigheid van coördinaten
 
 De nauwkeurigheid van de coördinaten opgenomen bij een geometrie moet minstens
 de nauwkeurigheid realiseren die vermeld wordt in het informatiemodel of
 bijgeleverde inwinningseisen. Meestal is het aantal decimalen dat in software
 standaard wordt opgeleverd groter. Deze decimalen hebben dan geen betekenis
 meer. Om te voorkomen dat er te grote databestanden ontstaan wordt aanbevolen de
-coördinaten af te ronden op 1 decimaal meer dan de nauwkeurigheid vanh de dataset vereist. Hierdoor kunen fouten bij herhaaldelijk heen en weer transformeren worden voorkomen.
+coördinaten af te ronden op 1 decimaal meer dan de nauwkeurigheid van de dataset vereist. Hierdoor kunnen fouten bij herhaaldelijk heen en weer transformeren worden voorkomen.
 
 <div class="example">
 _VOORBEELD_ zoals opgenomen in [IMOW](https://geonovum.github.io/TPOD/CIMOW/IMOW_v2.0.0.pdf#page=15) en het [model Basisgeometrie](https://docs.geostandaarden.nl/nen3610/def-st-basisgeometrie-20200930/#nauwkeurigheid-van-coordinaten)
@@ -123,19 +120,29 @@ decimalen. Afronding is volgens de volgende regel:
 0.0014 -\> 0.001.
 </div>
 
-### CRS in software
-Voorbeelden QGIS, proj, ESRI?
+#### Ondersteuning van meerdere CRS-en in software(biliotheken)
+
+Diverse software bibliotheken ondersteunen het gebruik van meerdere CRS-en.
+
+##### PROJ
+
+[PROJ](https://proj.org) is een open source softwarebiliotheek voor datumtransformaties en coördinaatconversies, tot february 2018 was de software bekend onder de naam PROJ.4. PROJ heeft zih ontwikkeld van een software voor conversie van coördinaten tot een software voor geodetische datumtransformaties en coördinaatconversies. In versie PROJ 8.1.1 worden RDNAPTRANS en tijdsafhankelijke transformaties ondersteund, versies gebasseerd op PROJ.4 (voor 2018) hebben deze ondersteuning niet. PROJ wordt onder andere gebruikt in de bibliotheek voor het omzetten van dataformaten [GDAL](https://gdal.org) en de open-source GIS-software [QGIS](https://qgis.org).
+
+##### GDAL
+
+##### QGIS
+
+##### ....
+
 ### CRS bij uitwisselingsformaten
 
-<mark style="background-color: SpringGreen">Voorbeeld(en?) hoe CRS-en worden gespecificeerd in uitwisselingsformaten</mark>
+Niet alle uitwisselingsformaten ondersteunen (volledig) het gebruik van meerdere CRS-en. De [Handreiking Geometrie in uitwisselingsformaten](https://geonovum.github.io/geox/) geeft een keuzehulp van gebruik van uitwisselingsformaten voor 2D vector bestanden, waarin ook de ondersteuning van CRS-en is opgenomen. De tabel hieronder geeft een samenvatting van de ondersteuning van CRS-en voor deze formaten.
 
-#### GeoJson
-
-#### GML
-
-#### Geopackage
-
-#### OGC API
-
-
+|Uitwisselingsformaat|RD urn:ogc:def:crs:EPSG::28992|ETRS89 urn:ogc:def:crs:EPSG::4258|WGS84 urn:ogc:def:crs:EPSG::4326|Web-Mercator urn:ogc:def:crs:EPSG::3857|
+|---|---|---|---|---|
+|[HTML](https://geonovum.github.io/geox/#html)|<span id="kruisje">&#10005;</span>|<span id="kruisje">&#10005;</span>|<span id="vinkje">&#10003;</span>|<span id="kruisje">&#10005;</span>|
+|[GeoJSON](https://geonovum.github.io/geox/#geojson)|<span id="tilde">&#65374;</span>|<span id="tilde">&#65374;</span>|<span id="vinkje">&#10003;</span>|<span id="tilde">&#65374;</span>|
+|[GeoPackage](https://geonovum.github.io/geox/#geopackage)|<span id="vinkje">&#10003;</span>|<span id="vinkje">&#10003;</span>|<span id="vinkje">&#10003;</span>|<span id="vinkje">&#10003;</span>|
+|[GML](https://geonovum.github.io/geox/#gml)|<span id="vinkje">&#10003;</span>|<span id="vinkje">&#10003;</span>|<span id="vinkje">&#10003;</span>|<span id="vinkje">&#10003;</span>|
+|[RDF](https://geonovum.github.io/geox/#rdf)|<span id="vinkje">&#10003;</span>|<span id="vinkje">&#10003;</span>|<span id="vinkje">&#10003;</span>|<span id="vinkje">&#10003;</span>|
 
