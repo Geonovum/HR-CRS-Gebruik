@@ -18,7 +18,7 @@ Een landelijk CRS is vaak een geprojecteerd CRS dat zo is gekozen dat de verstor
 #### Wereldwijde CRS-en
 
 ##### ITRS
-Het International Terrestrial Reference System geeft de definities om een wereldwijd CRS te kunnen realiseren, een ITRF is een reailisatie hiervan. ITRS wordt onderhouden door de IERS (International Earth Rotation Service). Het gebruik van International Terrestrial Reference Frame (ITRF) realisaties wordt door de International Union of Geodesy and Geophysics (IUGG) aangeraden voor plaatsbepaling, satellitenavigatie, toepasingen van aardwetenschappen en de vastlegging van nationale en regionale CRS-en [bron(http://www.iugg.org/resolutions/2019%20IUGG%20GA%20Resolutions.pdf)]. Om ITRF af te beelden in het platte vlak worden kaartprojecties gekozen afhankelijk van de toepassing.
+Het International Terrestrial Reference System geeft de definities om een wereldwijd CRS te kunnen realiseren, een ITRF is een reailisatie hiervan. ITRS wordt onderhouden door de IERS (International Earth Rotation Service). Het gebruik van International Terrestrial Reference Frame (ITRF) realisaties wordt door de International Union of Geodesy and Geophysics (IUGG) aangeraden voor plaatsbepaling, satellitenavigatie, toepasingen van aardwetenschappen en de vastlegging van nationale en regionale CRS-en [bron](http://www.iugg.org/resolutions/2019%20IUGG%20GA%20Resolutions.pdf). Om ITRF af te beelden in het platte vlak worden kaartprojecties gekozen afhankelijk van de toepassing.
 
 ##### WGS 84
 <!-- Status WGS 84 -->
@@ -141,7 +141,7 @@ Voor Nederlandse data mag voor ETRS89 de realisatie ETRF2000 worden gekozen. Wan
 Om te kunnen transformeren worden de door [[EUREF]] gepubliceerde tijdsafhankelijke transformatieparameters tussen ETRF2000 en ITRS gebruikt [[EUREF-TN1]] die ook in EPSG zijn opgenomen. Bij deze transformatie wordt de WGS 84-realisatie dan gelijkgesteld aan de bijbehorende ITRS-realisatie (ITRF2014 voor WGS 84 (G2139)). De keuze van het epoche kan voortkomen uit de datum van inwinning, publicatiedatum of een expliciete specificatie.
 
 <div class="example">
-_VOORBEELD_ Voor de uitwisseling van terein- en obstakelgegevens voor de luchtvaart in Europa [specificeert Eurocontrol](https://www.eurocontrol.int/sites/default/files/2021-07/eurocontrol-tod-manual-ed-3-0.pdf#page=125) dat het horizontale referentiesysteem WGS 84 is. In de [handreiking bij deze specificatie](https://www.eurocontrol.int/sites/default/files/publication/files/20130204-do-spec-vol.2-v1.0.pdf#page=16) wordt aangegeven dat WGS 84 voor deze toepassing wordt gelijkgesteld aan ITRF2000 op epoche 2010.0.
+_VOORBEELD_ Voor de uitwisseling van terein- en obstakelgegevens voor de luchtvaart in Europa [specificeert Eurocontrol](https://www.eurocontrol.int/sites/default/files/2021-07/eurocontrol-tod-manual-ed-3-0.pdf#page=125) dat het horizontale referentiesysteem WGS 84 is. In de [handreiking bij deze specificatie](https://www.eurocontrol.int/sites/default/files/publication/files/20130204-do-spec-vol.2-v1.0.pdf#page=16) wordt aangegeven dat WGS 84 voor deze toepassing wordt gelijkgesteld aan ITRF2000 op epoche 2000.0.
 </div>
 
 Indien de publicatiedatum van de dataset wordt gekozen als epoche voor de transformatie worden bij regelmatige updates (bijvoorbeeld jaarlijks) automatisch de WGS 84 coördinaten worden bijgesteld als gevolg van de platentektoniek. Wanneer als epoche de (gemiddelde) datum van de inwinning van de dataset, komen de coördinaten gemiddeld het best overeen met de WGS 84 coördinaten op het moment van inwinning.

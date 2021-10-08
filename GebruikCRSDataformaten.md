@@ -61,7 +61,7 @@ In het informatiemodel wordt bij voorkeur de volgende informatie meegegeven:
 - Hoe informatie over het bron CRS en de gebruikte transformaties wordt opgeslagen bij gebruik van meerdere CRS-en.
 - De numerieke precisie van coördinaten in het model.
 
-De volgende tabel geeft voorbeelden van het specificeren van het CRS in informatiemodellen:
+De volgende tabel geeft de link naar voorbeelden van het specificeren van het CRS in informatiemodellen:
 
 |Informatiemodel|Soort specificatie|Link|
 |---|---|---|
@@ -95,7 +95,7 @@ Het veranderen van coördinaten van het ene CRS naar het andere CRS wordt datumt
 
 <figure id="plaatje">
     <img src="media/conversionTransformation.jpg" alt="hr2">
-    <figcaption>Conversie en transformatie van coördinaten.</figcaption>
+    <figcaption>Datumtransformaties en coördinatenconversies. Horizontale bewerkingen zijn coördinaatconversies. De verticale bewerkingen zijn datumtransformaties van systeem A naar B. Niet weergegeven in dit diagram zijn het gebruik van correctiegrids of polynoomtransformaties (benaderingen) direct tussen geprojecteerde coördinaten of geografische coördinaten van de twee systemen. [bron](http://gnss1.tudelft.nl/pub/vdmarel/reader/CTB3310_RefSystems_1-2a_online.pdf#page=33).</figcaption>
 </figure>
 
 <div class="advisement">
@@ -109,7 +109,7 @@ Bij het ontwerp van het informatiemodel, landelijke voorziening of dataportaal k
   
 #### Geometrie en topologie
 
-Een rechte lijn in werkelijkheid is meestal geen rechte lijn in een kaart, maar een lijn die licht krom loopt. Om er voor te zorgen dat een grens in de kaart ongeacht de kaartprojectie met voldoende nauwkeurigheid eenduidig is heeft de NSGI herivoor een [advies](https://forum.pdok.nl/uploads/default/original/2X/c/c0795baa683bf3845c866ae4c576a880455be02a.pdf) geformuleerd. In dit advies staat dat lange lijnstukken van grenzen voorzien worden van tussenpunten. De afstand tussen deze tussenpunten is afhankelijk van de acceptabele lijnlengte en de locaties in Nederland, voor Europees Nederland inclusief EEZ kan de voglende tabel worden gehanteerd:
+Een rechte lijn in werkelijkheid is meestal geen rechte lijn in een kaart, maar een lijn die licht krom loopt. Om er voor te zorgen dat een grens in de kaart ongeacht de kaartprojectie met voldoende nauwkeurigheid eenduidig is heeft de NSGI hiervoor een [advies](https://forum.pdok.nl/uploads/default/original/2X/c/c0795baa683bf3845c866ae4c576a880455be02a.pdf) geformuleerd. In dit advies staat dat lange lijnstukken van grenzen voorzien worden van tussenpunten. De afstand tussen deze tussenpunten is afhankelijk van de acceptabele lijnlengte en de locaties in Nederland, voor Europees Nederland inclusief EEZ kan de voglende tabel worden gehanteerd:
 
 |Acceptabele afwijking|Advies lijnlengte|
 |----|----|
@@ -156,17 +156,26 @@ decimalen. Afronding is volgens de volgende regel:
 
 ### Ondersteuning van meerdere CRS-en in software(biliotheken)
 
-Diverse software bibliotheken ondersteunen het gebruik van meerdere CRS-en.
+Diverse software (bibliotheken) ondersteunen het gebruik van meerdere CRS-en. Deze paragraaf geeft een aantal voorbeelden en is zeker niet volledig.
 
 #### PROJ
 
 [PROJ](https://proj.org) is een open source softwarebiliotheek voor datumtransformaties en coördinaatconversies, tot february 2018 was de software bekend onder de naam PROJ.4. PROJ heeft zih ontwikkeld van een software voor conversie van coördinaten tot een software voor geodetische datumtransformaties en coördinaatconversies. In versie PROJ 8.1.1 worden RDNAPTRANS en tijdsafhankelijke transformaties ondersteund, versies gebasseerd op PROJ.4 (voor 2018) hebben deze ondersteuning niet. PROJ wordt onder andere gebruikt in de bibliotheek voor het omzetten van dataformaten [GDAL](https://gdal.org) en de open-source GIS-software [QGIS](https://qgis.org).
-
-#### GDAL
-
 #### QGIS
 
-#### ....
+QGIS is een open source GIS-software. De ondersteuning van datumtransforamties en coördinaatconversies is gebasseerd op PROJ. QGIS kan ook worden gebruikt om tussenpunten te berekenen volgens het [langelijnenadvies](#geometrie-en-topologie).
+
+<div class="example">
+_VOORBEELD_ QGIS 3.20 bevat diverse implementaties van de transformatie tussen RD en ETRS89 die zijn opgenomen in de EPSG-database. Zodra in een project RD en ETRS89 worden gebruikt verschijnt een pop-up met de vraag welke transformatie moet worden gebruikt, behalve wanneer de gebruiker al een default heeft geconfigureerd. De meest nauwkeurige transformatie, in eht geval van QGIS 3.20 is dat de 2D implementatie van RDNAPTRANS, wordt als eerste getoont. In oonderstaande figuur wordt het pop-up scherm getoond.
+
+<figure id="plaatje">
+    <img src="media/rdnaptrans2018_qgis.png" alt="hr2">
+    <figcaption>Keuzescherm voor transformatie tussen RD en ETRS89 in QGIS.</figcaption>
+</figure>
+
+De in rood omleidende elementen in de pop-up duiden hier op het gebruik van RDNAPTRANS, bijvoorbeeld de hoge nauwkeurigheid van de transformatie (0.001 m), de verwijzing naar RDNAPTRANS2018 in de omschrijving en het gebruik van het correctiegrid in de PROJ-string.
+</div>
+
 ### CRS bij uitwisselingsformaten
 
 Niet alle uitwisselingsformaten ondersteunen (volledig) het gebruik van meerdere CRS-en. De [Handreiking Geometrie in uitwisselingsformaten](https://geonovum.github.io/geox/) geeft een keuzehulp van gebruik van uitwisselingsformaten voor 2D vector bestanden, waarin ook de ondersteuning van CRS-en is opgenomen. De tabel hieronder geeft een samenvatting van de ondersteuning van CRS-en voor deze formaten.
