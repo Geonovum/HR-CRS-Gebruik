@@ -1,11 +1,11 @@
-## CRS-en in Nederland
-Voor uitwisseling en visualisatie kunnen in Nederland meerdere CRS-en worden gebruikt. Voor geo-informatie die is beperkt tot land en binnenwateren van Europees Nederland worden in het horizontale meestal coördinaten in RD of in het geografische ETRS89 gebruikt, voor de Noordzee en grensoverschrijdende datasets wordt meestal ETRS89 gebruikt. Het RD is een 2D CRS en ETRS89 en WGS84 zijn 3D CRS-en. WGS 84 is een mondiaal systeem dat in specifieke gevallen wordt gebruikt voor visualisatie.  Hoogten in ETRS89 en WGS 84 hebben geen fysische betekenis, hierom worden ook andere hoogtesystemen gebruikt in het bijzonder NAP op land en LAT op zee. De Nederlandse Samenwerking Geodetische Infrastructuur ([[NSGI]]) is verantwoordelijk voor de definitie en realisatie van de Nederlandse CRS-en en de relatie met het Europese CRS. [[NSGI]] is een samenwerkingsverband tussen Kadaster (Rijksdriehoeksmeting), Rijkswaterstaat (NAP) en de Dienst der Hydrografie (LAT). In dit hoofdstuk worden de belangrijkste CRS-en en hun relaties kort geïntroduceerd en toegelicht, uitgebreide informatie over de achtergrond van de relatie tussen RD (NAP) en ETRS89 is beschikbaar in de publicatie *De geodetische referentiestelsels van Nederland* [[NCG-GR-43]].
+## Gebruikte CRS-en in Nederland
+Voor uitwisseling en visualisatie kunnen in Nederland meerdere CRS-en worden gebruikt. Voor geo-informatie die is beperkt tot land en binnenwateren van Europees Nederland worden in het horizontale meestal coördinaten in RD of in het geografische ETRS89 gebruikt, voor de Noordzee en grensoverschrijdende datasets wordt meestal ETRS89 gebruikt. Het RD is een 2D CRS en ETRS89 en WGS84 zijn 3D CRS-en. WGS 84 is een mondiaal systeem dat in specifieke gevallen wordt gebruikt voor visualisatie.  Hoogten in ETRS89 en WGS 84 hebben geen fysische betekenis, hierom worden ook andere hoogtesystemen gebruikt in het bijzonder NAP op land en LAT op zee. De Nederlandse Samenwerking Geodetische Infrastructuur ([[NSGI]]) is verantwoordelijk voor de definitie en realisatie van de Nederlandse CRS-en en de relatie met het Europese CRS. In dit hoofdstuk worden de belangrijkste CRS-en en hun relaties kort geïntroduceerd en toegelicht, uitgebreide informatie over de achtergrond van de relatie tussen RD (NAP) en ETRS89 is beschikbaar in de publicatie *De geodetische referentiestelsels van Nederland* [[NCG-GR-43]].
 
 <div class="note">
 Lezer verwijzen naar bijlage over CRS-en (geografisch, geprojecteerd )
 </div>
 
-#### ETRS89
+#### Europees CRS: ETRS89
 <!-- Status ETRS89 -->
 
 Het Europese ETRS89 (European Terrestrial Reference System 1989) is sinds 1 oktober 2000 het officiële driedimensionale coördinatenstelsel van Nederland. Het Europese driedimensionale stelsels is daarmee ook het nationale driedimensionale stelsel. Nationale coördinatensystemen in Europa zijn gekoppeld aan ETRS89. 
@@ -41,8 +41,8 @@ _ADVIES_ Specificeer voor eenduidige koppeling aan het Nederlandse CRS dat bij i
 
 <mark>VOORBEELD GEVEN? bijvoorbeeld LVB?,  Dat het speelt bij bijv. inwinning geoinformatie, maar tegenwoordig ook bij bijv. precisielandbouw (en dat het in die nieuwe domeinen minder vaak goed gaat dan in de traditionele)?</mark>
 
-Opslag van geo-informatie in ETRS89 is ook mogelijk en wordt ondersteund in veel bestandsformaten en ruimtelijk databases.
-#### RD en NAP
+Opslag van geo-informatie in ETRS89 is ook mogelijk en wordt ondersteund in veel bestandsformaten en ruimtelijke databases.
+#### CRS op land: RD en NAP
 
 <!-- Gebruik RD en NAP -->
 
@@ -52,15 +52,15 @@ De beheerders en gebruikers van bestanden hebben bij de introductie van ETRS89 a
 
 <!-- Waarom RDNAPTRANS en relatie ETRS89 -->
 
-Bij de koppeling tussen ETRS89 en RD in de jaren 90 werden systematische verschillen gevonden. Deze verschillen zijn gemodelleerd in een correctiegrid, zodat bij de introductie van ETRS89 de RD-coördinaten niet wijzigden. Dit correctiegrid is onderdeel van de procedure RDNAPTRANS™ die wordt gebruikt voor het omzetten van ETRS89 naar RD/NAP en vice-versa. Ellipsoïdische hoogten in ETRS89 kunnen met het quasi-geoïdemodel naar NAP worden getransformeerd met een precisie die hoger is dan de ETRS89-coördinaten die met de meeste GNSS-metingen zijn verkregen. Deze transformatie is onderdeel van de procedure RDNAPTRANS™. RDNAPTRANS™ kent verschillende versies in veel (oudere) GIS-paketten is RDNAPTRANS™ niet volledig geïmplementeerd wat fouten op decimeterniveau oplevert. De NSGI publiceert de actuele procedure RDNAPTRANS™ en transformatievalidatieservice op haar [website]([[NSGI]]). Voor de transformatie tussen RD/NAP en ETRS89 met gebruik van de RDNAPTRANS procedure is tevens API beschikbaar bij de NSGI. Voorbeelden van implementatie van RDNAPTRANS in software wordt gegeven in de paragraaf [CRS in software](#crs-in-software).
+Bij de koppeling tussen ETRS89 en RD in de jaren 90 werden systematische verschillen gevonden. Deze verschillen zijn gemodelleerd in een correctiegrid, zodat bij de introductie van ETRS89 de RD-coördinaten niet wijzigden. Dit correctiegrid is onderdeel van de procedure RDNAPTRANS™ die wordt gebruikt voor het omzetten van ETRS89 naar RD/NAP en vice-versa. Ellipsoïdische hoogten in ETRS89 kunnen met het quasi-geoïdemodel naar NAP worden getransformeerd met een precisie die hoger is dan de ETRS89-coördinaten die met de meeste GNSS-metingen zijn verkregen. Deze transformatie is onderdeel van de procedure RDNAPTRANS™. RDNAPTRANS™ kent verschillende versies, in veel (oudere) GIS-paketten is RDNAPTRANS™ niet volledig geïmplementeerd wat fouten op decimeterniveau oplevert. De NSGI publiceert de actuele procedure RDNAPTRANS™ en transformatievalidatieservice op haar [website]([[NSGI]]). Voor de transformatie tussen RD/NAP en ETRS89 met gebruik van de RDNAPTRANS procedure is tevens een [transformatie-API](https://www.nsgi.nl/coordinatentransformatie-api) beschikbaar bij de NSGI. Voorbeelden van implementatie van RDNAPTRANS in software wordt gegeven in de paragraaf [CRS in software](#crs-in-software).
 
 <div class="advisement">
 _ADVIES_ (of _EIS_?) Voor de uitwisseling van geo-informatie binnen Europa is het nadrukkelijke advies om altijd de weg via ETRS89 te kiezen. Bij gebruik van de actuele RDNAPTRANS™ procedure is daarbij voor het Nederlandse deel een nauwkeurigheid op centimeterniveau gewaarborgd. 
 </div>
 
-#### <mark>Hoogte systeem op zee</mark>
+#### <mark>CRS op zee: LAT</mark>
 
-#### ITRS en WGS 84
+#### Wereldwijde CRS-en
 
 ##### ITRS
 Het International Terrestrial Reference System geeft de definties om een wereldwijd CRS te kunnen realiseren, een ITRF is een reailisatie hiervan. ITRS wordt onderhouden door de IERS (International Earth Rotation Service). Het gebruik van International Terrestrial Reference Frame (ITRF) realisaties wordt door de International Union of Geodesy and Geophysics (IUGG) aangeraden voor plaatsbepaling, satellitenavigatie, toepasingen van aardwetenschappen en de vastlegging van nationale en regionale CRS-en [bron(http://www.iugg.org/resolutions/2019%20IUGG%20GA%20Resolutions.pdf)].
