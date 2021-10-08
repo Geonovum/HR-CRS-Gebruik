@@ -48,6 +48,8 @@ ETRS89 wordt gebruikt voor uitwisseling van Europese geo-informatie in het kader
 _ADVIES_ Gebruik voor visualisatie van ETRS89 data een aanbevolen kaartprojectie. Aanbevolen projecties zijn de RD-projectie voor Nederland inclusief de Exclusieve Economische Zone of INSPIRE-projecties voor groter gebieden binnen Europa.
 </div>
 
+Opslag van geo-informatie in ETRS89 is ook mogelijk en wordt ondersteund in veel bestandsformaten en ruimtelijke databases.
+
 ##### Realisaties van ETRS89
 <!-- Realisaties ETRS89 -->
 
@@ -72,9 +74,23 @@ _ADVIES_ Specificeer voor eenduidige koppeling aan het Nederlandse CRS dat bij i
 </div>
 
 
-<mark>VOORBEELD GEVEN? bijvoorbeeld LVB?,  Dat het speelt bij bijv. inwinning geoinformatie, maar tegenwoordig ook bij bijv. precisielandbouw (en dat het in die nieuwe domeinen minder vaak goed gaat dan in de traditionele)?</mark>
+<div class="example">
+_VOORBEELD_ In de [aanbesteding Beeldmateriaal 5](https://www.tenderned.nl/tenderned-tap/aankondigingen/199678) is door Het Waterschapshuis de volgende passage opgenomen om zekerheid te hebben over aansluiting van de ingenwonnen data aan het Nederlandse CRS:
 
-Opslag van geo-informatie in ETRS89 is ook mogelijk en wordt ondersteund in veel bestandsformaten en ruimtelijke databases.
+Voor het inmeten van coördinaten met een GNSS-techniek moet voor de aansluiting aan het
+Nederlandse driedimensionale coördinatenstelsel gebruik gemaakt worden van één van de volgende referenties:
+- AGRS.NL.
+- NETPOS.
+- Een door het Kadaster gecertificeerde GNSS-dienstverlener.
+- GNSS-kernnetpunt(en) met een actualiteit van maximaal vijf jaar.
+</div>
+
+<div class="note">
+Hier nog iets meegeven dat het speelt bij bijv. inwinning geoinformatie, maar tegenwoordig ook bij bijv. precisielandbouw (en dat het in die nieuwe domeinen minder vaak goed gaat dan in de traditionele)? 
+
+Bijvoorbeeld zoiets specifiek voor landbouw: Voor precisielandbouw is zijn nauwkeurige correcties voor GNSS-waarnemingen nodig. In de landbouw sector zijn verschillende antionale en internationale dienstverleners actief. Deze dienstverleners gebruiken verschillende CRS-en. Wanneer tijdens de precisielandbouwcyclus van zaaien tot oogsten wordt gewisseld van GNSS-dienstverlener, bijvoorbeeld door het wisselen van abonnement of gebruik van verschillende dienstverleners door verschillende loonbedrijven, kunnen systematische verschillen tussen de CRS-en van de dienstverleners zorgen voor schade aan gewassen en verlies van opbrengsten. Bij gebruik van gecertificeerde GNSS-dienstverleners wordt dit risico geminimaliseerd, doordat de certificering zekerheid geeft over het gebruikte CRS.
+</div>
+
 #### CRS op land: RD en NAP
 
 <!-- Gebruik RD en NAP -->
@@ -122,7 +138,11 @@ Wanneer de dataspecificatie expliciet een realisatie en epoche van WGS 84 benoem
 
 Voor Nederlandse data mag voor ETRS89 de realisatie ETRF2000 worden gekozen. Wanneer de WGS 84 realisatie niet is gespecificeerd wordt dan de meest recente realisatie gekozen (WGS 84 (G2139), EPSG:9755) of de realisatie van het (gemiddelde) moment van inwinning van de dataset.
 
-Om te kunnen transformeren worden de door [[EUREF]] gepubliceerde tijdsafhankelijke transformatieparameters tussen ETRF2000 en ITRS gebruikt [[EUREF-TN1]] die ook in EPSG zijn opgenomen. Bij deze transformatie wordt de WGS 84-realisatie dan gelijkgesteld aan de bijbehorende ITRS-realisatie (ITRF2014 voor WGS 84 (G2139)). De keuze van het epoche kan voortkomen uit de datum van inwinning, publicatiedatum of een expliciete specificatie, zoals bijvoorbeeld is gedaan in de luchtvaart sector waar EUROCONTROL heeft gekozen om WGS 84 gelijk te stellen aan ITRF2000 op epoche 2000.0 (bron: https://www.eurocontrol.int/sites/default/files/publication/files/20130204-do-spec-vol.2-v1.0.pdf#page=16
+Om te kunnen transformeren worden de door [[EUREF]] gepubliceerde tijdsafhankelijke transformatieparameters tussen ETRF2000 en ITRS gebruikt [[EUREF-TN1]] die ook in EPSG zijn opgenomen. Bij deze transformatie wordt de WGS 84-realisatie dan gelijkgesteld aan de bijbehorende ITRS-realisatie (ITRF2014 voor WGS 84 (G2139)). De keuze van het epoche kan voortkomen uit de datum van inwinning, publicatiedatum of een expliciete specificatie.
+
+<div class="example">
+_VOORBEELD_ Voor de uitwisseling van terein- en obstakelgegevens voor de luchtvaart in Europa [specificeert Eurocontrol](https://www.eurocontrol.int/sites/default/files/2021-07/eurocontrol-tod-manual-ed-3-0.pdf#page=125) dat het horizontale referentiesysteem WGS 84 is. In de [handreiking bij deze specificatie](https://www.eurocontrol.int/sites/default/files/publication/files/20130204-do-spec-vol.2-v1.0.pdf#page=16) wordt aangegeven dat WGS 84 voor deze toepassing wordt gelijkgesteld aan ITRF2000 op epoche 2010.0.
+</div>
 
 Indien de publicatiedatum van de dataset wordt gekozen als epoche voor de transformatie worden bij regelmatige updates (bijvoorbeeld jaarlijks) automatisch de WGS 84 coördinaten worden bijgesteld als gevolg van de platentektoniek. Wanneer als epoche de (gemiddelde) datum van de inwinning van de dataset, komen de coördinaten gemiddeld het best overeen met de WGS 84 coördinaten op het moment van inwinning.
 

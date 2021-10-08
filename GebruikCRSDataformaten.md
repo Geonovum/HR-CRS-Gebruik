@@ -3,12 +3,18 @@
 Dit hoofdstuk gaat in op gebruik van de beschreven CRS-en. 
 
 
-### Opbouw en naamgeving van CRS
+### Opbouw van CRS
 
-Een CRS is opgebouwd uit een datum en een coördinaat systeem (CS). <mark>Het datum geeft </mark>
+Een CRS is opgebouwd uit een datum en een coördinaatsysteem. Het coördinaatsysteem definieert hoe coördinaten worden uitgedrukt, bijvoorbeeld cartesisch of geografisch. Het datum geeft de relatie van het coördinaatsysteem met de vorm van de aarde en het aardoppervlak. RD en NAP zijn beide een CRS, de combinatie van RD en NAP is een samengesteld (engels: compound) CRS.
 
+<div class="example">
+_VOORBEELD_ RD/NAP is het samengestelde CRS uit RD en NAP. Schematisch wordt dit als volgt weergegeven:
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggXG4gICAgQVtcIlNhbWVuZ2VzdGVsZCBDUlM8YnIgLz5SRE5BUFwiXVxuICAgIEJbQ1JTPGJyIC8-UkRdXG4gICAgQ1tDUlM8YnIgLz5OQVBdXG4gICAgQjFbXCJHZW9kZXRpc2NoIGRhdHVtPGJyIC8-UkQgQmVzc2VsXCJdXG4gICAgQjJbXCJDb29yZGluYXRlbnN5c3RlZW08YnIgLz5EdWJiZWxwcm9qZWN0aWUgdmFuIFNjaHJlaWJlcjxiciAvPk5vdGF0aWU6IHgseSBbbV1cIl1cbiAgICBDMVtcIlZlcnRpa2FhbCBkYXR1bTxiciAvPk5BUFwiXVxuICAgIEMyW1wiQ29vcmRpbmF0ZW5zeXN0ZWVtPGJyIC8-T3J0aG9tZXRyaXNjaGUgaG9vZ3RlbjxiciAvPk5vdGF0aWU6IEggW21dXCJdXG4gIEEtLS1CXG4gIEEtLS1DXG4gIEItLS1CMVxuICBCLS0tQjJcbiAgQy0tLUMxXG4gIEMtLS1DMlxuICAiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/edit#eyJjb2RlIjoiZ3JhcGggXG4gICAgQVtcIlNhbWVuZ2VzdGVsZCBDUlM8YnIgLz5SRE5BUFwiXVxuICAgIEJbQ1JTPGJyIC8-UkRdXG4gICAgQ1tDUlM8YnIgLz5OQVBdXG4gICAgQjFbXCJHZW9kZXRpc2NoIGRhdHVtPGJyIC8-UkQgQmVzc2VsXCJdXG4gICAgQjJbXCJDb29yZGluYXRlbnN5c3RlZW08YnIgLz5EdWJiZWxwcm9qZWN0aWUgdmFuIFNjaHJlaWJlcjxiciAvPk5vdGF0aWU6IHgseSBbbV1cIl1cbiAgICBDMVtcIlZlcnRpa2FhbCBkYXR1bTxiciAvPk5BUFwiXVxuICAgIEMyW1wiQ29vcmRpbmF0ZW5zeXN0ZWVtPGJyIC8-T3J0aG9tZXRyaXNjaGUgaG9vZ3RlbjxiciAvPk5vdGF0aWU6IEggW21dXCJdXG4gIEEtLS1CXG4gIEEtLS1DXG4gIEItLS1CMVxuICBCLS0tQjJcbiAgQy0tLUMxXG4gIEMtLS1DMlxuICAiLCJtZXJtYWlkIjoie1xuICBcInRoZW1lXCI6IFwiZGVmYXVsdFwiXG59IiwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ)
+</div>
 
-CRS-en worden in de praktijk op verschillende manieren aangeduidt. In hoofdstuk 2 zijn de officiële benamingen gebruikt, bij opslag en uitwisseling van geo-informatie wordt vaak gebruik gemaakt van gestandaardiseerde aanduiding van de CRS-en in de vorm van een OGC URN of Name Type Specification (NTS) voor CRS-en. Deze hebben de volgende structuur:
+### Naamgeving van CRS
+
+CRS-en worden in de praktijk op verschillende manieren aangeduid. In hoofdstuk 2 zijn de officiële benamingen gebruikt, bij opslag en uitwisseling van geo-informatie wordt vaak gebruik gemaakt van gestandaardiseerde aanduiding van de CRS-en in de vorm van een OGC URN of Name Type Specification (NTS) voor CRS-en. Deze hebben de volgende structuur:
 
 |Type aanduiding|structuur|
 |----|----|
@@ -16,7 +22,7 @@ CRS-en worden in de praktijk op verschillende manieren aangeduidt. In hoofdstuk 
 |NTS|http://www.opengis.net/def/crs/_authority_/_version_/_code_|
 |NTS|http://www.opengis.net/def/crs?authority=_authority_&version=_version_&code=_code_|
 
-In deze aanduiding wordt meestal EPSG als de-facto autoriteit gebruikt, maar ook ISO is een voorbeeld van een autoriteit. Bij gebruik van de laatste versie van de database van de authority wordt bij URN _version_ leeg gelaten, terwijl bij de NTS _version_=0 wordt gebruikt. In [Bijlage C](#crs-overzicht-tabel) is een tabel opgenomen met de EPSG-codes voor veelgebruikte CRS-en in Nederland. Met behulp van deze tabel kan de URN en NTS worden afgeleidt, bijvoorbeeld voor het RD (EPSG:code 28992), resulteert dit in de volgende aanduidingen.
+In deze aanduiding wordt meestal EPSG als de-facto autoriteit gebruikt, maar ook ISO is een voorbeeld van een autoriteit. Bij gebruik van de laatste versie van de database van de authority wordt bij URN _version_ leeg gelaten, terwijl bij de NTS _version_=0 wordt gebruikt. In [Bijlage A](#crs-overzicht-tabel) is een tabel opgenomen met de EPSG-codes voor veelgebruikte CRS-en in Nederland. Met behulp van deze tabel kan de URN en NTS worden afgeleidt, bijvoorbeeld voor het RD (EPSG:code 28992), resulteert dit in de volgende aanduidingen.
 
 |Type aanduiding|structuur|
 |----|----|
@@ -43,9 +49,6 @@ Voor de BRO is de keten echter anders:
 Bij de BRO kunnen bronhouders in verschillende CRS-en aanbieden. Bij intake in de landelijke voorziening wordt gertransformeerd naar ETRS89. Voor uitwisseling en visualisatie worden tussen dataplatform en gebruiker ETRS89, RD en WGS84 gebruikt, waarbij voor ETRS89 en WGS84 verschillende projecties mogelijk zijn. 
 
 Bij DSO zijn weer andere keuzes gemaakt, waaronder het dubbel opslaan van data in twee CRS-en:
-
-
-
 
 
 </div>

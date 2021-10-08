@@ -15,10 +15,10 @@ Geo-informatie is direct gekoppeld aan locaties op aarde. De wijze waarop dat ge
 
 De gebruikte CRS-en voor de opslag en uitwisseling van geo-informatie zijn in het algemeen onder te verdelen in drie groepen. Geprojecteerde, geografische en geocentrische CRS-en. Geprojecteerde CRS-en presenteren geo-informatie op een plat vlak in rechthoekige (x en y) coördinaten, een voorbeeld is het Nederlandse RD. Geografische CRS-en geven geografische coördinaten (lengte en breedte (engels: longitude en latitude) en soms hoogte) ten opzichte van een model van het aardoppervlak, vaak een ellipsoïde zoals bij WGS 84. Geocentrische coördinaten komen minder vaak voor bij opslag en gebruik van geo-informatie, geocentrische coördinaten geven 3D-coördinaten (X, Y en Z) ten opzichte van het middelpunt van de aarde. Het is belangrijk om te realiseren dat de geocentische X en Y coördinaten niet in het platte vlak liggen, zoals geprojecteerde x en y coördinaten.
 
-CRS-en nemen vaak de vorm van de aarde als uitgangspunt om de locaties vast te leggen. Maar het is ingewikkeld om de vorm van de aarde exact te beschrijven en werkelijkheid van het gekromde aardoppervlak in een plat vlak (kaart) weer te geven. Voor het weergeven van geo-informatie op een plat vlak worden [kaartprojecties](#kaartprojecties-de-aarde-plat-slaan) gebruikt. De weergave in het platte vlak is niet mogelijk zonder vervormingen die afhankelijk zjn van de keuze van de kaartprojectie. Een kaarprojectie kan hoekgetrouw, afstandsgetrouw en/of oppervlakte getrouw zijn, maar niet alle drie eigenschappen tegelijk hebben. Een kaartprojectie bevat dus altijd minimaal een vervorming in hoeken, afstanden of oppervlakten. Dat wil zeggen dat gelijke hoeken, afstanden of oppervlakten in werkelijkheid op de kaart niet allemaal gelijk aan elkaar zijn.
+CRS-en nemen vaak de vorm van de aarde als uitgangspunt om de locaties vast te leggen. Maar het is ingewikkeld om de vorm van de aarde exact te beschrijven en werkelijkheid van het gekromde aardoppervlak in een plat vlak (kaart) weer te geven. Voor het weergeven van geo-informatie op een plat vlak worden kaartprojecties gebruikt. De weergave in het platte vlak is niet mogelijk zonder vervormingen die afhankelijk zjn van de keuze van de kaartprojectie. Een kaarprojectie kan hoekgetrouw, afstandsgetrouw en/of oppervlakte getrouw zijn, maar niet alle drie eigenschappen tegelijk hebben. Een kaartprojectie bevat dus altijd minimaal een vervorming in hoeken, afstanden of oppervlakten. Dat wil zeggen dat gelijke hoeken, afstanden of oppervlakten in werkelijkheid op de kaart niet allemaal gelijk aan elkaar zijn.
 
 <div class="note">
-Figuur toevoegen van verschillende projecties voor zelfde gebied?
+Onderdeel van de documentatie van Open Source GIS programma QGIS is 'Een kleine introductie in GIS'. Deze introductie gaat onder andere in op [kaartprojecties](https://docs.qgis.org/3.16/nl/docs/gentle_gis_introduction/coordinate_reference_systems.html#overview).
 </div>
 
 Voor de inwinning, verwerking, uitwisseling en visualisatie van geo-informatie worden in de praktijk voor dezelfde dataset verschillende CRS-en gebruikt. De keuze van het meest geschikte hangt af van de toepassing en het gebied. Voor afbeelding van geo-data van alleen Nederland is een ander CRS geschikt dan afbeelden van heel Europa of de hele wereld. In veel gevallen wordt de dataset opgeslagen in één CRS. Bij uitwisseling en visualisatie van geo-informatie is het dus belang om een CRS te kiezen dat geschikt is voor de (gebruikers)toepassing. Spatial Data on the Web Best Practices [[SDW-BP]] raden aan om data voor visualisatie te publiceren in wereldwijd bruikbare CRS-en, omdat de gebruikerstoepassing niet altijd bekend is. De wereldwijdbruikbare CRS-en hebben als voordeel dat gebruik voor niet-specialisten laagdrempeliger wordt, maar deze CRS-en zijn bedoeld voor gebruik op kleine (wereldwijde) schaal en niet voor grootschalige toepassingen. Het gebruik van deze wereldwijde CRS-en geeft risico op systematische afwijkingen of inconsistenties wanneer de data niet alleen wordt gebruikt voor visualisatie of wanneer datasets worden gecombineerd. Hiervoor moeten zowel aanbieder, ontwikkelaar als eindgebruiker een afweging maken tussen laagdrempelig gebruik van geo-informatie en mogelijke gevolgen voor de beoogde toepassingen van de data.
@@ -61,21 +61,6 @@ Het hoofdstuk [CRS-en in Nederland](#crs-en-in-nederland) geeft een overzicht va
 Het onderdeel [Specificatie CRS](#specificeren-van-crs) geeft aan hoe CRS-en eenduidig worden gespecificeerd en vastgelegd voor uitwisseling en visualisatie. De paragraaf naamgeving is voor alle lezers bedoeld, de overige paragraven zijn gericht op  dataaanbieders, modelleurs, en applicatieontwikkelaars.
 
 De bijlagen met achtergrondinformatie geven een uitgebreidere toelichting op onderdelen die in specifieke gevallen relevant is of te uitgebreid voor de algemene tekst.
-### Adviezen/opmerkingen die ergens een plek moeten krijgen
-
-- Data-aanbieder (welk CRS mogelijk voor visualisatie, hoe transformeer je, welke formaten ondersteunen CRS-en, hierbij denken aan gebruik)
-
-- Desktop GIS-gebruiker (eigenschappen van CRS-en (projecties))
-
-
-- Applicatieontwikkelaar (waar moet je je opdrachtgever om vragen om eenduidig te kunnen implementeren (bv EPSG-code))
-<div class="example">
-De paradox is datJe weet niet wie je data gebruikt. 
-</div>
-- Architect/Modelleur van registraties (CRS-ondersteuning registraties --> [standaardparagraaf](#crs-in-het-informatiemodel) maken?)
-
-
-
 ### Het proces
 
 *Beschrijf het proces waarmee dit document is ontwikkeld*

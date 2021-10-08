@@ -1,4 +1,4 @@
-## Bijlage C: CRS overzicht tabel
+## Bijlage A: CRS overzicht tabel
 
 Onderstaande tabel geeft EPSG-code, het datum en het coördinaat systeem voor veelgebruikte CRS-en in Nederland. Wanneer ook de kolommen Datum2 en CS2 zijn ingevuld is sprake van een samengesteld (compound) CRS.
 
