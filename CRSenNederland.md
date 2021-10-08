@@ -1,8 +1,38 @@
 ## Gebruikte CRS-en in Nederland
-Voor uitwisseling en visualisatie kunnen in Nederland meerdere CRS-en worden gebruikt. Voor geo-informatie die is beperkt tot land en binnenwateren van Europees Nederland worden in het horizontale meestal coördinaten in RD of in het geografische ETRS89 gebruikt, voor de Noordzee en grensoverschrijdende datasets wordt meestal ETRS89 gebruikt. Het RD is een 2D CRS en ETRS89 en WGS84 zijn 3D CRS-en. WGS 84 is een mondiaal systeem dat in specifieke gevallen wordt gebruikt voor visualisatie.  Hoogten in ETRS89 en WGS 84 hebben geen fysische betekenis, hierom worden ook andere hoogtesystemen gebruikt in het bijzonder NAP op land en LAT op zee. De Nederlandse Samenwerking Geodetische Infrastructuur ([[NSGI]]) is verantwoordelijk voor de definitie en realisatie van de Nederlandse CRS-en en de relatie met het Europese CRS. In dit hoofdstuk worden de belangrijkste CRS-en en hun relaties kort geïntroduceerd en toegelicht, uitgebreide informatie over de achtergrond van de relatie tussen RD (NAP) en ETRS89 is beschikbaar in de publicatie *De geodetische referentiestelsels van Nederland* [[NCG-GR-43]].
 
-<div class="note">
-Lezer verwijzen naar bijlage over CRS-en (geografisch, geprojecteerd )
+Voor uitwisseling en visualisatie kunnen in Nederland meerdere CRS-en worden gebruikt. Voor geo-informatie die is beperkt tot land en binnenwateren van Europees Nederland worden in het horizontale meestal coördinaten in RD of in het geografische ETRS89 gebruikt, voor de Noordzee en grensoverschrijdende datasets wordt meestal ETRS89 gebruikt. Het RD is een 2D CRS en ETRS89 en WGS84 zijn 3D CRS-en. WGS 84 wordt in specifieke gevallen wordt gebruikt voor visualisatie.  Hoogten in ETRS89 en WGS 84 hebben geen fysische betekenis, hierom worden ook andere hoogtesystemen gebruikt in het bijzonder NAP op land en LAT op zee. De Nederlandse Samenwerking Geodetische Infrastructuur ([[NSGI]]) is verantwoordelijk voor de definitie en realisatie van de Nederlandse CRS-en en de relatie met het Europese CRS. In dit hoofdstuk worden de belangrijkste CRS-en en hun relaties kort geïntroduceerd en toegelicht, uitgebreide informatie over de achtergrond van de relatie tussen RD (NAP) en ETRS89 is beschikbaar in de publicatie *De geodetische referentiestelsels van Nederland* [[NCG-GR-43]].
+
+### Indeling van CRS-en
+
+CRS-en die gebruikt worden in het Nederlandse domein van geo-informatie kunnen worden ingedeeld in drie groepen:
+
+1. Wereldwijde CRS-en
+2. Continentale of regionale CRS-en
+3. Landelijke CRS-en
+
+Een wereldwijde CRS-en is en CRS dat gemiddeld zo goed mogelijk bij de vorm van de aarde aansluit. Wereldwijde CRS-en zijn bedoeld voor kleinschalige of wereldwijde toepassingen, bijvoorbeeld wereldkaarten, satellietnavigatie en het beschrijven processen zoals zeestromingen en platen tektoniek. Wereldwijde CRS-en zijn minder geschikt voor het nauwkeurig vastleggen van coördinaten, doordat in een wereldwijd CRS coördinaten tijdsafhankelijk zijn als gevolg van platentektoniek. Voorbeelden van wereldwijde CRS-en zijn het ITRS en WGS 84.
+
+Een continentaal of regionaal CRS is gekoppeld aan een tektonische plaat, hierdoor bewegen coördinaten in het CRS mee met de tektonische plaat. In een regionaal CRS zijn coördinaten stabiel, behalve bij lokale bodembeweging bijvoorbeeld in berggebieden of als gevolg van de post-glacial rebound in Scandinavië. De euraziatische plaat beweegt met enkele centimeters per jaar naar het noordoosten, het Europese CRS ETRS89 is gekoppeld aan de eurziatische plaat en beweegt dus mee. Voor een punt in Nederland is na 10 jaar coördinaatverschil van hetzelfde punt in ETRS89 verwaarloosbaar, terwijl in een wereldwijd CRS zoals WGS 84 het coördinaatverschil enkele decimeters is.
+
+Een landelijk CRS is vaak een geprojecteerd CRS dat zo is gekozen dat de verstoringen in het platte vlak minimaal zijn. Nauwkeurige wereldwijde en regionale CRS-en zijn mogelijk geworden door satellietplaatsbeoalingstechnieken, nauwkeurige landelijke CRS-en dateren vaak uit de 20e eeuw waar hoge nauwkeurigheid alleen op landelijk niveau kon worden gerealiseerd. Het verschil in oorsprong, schaal en orientatie van landelijke CRS-en kan honderden meters verschillen met de regionale en wereldwijde CRS-en. Het stelsel van de Rijksdriehoeksmeting (RD) is het landelijke CRS voor Nederland.
+#### Wereldwijde CRS-en
+
+##### ITRS
+Het International Terrestrial Reference System geeft de definities om een wereldwijd CRS te kunnen realiseren, een ITRF is een reailisatie hiervan. ITRS wordt onderhouden door de IERS (International Earth Rotation Service). Het gebruik van International Terrestrial Reference Frame (ITRF) realisaties wordt door de International Union of Geodesy and Geophysics (IUGG) aangeraden voor plaatsbepaling, satellitenavigatie, toepasingen van aardwetenschappen en de vastlegging van nationale en regionale CRS-en [bron(http://www.iugg.org/resolutions/2019%20IUGG%20GA%20Resolutions.pdf)]. Om ITRF af te beelden in het platte vlak worden kaartprojecties gekozen afhankelijk van de toepassing.
+
+##### WGS 84
+<!-- Status WGS 84 -->
+
+Het World Geodetic System 1984 (WGS 84) is het wereldwijde driedimensionale CRS dat wordt gebruikt door het Amerikaanse GNSS-systeem GPS. WGS 84 wodt beheerd door de U.S. National Geospatial Intelligence Agency (NGA). Toegang tot WGS 84 is in Nederland alleen mogelijk via het stand-alone gebruik van de GPS-satellieten. WGS 84-posities kunnen daarom alleen op meterniveau m.b.v. GPS-metingen worden verkregen. 
+
+<!-- WGS 84 is niet eenduidig -->
+
+Voor de realisaties van WGS 84 zijn in het verleden verschillende strategieën gebruikt waarbij een beperkt aantal stations wereldwijd zijn gebruikt. Hierdoor zijn er verschillen van twee meter tussen de eerste en latere realisatie en op decimeter niveau tussen de latere realisaties.  Voor nauwkeurige eenduidige definitie van het CRS is het daarom nodig een specifieke realisatie van WGS 84 te vermelden (bijvoorbeeld 3D WGS 84 (G2139), EPSG:9755). Sinds 1994 is WGS 84 indirect gekoppeld aan ITRS. WGS 84 en ITRS-realisaties op hetzelfde epoche komen momenteel op centimeterniveau overeen, zo kan bijvoorbeeld WGS 84 (G2139) worden gelijkgesteld aan ITRF2014 voor plaatsbepaling en navigatie [bron](https://earth-info.nga.mil/php/download.php?file=(U)WGS%2084(G2139).pdf). Het verschil tussen WGS 84/ITRS en ETRS89 op 1 januari 2025 is ongeveer 88 centimeter, dit neemt toe met 2,4 centimeter per jaar.
+
+In de praktijk wordt vaak over WGS 84 gesproken, ook als het onderliggende CRS eigenlijk ITRS of ETRS89 is. WGS 84 wordt dan ook niet aanbevolen voor uitwisseling van data. Voor visualisatie op het web ondersteunt de tooling vaak direct kaartprojecties op basis van WGS 84. OGC richtlijnen bevelen WGS 84 aan voor laagdrempelige visualisatie van geo-data op het web en het gebruik van de web-mercator projectie voor het afbeelden in een plat vlak. Web-mercator is een projectie die alleen geschikt is voor visualisatie, door de grote verstoringen in de schaal zijn coördinaten in deze projectie zijn niet geschikt voor het berekenen van bijvoorbeeld afstanden en oppervlakten. 
+
+<div class="advisement">
+_ADVIES_ Vanwege niet eenduidige gebruik van WGS 84 definities en verstoringen in de web-mercator projectie is het advies WGS 84 alleen te gebruiken voor visualisatie en dit alleen te doen wanneer de toepassing geen hoge nauwkeurigheid vereist.
 </div>
 
 #### Europees CRS: ETRS89
@@ -18,9 +48,10 @@ ETRS89 wordt gebruikt voor uitwisseling van Europese geo-informatie in het kader
 _ADVIES_ Gebruik voor visualisatie van ETRS89 data een aanbevolen kaartprojectie. Aanbevolen projecties zijn de RD-projectie voor Nederland inclusief de Exclusieve Economische Zone of INSPIRE-projecties voor groter gebieden binnen Europa.
 </div>
 
+##### Realisaties van ETRS89
 <!-- Realisaties ETRS89 -->
 
-[[EUREF]] is de organisatie die verantwoordelijk is voor de definitie en realisatie van ETRS89. ETRS89 is gekoppeld aan de Euraziatsche plaat en is afgeleid van het International Terrestrial Reference System (ITRS). De Euraziatische plaat verschuift met circa 2,5 centimeter per jaar, waardoor de relatie tussen ETRS89 en ITRS-realisaties (zoals WGS 84) en dus de coördinatentransformatie tijdsafhankelijk is. Coördinaten in ETRS89 en ITRS op het tijdstip 1989.0 zijn hetzelfde. Door de koppeling van ETRS89 aan de Euraziatische plaat wordt de gemiddelde tektonische beweging van het stabiele deel van Europa geëlimineerd en is de verandering van coördinaten in de tijd voor veel toepassingen binnen Europa te verwaarlozen. De realisaties van ETRS89 worden ook gebruikt voor wetenschappelijke doeleinden en verbeteren continue. Als voorbeeld: het verschil tussen de door veel landen gebruikte realisatie ETRF2000 en de recentere realisatie ETRF2014 kan oplopen tot 7 centimeter. 
+[[EUREF]] is de organisatie die verantwoordelijk is voor de definitie en realisatie van ETRS89. ETRS89 is gekoppeld aan de Euraziatische plaat en is afgeleid van het International Terrestrial Reference System (ITRS). De Euraziatische plaat verschuift met circa 2,5 centimeter per jaar, waardoor de relatie tussen ETRS89 en ITRS-realisaties (zoals WGS 84) en dus de coördinatentransformatie tijdsafhankelijk is. Coördinaten in ETRS89 en ITRS op het tijdstip 1989.0 zijn hetzelfde. Door de koppeling van ETRS89 aan de Euraziatische plaat wordt de gemiddelde tektonische beweging van het stabiele deel van Europa geëlimineerd en is de verandering van coördinaten in de tijd voor veel toepassingen binnen Europa te verwaarlozen. De realisaties van ETRS89 worden ook gebruikt voor wetenschappelijke doeleinden en verbeteren continue. Als voorbeeld: het verschil tussen de door veel landen gebruikte realisatie ETRF2000 en de recentere realisatie ETRF2014 kan oplopen tot 7 centimeter. 
 
 <!-- Eenduidig gebruik ETRF2000 als ETRS89 realisatie voor geo-informatie -->
 
@@ -31,6 +62,8 @@ Voor uitwisseling van geo-informatie in ETRS89 wordt dus geadviseerd om ETRF2000
 <div class="advisement">
 _ADVIES_ Specificeer voor datasets met een nauwkeurigheid op centimeter niveau als CRS de ETRS89-realisatie. Voor Nederland is dit sinds 2002 ETRF2000 (EPSG:9067 (2D) of EPSG:7931 (3D)). Voor nauwkeurige hoogtes is het advies ook het tijdstip (epoche) te vermelden waarop de realisatie geldig is, bijvoorbeeld 2010.5 bij aansluiting aan AGRS2010.
 </div>
+
+##### Certificering voor eenduidig CRS bij inwinning
 
 Voor inwinning van geo-informatie met GNSS-metingen (GPS, Galileo, GLONASS en BeiDou) certificeert de NSGI GNSS-dienstverleners. Bij gebruik van gecertificeerde diensten voor GNSS-metingen geeft zekerheid dat de metingen direct eenduidig gekoppeld zijn aan ETRF2000 volgens de actuele AGRS.NL realisatie. Het gebruik van gecertificeerde diensten wordt vaak opgenomen in productspecificaties, bestekken en handboeken.
 
@@ -48,59 +81,50 @@ Opslag van geo-informatie in ETRS89 is ook mogelijk en wordt ondersteund in veel
 
 Voor opslag, uitwisseling en visualisatie van geo-informatie op land en binnenwateren van het Europese deel van Nederland worden voor het horizontale vlak (2D) meestal coördinaten in het Nederlandse Stelsel van de Rijksdriehoeksmeting (RD) gebruikt. Voor het verticale vlak zijn hoogten ten opzichte van Normaal Amsterdams Peil (NAP) de officiële en meest gebruikte hoogten. RD-coördinaten zijn cartesisch in meters in een platvlak. Doordat RD en NAP in meters zijn en de RD-projectie minimale vervormingen geeft kan eenvoudig worden gerekend met deze coördinaten, voor nauwkeurige berekeningen van afstanden en oppervlakten correctieformules beschikbaar of kunnen complexere formules worden gebruikt op de ellipsoïde (deze zijn in GIS-paketten vaak standaard geïmplementeerd). 
 
-De beheerders en gebruikers van bestanden hebben bij de introductie van ETRS89 aangegeven RD te willen handhaven, maar wel graag een koppeling te zien met ETRS89. In 2000 is een nieuwe definitie geïntroduceerd waardoor het RD-stelsel een transformatie van de ETRS89-realisatie is. Het onderhouden van referentiepunten voor ETRS89 in Nederland en de omzetting naar RD-coördinaten zijn wettelijke taken van het Kadaster binnen NSGI. NAP wordt bepaald door de gepubliceerde hoogtes van NAP-peilmerken, hetgeen een wettelijke verantwoordelijkheid is van Rijkswaterstaat binnen NSGI. 
+De beheerders en gebruikers van bestanden hebben bij de introductie van ETRS89 aangegeven RD te willen handhaven, maar wel graag een koppeling te zien met ETRS89. In 2000 is een nieuwe definitie geïntroduceerd waardoor het RD-stelsel een transformatie van de ETRS89-realisatie is. De relatie tussen ETRS89 en RD/NAP is vastgelegd in de procedure [[RDNAPTRANS™]]. Het onderhouden van referentiepunten voor ETRS89 in Nederland en de omzetting naar RD-coördinaten zijn wettelijke taken van het Kadaster binnen NSGI. NAP wordt bepaald door de gepubliceerde hoogtes van NAP-peilmerken, hetgeen een wettelijke verantwoordelijkheid is van Rijkswaterstaat binnen NSGI. 
+#### <mark>CRS op zee: LAT</mark>
+
+### Relaties tussen CRS-en
+
+De relatie tussen CRS-en die zijn gebaseerd op een verschillende datum is vastgelegd in een [datumtransformatie](#datumtransformatie-en-conversie). De relaties RD/NAP, ETRS89, ITRS en WGS84 zijn weergegeven in onderstaande figuur met daarbij de organisatie die de gegevens van datumtransformatie beheerd.
+
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFIgXG4gICAgQVtSRF1cbiAgICBCW0VUUlM4OV1cbiAgICBDW0lUUlNdXG4gICAgRFtXR1MgODRdXG4gICAgXG4gIEEtLS18XCJOU0dJIChSRE5BUFRSQU5TKVwifEJcbiAgQi0tLXxFVVJFRnxDXG4gIEMtLS18TkdBfERcbiAgIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiZ3JhcGggTFIgXG4gICAgQVtSRF1cbiAgICBCW0VUUlM4OV1cbiAgICBDW0lUUlNdXG4gICAgRFtXR1MgODRdXG4gICAgXG4gIEEtLS18XCJOU0dJIChSRE5BUFRSQU5TKVwifEJcbiAgQi0tLXxFVVJFRnxDXG4gIEMtLS18TkdBfERcbiAgIiwibWVybWFpZCI6IntcbiAgXCJ0aGVtZVwiOiBcImRlZmF1bHRcIlxufSIsInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)
+
+In de volgende paragraven worden de datumtransformaties tusse RD en ETRS89 en tussen ETRS89 en WGS 84 beschreven.
+
+#### Datumtransformatie en conversie tussen RD/NAP en ETRS89
 
 <!-- Waarom RDNAPTRANS en relatie ETRS89 -->
 
-Bij de koppeling tussen ETRS89 en RD in de jaren 90 werden systematische verschillen gevonden. Deze verschillen zijn gemodelleerd in een correctiegrid, zodat bij de introductie van ETRS89 de RD-coördinaten niet wijzigden. Dit correctiegrid is onderdeel van de procedure RDNAPTRANS™ die wordt gebruikt voor het omzetten van ETRS89 naar RD/NAP en vice-versa. Ellipsoïdische hoogten in ETRS89 kunnen met het quasi-geoïdemodel naar NAP worden getransformeerd met een precisie die hoger is dan de ETRS89-coördinaten die met de meeste GNSS-metingen zijn verkregen. Deze transformatie is onderdeel van de procedure RDNAPTRANS™. RDNAPTRANS™ kent verschillende versies, in veel (oudere) GIS-paketten is RDNAPTRANS™ niet volledig geïmplementeerd wat fouten op decimeterniveau oplevert. De NSGI publiceert de actuele procedure RDNAPTRANS™ en transformatievalidatieservice op haar [website]([[NSGI]]). Voor de transformatie tussen RD/NAP en ETRS89 met gebruik van de RDNAPTRANS procedure is tevens een [transformatie-API](https://www.nsgi.nl/coordinatentransformatie-api) beschikbaar bij de NSGI. Voorbeelden van implementatie van RDNAPTRANS in software wordt gegeven in de paragraaf [CRS in software](#crs-in-software).
+Bij de koppeling tussen ETRS89 en RD in de jaren 90 werden systematische verschillen gevonden.Vanwege de wens van gebruikers dat RD-coördinaten niet wijzigden bij de introductie van ETRS89 is ervoor gekozen om de verschillen te modelleren in correctiegrid die deel uitmaakt van de datumtransforamtie en conversie procedure tussen geprojecteerde RD-coördinaten en geografische ETRS89-coördinaten. NAP hoogten kunnen met een quasi-geoïdemodel naar ellipsoïdische hoogten in ETRS89 worden getransformeerd met een precisie die hoger is dan de ETRS89-coördinaten die met de meeste GNSS-metingen wordt verkregen. Het correctiegrid en quais-geoïdemodel zijn onderdeel van de procedure RDNAPTRANS™. 
+
+RDNAPTRANS™ kent verschillende versies, in veel (oudere) GIS-paketten is RDNAPTRANS™ niet volledig geïmplementeerd wat fouten op decimeterniveau oplevert. De NSGI publiceert de actuele procedure RDNAPTRANS™ en transformatievalidatieservice op haar [website]([[NSGI]]). Voor de transformatie tussen RD/NAP en ETRS89 met gebruik van de RDNAPTRANS procedure is tevens een [transformatie-API](https://www.nsgi.nl/coordinatentransformatie-api) beschikbaar bij de NSGI. Voorbeelden van implementatie van RDNAPTRANS in software wordt gegeven in de paragraaf [CRS in software](#crs-in-software).
 
 <div class="advisement">
-_ADVIES_ (of _EIS_?) Voor de uitwisseling van geo-informatie binnen Europa is het nadrukkelijke advies om altijd de weg via ETRS89 te kiezen. Bij gebruik van de actuele RDNAPTRANS™ procedure is daarbij voor het Nederlandse deel een nauwkeurigheid op centimeterniveau gewaarborgd. 
+_ADVIES_  Voor de uitwisseling van geo-informatie binnen Europa is het nadrukkelijke advies om altijd de weg via ETRS89 te kiezen. Bij gebruik van de actuele RDNAPTRANS™ procedure is daarbij voor het Nederlandse deel een nauwkeurigheid op centimeterniveau gewaarborgd. 
 </div>
 
-#### <mark>CRS op zee: LAT</mark>
-
-#### Wereldwijde CRS-en
-
-##### ITRS
-Het International Terrestrial Reference System geeft de definties om een wereldwijd CRS te kunnen realiseren, een ITRF is een reailisatie hiervan. ITRS wordt onderhouden door de IERS (International Earth Rotation Service). Het gebruik van International Terrestrial Reference Frame (ITRF) realisaties wordt door de International Union of Geodesy and Geophysics (IUGG) aangeraden voor plaatsbepaling, satellitenavigatie, toepasingen van aardwetenschappen en de vastlegging van nationale en regionale CRS-en [bron(http://www.iugg.org/resolutions/2019%20IUGG%20GA%20Resolutions.pdf)].
-
-##### WGS 84
-<!-- Status WGS 84 -->
-
-Het World Geodetic System 1984 (WGS 84) is het wereldwijde driedimensionale CRS dat wordt gebruikt door het Amerikaanse GNSS-systeem GPS. Toegang tot WGS 84 is in Nederland alleen mogelijk via het stand-alone gebruik van de GPS-satellieten. WGS 84-posities kunnen daarom alleen op meterniveau m.b.v. GPS-metingen worden verkregen. 
-
-<!-- WGS 84 is niet eenduidig -->
-
-Voor de realisaties van WGS 84 zijn in het verleden verschillende strategieën gebruikt waarbij een beperkt aantal stations wereldwijd zijn gebruikt. Hierdoor zijn er verschillen van twee meter tussen de eerste en latere realisatie en op decimeter niveau tussen de latere realisaties.  Voor nauwkeurige eenduidige definitie van het CRS is het daarom nodig een specifieke realisatie van WGS 84 te vermelden (bijvoorbeeld 3D WGS 84 (G2139), EPSG:9755). Sinds 1994 is WGS 84 indirect gekoppeld aan ITRS. WGS 84 en ITRS-realisaties op hetzelfde epoche komen momenteel op centimeterniveau overeen, zo kan bijvoorbeeld WGS 84 (G2139) worden gelijkgesteld aan ITRF2014 voor plaatsbepaling en navigatie [bron](https://earth-info.nga.mil/php/download.php?file=(U)WGS%2084(G2139).pdf). Het verschil tussen WGS 84/ITRS en ETRS89 op 1 januari 2025 is ongeveer 88 centimeter, dit neemt toe met 2,4 centimeter per jaar.
-
-In de praktijk wordt vaak over WGS 84 gesproken, ook als het onderliggende CRS eigenlijk ITRS of ETRS89 is. WGS 84 wordt dan ook niet aanbevolen voor uitwisseling van data. Voor visualisatie op het web ondersteunt de tooling vaak direct kaartprojecties op basis van WGS 84. OGC richtlijnen bevelen WGS 84 aan voor laagdrempelige visualisatie van geo-data op het web. <mark style="background-color: Chartreuse">Vanwege het niet eenduidige gebruik van WGS 84 wordt geadviseerd data alleen te visualiseren in WGS 84 wanneer de toepassing geen hoge nauwkeurigheid vereisen</mark>.
-
+#### Datumtransformatie tussen ETRS89 en WGS 84 
 <!--Strategieën gebruik WGS 84 bij bron in RD of ETRS89 -->
 
-Wanneer na zorgvuldige afweging toch gebruik wordt gemaakt van WGS 84 bij uitwisseling en visualisatie van data waarbij de bron in RD of ETRS89 is, zijn verschillende strategieën mogelijk die in de volgende paragraven worden beschreven.
+Wanneer na zorgvuldige afweging toch gebruik wordt gemaakt van WGS 84 voor visualisatie of uitwisseling zijn verschillende strategieën mogelijk die in de volgende paragraven worden beschreven.
 ###### WGS 84 gelijkstellen aan ETRS89
 
-Wanneer het beoogd gebruik van de data bestaat uit visualisatie of combinatie met andere datasets kan worden gekozen om WGS 84 en ETRS89 aan elkaar gelijk te stellen. Dit is de standaard implementatie in meerdere GIS-paketten, omdat zonder expliciete melding van de WGS 84 en ETRS89 realisaties de EPSG-parameters voor de transformatie een nultransformatie geven.
-###### Tijdsafhankelijke transformatie van ETRS89 naar WGS 84
-
-Wanneer de dataspecificatie expliciet een realisatie van WGS 84 benoemd, of data gecombineerd wordt met de locatieinformatie van de eindgebruiker kan worden gekozen de transformatie tussen ETRS89 en WGS 84 uit te voeren op voor een specifieke realisatie op een specifiek epoche. 
-
-Voor Nederlandse data mag voor ETRS89 de realisatie ETRF2000 worden gekozen. Wanneer de WGS 84 realisatie niet is gespecificeerd wordt dan de meest recente realisatie gekozen (WGS 84 (G2139), EPSG:9755) of de realisatie van het (gemiddelde) moment van inwinning van de dataset.
-
-Om te kunnen transformeren worden de door [[EUREF]] gepubliceerde tijdsafhankelijke transformatieparameters van ETRF2000 naar ITRS gebruikt [[EUREF-TN1]] die ook in EPSG zijn opgenomen. Bij deze transformatie wordt de WGS 84-realisatie dan gelijkgesteld aan de bijbehorende ITRS-realisatie (ITRF2014 voor WGS 84 (G2139)). De keuze van het epoche kan voortkomen uit de specificatie, wanneer geen epoche is gespecificeerd wordt zijn er een aantal mogelijkheden:
-
-1. Kies het epoche 1989.0, dit is het epoche dat overeenkomt met de definitie van ETRS89 en geeft kleine coördinaatverschillen tussen WGS 84 en ETRS89;
-2. Kies de publicatiedatum van de dataset, zodat bij regelmatige updates (bijvoorbeeld) jaarlijks de WGS 84 coördinaten worden bijgesteld als gevolg van de platentektoniek;
-3. Kies als epoche de (gemiddelde) datum van de inwinning van de dataset, de coördinaten komen dan gemiddeld het best overeen met de WGS 84 coördinaten op het moment van inwinning.
-
-In het informatiemodel van de BRO is gekozen voor het opnemen van de eerste en derde mogelijkheid in de waardelijst van het attribuut [Coördinaattransformatie](https://docs.geostandaarden.nl/bro/bhr-g/#detail_class_Model_Cordinaattransformatie) op te nemen.
+Wanneer de brondata in RD of ETRS89 is en het beoogd gebruik van de data bestaat uit visualisatie of combinatie met andere datasets, kan worden gekozen om WGS 84 en ETRS89 aan elkaar gelijk te stellen. Dit is de standaard implementatie in meerdere GIS-paketten, namelijk dat zonder expliciete vermelding van de WGS 84 en ETRS89-realisaties een nultransformatie wordt gebruikt. De nauwkeurigheid van de nultransformatie is circa 2 meter.
 
 <div class="note">
 Bij gebruik van data waarbij het aangegeven CRS WGS 84 is zonder duidelijke informatieover het CRS van de brondata, de gebruikte transformaties, realisatie en/of het epoche moet de gebruiker er rekening mee houden dat de data systematische fouten in de orde van meters kan bevatten. 
 </div>
 
-### Relaties tussen CRS-en
+###### Tijdsafhankelijke transformatie tussen ETRS89 en WGS 84
 
-- Vereenvoudigde versie van [Conversie en Transformatie](#conversie-en-transformatie) en [Relaties](#overzicht-conversie-en-transformaties)
+Wanneer de dataspecificatie expliciet een realisatie en epoche van WGS 84 benoemd, of data gecombineerd wordt met de locatieinformatie van de eindgebruiker kan worden gekozen de transformatie tussen ETRS89 en WGS 84 uit te voeren met hoge nauwkeurigheid voor een specifieke realisatie op een specifiek epoche. 
+
+Voor Nederlandse data mag voor ETRS89 de realisatie ETRF2000 worden gekozen. Wanneer de WGS 84 realisatie niet is gespecificeerd wordt dan de meest recente realisatie gekozen (WGS 84 (G2139), EPSG:9755) of de realisatie van het (gemiddelde) moment van inwinning van de dataset.
+
+Om te kunnen transformeren worden de door [[EUREF]] gepubliceerde tijdsafhankelijke transformatieparameters tussen ETRF2000 en ITRS gebruikt [[EUREF-TN1]] die ook in EPSG zijn opgenomen. Bij deze transformatie wordt de WGS 84-realisatie dan gelijkgesteld aan de bijbehorende ITRS-realisatie (ITRF2014 voor WGS 84 (G2139)). De keuze van het epoche kan voortkomen uit de datum van inwinning, publicatiedatum of een expliciete specificatie, zoals bijvoorbeeld is gedaan in de luchtvaart sector waar EUROCONTROL heeft gekozen om WGS 84 gelijk te stellen aan ITRF2000 op epoche 2000.0 (bron: https://www.eurocontrol.int/sites/default/files/publication/files/20130204-do-spec-vol.2-v1.0.pdf#page=16
+
+Indien de publicatiedatum van de dataset wordt gekozen als epoche voor de transformatie worden bij regelmatige updates (bijvoorbeeld jaarlijks) automatisch de WGS 84 coördinaten worden bijgesteld als gevolg van de platentektoniek. Wanneer als epoche de (gemiddelde) datum van de inwinning van de dataset, komen de coördinaten gemiddeld het best overeen met de WGS 84 coördinaten op het moment van inwinning.
+
+
 
