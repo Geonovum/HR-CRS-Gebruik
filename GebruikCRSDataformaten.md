@@ -89,13 +89,13 @@ Wanneer voor opslag, uitwisseling en/of visualisatie andere CRS-en worden gebrui
 - Voorkom dat geometrische of topologische verschillen ontstaan
 - Significantie van decimalen
 
-#### Datumtransformatie en conversie
+#### Datumtransformatie en coördinatenconversie
 
 Het veranderen van coördinaten van het ene CRS naar het andere CRS wordt datumtransformatie genoemd. Het uitdrukken van coördinaten in een ander coördinatensysteem, bijvoorbeeld van geografisch naar geprojecteerd, noemen we  coördinatenconversie. De relatie wordt afgebeeld in onderstaande figuur en verder uitgelegd in [bron](http://gnss1.tudelft.nl/pub/vdmarel/reader/CTB3310_RefSystems_1-2a_online.pdf#page=33).
 
 <figure id="plaatje">
     <img src="media/conversionTransformation.jpg" alt="hr2">
-    <figcaption>Datumtransformaties en coördinatenconversies. Horizontale bewerkingen zijn coördinaatconversies. De verticale bewerkingen zijn datumtransformaties van systeem A naar B. Niet weergegeven in dit diagram zijn het gebruik van correctiegrids of polynoomtransformaties (benaderingen) direct tussen geprojecteerde coördinaten of geografische coördinaten van de twee systemen. [bron](http://gnss1.tudelft.nl/pub/vdmarel/reader/CTB3310_RefSystems_1-2a_online.pdf#page=33).</figcaption>
+    <figcaption>Datumtransformaties en coördinatenconversies. Horizontale bewerkingen zijn coördinaatconversies. De verticale bewerkingen zijn datumtransformaties van systeem A naar B. Niet weergegeven in dit diagram zijn het gebruik van correctiegrids of polynoomtransformaties (benaderingen) direct tussen geprojecteerde coördinaten of geografische coördinaten van de twee systemen. <a href="http://gnss1.tudelft.nl/pub/vdmarel/reader/CTB3310_RefSystems_1-2a_online.pdf#page=33">bron</a>.</figcaption>
 </figure>
 
 <div class="advisement">
@@ -160,13 +160,13 @@ Diverse software (bibliotheken) ondersteunen het gebruik van meerdere CRS-en. De
 
 #### PROJ
 
-[PROJ](https://proj.org) is een open source softwarebiliotheek voor datumtransformaties en coördinaatconversies, tot february 2018 was de software bekend onder de naam PROJ.4. PROJ heeft zih ontwikkeld van een software voor conversie van coördinaten tot een software voor geodetische datumtransformaties en coördinaatconversies. In versie PROJ 8.1.1 worden RDNAPTRANS en tijdsafhankelijke transformaties ondersteund, versies gebasseerd op PROJ.4 (voor 2018) hebben deze ondersteuning niet. PROJ wordt onder andere gebruikt in de bibliotheek voor het omzetten van dataformaten [GDAL](https://gdal.org) en de open-source GIS-software [QGIS](https://qgis.org).
+[PROJ](https://proj.org) is een open source softwarebiliotheek voor datumtransformaties en coördinaatconversies, tot februari 2018 was de software bekend onder de naam PROJ.4. PROJ heeft zih ontwikkeld van een software voor conversie van coördinaten tot een software voor geodetische datumtransformaties en coördinaatconversies. In versie PROJ 8.1.1 worden RDNAPTRANS en tijdsafhankelijke transformaties ondersteund, versies gebasseerd op PROJ.4 (voor 2018) hebben deze ondersteuning niet. PROJ wordt onder andere gebruikt in de bibliotheek voor het omzetten van dataformaten [GDAL](https://gdal.org) en de open-source GIS-software [QGIS](https://qgis.org).
 #### QGIS
 
-QGIS is een open source GIS-software. De ondersteuning van datumtransforamties en coördinaatconversies is gebasseerd op PROJ. QGIS kan ook worden gebruikt om tussenpunten te berekenen volgens het [langelijnenadvies](#geometrie-en-topologie).
+[QGIS](https://www.qgis.org/) is een open source GIS-software. De ondersteuning van datumtransformaties en coördinaatconversies is gebaseerd op PROJ. QGIS kan ook worden gebruikt om tussenpunten te berekenen volgens het [langelijnenadvies](#geometrie-en-topologie).
 
 <div class="example">
-_VOORBEELD_ QGIS 3.20 bevat diverse implementaties van de transformatie tussen RD en ETRS89 die zijn opgenomen in de EPSG-database. Zodra in een project RD en ETRS89 worden gebruikt verschijnt een pop-up met de vraag welke transformatie moet worden gebruikt, behalve wanneer de gebruiker al een default heeft geconfigureerd. De meest nauwkeurige transformatie, in eht geval van QGIS 3.20 is dat de 2D implementatie van RDNAPTRANS, wordt als eerste getoont. In oonderstaande figuur wordt het pop-up scherm getoond.
+_VOORBEELD_ QGIS 3.20 bevat diverse implementaties van de transformatie tussen RD en ETRS89 die zijn opgenomen in de EPSG-database. Zodra in een project RD en ETRS89 worden gebruikt verschijnt een pop-up met de vraag welke transformatie moet worden gebruikt, behalve wanneer de gebruiker al een default heeft geconfigureerd. De meest nauwkeurige transformatie, in eht geval van QGIS 3.20 is dat de 2D implementatie van RDNAPTRANS, wordt als eerste getoont. In onderstaande figuur wordt het pop-up scherm getoond.
 
 <figure id="plaatje">
     <img src="media/rdnaptrans2018_qgis.png" alt="hr2">

@@ -108,7 +108,7 @@ De relatie tussen CRS-en die zijn gebaseerd op een verschillende datum is vastge
 
 In de volgende paragraven worden de datumtransformaties tusse RD en ETRS89 en tussen ETRS89 en WGS 84 beschreven.
 
-#### Datumtransformatie en conversie tussen RD/NAP en ETRS89
+#### Transformatie en conversie tussen RD/NAP en ETRS89
 
 <!-- Waarom RDNAPTRANS en relatie ETRS89 -->
 
@@ -120,7 +120,7 @@ RDNAPTRANS™ kent verschillende versies, in veel (oudere) GIS-paketten is RDNAP
 _ADVIES_  Voor de uitwisseling van geo-informatie binnen Europa is het nadrukkelijke advies om altijd de weg via ETRS89 te kiezen. Bij gebruik van de actuele RDNAPTRANS™ procedure is daarbij voor het Nederlandse deel een nauwkeurigheid op centimeterniveau gewaarborgd. 
 </div>
 
-#### Datumtransformatie tussen ETRS89 en WGS 84 
+#### Transformatie tussen ETRS89 en WGS 84 
 <!--Strategieën gebruik WGS 84 bij bron in RD of ETRS89 -->
 
 Wanneer na zorgvuldige afweging toch gebruik wordt gemaakt van WGS 84 voor visualisatie of uitwisseling zijn verschillende strategieën mogelijk die in de volgende paragraven worden beschreven.
