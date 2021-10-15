@@ -20,4 +20,6 @@ Onderstaande tabel geeft EPSG-code, het datum en het coördinaat systeem voor ve
 |ETRS89 + EVRF2019|9422|ETRS89|Geografisch|NAP|Normaal hoogte (H)|ETRS89=Ensemble|
 |ETRF2000 + NAP||ETRS89|Geografisch|NAP|Waterpashoogte (H)||
 |WGS 84|4258|WGS 84|Geografisch 2D (ϕ, λ)|||Ensemble|
+|WGS 84|4979|WGS 84|Geografisch 3D (ϕ, λ)|||Ensemble|
 |WGS 84 (G2139)|9755|WGS 84|Geografisch 2D|||WGS 84 realisatie va 3 januari 2021|
+|WGS 84 / Web Mercator of Pseudo Mercator|3857|WGS 84|Gesimplifiseerde mercator projectie (x, y)|||Geen geodetisch CRS, alleen geschikt eenvoudige visualisatie van onnauwkeurige data|

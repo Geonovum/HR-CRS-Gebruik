@@ -13,12 +13,14 @@ Hiermee is een geodetisch onderwerp als CRS in toenemene mate ook een geo-inform
 ### Introductie coördinaatreferentiesystemen (CRS)
 Geo-informatie is direct gekoppeld aan locaties op aarde. De wijze waarop dat gebeurt wordt beschreven in het coördinaatreferentiesysteem (CRS) waarbij coördinaten van een locatie worden vastgelegd. RD, ETRS89 en WGS84 zijn voorbeelden van CRS-en. 
 
-De gebruikte CRS-en voor de opslag en uitwisseling van geo-informatie zijn in het algemeen onder te verdelen in drie groepen. Geprojecteerde, geografische en geocentrische CRS-en. Geprojecteerde CRS-en presenteren geo-informatie op een plat vlak in rechthoekige (x en y) coördinaten, een voorbeeld is het Nederlandse RD. Geografische CRS-en geven geografische coördinaten (lengte en breedte (engels: longitude en latitude) en soms hoogte) ten opzichte van een model van het aardoppervlak, vaak een ellipsoïde zoals bij WGS 84. Geocentrische coördinaten komen minder vaak voor bij opslag en gebruik van geo-informatie, geocentrische coördinaten geven 3D-coördinaten (X, Y en Z) ten opzichte van het middelpunt van de aarde. Het is belangrijk om te realiseren dat de geocentische X en Y coördinaten niet in het platte vlak liggen, zoals geprojecteerde x en y coördinaten.
+De gebruikte CRS-en voor de opslag en uitwisseling van geo-informatie zijn in het algemeen onder te verdelen in drie groepen. Geprojecteerde, geografische en geocentrische CRS-en. Geprojecteerde CRS-en presenteren geo-informatie op een plat vlak in rechthoekige (x en y) coördinaten, een voorbeeld is het Nederlandse RD. Geografische CRS-en geven geografische coördinaten (lengte en breedte (engels: longitude en latitude) en soms hoogte) ten opzichte van een model van het aardoppervlak, vaak een ellipsoïde zoals bij WGS 84. Geocentrische coördinaten komen minder vaak voor bij opslag en gebruik van geo-informatie, geocentrische coördinaten geven 3D-coördinaten (X, Y en Z) ten opzichte van het middelpunt van de aarde. Het is belangrijk om te realiseren dat de geocentrische X en Y coördinaten niet in het platte vlak liggen, zoals geprojecteerde x en y coördinaten.
 
-CRS-en nemen vaak de vorm van de aarde als uitgangspunt om de locaties vast te leggen. Maar het is ingewikkeld om de vorm van de aarde exact te beschrijven en werkelijkheid van het gekromde aardoppervlak in een plat vlak (kaart) weer te geven. Voor het weergeven van geo-informatie op een plat vlak worden kaartprojecties gebruikt. De weergave in het platte vlak is niet mogelijk zonder vervormingen die afhankelijk zjn van de keuze van de kaartprojectie. Een kaarprojectie kan hoekgetrouw, afstandsgetrouw en/of oppervlakte getrouw zijn, maar niet alle drie eigenschappen tegelijk hebben. Een kaartprojectie bevat dus altijd minimaal een vervorming in hoeken, afstanden of oppervlakten. Dat wil zeggen dat gelijke hoeken, afstanden of oppervlakten in werkelijkheid op de kaart niet allemaal gelijk aan elkaar zijn.
+CRS-en nemen vaak de vorm van de aarde als uitgangspunt om de locaties vast te leggen. Maar het is ingewikkeld om de vorm van de aarde exact te beschrijven en de werkelijkheid van het gekromde aardoppervlak in een plat vlak (kaart) weer te geven. Voor het weergeven van geo-informatie in een plat vlak worden kaartprojecties gebruikt. De weergave in het platte vlak is niet mogelijk zonder vervormingen die afhankelijk zjn van de keuze van de kaartprojectie. Een kaarprojectie kan hoekgetrouw, afstandsgetrouw en/of oppervlakte getrouw zijn, maar niet alle drie eigenschappen tegelijk hebben. Een kaartprojectie bevat dus altijd minimaal een vervorming in hoeken, afstanden of oppervlakten. Dat wil zeggen dat gelijke hoeken, afstanden of oppervlakten in werkelijkheid op de kaart niet allemaal gelijk aan elkaar zijn.
 
 <div class="note">
 Onderdeel van de documentatie van Open Source GIS programma QGIS is 'Een kleine introductie in GIS'. Deze introductie gaat onder andere in op [kaartprojecties](https://docs.qgis.org/3.16/nl/docs/gentle_gis_introduction/coordinate_reference_systems.html#overview).
+
+Hoe dit opnemen in handreiking?
 </div>
 
 Voor de inwinning, verwerking, uitwisseling en visualisatie van geo-informatie worden in de praktijk voor dezelfde dataset verschillende CRS-en gebruikt. De keuze van het meest geschikte hangt af van de toepassing en het gebied. Voor afbeelding van geo-data van alleen Nederland is een ander CRS geschikt dan afbeelden van heel Europa of de hele wereld. In veel gevallen wordt de dataset opgeslagen in één CRS. Bij uitwisseling en visualisatie van geo-informatie is het dus belang om een CRS te kiezen dat geschikt is voor de (gebruikers)toepassing. Spatial Data on the Web Best Practices [[SDW-BP]] raden aan om data voor visualisatie te publiceren in wereldwijd bruikbare CRS-en, omdat de gebruikerstoepassing niet altijd bekend is. De wereldwijdbruikbare CRS-en hebben als voordeel dat gebruik voor niet-specialisten laagdrempeliger wordt, maar deze CRS-en zijn bedoeld voor gebruik op kleine (wereldwijde) schaal en niet voor grootschalige toepassingen. Het gebruik van deze wereldwijde CRS-en geeft risico op systematische afwijkingen of inconsistenties wanneer de data niet alleen wordt gebruikt voor visualisatie of wanneer datasets worden gecombineerd. Hiervoor moeten zowel aanbieder, ontwikkelaar als eindgebruiker een afweging maken tussen laagdrempelig gebruik van geo-informatie en mogelijke gevolgen voor de beoogde toepassingen van de data.
@@ -36,7 +38,7 @@ Bij de inwinning van de BGT worden ETRS89, RD en lokale CRS-en gebruikt. Voor de
 
 <!-- Waarom verschillende CRS-en -->
 
-Eenduidig gebruik van CRS-en en [datumtransformaties](#datumtransformatie-en-conversie) voorkomt systematische afwijkingen bij gebruik van meerdere datasets. Eenduidig gebruik is mogelijk door het maken van afspraken over het gebruik van eenduidige CRS-en en datumtransformaties. Bij minder precieze datumtransformaties en conversies kunnen (toelaatbare) visuele verschillen ontstaan die afhankelijk zijn van de keuze van CRS en implementatie.
+Eenduidig gebruik van CRS-en en [datumtransformaties](#datumtransformatie-en-conversie) voorkomt systematische afwijkingen bij gebruik van meerdere datasets. Eenduidig gebruik is mogelijk door het maken van afspraken over het gebruik van eenduidige CRS-en en datumtransformaties. Bij minder precieze datumtransformaties en [coördinatenconversies](#datumtransformatie-en-conversie) kunnen (toelaatbare) visuele verschillen ontstaan die afhankelijk zijn van de keuze van CRS en implementatie.
 
 <div class="note">
 hier al één / enkele voorbeelden toevoegen waarom goed omgaan met CRS belangrijk is: wat kan er misgaan / is er al misgegaan door fouten hiermee? 
@@ -56,11 +58,15 @@ In het voorbeeld van de BGT gaat het dus om adviezen voor het omgaan met CRS-en 
 
 </div>
 
-Het hoofdstuk [CRS-en in Nederland](#crs-en-in-nederland) geeft een overzicht van de huidige veel gebruikte CRS-en in Nederland en de relatie met andere CRS-en. Het hoofdstuk is gericht op nieuwkomers in de geo-wereld, dataaanbieders, GIS-gebruikes en modelleurs die hun kennis willen opfrissen.
+<div class="note">
+- hier nog iet toevoegen dat in de tekst soms wordt verwezen naar EPSG codes en wat dat dan zijn
+- leeswijzer voor de verschillende doelgroepen?
+</div>
 
-Het onderdeel [Specificatie CRS](#specificeren-van-crs) geeft aan hoe CRS-en eenduidig worden gespecificeerd en vastgelegd voor uitwisseling en visualisatie. De paragraaf naamgeving is voor alle lezers bedoeld, de overige paragraven zijn gericht op  dataaanbieders, modelleurs, en applicatieontwikkelaars.
+Het hoofdstuk [Gebruikte CRS-en in Nederland](#crs-en-in-nederland) geeft een overzicht van de huidige veel gebruikte CRS-en in Nederland en de relatie met andere CRS-en. Het hoofdstuk is gericht op nieuwkomers in de geo-wereld, dataaanbieders, GIS-gebruikes en modelleurs die hun kennis willen opfrissen.
 
-De bijlagen met achtergrondinformatie geven een uitgebreidere toelichting op onderdelen die in specifieke gevallen relevant is of te uitgebreid voor de algemene tekst.
+Het onderdeel [CRS gebruik](#specificeren-van-crs) geeft aan hoe CRS-en eenduidig kunnen worden gebruikt en gespecificeerd in informatiemodellen en bij uitwisseling en visualisatie. 
+
 ### Het proces
 
 *Beschrijf het proces waarmee dit document is ontwikkeld*

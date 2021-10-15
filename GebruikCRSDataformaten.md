@@ -2,6 +2,9 @@
 
 Dit hoofdstuk gaat in op gebruik van de beschreven CRS-en. 
 
+<div class="note">
+Paragraaf 3.1, 3.2 en 3.4.1 (deels) naar begin hooftuk 2? en er hier bij de inleiding naar terugverwijzen?
+</div>
 
 ### Opbouw van CRS
 
@@ -71,7 +74,7 @@ De volgende tabel geeft de link naar voorbeelden van het specificeren van het CR
 
 ### Aandachtspunten bij gebruik van meerdere CRS-en
 
-Bij het gebruik van meerdere CRS-en bestaat risico op introductie van fouten of verstoringen door onjuiste implementatie an de realties tussen CRS-en. Eindgebruikers worden geadviseerd data waar mogeijk op te vragen in hetzelfde CRS.
+Bij het gebruik van meerdere CRS-en bestaat risico op introductie van fouten of verstoringen door onjuiste implementatie an de relaties tussen CRS-en. Eindgebruikers worden geadviseerd data waar mogeijk op te vragen in hetzelfde CRS.
 
 <div class="advisement">
 _ADVIES_ Vraag als eindgebruiker data zoveel mogelijk op in hetzelfde CRS.
@@ -102,7 +105,10 @@ Het veranderen van coördinaten van het ene CRS naar het andere CRS wordt datumt
 _ADVIES_ Wanneer een datumtransformatie plaatsvindt in de keten van inwinning tot gebruik is het advies de gekozen transformatieparameters in het model en/of metadata op te nemen. Bij tijdsafhankelijke transformaties, zoals van ETRS89 naar WGS 84 moet dan ook het referentieepoche worden opgenomen. Tussen RD/NAP en ETRS89 is het van belang gebruik te maken van de RDNAPTRANS procedure. 
 </div>
 
+<div class="example">
+_VOORBEELD_
 In het informatiemodel van de BRO is gekozen voor het opnemen van het attribuut [Coördinaattransformatie](https://docs.geostandaarden.nl/bro/bhr-g/#detail_class_Model_Cordinaattransformatie) waarin in de waardelijst de mogelijke transformaties zijn vastgelegd.
+</div>
 
 Bij het ontwerp van het informatiemodel, landelijke voorziening of dataportaal kan de afweging worden gemaakt om datumtransformaties op verschillende plaatsen in de keten te laten plaatsvinden en data dubbel op te slaan of juist de transformaties on-the-fly uit te voeren. Aandachtspunten bij deze afweging zijn onder andere de authenticiteit van gegevens en de kostenafweging tussen dubbel opslaan en (herhaaldelijk) on-the-fly transformeren. 
 
@@ -180,11 +186,11 @@ De in rood omleidende elementen in de pop-up duiden hier op het gebruik van RDNA
 
 Niet alle uitwisselingsformaten ondersteunen (volledig) het gebruik van meerdere CRS-en. De [Handreiking Geometrie in uitwisselingsformaten](https://geonovum.github.io/geox/) geeft een keuzehulp van gebruik van uitwisselingsformaten voor 2D vector bestanden, waarin ook de ondersteuning van CRS-en is opgenomen. De tabel hieronder geeft een samenvatting van de ondersteuning van CRS-en voor deze formaten.
 
-|Uitwisselingsformaat|RD urn:ogc:def:crs:EPSG::28992|ETRS89 urn:ogc:def:crs:EPSG::4258|WGS84 urn:ogc:def:crs:EPSG::4326|Web-Mercator urn:ogc:def:crs:EPSG::3857|
-|---|---|---|---|---|
-|[HTML](https://geonovum.github.io/geox/#html)|<span id="kruisje">&#10005;</span>|<span id="kruisje">&#10005;</span>|<span id="vinkje">&#10003;</span>|<span id="kruisje">&#10005;</span>|
-|[GeoJSON](https://geonovum.github.io/geox/#geojson)|<span id="tilde">&#65374;</span>|<span id="tilde">&#65374;</span>|<span id="vinkje">&#10003;</span>|<span id="tilde">&#65374;</span>|
-|[GeoPackage](https://geonovum.github.io/geox/#geopackage)|<span id="vinkje">&#10003;</span>|<span id="vinkje">&#10003;</span>|<span id="vinkje">&#10003;</span>|<span id="vinkje">&#10003;</span>|
-|[GML](https://geonovum.github.io/geox/#gml)|<span id="vinkje">&#10003;</span>|<span id="vinkje">&#10003;</span>|<span id="vinkje">&#10003;</span>|<span id="vinkje">&#10003;</span>|
-|[RDF](https://geonovum.github.io/geox/#rdf)|<span id="vinkje">&#10003;</span>|<span id="vinkje">&#10003;</span>|<span id="vinkje">&#10003;</span>|<span id="vinkje">&#10003;</span>|
+|CRS|URN|[HTML](https://geonovum.github.io/geox/#html)|[GeoJSON](https://geonovum.github.io/geox/#geojson)|[GeoPackage](https://geonovum.github.io/geox/#geopackage)|[GML](https://geonovum.github.io/geox/#gml)|[RDF](https://geonovum.github.io/geox/#rdf)|
+|---|---|---|---|---|---|---|
+|RD|urn:ogc:def:crs:EPSG::28992|<span id="kruisje">&#10005;|<span id="tilde">&#65374;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
+|ETRS89|urn:ogc:def:crs:EPSG::4258|<span id="kruisje">&#10005;|<span id="tilde">&#65374;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
+|WGS84|urn:ogc:def:crs:EPSG::4326|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
+|Web-Mercator|urn:ogc:def:crs:EPSG::3857|<span id="kruisje">&#10005;|<span id="tilde">&#65374;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
 
+De tabel laat zien dat de eenvoudige formaten HTML en GeoJSON alleen WGS 84 ondersteunen wat vaak moet worden geinterpreteerd als een ongedefinieerd CRS ondersteunen met geografische coördinaten en lage nauwkeurigheid. Voor veel toepassingen op het web voldoet de lagere nauwkeurigheid.
