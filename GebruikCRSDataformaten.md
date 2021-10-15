@@ -3,7 +3,7 @@
 Dit hoofdstuk gaat in op gebruik van de beschreven CRS-en. 
 
 <div class="note">
-Paragraaf 3.1, 3.2 en 3.4.1 (deels) naar begin hooftuk 2? en er hier bij de inleiding naar terugverwijzen?
+Paragraaf 3.1, 3.2 en 3.4.1 (deels) naar begin  hoofdstuk 2 of zelfs 1.2? en er hier bij de inleiding naar terugverwijzen?
 </div>
 
 ### Opbouw van CRS
@@ -25,7 +25,7 @@ CRS-en worden in de praktijk op verschillende manieren aangeduid. In hoofdstuk 2
 |NTS|http://www.opengis.net/def/crs/_authority_/_version_/_code_|
 |NTS|http://www.opengis.net/def/crs?authority=_authority_&version=_version_&code=_code_|
 
-In deze aanduiding wordt meestal EPSG als de-facto autoriteit gebruikt, maar ook ISO is een voorbeeld van een autoriteit. Bij gebruik van de laatste versie van de database van de authority wordt bij URN _version_ leeg gelaten, terwijl bij de NTS _version_=0 wordt gebruikt. In [Bijlage A](#crs-overzicht-tabel) is een tabel opgenomen met de EPSG-codes voor veelgebruikte CRS-en in Nederland. Met behulp van deze tabel kan de URN en NTS worden afgeleidt, bijvoorbeeld voor het RD (EPSG:code 28992), resulteert dit in de volgende aanduidingen.
+In deze aanduiding wordt meestal EPSG als de-facto autoriteit gebruikt, maar ook ISO is een voorbeeld van een autoriteit. Bij gebruik van de laatste versie van de database van de authority wordt bij URN _version_ leeg gelaten, terwijl bij de NTS _version_=0 wordt gebruikt. In [Bijlage A](#crs-overzicht-tabel) is een tabel opgenomen met de EPSG-codes voor veelgebruikte CRS-en in Nederland. Met behulp van deze tabel kan de URN en NTS worden afgeleid, bijvoorbeeld voor het RD (EPSG:code 28992), resulteert dit in de volgende aanduidingen.
 
 |Type aanduiding|structuur|
 |----|----|
@@ -49,7 +49,7 @@ Voor de BRO is de keten echter anders:
 
 [![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFJcbiAgc3ViZ3JhcGggQnJvbmhvdWRlclxuICAgIHN1YmdyYXBoIElud2lubmluZ1xuICAgICAgQTFbXCJSRFwiXSBcbiAgICAgIEEyW1wiRVRSUzg5XCJdXG4gICAgICBBM1tcIldHUzg0XCJdXG4gICAgZW5kXG4gIGVuZFxuICBzdWJncmFwaCBcIkxhbmRlbGlqa2UgVm9vcnppZW5pbmdcIlxuICAgIHN1YmdyYXBoIFwiSW50YWtlIExWXCJcbiAgICAgIEIxW1wiUkRcIl0gXG4gICAgICBCMltcIkVUUlM4OVwiXVxuICAgICAgQjNbXCJXR1M4NFwiXVxuICAgIGVuZFxuICAgIHN1YmdyYXBoIFwiT3BzbGFnIExWXCJcbiAgICAgIEI0W0VUUlM4OV1cbiAgICBlbmRcbiAgZW5kXG4gIHN1YmdyYXBoIFwiRGF0YXBsYXRmb3JtIChQRE9LKVwiXG4gICAgc3ViZ3JhcGggXCJPcHNsYWcgUERPS1wiXG4gICAgICBEW0VUUlM4OV1cbiAgICBlbmRcbiAgZW5kXG4gIHN1YmdyYXBoIEdlYnJ1aWtlclxuICAgIHN1YmdyYXBoIFZpc3VhbGlzYXRpZVxuICAgICAgRTFbRVRSUzg5XVxuICAgICAgRTJbUkRdXG4gICAgICBFM1tXR1M4NF1cbiAgICBlbmRcbiAgICBzdWJncmFwaCBcIkRvd25sb2FkIChBdG9tKVwiXG4gICAgICBFNFtFVFJTODldXG4gICAgZW5kXG4gICAgc3ViZ3JhcGggXCJCUk8gTG9rZXRcIlxuICAgICAgICBGMVtFVFJTODldXG4gICAgZW5kXG4gIGVuZFxuICBBMS0tPkIxXG4gIEEyLS0-QjJcbiAgQTMtLT5CM1xuICBCMS0tPnxUcmFuc2Zvcm1hdGllfEI0XG4gIEIyLS0-QjRcbiAgQjMtLT58VHJhbnNmb3JtYXRpZXxCNFxuICBCNC0tPnxVaXR3aXNzZWxpbmd8RFxuICBELS0-fFVpdHdpc3NlbGluZ3xFMVxuICBELS0-fFVpdHdpc3NlbGluZ3xFMlxuICBELS0-fFVpdHdpc3NlbGluZ3xFM1xuICBELS0-fFVpdHdpc3NlbGluZ3xFNFxuICBCNCAtLT58VWl0d2lzc2VsaW5nfEYxXG5cbiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiZ3JhcGggTFJcbiAgc3ViZ3JhcGggQnJvbmhvdWRlclxuICAgIHN1YmdyYXBoIElud2lubmluZ1xuICAgICAgQTFbXCJSRFwiXSBcbiAgICAgIEEyW1wiRVRSUzg5XCJdXG4gICAgICBBM1tcIldHUzg0XCJdXG4gICAgZW5kXG4gIGVuZFxuICBzdWJncmFwaCBcIkxhbmRlbGlqa2UgVm9vcnppZW5pbmdcIlxuICAgIHN1YmdyYXBoIFwiSW50YWtlIExWXCJcbiAgICAgIEIxW1wiUkRcIl0gXG4gICAgICBCMltcIkVUUlM4OVwiXVxuICAgICAgQjNbXCJXR1M4NFwiXVxuICAgIGVuZFxuICAgIHN1YmdyYXBoIFwiT3BzbGFnIExWXCJcbiAgICAgIEI0W0VUUlM4OV1cbiAgICBlbmRcbiAgZW5kXG4gIHN1YmdyYXBoIFwiRGF0YXBsYXRmb3JtIChQRE9LKVwiXG4gICAgc3ViZ3JhcGggXCJPcHNsYWcgUERPS1wiXG4gICAgICBEW0VUUlM4OV1cbiAgICBlbmRcbiAgZW5kXG4gIHN1YmdyYXBoIEdlYnJ1aWtlclxuICAgIHN1YmdyYXBoIFZpc3VhbGlzYXRpZVxuICAgICAgRTFbRVRSUzg5XVxuICAgICAgRTJbUkRdXG4gICAgICBFM1tXR1M4NF1cbiAgICBlbmRcbiAgICBzdWJncmFwaCBcIkRvd25sb2FkIChBdG9tKVwiXG4gICAgICBFNFtFVFJTODldXG4gICAgZW5kXG4gICAgc3ViZ3JhcGggXCJCUk8gTG9rZXRcIlxuICAgICAgICBGMVtFVFJTODldXG4gICAgZW5kXG4gIGVuZFxuICBBMS0tPkIxXG4gIEEyLS0-QjJcbiAgQTMtLT5CM1xuICBCMS0tPnxUcmFuc2Zvcm1hdGllfEI0XG4gIEIyLS0-QjRcbiAgQjMtLT58VHJhbnNmb3JtYXRpZXxCNFxuICBCNC0tPnxVaXR3aXNzZWxpbmd8RFxuICBELS0-fFVpdHdpc3NlbGluZ3xFMVxuICBELS0-fFVpdHdpc3NlbGluZ3xFMlxuICBELS0-fFVpdHdpc3NlbGluZ3xFM1xuICBELS0-fFVpdHdpc3NlbGluZ3xFNFxuICBCNCAtLT58VWl0d2lzc2VsaW5nfEYxXG5cbiIsIm1lcm1haWQiOiJ7XG4gIFwidGhlbWVcIjogXCJkZWZhdWx0XCJcbn0iLCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9)
 
-Bij de BRO kunnen bronhouders in verschillende CRS-en aanbieden. Bij intake in de landelijke voorziening wordt gertransformeerd naar ETRS89. Voor uitwisseling en visualisatie worden tussen dataplatform en gebruiker ETRS89, RD en WGS84 gebruikt, waarbij voor ETRS89 en WGS84 verschillende projecties mogelijk zijn. 
+Bij de BRO kunnen bronhouders in verschillende CRS-en aanbieden. Bij intake in de landelijke voorziening wordt getransformeerd naar ETRS89. Voor uitwisseling en visualisatie worden tussen dataplatform en gebruiker ETRS89, RD en WGS84 gebruikt, waarbij voor ETRS89 en WGS84 verschillende projecties mogelijk zijn. 
 
 Bij DSO zijn weer andere keuzes gemaakt, waaronder het dubbel opslaan van data in twee CRS-en:
 
@@ -74,13 +74,13 @@ De volgende tabel geeft de link naar voorbeelden van het specificeren van het CR
 
 ### Aandachtspunten bij gebruik van meerdere CRS-en
 
-Bij het gebruik van meerdere CRS-en bestaat risico op introductie van fouten of verstoringen door onjuiste implementatie an de relaties tussen CRS-en. Eindgebruikers worden geadviseerd data waar mogeijk op te vragen in hetzelfde CRS.
+Bij het gebruik van meerdere CRS-en bestaat risico op introductie van fouten of verstoringen door onjuiste implementatie an de relaties tussen CRS-en. Eindgebruikers worden geadviseerd data waar mogelijk op te vragen in hetzelfde CRS.
 
 <div class="advisement">
 _ADVIES_ Vraag als eindgebruiker data zoveel mogelijk op in hetzelfde CRS.
 </div>
 
-Aanbieder van data worden geadviseerd om data aan te bieden in de verschilende CRS-en gericht op de eindgebruikers. Hierbij is het advies zo nauwkeurig mogelijk te transformeren, omdat het niet altijd duidelijk is wie de eindgebruiker is.
+Aanbieder van data worden geadviseerd om data aan te bieden in de verschillende CRS-en gericht op de eindgebruikers. Hierbij is het advies zo nauwkeurig mogelijk te transformeren, omdat het niet altijd duidelijk is wie de eindgebruiker is.
 
 <div class="advisement">
 _ADVIES_ Biedt data aan in CRS-en gericht op het eindgebruik en transformeer hierbij eenduidig en zo nauwkeurig mogelijk.
@@ -102,7 +102,7 @@ Het veranderen van coördinaten van het ene CRS naar het andere CRS wordt datumt
 </figure>
 
 <div class="advisement">
-_ADVIES_ Wanneer een datumtransformatie plaatsvindt in de keten van inwinning tot gebruik is het advies de gekozen transformatieparameters in het model en/of metadata op te nemen. Bij tijdsafhankelijke transformaties, zoals van ETRS89 naar WGS 84 moet dan ook het referentieepoche worden opgenomen. Tussen RD/NAP en ETRS89 is het van belang gebruik te maken van de RDNAPTRANS procedure. 
+_ADVIES_ Wanneer een datumtransformatie plaatsvindt in de keten van inwinning tot gebruik is het advies de gekozen transformatieparameters in het model en/of metadata op te nemen. Bij tijdsafhankelijke transformaties, zoals van ETRS89 naar WGS 84 moet dan ook het referentieepoche worden opgenomen. Tussen RD/NAP en ETRS89 is het van belang gebruik te maken van de RDNAPTRANS™ procedure. 
 </div>
 
 <div class="example">
@@ -115,7 +115,7 @@ Bij het ontwerp van het informatiemodel, landelijke voorziening of dataportaal k
   
 #### Geometrie en topologie
 
-Een rechte lijn in werkelijkheid is meestal geen rechte lijn in een kaart, maar een lijn die licht krom loopt. Om er voor te zorgen dat een grens in de kaart ongeacht de kaartprojectie met voldoende nauwkeurigheid eenduidig is heeft de NSGI hiervoor een [advies](https://forum.pdok.nl/uploads/default/original/2X/c/c0795baa683bf3845c866ae4c576a880455be02a.pdf) geformuleerd. In dit advies staat dat lange lijnstukken van grenzen voorzien worden van tussenpunten. De afstand tussen deze tussenpunten is afhankelijk van de acceptabele lijnlengte en de locaties in Nederland, voor Europees Nederland inclusief EEZ kan de voglende tabel worden gehanteerd:
+Een rechte lijn in werkelijkheid is meestal geen rechte lijn in een kaart, maar een lijn die licht krom loopt. Om er voor te zorgen dat een grens in de kaart ongeacht de kaartprojectie met voldoende nauwkeurigheid eenduidig is heeft de NSGI hiervoor een [advies](https://forum.pdok.nl/uploads/default/original/2X/c/c0795baa683bf3845c866ae4c576a880455be02a.pdf) geformuleerd. In dit advies staat dat lange lijnstukken van grenzen voorzien worden van tussenpunten. De afstand tussen deze tussenpunten is afhankelijk van de acceptabele lijnlengte en de locaties in Nederland, voor Europees Nederland inclusief EEZ kan de volgende tabel worden gehanteerd:
 
 |Acceptabele afwijking|Advies lijnlengte|
 |----|----|
@@ -130,7 +130,7 @@ Voor een nauwkeurigheid van 1 mm zijn dus punten met 200 m tussenafstand nodig v
 
 
 <div class="advisement">
-_ADVIES_ Wanneer lijnen worden getransfomeerd met behulp van RDNAPTRANS mogen de lijnsegmenten niet langer zijn dan 200 meter om de geometrie eenduidig te transformeneren met de nauwkeurigheid van RDNAPTRANS.
+_ADVIES_ Wanneer lijnen worden getransformeerd met behulp van RDNAPTRANS™ mogen de lijnsegmenten niet langer zijn dan 200 meter om de geometrie eenduidig te transformeren met de nauwkeurigheid van RDNAPTRANS™.
 </div>
 
 #### Nauwkeurigheid van coördinaten
@@ -160,26 +160,26 @@ decimalen. Afronding is volgens de volgende regel:
 0.0014 -\> 0.001.
 </div>
 
-### Ondersteuning van meerdere CRS-en in software(biliotheken)
+### Ondersteuning van meerdere CRS-en in software(bibliotheken)
 
 Diverse software (bibliotheken) ondersteunen het gebruik van meerdere CRS-en. Deze paragraaf geeft een aantal voorbeelden en is zeker niet volledig.
 
 #### PROJ
 
-[PROJ](https://proj.org) is een open source softwarebiliotheek voor datumtransformaties en coördinaatconversies, tot februari 2018 was de software bekend onder de naam PROJ.4. PROJ heeft zih ontwikkeld van een software voor conversie van coördinaten tot een software voor geodetische datumtransformaties en coördinaatconversies. In versie PROJ 8.1.1 worden RDNAPTRANS en tijdsafhankelijke transformaties ondersteund, versies gebasseerd op PROJ.4 (voor 2018) hebben deze ondersteuning niet. PROJ wordt onder andere gebruikt in de bibliotheek voor het omzetten van dataformaten [GDAL](https://gdal.org) en de open-source GIS-software [QGIS](https://qgis.org).
+[PROJ](https://proj.org) is een open source softwarebibliotheek voor datumtransformaties en coördinaatconversies, tot februari 2018 was de software bekend onder de naam PROJ.4. PROJ heeft zich ontwikkeld van een software voor conversie van coördinaten tot een software voor geodetische datumtransformaties en coördinaatconversies. In versie PROJ 8.1.1 worden RDNAPTRANS™ en tijdsafhankelijke transformaties ondersteund, versies gebaseerd op PROJ.4 (voor 2018) hebben deze ondersteuning niet. PROJ wordt onder andere gebruikt in de bibliotheek voor het omzetten van dataformaten [GDAL](https://gdal.org) en de open-source GIS-software [QGIS](https://qgis.org).
 #### QGIS
 
 [QGIS](https://www.qgis.org/) is een open source GIS-software. De ondersteuning van datumtransformaties en coördinaatconversies is gebaseerd op PROJ. QGIS kan ook worden gebruikt om tussenpunten te berekenen volgens het [langelijnenadvies](#geometrie-en-topologie).
 
 <div class="example">
-_VOORBEELD_ QGIS 3.20 bevat diverse implementaties van de transformatie tussen RD en ETRS89 die zijn opgenomen in de EPSG-database. Zodra in een project RD en ETRS89 worden gebruikt verschijnt een pop-up met de vraag welke transformatie moet worden gebruikt, behalve wanneer de gebruiker al een default heeft geconfigureerd. De meest nauwkeurige transformatie, in eht geval van QGIS 3.20 is dat de 2D implementatie van RDNAPTRANS, wordt als eerste getoont. In onderstaande figuur wordt het pop-up scherm getoond.
+_VOORBEELD_ QGIS 3.20 bevat diverse implementaties van de transformatie tussen RD en ETRS89 die zijn opgenomen in de EPSG-database. Zodra in een project RD en ETRS89 worden gebruikt verschijnt een pop-up met de vraag welke transformatie moet worden gebruikt, behalve wanneer de gebruiker al een default heeft geconfigureerd. De meest nauwkeurige transformatie, in het geval van QGIS 3.20 is dat de 2D implementatie van RDNAPTRANS™, wordt als eerste getoond. In onderstaande figuur wordt het pop-up scherm getoond.
 
 <figure id="plaatje">
-    <img src="media/rdnaptrans2018_qgis.png" alt="hr2">
+    <img src="media/RDNAPTRANS™2018_qgis.png" alt="hr2">
     <figcaption>Keuzescherm voor transformatie tussen RD en ETRS89 in QGIS.</figcaption>
 </figure>
 
-De in rood omleidende elementen in de pop-up duiden hier op het gebruik van RDNAPTRANS, bijvoorbeeld de hoge nauwkeurigheid van de transformatie (0.001 m), de verwijzing naar RDNAPTRANS2018 in de omschrijving en het gebruik van het correctiegrid in de PROJ-string.
+De in rood omleidende elementen in de pop-up duiden hier op het gebruik van RDNAPTRANS™, bijvoorbeeld de hoge nauwkeurigheid van de transformatie (0.001 m), de verwijzing naar RDNAPTRANS™2018 in de omschrijving en het gebruik van het correctiegrid in de PROJ-string.
 </div>
 
 ### CRS bij uitwisselingsformaten
@@ -193,4 +193,4 @@ Niet alle uitwisselingsformaten ondersteunen (volledig) het gebruik van meerdere
 |WGS84|urn:ogc:def:crs:EPSG::4326|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
 |Web-Mercator|urn:ogc:def:crs:EPSG::3857|<span id="kruisje">&#10005;|<span id="tilde">&#65374;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
 
-De tabel laat zien dat de eenvoudige formaten HTML en GeoJSON alleen WGS 84 ondersteunen wat vaak moet worden geinterpreteerd als een ongedefinieerd CRS ondersteunen met geografische coördinaten en lage nauwkeurigheid. Voor veel toepassingen op het web voldoet de lagere nauwkeurigheid.
+De tabel laat zien dat de eenvoudige formaten HTML en GeoJSON alleen WGS 84 ondersteunen wat vaak moet worden geïnterpreteerd als een ongedefinieerd CRS ondersteunen met geografische coördinaten en lage nauwkeurigheid. Voor veel toepassingen op het web voldoet de lagere nauwkeurigheid.
