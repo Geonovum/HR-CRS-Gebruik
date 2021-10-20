@@ -175,7 +175,7 @@ Diverse software (bibliotheken) ondersteunen het gebruik van meerdere CRS-en. De
 _VOORBEELD_ QGIS 3.20 bevat diverse implementaties van de transformatie tussen RD en ETRS89 die zijn opgenomen in de EPSG-database. Zodra in een project RD en ETRS89 worden gebruikt verschijnt een pop-up met de vraag welke transformatie moet worden gebruikt, behalve wanneer de gebruiker al een default heeft geconfigureerd. De meest nauwkeurige transformatie, in het geval van QGIS 3.20 is dat de 2D implementatie van RDNAPTRANS™, wordt als eerste getoond. In onderstaande figuur wordt het pop-up scherm getoond.
 
 <figure id="plaatje">
-    <img src="media/RDNAPTRANS™2018_qgis.png" alt="hr2">
+    <img src="media/rdnaptrans2018_qgis.png" alt="hr2">
     <figcaption>Keuzescherm voor transformatie tussen RD en ETRS89 in QGIS.</figcaption>
 </figure>
 
