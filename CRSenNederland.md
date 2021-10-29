@@ -1,6 +1,46 @@
 ## Achtergrond: Gebruikte CRS-en in Nederland
 
-Voor uitwisseling en visualisatie kunnen in Nederland meerdere CRS-en worden gebruikt. Voor geo-informatie die is beperkt tot land en binnenwateren van Europees Nederland, worden in het horizontale vlak meestal coördinaten in RD of in het geografische ETRS89 gebruikt, voor de Noordzee en grensoverschrijdende datasets wordt meestal ETRS89 gebruikt. Geografische coördinaten zoals ETRS89 en 3D WGS 84 kunnen niet gevisualiseerd worden zonder een kaartprojectie. Het RD is een 2D CRS en ETRS89 en WGS 84 zowel 2D als 3D CRS-en. WGS 84 wordt in specifieke gevallen wordt gebruikt voor visualisatie in combinatie met een kaartprojectie zoals Web-Mercator. Hoogten in ETRS89 en 3D WGS 84 hebben geen fysische betekenis, hierom worden ook andere hoogtesystemen gebruikt, in het bijzonder NAP op land en LAT op zee. De Nederlandse Samenwerking Geodetische Infrastructuur ([[NSGI]]) is verantwoordelijk voor de definitie en realisatie van de Nederlandse CRS-en en de relatie met het Europese CRS. In dit hoofdstuk worden de belangrijkste CRS-en en hun relaties kort geïntroduceerd en toegelicht, uitgebreide informatie over de achtergrond van de relatie tussen RD (NAP) en ETRS89 is beschikbaar in de publicatie *De geodetische referentiestelsels van Nederland* [[NCG-GR-43]].
+Voor uitwisseling en visualisatie kunnen in Nederland meerdere CRS-en worden gebruikt. Voor geo-informatie die is beperkt tot land en binnenwateren van Europees Nederland, worden in het horizontale vlak meestal coördinaten in RD of in het geografische ETRS89 gebruikt, voor de Noordzee en grensoverschrijdende datasets wordt meestal ETRS89 gebruikt. Geografische coördinaten zoals ETRS89 en 3D WGS 84 kunnen niet gevisualiseerd worden zonder een kaartprojectie. Het RD is een 2D CRS en ETRS89 en WGS 84 zowel 2D als 3D CRS-en. WGS 84 wordt in specifieke gevallen wordt gebruikt voor visualisatie in combinatie met een kaartprojectie zoals Web-Mercator. Hoogten in ETRS89 en 3D WGS 84 hebben geen fysische betekenis, hierom worden ook andere hoogtesystemen gebruikt, in het bijzonder NAP op land en LAT op zee. De Nederlandse Samenwerking Geodetische Infrastructuur ([[NSGI]]) is verantwoordelijk voor de definitie en realisatie van de Nederlandse CRS-en en de relatie met het Europese CRS. In dit hoofdstuk worden de opbouw, naamgeving en de belangrijkste CRS-en en hun relaties kort geïntroduceerd en toegelicht. Uitgebreide informatie over de achtergrond van de relatie tussen RD (NAP) en ETRS89 is beschikbaar in de publicatie *De geodetische referentiestelsels van Nederland* [[NCG-GR-43]].
+
+### Opbouw van CRS
+
+Een CRS is opgebouwd uit een datum en een coördinaatsysteem. Het coördinaatsysteem definieert hoe coördinaten worden uitgedrukt, bijvoorbeeld cartesisch of geografisch. Het datum geeft de relatie van het coördinaatsysteem met de aarde. RD en NAP zijn beide een CRS, de combinatie van RD en NAP is een samengesteld (Engels: compound) CRS.
+
+<div class="example">
+_VOORBEELD_ RD/NAP is het samengestelde CRS uit RD en NAP. Schematisch wordt dit als volgt weergegeven:
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggXG4gICAgQVtcIlNhbWVuZ2VzdGVsZCBDUlM8YnIgLz5SRE5BUFwiXVxuICAgIEJbQ1JTPGJyIC8-UkRdXG4gICAgQ1tDUlM8YnIgLz5OQVBdXG4gICAgQjFbXCJHZW9kZXRpc2NoIGRhdHVtPGJyIC8-UkQgQmVzc2VsXCJdXG4gICAgQjJbXCJDb29yZGluYXRlbnN5c3RlZW08YnIgLz5EdWJiZWxwcm9qZWN0aWUgdmFuIFNjaHJlaWJlcjxiciAvPk5vdGF0aWU6IHgseSBbbV1cIl1cbiAgICBDMVtcIlZlcnRpa2FhbCBkYXR1bTxiciAvPk5BUFwiXVxuICAgIEMyW1wiQ29vcmRpbmF0ZW5zeXN0ZWVtPGJyIC8-T3J0aG9tZXRyaXNjaGUgaG9vZ3RlbjxiciAvPk5vdGF0aWU6IEggW21dXCJdXG4gIEEtLS1CXG4gIEEtLS1DXG4gIEItLS1CMVxuICBCLS0tQjJcbiAgQy0tLUMxXG4gIEMtLS1DMlxuICAiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/edit#eyJjb2RlIjoiZ3JhcGggXG4gICAgQVtcIlNhbWVuZ2VzdGVsZCBDUlM8YnIgLz5SRE5BUFwiXVxuICAgIEJbQ1JTPGJyIC8-UkRdXG4gICAgQ1tDUlM8YnIgLz5OQVBdXG4gICAgQjFbXCJHZW9kZXRpc2NoIGRhdHVtPGJyIC8-UkQgQmVzc2VsXCJdXG4gICAgQjJbXCJDb29yZGluYXRlbnN5c3RlZW08YnIgLz5EdWJiZWxwcm9qZWN0aWUgdmFuIFNjaHJlaWJlcjxiciAvPk5vdGF0aWU6IHgseSBbbV1cIl1cbiAgICBDMVtcIlZlcnRpa2FhbCBkYXR1bTxiciAvPk5BUFwiXVxuICAgIEMyW1wiQ29vcmRpbmF0ZW5zeXN0ZWVtPGJyIC8-T3J0aG9tZXRyaXNjaGUgaG9vZ3RlbjxiciAvPk5vdGF0aWU6IEggW21dXCJdXG4gIEEtLS1CXG4gIEEtLS1DXG4gIEItLS1CMVxuICBCLS0tQjJcbiAgQy0tLUMxXG4gIEMtLS1DMlxuICAiLCJtZXJtYWlkIjoie1xuICBcInRoZW1lXCI6IFwiZGVmYXVsdFwiXG59IiwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ)
+</div>
+
+### Naamgeving van CRS
+
+CRS-en worden in de praktijk op verschillende manieren aangeduid. In hoofdstuk 2 zijn de officiële benamingen gebruikt, bij opslag en uitwisseling van geo-informatie wordt vaak gebruik gemaakt van gestandaardiseerde aanduiding van de CRS-en in de vorm van een OGC URN of Name Type Specification (NTS) voor CRS-en. Deze hebben de volgende structuur:
+
+|Type aanduiding|structuur|
+|----|----|
+|URN|urn:ogc:def:crs:_authority_:_version_:_code_|
+|NTS|http://www.opengis.net/def/crs/_authority_/_version_/_code_|
+|NTS|http://www.opengis.net/def/crs?authority=_authority_&version=_version_&code=_code_|
+
+In deze aanduiding wordt meestal EPSG als de-facto autoriteit gebruikt, maar ook ISO is een voorbeeld van een autoriteit. Bij gebruik van de laatste versie van de database van de authority wordt bij URN _version_ leeg gelaten, terwijl bij de NTS _version_=0 wordt gebruikt. In [Bijlage A](#crs-overzicht-tabel) is een tabel opgenomen met de EPSG-codes voor veelgebruikte CRS-en in Nederland. Met behulp van deze tabel kan de URN en NTS worden afgeleid, bijvoorbeeld voor het RD (EPSG:code 28992), resulteert dit in de volgende aanduidingen.
+
+|Type aanduiding|structuur|
+|----|----|
+|URN|urn:ogc:def:crs:EPSG::28992|
+|NTS|http://www.opengis.net/def/crs/ESPG/0/28992|
+|NTS|http://www.opengis.net/def/crs?authority=EPSG&version=0&code=28992|
+
+### Coördinatentransformatie, datumtransformatie en coördinatenconversie
+
+Het veranderen van coördinaten van het ene CRS naar het andere CRS wordt **coördinatentransformatie** genoemd. Een coördinatentransformaties kan bestaan uit een datumtransformatie en of een coördinatenconversie. 
+* Het veranderen van coördinaten van het ene datum naar het andere datum wordt **datumtransformatie** genoemd.
+* Het uitdrukken van coördinaten in een ander coördinatensysteem, bijvoorbeeld van geografisch naar geprojecteerd, noemen we **coördinatenconversie**.
+
+De coördinatentransformatie en de onderdelen datumtransformatie en coördinatenconversie worden afgebeeld in onderstaande figuur en verder uitgelegd in [bron](http://gnss1.tudelft.nl/pub/vdmarel/reader/CTB3310_RefSystems_1-2a_online.pdf#page=33).
+
+<figure id="plaatje">
+    <img src="media/conversionTransformation.jpg" alt="hr2">
+    <figcaption>Coördinatentransformatie, datumtransformaties en coördinatenconversie. Een verandering is een coördinatentransformatie. Horizontale bewerkingen zijn coördinaatconversies. De verticale bewerkingen zijn datumtransformaties van systeem A naar B. Niet weergegeven in dit diagram zijn het gebruik van correctiegrids of polynoomtransformaties (benaderingen) direct tussen geprojecteerde coördinaten of geografische coördinaten van de twee systemen. <a href="http://gnss1.tudelft.nl/pub/vdmarel/reader/CTB3310_RefSystems_1-2a_online.pdf#page=33">bron</a>.</figcaption>
+</figure>
 
 ### Indeling van CRS-en
 
@@ -55,45 +95,4 @@ Voor opslag, uitwisseling en visualisatie van geo-informatie op land en binnenwa
 
 De beheerders en gebruikers van bestanden hebben bij de introductie van ETRS89 aangegeven RD te willen handhaven, maar wel graag een koppeling te zien met ETRS89. In 2000 is een nieuwe definitie geïntroduceerd waardoor het RD-stelsel een transformatie van de ETRS89-realisatie is. De relatie tussen ETRS89 en RD/NAP is vastgelegd in de procedure [[RDNAPTRANS™]]. Het onderhouden van referentiepunten voor ETRS89 in Nederland en de omzetting naar RD-coördinaten zijn wettelijke taken van het Kadaster binnen NSGI. NAP wordt bepaald door de gepubliceerde hoogtes van NAP-peilmerken, hetgeen een wettelijke verantwoordelijkheid is van Rijkswaterstaat binnen NSGI. 
 #### <mark>CRS op zee: LAT</mark>
-
-### Relaties tussen CRS-en
-De relatie tussen CRS-en die zijn gebaseerd op een verschillende datum, is vastgelegd in een [datumtransformatie](#datumtransformatie-en-conversie). De relaties RD/NAP, ETRS89, ITRS en 3D WGS 84 zijn weergegeven in onderstaande figuur met daarbij de organisatie die de gegevens van datumtransformatie beheerd.
-
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFIgXG4gICAgQVtSRF1cbiAgICBCW0VUUlM4OV1cbiAgICBDW0lUUlNdXG4gICAgRFtXR1MgODRdXG4gICAgXG4gIEEtLS18XCJOU0dJIChSRE5BUFRSQU5TKVwifEJcbiAgQi0tLXxFVVJFRnxDXG4gIEMtLS18TkdBfERcbiAgIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiZ3JhcGggTFIgXG4gICAgQVtSRF1cbiAgICBCW0VUUlM4OV1cbiAgICBDW0lUUlNdXG4gICAgRFtXR1MgODRdXG4gICAgXG4gIEEtLS18XCJOU0dJIChSRE5BUFRSQU5TKVwifEJcbiAgQi0tLXxFVVJFRnxDXG4gIEMtLS18TkdBfERcbiAgIiwibWVybWFpZCI6IntcbiAgXCJ0aGVtZVwiOiBcImRlZmF1bHRcIlxufSIsInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)
-
-In de volgende paragrafen worden de datumtransformaties tusse RD en ETRS89 en tussen ETRS89 en WGS 84 beschreven.
-
-#### Transformatie en conversie tussen RD/NAP en ETRS89
-Bij de koppeling tussen ETRS89 en RD in de jaren 1990 werden systematische verschillen gevonden. Vanwege de wens van gebruikers dat RD-coördinaten niet wijzigden bij de introductie van ETRS89, is er voor gekozen om de verschillen te modelleren in correctiegrid, dat deel uitmaakt van de coördinatentransformatie procedure tussen geprojecteerde RD-coördinaten en geografische ETRS89-coördinaten. NAP hoogten kunnen met een quasi-geoïdemodel naar ellipsoïdische hoogten in ETRS89 worden getransformeerd met een precisie die hoger is dan de ETRS89-coördinaten die met de meeste GNSS-metingen wordt verkregen. Het correctiegrid en quasi-geoïdemodel zijn onderdeel van de procedure RDNAPTRANS™. 
-
-RDNAPTRANS™ kent verschillende versies, in veel (oudere) GIS-pakketten en andere software is RDNAPTRANS™ niet volledig geïmplementeerd, wat fouten op decimeterniveau oplevert. Met de publicatie van RDNAPTRANS™ 2018 is een versie beschikbaar gekomen die voor aanbieders van software eenvoudiger te implementeren is. In de regel blijven de oudere versies ook beschikbaar in software, waarmee het voor gebruikers belangrijk is om goed te weten welke transformatie zij het meeste kunnen gebruiken in hun software. De NSGI publiceert de actuele procedure RDNAPTRANS™ en transformatievalidatieservice op haar [website]([[NSGI]]). Voor de transformatie tussen RD/NAP en ETRS89 met gebruik van de RDNAPTRANS™ procedure is tevens een [transformatie-API](https://www.nsgi.nl/coordinatentransformatie-api) beschikbaar bij de NSGI. Voorbeelden van implementatie van RDNAPTRANS™ in software wordt gegeven in de paragraaf [CRS in software](#crs-in-software).
-
-<div class="advisement">
-_ADVIES_  Voor de uitwisseling van geo-informatie binnen Europa is het nadrukkelijke advies om altijd de weg via ETRS89 te kiezen. Bij gebruik van de actuele RDNAPTRANS™ procedure is daarbij voor het Nederlandse deel een nauwkeurigheid op centimeterniveau gewaarborgd. 
-</div>
-
-#### Transformatie tussen ETRS89 en ITS/WGS 84
-Wanneer na zorgvuldige afweging gebruik wordt gemaakt van WGS 84 of ITRS voor visualisatie of uitwisseling zijn verschillende strategieën mogelijk die in de volgende paragrafen worden beschreven. Het is verstandig de gekozne strategie in de metadata te vermelden.
-
-###### WGS 84 gelijkstellen aan ETRS89
-Wanneer de brondata in RD of ETRS89 is en het beoogd gebruik van de data bestaat uit visualisatie of combinatie met andere datasets, kan worden gekozen om WGS 84 en ETRS89 aan elkaar gelijk te stellen. Dit is de standaard implementatie in meerdere GIS-paketten, namelijk dat zonder expliciete vermelding van de WGS 84 en ETRS89-realisaties een nultransformatie wordt gebruikt. De nauwkeurigheid van de nultransformatie is circa 2 meter. Door het toepassen van deze strategie moet het resultaat worden geïnterpreteerd als een CRS dat bestaat uit een ongedefinieerd datum met als coördinatensysteem lengte en breedte. Het voordeel van het gebruik van de nultransformatie is dat de transformatie niet tijdsafhankelijk is en coördinaten dus niet veranderen in de tijd.
-
-<div class="note">
-Bij gebruik van data waarbij het aangegeven CRS WGS 84 (EPSG:4326) is zonder duidelijke informatie over het CRS van de brondata, de gebruikte transformaties, realisatie en/of het epoche moet de gebruiker er rekening mee houden dat de data systematische fouten in de orde van meters kan bevatten. De toepassing bepaald of dit acceptabel is of niet. 
-</div>
-
-###### Tijdsafhankelijke transformatie tussen ETRS89 en ITRS/WGS 84
-Wanneer de dataspecificatie expliciet een realisatie en epoche van WGS 84 of ITRS benoemd, of data gecombineerd wordt met de actuele locatie van de eindgebruiker kan worden gekozen de transformatie tussen ETRS89 en WGS 84 uit te voeren met hoge nauwkeurigheid voor een specifieke realisatie op een specifiek epoche. Dergelijke transformaties zijn vaak niet standaard geïmplementeerd in GIS-software, waardoor de gebruiker zelf de juiste transformatie moet definiëren in de software. 
-
-Voor Nederlandse data mag voor ETRS89 de realisatie ETRF2000 worden gekozen. Wanneer de WGS 84-realisatie niet is gespecificeerd, dan wordt de meest recente realisatie gekozen (2D/3D WGS 84 (G2139)) of de realisatie van het (gemiddelde) moment van inwinning van de dataset.
-
-Om te kunnen transformeren worden de door [[EUREF]] gepubliceerde tijdsafhankelijke transformatieparameters tussen ETRF2000 en ITRS gebruikt [[EUREF-TN1]] die ook in EPSG zijn opgenomen. Bij deze transformatie wordt de WGS 84-realisatie dan gelijkgesteld aan de bijbehorende ITRS-realisatie (ITRF2014 voor WGS 84 (G2139)). De keuze van het epoche kan voortkomen uit de datum van inwinning, publicatiedatum of een expliciete specificatie en kan indien noodzakelijk per geometrie verschillend zijn.
-
-<div class="example">
-_VOORBEELD_ Voor de uitwisseling van terrein- en obstakelgegevens voor de luchtvaart in Europa [specificeert Eurocontrol](https://www.eurocontrol.int/sites/default/files/2021-07/eurocontrol-tod-manual-ed-3-0.pdf#page=125) dat het horizontale referentiesysteem WGS 84 is. In de [handreiking bij deze specificatie](https://www.eurocontrol.int/sites/default/files/publication/files/20130204-do-spec-vol.2-v1.0.pdf#page=16) wordt aangegeven dat WGS 84 voor deze toepassing wordt gelijkgesteld aan ITRF2000 op epoche 2000.0.
-</div>
-
-Indien de publicatiedatum van de dataset wordt gekozen als epoche voor de transformatie worden bij regelmatige updates (bijvoorbeeld jaarlijks) de WGS 84/ITRS coördinaten bijgesteld als gevolg van de platentektoniek. Wanneer als epoche de (gemiddelde) datum van de inwinning van de dataset, komen de coördinaten gemiddeld het best overeen met de WGS 84/ITRS coördinaten op het moment van inwinning. 
-
-
 

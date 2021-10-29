@@ -39,7 +39,7 @@ Het gebruik van CRS-en in de keten van inwinning tot uitwisseling en visualisati
 Bij de inwinning van de BGT worden ETRS89, RD en lokale CRS-en gebruikt. Voor de opslag bij bronhouders, de Landelijke Voorziening en het dataplatform wordt voor de uitwisseling het CRS RD gebruikt. Voor uitwisseling tussen dataplatform en gebruiker worden het Nederlandse RD, het Europese ETRS89 en het wereldwijde 3D WGS 84 gebruikt. Hierbij zijn voor de visualisatie van ETRS89 en 3D WGS 84 verschillende kaartprojecties mogelijk.
 </div>
 
-Eenduidig gebruik van CRS-en [coördinatentransformaties](#datumtransformatie-en-conversie) voorkomt systematische afwijkingen bij gebruik van meerdere datasets. Eenduidig gebruik is mogelijk door het maken van afspraken over het gebruik van eenduidige coördinatentransformaties. Bij minder precieze coördinatentransformaties kunnen (soms visueel toelaatbare) verschillen ontstaan die afhankelijk zijn van de keuze van CRS en implementatie.
+Eenduidig gebruik van CRS-en [coördinatentransformaties](#coordinatentransformatie-datumtransformatie-en-coordinatenconversie) voorkomt systematische afwijkingen bij gebruik van meerdere datasets. Eenduidig gebruik is mogelijk door het maken van afspraken over het gebruik van eenduidige coördinatentransformaties. Bij minder precieze coördinatentransformaties kunnen (soms visueel toelaatbare) verschillen ontstaan die afhankelijk zijn van de keuze van CRS en implementatie.
 
 ### Leeswijzer
 
