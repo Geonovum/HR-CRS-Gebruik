@@ -183,8 +183,12 @@ var respecConfig =
         title:      "Stelselafspraken, Versie 2.5, 27-09-2021",
         href:       "https://iplo.nl/digitaal-stelsel/documenten/architectuurdocumenten/",
         publisher:  "Deelprogramma Digitaal Stelsel Omgevingswet"
-      }
-
+      },
+    "Dienst-der-hydrografie":
+    {
+      title:        "Coördinatenreferentiestelsels voor dieptebepaling op zee",
+      href:         "https://www.defensie.nl/onderwerpen/hydrografie/coordinatenstelsels-op-zee/dieptebepaling-op-zee"
+    }
 
     
   },

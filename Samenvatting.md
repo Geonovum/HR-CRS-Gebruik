@@ -1,14 +1,19 @@
 ## Samenvatting
 
-*Hier de (management)samenvatting van de verkenning, onderwerp, belangrijkste conclusies/aanbevelingen*
+Een geodetisch onderwerp als CRS is in toenemende mate ook een geo-informatie / GIS-onderwerp aan het worden, wat betekent dat er aandacht nodig is voor hoe je op passende wijze omgaat met dit onderwerp in informatiemodellen, in uitwisselmechanismes en -formaten en ook in het ontwerp van landelijke voorzieningen.
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, 
-ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, 
-aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. 
-Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
-Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. 
-Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. 
-Curabitur ullamcorper ultricies nisi. Nam eget dui.
+Binnen Geonovum en het werkveld zijn bij de inrichting van DSO en BRO zijn recent diverse inzichten op dit vlak opgedaan zijn. De Nederlandse Samenwerking Geodetische Infrastructuur [[NSGI]] is hierbij de autoriteit voor de adviezen over goed gebruik over de in Nederland gebruikte CRS-en die ook vaak ten grondslag liggen aan de gekozen voorbeelden. Deze handreiking verzamelt verwijzingen naar bestaande adviezen en voorbeelden van implementaties. 
+
+De belangrijkste CRS-en die worden gebruikt in geo-informaite en GIS zijn opgenomen in deze handreiking, zoals:
+* RD;
+* NAP;
+* ETRS89;
+* WGS 84.
+
+De handreiking gaat hierbij onder andere in op aandachtspunt bij:
+* CRS keuze voor informatiemodellen;
+* het meegeven van informatie over CRS-en in informatiemodellen en metadata;
+* eenduidige naamgeving van CRS-en;
+* eenduidige coördinaattransformaties;
+* ondersteuning van CRS-en in uitwisselingsformaten en software(bilbiotheken).
 
