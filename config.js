@@ -166,6 +166,25 @@ var respecConfig =
         href:       "https://ncgeo.nl/index.php/nl/publicaties/groene-serie/item/2361-gs-43-a-de-bruijne-de-geodetische-referentiestelsels-van-nederland",
         publisher:  "NCG",
     },
+    "van-der-Marel":
+      {
+        title:      "Reference Systems for Surveying and Mapping Lecture notes",
+        href:       "http://gnss1.tudelft.nl/pub/vdmarel/reader/CTB3310_RefSystems_1-2a_online.pdf#page=33",
+        publisher:  "Delft University of Technology"
+      },
+    "DSO-API":
+      {
+        title:      "API- en URI-strategie Digitaal Stelsel Omgevingswet",
+        href:       "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/api-en-uri-strategie/",
+        publisher:  "Deelprogramma Digitaal Stelsel Omgevingswet"
+      },
+    "DSO-Stelselafspraken":
+      {
+        title:      "Stelselafspraken, Versie 2.5, 27-09-2021",
+        href:       "https://iplo.nl/digitaal-stelsel/documenten/architectuurdocumenten/",
+        publisher:  "Deelprogramma Digitaal Stelsel Omgevingswet"
+      }
+
 
     
   },
