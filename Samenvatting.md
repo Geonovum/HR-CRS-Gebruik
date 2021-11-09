@@ -1,8 +1,8 @@
 ## Samenvatting
 
-Een geodetisch onderwerp als CRS is in toenemende mate ook een geo-informatie / GIS-onderwerp aan het worden, wat betekent dat er aandacht nodig is voor hoe je op passende wijze omgaat met dit onderwerp in informatiemodellen, in uitwisselmechanismes en -formaten en ook in het ontwerp van landelijke voorzieningen.
+Een geodetisch onderwerp als CRS is in toenemende mate ook een geo-informatie / GIS-onderwerp aan het worden, wat betekent dat er aandacht nodig is voor hoe je op passende wijze omgaat met dit onderwerp in informatiemodellen, in uitwisselmechanismes en -formaten en in het ontwerp van landelijke voorzieningen.
 
-Binnen Geonovum en het werkveld zijn bij de inrichting van DSO en BRO zijn recent diverse inzichten op dit vlak opgedaan zijn. De Nederlandse Samenwerking Geodetische Infrastructuur [[NSGI]] is hierbij de autoriteit voor de adviezen over goed gebruik over de in Nederland gebruikte CRS-en die ook vaak ten grondslag liggen aan de gekozen voorbeelden. Deze handreiking verzamelt verwijzingen naar bestaande adviezen en voorbeelden van implementaties. 
+Binnen Geonovum en het werkveld zijn bij o.a. de inrichting van het DSO en de BRO recent ervaringen op dit vlak opgedaan. De Nederlandse Samenwerking Geodetische Infrastructuur [[NSGI]] is hierbij de autoriteit voor de adviezen over geodetisch correct gebruik van de in Nederland gebruikte CRS-en, terwijl Geonovum de autoriteit is op het vlak van adviezen over en standaarden voor informatiemodellen, uitwisselmechanismes en -formaten. Aan veel van de gekozen voorbeelden liggen adviezen van de NSGI ten grondslag. Deze handreiking bundelt verwijzingen naar bestaande adviezen, past deze toe op de traditionele Geonovum-onderwerpen rond uitwisseling van data en geeft voorbeelden van implementaties. 
 
 De belangrijkste CRS-en die worden gebruikt in geo-informatie en GIS zijn opgenomen in deze handreiking, zoals:
 
