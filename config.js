@@ -131,8 +131,6 @@ var respecConfig =
       status: "Werkversie Informatiemodel",
       publisher: "BRO",
     },
-
-
     "NSGI":
       {
         title:      "Website NSGI",
