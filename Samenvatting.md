@@ -17,5 +17,5 @@ De handreiking gaat hierbij onder andere in op aandachtspunt bij:
 * het meegeven van informatie over CRS-en in informatiemodellen en metadata;
 * eenduidige naamgeving van CRS-en;
 * eenduidige coördinaattransformaties;
-* ondersteuning van CRS-en in uitwisselingsformaten en software(bilbiotheken).
+* ondersteuning van CRS-en in uitwisselingsformaten en software(bibliotheken).
 
