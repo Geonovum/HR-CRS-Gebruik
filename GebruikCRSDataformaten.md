@@ -223,4 +223,3 @@ _VOORBEELD_ QGIS 3.20 bevat diverse implementaties van de transformatie tussen R
 De in rood omleidende elementen in de pop-up duiden hier op het gebruik van RDNAPTRANS™, bijvoorbeeld de hoge nauwkeurigheid van de transformatie (0.001 m), de verwijzing naar RDNAPTRANS™2018 in de omschrijving en het gebruik van het correctiegrid in de PROJ-string.
 </div>
 
-https://www.youtube.com/watch?v=ygDv2PJpYoc&list=PLt0-qTVCvEp1ZwKnf8iup320Cvp9AgXso&index=1
