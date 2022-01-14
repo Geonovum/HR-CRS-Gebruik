@@ -12,8 +12,8 @@
 |GNSS      |Global Navigation Satellite System|
 |IOGP      |International Association of Oil & Gas Producers|
 |IERS      |International Earrth Rotation Service|
+|ITRF      |International Terrestrial Reference Frame|
 |ITRS      |International Terrestrial Reference System|
-|ITRS      |International Terrestrial Reference Frame|
 |IUGG      |International Union for Geodesy and Geophysiscs|
 |LAT       |Lowest Astronomical Tide|  
 |NAP       |Normaal Amsterdams Peil|
