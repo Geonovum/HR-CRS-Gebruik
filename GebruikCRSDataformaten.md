@@ -53,19 +53,18 @@ De nauwkeurigheid van coördinaten moet minstens de nauwkeurigheid realiseren di
 <div class="example">
 _VOORBEELD_ zoals opgenomen in [IMOW](https://geonovum.github.io/TPOD/CIMOW/IMOW_v2.0.0.pdf#page=15) en het [model Basisgeometrie](https://docs.geostandaarden.nl/nen3610/def-st-basisgeometrie-20200930/#nauwkeurigheid-van-coordinaten)
 
-Coördinaten opgenomen bij een geometrie worden standaard uitgewisseld met een getalsnauwkeurigheid van 1 mm of het equivalent daarvan in graden. Voor RD, NAP
-en ETRS89 komt dat overeen met de volgende nauwkeurigheden:
+*Coördinaten opgenomen bij een geometrie worden standaard uitgewisseld met een getalsnauwkeurigheid van 1 mm of het equivalent daarvan in graden. Voor RD, NAP en ETRS89 komt dat overeen met de volgende nauwkeurigheden:*
 
-- RD in meters 3 decimalen (1 mm);  
-- NAP-hoogte in meters 3 decimalen (1 mm);  
-- ETRS89-breedte in graden 8 decimalen (1,1 mm);  
-- ETRS89-lengte in graden 8 decimalen (0,7 mm);  
-- ETRS89-hoogte in meters 3 decimalen (1 mm).
+- *RD in meters 3 decimalen (1 mm);*  
+- *NAP-hoogte in meters 3 decimalen (1 mm);*  
+- *ETRS89-breedte in graden 8 decimalen (1,1 mm);*  
+- *ETRS89-lengte in graden 8 decimalen (0,7 mm);*  
+- *ETRS89-hoogte in meters 3 decimalen (1 mm).*
 
-Alles wat nauwkeuriger is wordt afgerond op deze nauwkeurigheid van 3 of 8
-decimalen. Afronding is volgens de volgende regel:  
-0,0015 -\> 0,002;  
-0,0014 -\> 0,001.
+*Alles wat nauwkeuriger is wordt afgerond op deze nauwkeurigheid van 3 of 8 decimalen. Afronding is volgens de volgende regel:*
+
+- *0,0015 -\> 0,002;*
+- *0,0014 -\> 0,001.*
 </div>
 
 ### Aandachtspunten bij meerdere CRS-en
@@ -102,21 +101,11 @@ _VOORBEELD_ In de de stelselafspraken voor het DSO is het langelijnenadvies als 
 
 Het ophakken van lange lijnstukken, zoals geadviseerd door het NSGI, is de expliciete verantwoordelijkheid van de bronhouder. Hierbij kan de volgende aanpak worden gevolgd:
 
-* RDNAPTRANS™ wordt gebruikt voor de transformatie. De Transformatie-API van
-de NSGI geeft daarbij aan wat de (on)nauwkeurigheid is van de uitgevoerde
-transformatie.
-* Indien de onnauwkeurig te groot is (te bepalen door de bronhouder), is het
-noodzakelijk om voor alle lange lijnen in de brongegevens synthetische
-tussenpunten toe te voegen.
-* De bronhouder moet voor het toevoegen van de genoemde punten kiezen uit a)
-een rechte lijn in werkelijkheid of b) een rechte lijn op de kaart.
-* De benodigde voorbewerking kan op basis van de gekozen strategie geautomatiseerd
-worden uitgevoerd en doorgeleverd aan RDNAPTRANS™, teneinde een nauwkeurige
-transformatie te bereiken.
-* De voorbewerking dient bij de bron of elders te worden uitgevoerd, maar altijd op
-aanwijzing van de bronhouder. Voor de plan tot publicatie keten zijn de bronhouders
-altijd verantwoordelijk voor aanlevering binnen de gestelde eisen. De LVBB en DSO-LV
-voeren wel transformaties maar geen geo-bewerkingen uit.
+* *RDNAPTRANS™ wordt gebruikt voor de transformatie. De Transformatie-API van de NSGI geeft daarbij aan wat de (on)nauwkeurigheid is van de uitgevoerde transformatie.*
+* *Indien de onnauwkeurig te groot is (te bepalen door de bronhouder), is het noodzakelijk om voor alle lange lijnen in de brongegevens synthetische tussenpunten toe te voegen.*
+* *De bronhouder moet voor het toevoegen van de genoemde punten kiezen uit a) een rechte lijn in werkelijkheid of b) een rechte lijn op de kaart.*
+* *De benodigde voorbewerking kan op basis van de gekozen strategie geautomatiseerd worden uitgevoerd en doorgeleverd aan RDNAPTRANS™, teneinde een nauwkeurige transformatie te bereiken.*
+* *De voorbewerking dient bij de bron of elders te worden uitgevoerd, maar altijd op aanwijzing van de bronhouder. Voor de plan tot publicatie keten zijn de bronhouders altijd verantwoordelijk voor aanlevering binnen de gestelde eisen. De LVBB en DSO-LV voeren wel transformaties maar geen geo-bewerkingen uit.*
 </div>
 
 #### Aandachtspunten bij coördinaattransformatie
@@ -150,7 +139,7 @@ Wanneer de brondata in RD of ETRS89 is en het beoogd gebruik van de data bestaat
 <div class=example>
 _VOORBEELD_ In de de [stelselafspraken voor het DSO, versie 2.5 27-09-2021](https://iplo.nl/digitaal-stelsel/documenten/architectuurdocumenten/) is gebruik van de nultransformatie als volgt vastgelegd:
 
-Voor de uitlevering via API’s kan ook Pseudo-Mercator op basis van WGS84 (EPSG:3857) worden ondersteund. Hiermee kan bijvoorbeeld in gebruikerstoepassingen worden voorzien die beter aansluiten op Google Maps™. Voor de transformatie van (RD via) ETRS89 naar WGS84 is de aanbeveling om tussen ETRS89 en WGS84 een nultransformatie toe te passen en de coördinaten in ETRS89 en WGS84 dus gelijk aan elkaar te stellen. Gezien de onnauwkeurigheid van WGS84 is dat een gebruikelijke keuze met een acceptabele nauwkeurigheid, waarmee tevens voorkomen wordt dat de verkregen coördinaten in WGS84 door de tijd heen veranderen als gevolg van de tektonische beweging van Europa.
+*Voor de uitlevering via API’s kan ook Pseudo-Mercator op basis van WGS84 (EPSG:3857) worden ondersteund. Hiermee kan bijvoorbeeld in gebruikerstoepassingen worden voorzien die beter aansluiten op Google Maps™. Voor de transformatie van (RD via) ETRS89 naar WGS84 is de aanbeveling om tussen ETRS89 en WGS84 een nultransformatie toe te passen en de coördinaten in ETRS89 en WGS84 dus gelijk aan elkaar te stellen. Gezien de onnauwkeurigheid van WGS84 is dat een gebruikelijke keuze met een acceptabele nauwkeurigheid, waarmee tevens voorkomen wordt dat de verkregen coördinaten in WGS84 door de tijd heen veranderen als gevolg van de tektonische beweging van Europa.*
 </div>
 
 <div class="note">

@@ -67,7 +67,7 @@ Doordat de specificatie 'WGS 84' zonder vermelding van realisatie en epoche niet
 #### Europees CRS: ETRS89
 ETRS89 wordt gebruikt voor uitwisseling van Europese geo-informatie in het kader van INSPIRE. Geo-informatie in geografische ETRS89-coördinaten kan niet worden afgebeeld op een papieren kaart of een kaart op een plat computerscherm zonder kaartprojectie, omdat deze coördinaten refereren naar een 3D ellipsoïde. INSPIRE raadt voor het projecteren van ETRS89 -afhankelijk van de toepassing- een aantal kaartprojecties aan. Daarnaast zijn voor toepassing binnen het Europese deel van Nederland, inclusief de Nederlandse Exclusieve Economische Zone (EEZ) van de Noordzee, RD-coördinaten zeer geschikt als kaartprojectie voor visualisatie van geo-informatie in ETRS89-coördinaten. De RD-projectie geeft op land en het grootste deel van de Noordzee minder vervormingen dan andere projecties zoals ETRS89-UTMzn. Sinds de invoering van [RDNAPTRANS™2018](https://www.nsgi.nl/rdnaptrans) is er geen beperking voor de toepassing van RD op de Noordzee.
 
-In 2000 is het Nederlandse RD per definitie gekoppeld aan ETRS89. Het Europese ETRS89 (European Terrestrial Reference System 1989) is daarmee sinds 1 oktober 2000 het officiële driedimensionale coördinatenstelsel van Nederland. De meeste andere nationale coördinatensystemen in Europa hebben ook een nauwkeurige koppeling met ETRS89. De relatie tussen ETRS89 en RD/NAP is vastgelegd in de procedure [RDNAPTRANS™](https://www.nsgi.nl/rdnaptrans).
+In 2000 is het Nederlandse RD per definitie gekoppeld aan ETRS89. Het Europese ETRS89 (European Terrestrial Reference System 1989) is daarmee sinds 1 oktober 2000 het officiële driedimensionale CRS van Nederland. De meeste andere nationale CRS-en in Europa hebben ook een nauwkeurige koppeling met ETRS89. De relatie tussen ETRS89 en RD/NAP is vastgelegd in de procedure [RDNAPTRANS™](https://www.nsgi.nl/rdnaptrans).
 
 Opslag van geo-informatie in ETRS89 is ook mogelijk en wordt ondersteund in veel bestandsformaten en ruimtelijke databases.
 
@@ -84,12 +84,13 @@ Voor inwinning van geo-informatie met GNSS-metingen (GPS, Galileo, GLONASS en Be
 <div class="example">
 _VOORBEELD_ In de [aanbesteding Beeldmateriaal 5](https://www.tenderned.nl/tenderned-tap/aankondigingen/199678) is door Het Waterschapshuis de volgende passage opgenomen om zekerheid te hebben over aansluiting van de ingewonnen data aan het Nederlandse CRS:
 
-Voor het inmeten van coördinaten met een GNSS-techniek moet voor de aansluiting aan het
-Nederlandse driedimensionale coördinatenstelsel gebruik gemaakt worden van één van de volgende referenties:
-- AGRS.NL
-- NETPOS
-- Een door het Kadaster gecertificeerde GNSS-dienstverlener
-- GNSS-kernnetpunt(en) met een actualiteit van maximaal vijf jaar
+*Voor het inmeten van coördinaten met een GNSS-techniek moet voor de aansluiting aan het Nederlandse driedimensionale coördinatenstelsel gebruik gemaakt worden van één van de volgende referenties:*
+- *AGRS.NL*
+- *NETPOS*
+- *Een door het Kadaster gecertificeerde GNSS-dienstverlener*
+- *GNSS-kernnetpunt(en) met een actualiteit van maximaal vijf jaar*
+</em>
+Opmerking: In bovenstaand citaat wordt met *coördinatenstelsel* in de context van deze handreiking *CRS* bedeoeld.
 </div>
 
 #### CRS op land: RD en NAP
