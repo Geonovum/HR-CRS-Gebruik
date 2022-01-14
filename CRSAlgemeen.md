@@ -13,6 +13,7 @@ Defintie CRS met datum en CS geven volgens crs-eu.eu
 <div class="note">
 Ook verwijzen naar https://docs.qgis.org/3.16/nl/docs/gentle_gis_introduction/coordinate_reference_systems.html ?
 </div>
+
 #### Ellipsoïdes: Het benaderen van de aardbol
 
 Bij een grove benadering is de aarde een bol. Maar de aarde is bij de polen afgeplat, en een driedimensionale ellips, een zogenaamde ellipsoïde, is een betere benadering. Maar ook dan is de vorm van het aardoppervlak, met al zijn bergen en dalen, onmogelijk perfect wiskundig te beschrijven. Bij definitie van een datum is niet alleen de keuze van lengte van de assen en de afplatting, maar ook de realatie met de aarde door bijvoorbeeld orientatie en de keuze van het middelpunt ellipsoïde van belang. Het WGS 84 datum van het GPS-systeem voor wereldwijd gebruik heeft tot doel het gehele aardoppervlak zo goed mogelijk te beschrijven. Hiervoor is de  WGS 84-ellipsoïde gekozen met als oorsprong het middelpunt van de aard, als Z-as de rotatieas van de aarde en X-as naar Greenwich. Voor het RD is de Bessel1841-ellipsoïde gekozen en zo georiënteerd dat deze de kromming van Nederland zo goed mogelijk benaderd, echter hoe verder van Nederland hoe slechter deze keuze past bij de vorm van de aarde.
