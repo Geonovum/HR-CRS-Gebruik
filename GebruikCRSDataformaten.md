@@ -1,4 +1,4 @@
-## Aandachtspunten voor CRS gebruik
+## Aandachtspunten voor CRS-gebruik
 
 ### Aandachtspunten bij CRS in informatiemodel en informatieketen
 
