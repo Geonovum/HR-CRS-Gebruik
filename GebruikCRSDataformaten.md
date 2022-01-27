@@ -168,22 +168,31 @@ _VOORBEELD_
 In het informatiemodel van de BRO is gekozen voor het opnemen van het attribuut [Coördinaattransformatie](https://docs.geostandaarden.nl/bro/bhr-g/#detail_class_Model_Cordinaattransformatie) waarin in de waardelijst de mogelijke transformaties zijn vastgelegd.
 </div>
 
-### CRS bij uitwisselingsformaten
+### CRS bij uitwisselingsformaten en standaarden
 
-Niet alle uitwisselingsformaten ondersteunen (volledig) het gebruik van meerdere CRS-en. De [Handreiking Geometrie in uitwisselingsformaten](https://geonovum.github.io/geox/) geeft een keuzehulp van gebruik van uitwisselingsformaten voor 2D vector bestanden, waarin ook de ondersteuning van CRS-en is opgenomen. De tabel hieronder geeft een samenvatting van de ondersteuning van CRS-en voor deze formaten.
+Niet alle uitwisselingsformaten en standaarden ondersteunen (volledig) het gebruik van meerdere CRS-en. De [Handreiking Geometrie in uitwisselingsformaten](https://geonovum.github.io/geox/) geeft een keuzehulp van gebruik van uitwisselingsformaten voor 2D vector bestanden, waarin ook de ondersteuning van CRS-en is opgenomen. De tabel hieronder geeft een samenvatting van de ondersteuning van CRS-en voor deze formaten.
 
 |CRS|URN|[HTML](https://geonovum.github.io/geox/#html)|[GeoJSON](https://geonovum.github.io/geox/#geojson)|[GeoPackage](https://geonovum.github.io/geox/#geopackage)|[GML](https://geonovum.github.io/geox/#gml)|[RDF](https://geonovum.github.io/geox/#rdf)|
 |---|---|---|---|---|---|---|
 |RD|urn:ogc:def:crs:EPSG::28992|<span id="kruisje">&#10005;|<span id="tilde">&#65374;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
-|ETRS89|urn:ogc:def:crs:EPSG::4258|<span id="kruisje">&#10005;|<span id="tilde">&#65374;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
+|ETRS89|urn:ogc:def:crs:EPSG::4258|<span id="kruisje">&#10005;|<span id="tilde">#crs-bij-uitwisselingsformaten|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
 |WGS 84|urn:ogc:def:crs:EPSG::4326|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
 |Web-Mercator|urn:ogc:def:crs:EPSG::3857|<span id="kruisje">&#10005;|<span id="tilde">&#65374;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
 
 De tabel laat zien dat de eenvoudige formaten HTML en GeoJSON default alleen WGS 84 ondersteunen. In het geval dat een formaat alleen WGS 84 ondersteund moet dit worden geïnterpreteerd als een ongedefinieerd CRS met geografische coördinaten en lage nauwkeurigheid, omdat bijvoorbeeld een [nultransformatie](#wgs-84-gelijkstellen-aan-etrs89) kan zijn toegepast. Voor veel toepassingen op het web voldoet deze lagere nauwkeurigheid. De andere formaten ondersteunen meerdere CRS-en, ook de CRS-en die niet in deze tabel zijn opgenomen, maar wel zijn gegeven in [Bijlage A](#bijlage-a-crs-overzicht-tabel).
 
+#### OGC API
+De [OGC API standaard](https://ogcapi.ogc.org/) worden ontworpen om eenvoudig geodata op het web te publiceren. De standaard is modulair opgebouwd uit API bouwblokken. Ondersteuning voor meerdere CRS-en is in de OGC API Roadmap alleen voorzien in de bouwblokken voor OGC API Features, maar er wordt naar verwezen in de [OGC API Common repository](https://github.com/opengeospatial/ogcapi-common) als deel 3 van deze bouwblokken. 
+
+De OGC API Features bevat de bouwblokken voor het creëren, bewerken en bevragen van Features. In de [deel 2 van OGC API Features](https://docs.opengeospatial.org/is/18-058/18-058.html) beschrijving wordt de [deel 1 van de OGC API Features](http://docs.opengeospatial.org/is/17-069r3/17-069r3.html), waarin WGS 84 wordt voorgeschreven, uitgebreid voor de ondersteuning van meerdere CRS-en. Met deze uitbreiding is het gebruik van meerdere CRS-en mogelijk mits er een [NTS](#naamgeving-van-crs) beschikbaar is en het CRS voldoet aan [ISO 19111:2019](https://www.iso.org/obp/ui/#iso:std:iso:19111) / [OGC Abstract Specification Topic 2: Referencing by coordinates](http://docs.opengeospatial.org/as/18-005r4/18-005r4.html) . Hiermee wordt, naast bijvoorbeeld RDNAP, ook de ontsluiting van data opgeslagen in de realisatie van een wereldwijd dynamisch CRS zoals ITRF2014 op en bepaald epoche ondersteund in OGC API Features. De OGC API Features deel 2 bevat onder andere een beschrijving over hoe:
+
+* wordt aangegeven wat CRS en bij een dynamisch CRS het referentie epoche van de opgeslagen dataset is,
+* wordt aangegeven welke CRS-en worden ondersteund door de API,
+* data in een specifiek CRS kan worden opgevraagd.
+
 #### Gebruik van andere CRS-en in GeoJSON
 
-Voor GeoJSON zijn in bovenstaande tabel tildes aangegeven voor andere CRS-en. GeoJSON ondersteunt default alleen WGS 84, echter de standaard biedt de optie voor gebruik van andere CRS-en, mits door de ontvangende en leverende partij vooraf is afgesproken welk CRS wordt uitgewisseld. Deze ruimte in de GeoJSON-specificatie wordt bijvoorbeeld in de [DSO API-strategie](https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/api-en-uri-strategie/) gebruikt door het aangeboden en gevraagde CRS te specificeren in de header van een REST-API aanroep.
+Voor GeoJSON zijn in de [tabel met uitwisselingsformaten](#crs-bij-uitwisselingsformaten) tildes (&#65374;) aangegeven voor andere CRS-en dan WGS 84. GeoJSON ondersteunt default alleen WGS 84, echter de standaard biedt de optie voor gebruik van andere CRS-en, mits door de ontvangende en leverende partij vooraf is afgesproken welk CRS wordt uitgewisseld. Deze ruimte in de GeoJSON-specificatie wordt bijvoorbeeld in de [DSO API-strategie](https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/api-en-uri-strategie/) gebruikt door het aangeboden en gevraagde CRS te specificeren in de header van een REST-API aanroep.
 
 <div class=example>
 _VOORBEELD_ 
