@@ -175,7 +175,7 @@ Niet alle uitwisselingsformaten en standaarden ondersteunen (volledig) het gebru
 |CRS|URN|[HTML](https://geonovum.github.io/geox/#html)|[GeoJSON](https://geonovum.github.io/geox/#geojson)|[GeoPackage](https://geonovum.github.io/geox/#geopackage)|[GML](https://geonovum.github.io/geox/#gml)|[RDF](https://geonovum.github.io/geox/#rdf)|
 |---|---|---|---|---|---|---|
 |RD|urn:ogc:def:crs:EPSG::28992|<span id="kruisje">&#10005;|<span id="tilde">&#65374;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
-|ETRS89|urn:ogc:def:crs:EPSG::4258|<span id="kruisje">&#10005;|<span id="tilde">|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
+|ETRS89|urn:ogc:def:crs:EPSG::4258|<span id="kruisje">&#10005;|<span id="tilde">&#65374;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
 |WGS 84|urn:ogc:def:crs:EPSG::4326|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
 |Web-Mercator|urn:ogc:def:crs:EPSG::3857|<span id="kruisje">&#10005;|<span id="tilde">&#65374;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
 
