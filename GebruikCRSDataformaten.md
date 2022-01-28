@@ -45,7 +45,7 @@ De volgende tabel geeft de link naar voorbeelden van het specificeren van het CR
 |BRO Booronderzoek|2D: Gebruik van ETRS89 voor opslag, aanlevering toegestaan in RD, ETRS89 en WGS 84|https://docs.geostandaarden.nl/bro/bhr-g/#referentiestelsels-voor-de-horizontale-positie|
 
 #### Aandachtspunten t.a.v. dubbel opslaan of on-the-fly transformeren
-Bij het ontwerp van het informatiemodel, landelijke voorziening of dataportaal kan de afweging worden gemaakt om datumtransformaties op verschillende plaatsen in de keten te laten plaatsvinden en data dubbel op te slaan of juist de transformaties on-the-fly uit te voeren. Aandachtspunten bij deze afweging zijn onder andere de authenticiteit van gegevens, de kostenafweging tussen dubbel opslaan en (herhaaldelijk) on-the-fly transformeren en de borging van voldoende performance. 
+Bij het ontwerp van het informatiemodel, landelijke voorziening of dataportaal kan de afweging worden gemaakt om coördinaattransformaties op verschillende plaatsen in de keten te laten plaatsvinden en data dubbel op te slaan of juist de transformaties on-the-fly uit te voeren. Aandachtspunten bij deze afweging zijn onder andere de authenticiteit van gegevens, de kostenafweging tussen dubbel opslaan en (herhaaldelijk) on-the-fly transformeren en de borging van voldoende performance. 
 
 #### Nauwkeurigheid van coördinaten
 De nauwkeurigheid van coördinaten moet minstens de nauwkeurigheid realiseren die vermeld wordt in het informatiemodel of bijgeleverde inwinningseisen. Meestal is het aantal decimalen dat in software standaard wordt opgeleverd, groter. Deze decimalen hebben dan geen betekenis meer. Om te voorkomen dat er te grote databestanden ontstaan, wordt aanbevolen de coördinaten af te ronden op 1 decimaal meer dan de nauwkeurigheid van de dataset vereist. Hierdoor kunnen fouten bij herhaaldelijk heen en weer transformeren worden voorkomen.
@@ -199,21 +199,38 @@ _VOORBEELD_
 In een aanroep naar de REST-API van de DSO-LV moet het gebruikte CRS voor de geometrie in de aanroep expliciet worden aangegeven door middel van de `Content-Crs` header. Het CRS waarin de geometrie in het antwoord is gewenst wordt opgegeven via de `Accept-Crs` header.
 </div>
 
+#### OGC Features and Geometries JSON
+
+Op het moment van schrijven van deze handreiking is binnen OGC een [OGC Features and Geometries JSON werkgroep](https://www.ogc.org/projects/groups/featgeojsonswg) actief. De werkgroep richt zich op de ontwikkeling van OGC Features and Geometries JSON (JSON-FG) als uitbreiding op GeoJSON. De aanpak is om het te baseren op GeoJSON, alles wat in GeoJSON al is gespecificeerd intact te laten, en het maar zo minimaal als mogelijk uit te breiden. Het wordt dus zeker geen GML in JSON. Kandidaat-uitbreidingen zijn:
+
+* Gebruik van andere coördinaatreferentiesystemen dan WGS84;
+* Ondersteuning voor ellipsvormige meetwaarden;
+* Support voor 3D volumes;
+* Handreikingen voor het opnemen van eigenschappen van geo-objecten, zoals temporele eigenschappen.
+
 ### Aandachtspunten  bij toepassing in software
 
-Diverse software (bibliotheken) ondersteunen het gebruik van meerdere CRS-en. Deze paragraaf geeft een aantal voorbeelden en is zeker niet volledig.
+Diverse software (bibliotheken) ondersteunen het gebruik van meerdere CRS-en. Deze paragraaf geeft een aantal voorbeelden van software die coördinaattransformaties ondersteund en is zeker niet volledig. 
 
-#### Voor ontwikkelaars: PROJ
+
+#### De merknaam RDNAPTRANS™
+
+RDNAPTRANS™ is een beschermde merknaam. Wanneer RDNAPTRANS™ is geïmplementeerd in een applicatie kan deze worden gecertificeerd met de RDNAPTRANS™ [Transformatievalidatieservice](https://www.nsgi.nl/geodetische-infrastructuur/producten/programma-rdnaptrans/transformatievalidatie). Na deze certificering mag de leverancier de merknaam RDNAPTRANS™ gebruiken. Of een applicatie RDNAPTRANS™ gecertificeerd is kan worden gevraagd bij de leverancier of NSGI. Voorbeelden van gecertificeerde applicaties zijn [FME](https://hub.safe.com/publishers/safe-lab/transformers/rdnaptrans2018) en [DgDialog BGT](https://bgtsoftware.nl/dg-dialog-bgt-versie-7-9-beschikbaar/).
+#### Voor ontwikkelaars
+
+##### PROJ
 
 [PROJ](https://proj.org) is een open source softwarebibliotheek voor datumtransformaties en coördinaatconversies, tot februari 2018 was de software bekend onder de naam PROJ.4. PROJ heeft zich ontwikkeld van een software voor conversie van coördinaten tot een software voor geodetische datumtransformaties en coördinaatconversies. In versie PROJ 8.1.1 worden RDNAPTRANS™ en tijdsafhankelijke transformaties ondersteund, versies gebaseerd op PROJ.4 (voor 2018) hebben deze ondersteuning niet. PROJ wordt onder andere gebruikt in de bibliotheek voor het omzetten van dataformaten [GDAL](https://gdal.org) en de open-source GIS-software [QGIS](https://qgis.org).
-#### Voor gebruikers: QGIS
+#### Voor gebruikers
+
+##### QGIS
 
 [QGIS](https://www.qgis.org/) is een open source GIS-software. De ondersteuning van datumtransformaties en coördinaatconversies is gebaseerd op PROJ. QGIS kan ook worden gebruikt om conform het langelijnenadvies tussenpunten volgens een rechte lijn in de kaartprojectie te berekenen. Het berekenen van tussenpunten volgens een rechte lijn in werkelijkheid (geodetische lijn) volgens het [langelijnenadvies](#geometrie-en-topologie) is minder eenvoudig, maar kan wel met een speciale functie van PROJ.
 
 <div class="example">
 _VOORBEELD_ QGIS 3.20 bevat diverse implementaties van de transformatie tussen RD en ETRS89 die zijn opgenomen in de EPSG-database. Zodra in een project RD en ETRS89 worden gebruikt verschijnt een pop-up met de vraag welke transformatie moet worden gebruikt, behalve wanneer de gebruiker al een default heeft geconfigureerd. De meest nauwkeurige transformatie, in het geval van QGIS 3.20 is dat de 2D implementatie van RDNAPTRANS™, wordt als eerste getoond. In onderstaande figuur wordt het pop-up scherm getoond.
 
-<figure id="plaatje">
+<figure id="plaatjeQGIS">
     <img src="media/rdnaptrans2018_qgis.png" alt="hr2">
     <figcaption>Keuzescherm voor transformatie tussen RD en ETRS89 in QGIS.</figcaption>
 </figure>
@@ -221,3 +238,38 @@ _VOORBEELD_ QGIS 3.20 bevat diverse implementaties van de transformatie tussen R
 De in rood omleidende elementen in de pop-up duiden hier op het gebruik van RDNAPTRANS™, bijvoorbeeld de hoge nauwkeurigheid van de transformatie (0.001 m), de verwijzing naar RDNAPTRANS™2018 in de omschrijving en het gebruik van het correctiegrid in de PROJ-string.
 </div>
 
+##### ArcGIS Pro
+
+Het Esri softwarepakket [ArcGIS Pro](https://www.esri.nl/nl-nl/producten/arcgis-pro/home) biedt ondersteuning voor coördinaattransformaties, waaronder de transformatie tussen RD en ETRS89. Lange tijd is dit de [verbeterde benaderde transformatie van RDNAPTRANS™ versie 2008](https://dehollandsecirkel.courant.nu/issue/INFO/2014-09-01/edition/null/page/20?query=) geweest, sinds een paar jaar wordt ook RDNAPTRANS™2018 ondersteund. In versie ArcGIS Pro 2.9, welke in 2021 beschikbaar is gekomen, is ook de transformatie in het verticale vlak, ETRS89 en NAP, geïntroduceerd.
+
+<div class="example">
+_VOORBEELD_ In ArcGIS Pro worden CRS-en en coördinaattransformaties van verschillende bronnen gebruikt, de bron wordt aangeduid met een ‘Authority’, meestal EPSG of Esri. Ieder CRS en coördinaatransformatie heeft een eigen zogenaamde Wel-Known ID (WKID), wanneer de ‘Authority’ EPSG is komt de WKID overeen met de EPSG-code.
+
+Zodra er in een in ArcGIS Pro 2D-data van meerdere CRS-en wordt gebruikt dan wordt automatisch de meest nauwkeurige beschikbare transformatie ingesteld. Voor de 2D-transformatie van RD (WKID:28992) naar ETRS89-GRS80 (WKID:4258) is dat in 2021 conform RDNAPTRANS™2018 de ‘Amersfoort To ETRS 1989 9’ (WKID:9282) transformatie. Eventuele oude (minder nauwkeurige) transformaties, bijvoorbeeld gebaseerd op benaderingen van eerdere RDNAPTRANS™-versies kunnen door de gebruiker ook nog ingesteld worden.
+
+De data wordt op deze manier on-the-fly geprojecteerd van ETRS89 naar RD en vice versa. Het is met de Project-tool ook mogelijk om een conversie te doen van ETRS89 naar RD (en vice versa), zodat de data wordt opgeslagen in het andere CRS.
+
+<figure id="plaatjeESRI1">
+    <img src="media/rdnaptrans2018_esri1.png" alt="hr2">
+    <figcaption>Keuzescherm voor transformatie tussen RD en ETRS89 in ARcGIS Pro. De transformatie met naam ‘Amersfoort To ETRS 1989 9’(WKID:9282) is conform RDNAPTRANS™2018.</figcaption>
+</figure>
+
+Wanneer er NAP (WKID: 5709) als CRS voor de hoogte is ingesteld, dan kan er vanaf ArcGIS Pro 2.9 ook een correctie transformatie worden ingesteld tussen NAP en ETRS89 (WKID:115701) en vice versa. Hiervoor wordt de transformatie ‘ETRS89 height To NAP Height nlgeo2018’ (WKID:9283) gebruikt.
+
+<figure id="plaatjeESRI2">
+    <img src="media/rdnaptrans2018_esri2.png" alt="hr2">
+    <figcaption>Keuzescherm voor de transformatie van RD en NAP naar ETRS89 bij 3D-datasets in ArcGIS Pro. Feitelijk wordt er in ArcGIS Pro een samengestelde transformatie uitgevoerd conform RDNAPTRANS™2018, eerst voor het horizontale vlak en daarna voor de hoogte.
+    </figcaption>
+</figure>
+
+Voor ondersteuning van de hoogtetransformatie is een additionele setup noodzakelijk. Gebruikers van ArcGIS Pro 2.9 kunnen deze downloaden op dezelfde locatie waar ook de andere setups van ArcGIS te vinden zijn, namelijk https://my.esri.com. 
+
+Voor RD naar WGS84 (en vice versa) wordt er ook automatisch een samengestelde transformatie uitgevoerd die via ETRS89 loopt: Dus eerst ‘Amersfoort To ETRS 1989 9’ (WKID: 9282) en daar ‘ETRS1989 To WGS 1984’ (WKID: 1149). Bij de laatste transformatie is ETRS89 feitelijk gelijkgesteld aan WGS84, er wordt een nultransformatie toegepast zonder translatie of rotatie. Ook voor de transformatie tussen RD naar WGS84 zijn oude parameters nog beschikbaar voor ‘backward compatability’ met gebruikte transformaties.
+
+<figure id="plaatjeESRI3">
+    <img src="media/rdnaptrans2018_esri3.png" alt="hr2">
+    <figcaption>Keuzescherm voor de transformatie van RD en NAP naar WGS 84 in ArcGIS Pro. Feitelijk wordt voor de transformatie tussen ETRS89 en WGS 84 een nultransformatie gebruikt.
+    </figcaption>
+</figure>
+
+</div>
