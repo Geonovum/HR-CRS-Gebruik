@@ -24,7 +24,7 @@ Onderstaande tabel geeft de naam en EPSG-code veelgebruikte CRS-en in Nederland.
 |ETRS89 + EVRF2007|7423|Samengesteld<br>ETRS89-GRS80 en EVRF2007|ETRS89=Ensemble|
 |ETRS89 + EVRF2019 mean-tide|9423|Samengesteld<br>ETRS89-GRS80 en EVRF2019|ETRS89=Ensemble|
 |ETRS89 + LAT-NL|9289|Samengesteld<br>ETRS89-GRS80 en LAT-NL|ETRS89=Ensemble|
-|ETRF2000 + NAP|Samengesteld<br>Geografisch ETRF2000 en NAP||
+|ETRF2000 + NAP||Samengesteld<br>Geografisch ETRF2000 en NAP||
 |ITRF2014|9000|Geografisch<br>GRS80 ellipsoïde  (&phi;, &lambda;)|Aanbevolen wereldwijd CRS door VN, IUGG en EPSG|
 |ITRF2014|7912|Geografisch<br>GRS80 ellipsoïde  (&phi;, &lambda;, h)|Aanbevolen wereldwijd CRS door VN, IUGG en EPSG|
 |ITRF2014|7789|Geocentrisch (X, Y, Z)|Aanbevolen wereldwijd CRS door VN, IUGG en EPSG|
