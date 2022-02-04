@@ -193,8 +193,8 @@ var respecConfig =
   postProcess:[custGHPG],   //-- Optioneel voor een multi document repository
 
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
-  //previousPublishDate: "2018-09-18",  	    // Format is "YYY-MM-DD"
-  //previousMaturity: "CV",                   // kies 1 van deze 2 regels  	  
+  previousPublishDate: "2021-11-25",  	    // Format is "YYY-MM-DD"
+  previousMaturity: "CV",                   // kies 1 van deze 2 regels  	  
   //previousMaturity: "VV",  	                // kies 1 van deze 2 regels
 
   //-- Optionele parameters:
