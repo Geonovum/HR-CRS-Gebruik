@@ -56,13 +56,13 @@ var respecConfig =
   format: "markdown",                 // altijd "markdown"     
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
-  //publishDate: "2019-10-08",  	    // Format is "YYYY-MM-DD"
+  //publishDate: "2021-11-25",  	    // Format is "YYYY-MM-DD"
   //-- Repositorynaam op GitHub -------------------------------------------------------
   github: "https://github.com/geonovum/HR-CRS-Gebruik",
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
   issueBase: "https://github.com/geonovum/HR-CRS-Gebruik/issues",
   //-- edDraftURI: de URI van de werkversie van het document
-  edDraftURI: "https://github.com/geonovum/HR-CRS-Gebruik",
+  edDraftURI: "https://geonovum.github.io/HR-CRS-Gebruik",
   //-- de namen van de Editor(s) ------------------------------------------------------
   //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
   editors: 
@@ -193,8 +193,8 @@ var respecConfig =
   postProcess:[custGHPG],   //-- Optioneel voor een multi document repository
 
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
-  //previousPublishDate: "2018-09-18",  	    // Format is "YYY-MM-DD"
-  //previousMaturity: "CV",                   // kies 1 van deze 2 regels  	  
+  previousPublishDate: "2021-11-25",  	    // Format is "YYY-MM-DD"
+  previousMaturity: "CV",                   // kies 1 van deze 2 regels  	  
   //previousMaturity: "VV",  	                // kies 1 van deze 2 regels
 
   //-- Optionele parameters:
