@@ -203,7 +203,7 @@ In een aanroep naar de REST-API van de DSO-LV moet het gebruikte CRS voor de geo
 
 Op het moment van schrijven van deze handreiking is binnen OGC een [OGC Features and Geometries JSON werkgroep](https://www.ogc.org/projects/groups/featgeojsonswg) actief. De werkgroep richt zich op de ontwikkeling van OGC Features and Geometries JSON (JSON-FG) als uitbreiding op GeoJSON. De aanpak is om het te baseren op GeoJSON, alles wat in GeoJSON al is gespecificeerd intact te laten, en het maar zo minimaal als mogelijk uit te breiden. Het wordt dus zeker geen GML in JSON. Kandidaat-uitbreidingen zijn:
 
-* Gebruik van andere coördinaatreferentiesystemen dan WGS84;
+* Gebruik van andere coördinaatreferentiesystemen dan WGS 84;
 * Ondersteuning voor ellipsvormige meetwaarden;
 * Support voor 3D volumes;
 * Handreikingen voor het opnemen van eigenschappen van geo-objecten, zoals temporele eigenschappen.
