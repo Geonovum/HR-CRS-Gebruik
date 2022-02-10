@@ -19,13 +19,13 @@ Voor visualisatie op het web is het uitgangspunt dat de data wordt afgebeeld op 
 ### INSPIRE
 Bij visualisatie in het kader van INSPIRE zijn een aantal projecties van geografisch ETRS89 gedefinieërd, namelijk ETRS89-LAEA, ETRS89-LCC en ETRS89-TM*zn*. 
 
-Voor INSPIRE-verplichtingen mag voor datauitwisseling van 2D-vectordata zowel geografisch als geprojecteerd ETRS89 worden gebruikt. Bij uitwisseling en visualisatie van 2D-rasterdata wordt volgens sectie 2.2. van [Annex II](http://data.europa.eu/eli/reg/2010/1089/oj) ETRS89-LAEA gebruikt tenzij daar binnen de technische specificaties van wordt afgeweken. Sectie 2.2.1 van [Annex II](http://data.europa.eu/eli/reg/2010/1089/oj) geeft de definitie van de eigenschappen van het ETRS89-LAEA raster, zoals de mogelijke resoluties en de celnummering.
+Voor INSPIRE-verplichtingen mag voor data-uitwisseling van 2D vectordata zowel geografisch als geprojecteerd ETRS89 worden gebruikt. Bij uitwisseling en visualisatie van 2D rasterdata wordt volgens sectie 2.2 van [Annex II](http://data.europa.eu/eli/reg/2010/1089/oj) ETRS89-LAEA gebruikt, tenzij daar binnen de technische specificaties van wordt afgeweken. Sectie 2.2.1 van [Annex II](http://data.europa.eu/eli/reg/2010/1089/oj) geeft de definitie van de eigenschappen van het ETRS89-LAEA raster, zoals de mogelijke resoluties en de celnummering.
 
-Voor 3D datasets gelden voor vector- en rasterdata dezelfde voorwaarden als voor 2D-data. Voor 3D-data kan het geografisch ETRS89-GRS80h worden gebruikt of een samengesteld CRS met als 1D CRS een EVRS-realisatie op land en op zee LAT in getijdegebied (zee en kustgebied), of MSL in gebieden waar geen significant getij aanwezig is en als 2D CRS een geografisch op geprojecteerd INSPIRE-CRS. 
+Voor 3D datasets gelden voor vector- en rasterdata dezelfde voorwaarden als voor 2D data. Voor 3D data kan het geografisch ETRS89-GRS80h worden gebruikt of een samengesteld CRS met als 1D CRS een EVRS-realisatie op land en op zee LAT in getijdegebied (zee en kustgebied), of MSL in gebieden waar geen significant getij aanwezig is, en als 2D CRS een geografisch of geprojecteerd INSPIRE CRS. 
 
 <div class="example">
 _VOORBEELD_
-Afhankelijk van de specifieke INSPIRE-datasets kan worden afgeweken van de voorwaarde in sectie 2.2. van  dat ETRS89-LAEA wordt gebruikt voor het visualisatie en uitwisseling van rasterdata en een specifieke ander aanbeveling worden gedaan. Een voorbeeld hiervan is de [Annex III](https://eur-lex.europa.eu/eli/reg/2013/1253/oj) in paragraaf 1.7.2 voor hoogterasters. 
+Afhankelijk van de specifieke INSPIRE datasets kan worden afgeweken van de voorwaarde in sectie 2.2 van [Annex II](http://data.europa.eu/eli/reg/2010/1089/oj) (namelijk dat ETRS89-LAEA wordt gebruikt voor het visualisatie en uitwisseling van rasterdata) en een specifieke andere aanbeveling worden gedaan. Een voorbeeld hiervan is de [Annex III](https://eur-lex.europa.eu/eli/reg/2013/1253/oj) in paragraaf 1.7.2 voor hoogterasters. 
 
 <em>
 Eisen voor hoogteraster coverages
@@ -45,13 +45,15 @@ Het raster gespecificeerd in Paragraaf 2.2.1 van bijlage II moet niet worden geb
 
 Waarbij *Het raster gespecificeerd in Paragraaf 2.2.1 van bijlage II* ETRS89-LAEA is. 
 
-In aanvulling hierop worden in de [technische specificaties voor hoogtedata](https://inspire.ec.europa.eu/id/document/tg/el) de aanbeveling gedaan voor uitwisseling in eeb samengesteld CRS met als 2D CRS geografisch of geprojecteerd ETRS89 als 1D CRS EVRS. 
+In aanvulling hierop wordt in de [technische specificaties voor hoogtedata](https://inspire.ec.europa.eu/id/document/tg/el) de aanbeveling gedaan om voor uitwisseling een samengesteld CRS te gebruiken, bestaand uit geografisch of geprojecteerd ETRS89 als 2D CRS en EVRS als 1D CRS: 
 
-*Recommendation 13 For pan-European global Elevation datasets the compound CRS ETRS89-GRS80/EVRS is recommended for data provision, in areas within the geographical scope of ETRS89.*
+*Recommendation 13
+  For pan-European global Elevation datasets the compound CRS ETRS89-GRS80/EVRS is recommended for data provision, in areas within the geographical scope of ETRS89.*
 
-Voor visualisatie wordt het samengestelde CRS geprojecteerd ETRS89TM*zn* voor 2D en EVRS voor 1D aanbevolen.
+Voor visualisatie wordt het samengestelde CRS geprojecteerd ETRS89TM*zn* voor 2D en EVRS voor 1D aanbevolen:
 
-*Recommendation 14 For regional European Elevation datasets, covering specific parts of countries, the compound CRS ETRS89-TMzn/EVRS is recommended for data provision and display, in areas within the geographical scope of ETRS89.*
+*Recommendation 14 
+  For regional European Elevation datasets, covering specific parts of countries, the compound CRS ETRS89-TMzn/EVRS is recommended for data provision and display, in areas within the geographical scope of ETRS89.*
 
 </em>
 </div>
