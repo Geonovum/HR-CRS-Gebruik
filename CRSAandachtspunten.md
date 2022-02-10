@@ -1,4 +1,5 @@
 ## Aandachtspunten voor CRS-gebruik
+Na de relevante achtergronden bij de verschillende gebruikte CRS-en in Nederland, geeft dit hoofdstuk aandachtspunten bij het op passende wijze kiezen van en omgaan met CRS-en in o.a. informatiemodellen, in uitwisselmechanismes, -formaten en -standaarden en in het ontwerp van landelijke voorzieningen. Verder bevat het voorbeelden van hoe dit in verschillende softwarepakketen mogelijk is, zowel vanuit het perspectief van ontwikkelaars als vanuit het persepctief van de gebruiker.
 
 ### Aandachtspunten bij CRS in informatiemodel en informatieketen
 
