@@ -208,7 +208,7 @@ Diverse software (bibliotheken) ondersteunen het gebruik van meerdere CRS-en. De
 
 #### De merknaam RDNAPTRANS™
 
-RDNAPTRANS™ is een beschermde merknaam. Wanneer RDNAPTRANS™ is geïmplementeerd in een applicatie kan deze worden gecertificeerd met de RDNAPTRANS™ [Transformatievalidatieservice](https://www.nsgi.nl/geodetische-infrastructuur/producten/programma-rdnaptrans/transformatievalidatie). Na deze certificering mag de leverancier de merknaam RDNAPTRANS™ gebruiken. Of een applicatie RDNAPTRANS™ gecertificeerd is kan worden gevraagd bij de leverancier of NSGI. Voorbeelden van gecertificeerde applicaties zijn [FME](https://hub.safe.com/publishers/safe-lab/transformers/rdnaptrans2018) en [DgDialog BGT](https://bgtsoftware.nl/dg-dialog-bgt-versie-7-9-beschikbaar/).
+RDNAPTRANS™ is een beschermde merknaam. Wanneer RDNAPTRANS™ is geïmplementeerd in een applicatie kan deze worden gecertificeerd door het Kadaster. Voor deze certificering wordt een aanvraagformulier ingevuld waarbij de aanvrager aantoont dat de implementatie is gevalideerd aan de criteria van RDNAPTRANS™. Voor de validatie wordt de RDNAPTRANS™[Transformatievalidatieservice](https://www.nsgi.nl/geodetische-infrastructuur/producten/programma-rdnaptrans/transformatievalidatie) gebruikt. Na deze certificering mag de leverancier de merknaam RDNAPTRANS™ gebruiken. Of een applicatie RDNAPTRANS™ gecertificeerd is kan worden gevraagd bij de leverancier of NSGI. Voorbeelden van gecertificeerde applicaties zijn [FME](https://hub.safe.com/publishers/safe-lab/transformers/rdnaptrans2018) en [DgDialog BGT](https://bgtsoftware.nl/dg-dialog-bgt-versie-7-9-beschikbaar/).
 #### Voor ontwikkelaars
 
 ##### PROJ
@@ -233,7 +233,7 @@ De in rood omleidende elementen in de pop-up duiden hier op het gebruik van RDNA
 
 ##### Voorbeeld: ArcGIS Pro
 
-Het Esri softwarepakket [ArcGIS Pro](https://www.esri.nl/nl-nl/producten/arcgis-pro/home) biedt ondersteuning voor coördinaattransformaties, waaronder de transformatie tussen RD en ETRS89. Lange tijd is dit de [verbeterde benaderde transformatie van RDNAPTRANS™ versie 2008](https://dehollandsecirkel.courant.nu/issue/INFO/2014-09-01/edition/null/page/20?query=) geweest, sinds een paar jaar wordt ook RDNAPTRANS™2018 ondersteund. In versie ArcGIS Pro 2.9, welke in 2021 beschikbaar is gekomen, is ook de transformatie in het verticale vlak, ETRS89 en NAP, geïntroduceerd.
+Het Esri softwarepakket [ArcGIS Pro](https://www.esri.nl/nl-nl/producten/arcgis-pro/home) biedt ondersteuning voor coördinaattransformaties, waaronder de transformatie tussen RD en ETRS89. Lange tijd is dit de [verbeterde benaderde transformatie](https://dehollandsecirkel.courant.nu/issue/INFO/2014-09-01/edition/null/page/20?query=) op basis van de procedure uit 2008 geweest, sinds een paar jaar wordt ook RDNAPTRANS™2018 ondersteund. In versie ArcGIS Pro 2.9, welke in 2021 beschikbaar is gekomen, is ook de transformatie in het verticale vlak, ETRS89 en NAP, geïntroduceerd.
 
 <div class="example">
 _VOORBEELD_ In ArcGIS Pro worden CRS-en en coördinaattransformaties van verschillende bronnen gebruikt, de bron wordt aangeduid met een ‘Authority’, meestal EPSG of Esri. Ieder CRS en coördinaatransformatie heeft een eigen zogenaamde Wel-Known ID (WKID), wanneer de ‘Authority’ EPSG is komt de WKID overeen met de EPSG-code.
