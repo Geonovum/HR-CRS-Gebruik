@@ -1,4 +1,5 @@
 ## Aandachtspunten voor CRS-gebruik
+Na de relevante achtergronden bij de verschillende gebruikte CRS-en in Nederland, geeft dit hoofdstuk aandachtspunten bij het op passende wijze kiezen van en omgaan met CRS-en in o.a. informatiemodellen, in uitwisselmechanismes, -formaten en -standaarden en in het ontwerp van landelijke voorzieningen. Verder bevat het voorbeelden van hoe dit in verschillende softwarepakketen mogelijk is, zowel vanuit het perspectief van ontwikkelaars als vanuit het persepctief van de gebruiker.
 
 ### Aandachtspunten bij CRS in informatiemodel en informatieketen
 
@@ -182,7 +183,7 @@ Niet alle uitwisselingsformaten en standaarden ondersteunen (volledig) het gebru
 De tabel laat zien dat de eenvoudige formaten HTML en GeoJSON default alleen WGS 84 ondersteunen. In het geval dat een formaat alleen WGS 84 ondersteund moet dit worden geïnterpreteerd als een ongedefinieerd CRS met geografische coördinaten en lage nauwkeurigheid, omdat bijvoorbeeld een [nultransformatie](#wgs-84-gelijkstellen-aan-etrs89) kan zijn toegepast. Voor veel toepassingen op het web voldoet deze lagere nauwkeurigheid. De andere formaten ondersteunen meerdere CRS-en, ook de CRS-en die niet in deze tabel zijn opgenomen, maar wel zijn gegeven in [Bijlage A](#bijlage-a-crs-overzicht-tabel).
 
 #### OGC API
-De [OGC API standaard](https://ogcapi.ogc.org/) worden ontworpen om eenvoudig geodata op het web te publiceren. De standaard is modulair opgebouwd uit API bouwblokken. Ondersteuning voor meerdere CRS-en is in de OGC API Roadmap alleen voorzien in de bouwblokken voor OGC API Features, maar er wordt naar verwezen in de [OGC API Common repository](https://github.com/opengeospatial/ogcapi-common) als deel 3 van deze bouwblokken. 
+De [OGC API standaarden](https://ogcapi.ogc.org/) worden ontworpen om eenvoudig geodata op het web te publiceren. De standaarden zijn modulair opgebouwd uit API bouwblokken. Ondersteuning voor meerdere CRS-en is in de OGC API Roadmap alleen voorzien in de bouwblokken voor OGC API Features, maar er wordt naar verwezen in de [OGC API Common repository](https://github.com/opengeospatial/ogcapi-common) als deel 3 van deze bouwblokken. 
 
 De OGC API Features bevat de bouwblokken voor het creëren, bewerken en bevragen van Features. In de [deel 2 van OGC API Features](https://docs.opengeospatial.org/is/18-058/18-058.html) beschrijving wordt de [deel 1 van de OGC API Features](http://docs.opengeospatial.org/is/17-069r3/17-069r3.html), waarin WGS 84 wordt voorgeschreven, uitgebreid voor de ondersteuning van meerdere CRS-en. Met deze uitbreiding is het gebruik van meerdere CRS-en mogelijk mits er een [NTS](#naamgeving-van-crs) beschikbaar is en het CRS voldoet aan [ISO 19111:2019](https://www.iso.org/obp/ui/#iso:std:iso:19111) / [OGC Abstract Specification Topic 2: Referencing by coordinates](http://docs.opengeospatial.org/as/18-005r4/18-005r4.html) . Hiermee wordt, naast bijvoorbeeld RDNAP, ook de ontsluiting van data opgeslagen in de realisatie van een wereldwijd dynamisch CRS zoals ITRF2014 op en bepaald epoche ondersteund in OGC API Features. De OGC API Features deel 2 bevat onder andere een beschrijving over hoe:
 
@@ -210,7 +211,7 @@ Op het moment van schrijven van deze handreiking is binnen OGC een [OGC Features
 
 ### Aandachtspunten  bij toepassing in software
 
-Diverse software (bibliotheken) ondersteunen het gebruik van meerdere CRS-en. Deze paragraaf geeft een aantal voorbeelden van software die coördinaattransformaties ondersteund en is zeker niet volledig. 
+Diverse software (bibliotheken) ondersteunen het gebruik van meerdere CRS-en. Deze paragraaf geeft een aantal voorbeelden van software die coördinaattransformaties ondersteund en is zeker niet volledig. De voorbeelden zijn bedoeld als handreiking hoe een aantal aandachtspunten uit dit document praktisch toegepast kunnen worden.
 
 
 #### De merknaam RDNAPTRANS™
@@ -222,8 +223,8 @@ RDNAPTRANS™ is een beschermde merknaam. Wanneer RDNAPTRANS™ is geïmplemente
 
 [PROJ](https://proj.org) is een open source softwarebibliotheek voor datumtransformaties en coördinaatconversies, tot februari 2018 was de software bekend onder de naam PROJ.4. PROJ heeft zich ontwikkeld van een software voor conversie van coördinaten tot een software voor geodetische datumtransformaties en coördinaatconversies. In versie PROJ 8.1.1 worden RDNAPTRANS™ en tijdsafhankelijke transformaties ondersteund, versies gebaseerd op PROJ.4 (voor 2018) hebben deze ondersteuning niet. PROJ wordt onder andere gebruikt in de bibliotheek voor het omzetten van dataformaten [GDAL](https://gdal.org) en de open-source GIS-software [QGIS](https://qgis.org).
 #### Voor gebruikers
-
-##### QGIS
+Het is onmogelijk om een volledig overzicht te geven hoe gebruikers in elk geografisch softwarepakket gebruik kunnen maken van de correcte CRS-en en transformatieprocedures. Ter illustratie beperken we ons daarom tot twee voorbeelden aan de hand van veelgebruikte software, namelijk QGIS en ArcGIS Pro. 
+##### Voorbeeld: QGIS
 
 [QGIS](https://www.qgis.org/) is een open source GIS-software. De ondersteuning van datumtransformaties en coördinaatconversies is gebaseerd op PROJ. QGIS kan ook worden gebruikt om conform het langelijnenadvies tussenpunten volgens een rechte lijn in de kaartprojectie te berekenen. Het berekenen van tussenpunten volgens een rechte lijn in werkelijkheid (geodetische lijn) volgens het [langelijnenadvies](#geometrie-en-topologie) is minder eenvoudig, maar kan wel met een speciale functie van PROJ.
 
@@ -238,7 +239,7 @@ _VOORBEELD_ QGIS 3.20 bevat diverse implementaties van de transformatie tussen R
 De in rood omleidende elementen in de pop-up duiden hier op het gebruik van RDNAPTRANS™, bijvoorbeeld de hoge nauwkeurigheid van de transformatie (0.001 m), de verwijzing naar RDNAPTRANS™2018 in de omschrijving en het gebruik van het correctiegrid in de PROJ-string.
 </div>
 
-##### ArcGIS Pro
+##### Voorbeeld: ArcGIS Pro
 
 Het Esri softwarepakket [ArcGIS Pro](https://www.esri.nl/nl-nl/producten/arcgis-pro/home) biedt ondersteuning voor coördinaattransformaties, waaronder de transformatie tussen RD en ETRS89. Lange tijd is dit de [verbeterde benaderde transformatie van RDNAPTRANS™ versie 2008](https://dehollandsecirkel.courant.nu/issue/INFO/2014-09-01/edition/null/page/20?query=) geweest, sinds een paar jaar wordt ook RDNAPTRANS™2018 ondersteund. In versie ArcGIS Pro 2.9, welke in 2021 beschikbaar is gekomen, is ook de transformatie in het verticale vlak, ETRS89 en NAP, geïntroduceerd.
 
