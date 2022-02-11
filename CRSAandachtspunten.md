@@ -98,15 +98,7 @@ _ADVIES_ Wanneer lijnen worden getransformeerd met behulp van RDNAPTRANS™ gebr
 </div>
 
 <div class="example">
-_VOORBEELD_ In de de stelselafspraken voor het DSO is het langelijnenadvies als volgt opgenomen, inclusief een schematisch voorbeeld:
-
-Het ophakken van lange lijnstukken, zoals geadviseerd door het NSGI, is de expliciete verantwoordelijkheid van de bronhouder. Hierbij kan de volgende aanpak worden gevolgd:
-
-* *RDNAPTRANS™ wordt gebruikt voor de transformatie. De Transformatie-API van de NSGI geeft daarbij aan wat de (on)nauwkeurigheid is van de uitgevoerde transformatie.*
-* *Indien de onnauwkeurig te groot is (te bepalen door de bronhouder), is het noodzakelijk om voor alle lange lijnen in de brongegevens synthetische tussenpunten toe te voegen.*
-* *De bronhouder moet voor het toevoegen van de genoemde punten kiezen uit a) een rechte lijn in werkelijkheid of b) een rechte lijn op de kaart.*
-* *De benodigde voorbewerking kan op basis van de gekozen strategie geautomatiseerd worden uitgevoerd en doorgeleverd aan RDNAPTRANS™, teneinde een nauwkeurige transformatie te bereiken.*
-* *De voorbewerking dient bij de bron of elders te worden uitgevoerd, maar altijd op aanwijzing van de bronhouder. Voor de plan tot publicatie keten zijn de bronhouders altijd verantwoordelijk voor aanlevering binnen de gestelde eisen. De LVBB en DSO-LV voeren wel transformaties maar geen geo-bewerkingen uit.*
+_VOORBEELD_ In de de [stelselafspraken versie 2.5 van 27 september 2021 voor het DSO](https://iplo.nl/publish/library/219/dso_architectuur_stelselafspraken_versie-2-5.pdf) is het langelijnenadvies opgenomen als kader opgenomen voor de aanlevering van geometrieën.
 </div>
 
 #### Aandachtspunten bij coördinaattransformatie
