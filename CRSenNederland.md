@@ -87,7 +87,7 @@ Om verschillen tussen implementaties van ETRS89 voor de opslag en uitwisseling t
 
 Voor uitwisseling van geo-informatie in ETRS89 wordt dus geadviseerd om ETRF2000 te gebruiken. Waar zeer hoge nauwkeurigheid is vereist, is de aanbeveling om als CRS ook expliciet ETRF2000 als realisatie van ETRS89 te benoemen, omdat verschillen met andere ETRS89-realisatie kunnen oplopen tot meerdere centimeters. Ter indicatie: het verschil tussen de door veel landen gebruikte realisatie ETRF2000 en de recentere realisatie ETRF2014 kan oplopen tot 7 centimeter in Nederland. Voor veel toepassingen mogen de snelheden en verschillen tussen de ETRF2000 realisaties van ETRS89 binnen Nederland verwaarloosd worden voor coördinaten in het horizontale vlak. Voor toepassingen waarbij een zeer nauwkeurige hoogte van belang is, kunnen verticale snelheden en verschillen wel van belang zijn. De NSGI kan hierover adviseren. 
 
-Van het [EVRS](http://www.euref.eu/euref_egrs.html) bestaan inmiddels drie realisaties, EVRF2000, EVRF2007 en EVRF2019. EVRF2007 is opgenomen in de INSPIRE richtlijnen als 1D CRS voor geharmoniseerde uitwiseling van hoogte gegevens.
+Van het [EVRS](http://www.euref.eu/euref_egrs.html) bestaan inmiddels drie realisaties, EVRF2000, EVRF2007 en EVRF2019. EVRF2007 is opgenomen in de INSPIRE richtlijnen als 1D CRS voor geharmoniseerde uitwisseling van hoogte gegevens.
 ##### Aansluiting bij geodetische infrastructuur voor eenduidig CRS bij inwinning
 
 Voor inwinning van geo-informatie met GNSS-metingen (GPS, Galileo, GLONASS en BeiDou) publiceert de NSGI informatie over GNSS-punten en certificeert de NSGI GNSS-dienstverleners. Het gebruik van deze geodetische infrastructuur geeft zekerheid dat de metingen direct eenduidig gekoppeld zijn aan ETRF2000 volgens de actuele AGRS.NL realisatie. Het verplicht gebruik van aansluiting aan de geodetische infrastructuur wordt vaak opgenomen in productspecificaties, bestekken en handboeken.
@@ -101,7 +101,7 @@ _VOORBEELD_ In de [aanbesteding Beeldmateriaal 5](https://www.tenderned.nl/tende
 - *Een door het Kadaster gecertificeerde GNSS-dienstverlener*
 - *GNSS-kernnetpunt(en) met een actualiteit van maximaal vijf jaar*
 </em>
-Opmerking: In bovenstaand citaat wordt met *coördinatenstelsel* in de context van deze handreiking *CRS* bedeoeld.
+Opmerking: In bovenstaand citaat wordt met *coördinatenstelsel* in de context van deze handreiking *CRS* bedoeld.
 </div>
 
 #### CRS op land: RD en NAP

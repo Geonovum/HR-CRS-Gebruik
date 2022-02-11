@@ -7,9 +7,9 @@ Onderstaande tabel geeft de naam en EPSG-code veelgebruikte CRS-en in Nederland.
 |RD|28992|Geprojecteerd<br>Stereografische projectie (x, y)|[Horizontaal CRS voor Nederland](https://www.nsgi.nl/geodetische-infrastructuur/referentiestelsels)|
 |NAP|5709|Vertikaal<br>hoogte (H)|[Vertikaal CRS voor Nederland](https://www.nsgi.nl/geodetische-infrastructuur/referentiestelsels)|
 |LAT-NL|9287|Vertikaal<br>diepte (H)|[Hydrografische toepassingen op zee](https://www.defensie.nl/onderwerpen/hydrografie/coordinatenstelsels-op-zee/dieptebepaling-op-zee)|
-|ETRS89|4258|Geografisch<br>GRS80 ellipsoïde (&phi;, &lambda;)|Ensemble<br>Binnen INSPIRE aangeduidt als ETRS89-GRS80|
-|ETRS89|4937|Geografisch<br>GRS80 ellipsoïde (&phi;, &lambda;, h)|Ensemble<br>Binnen INSPIRE aangeduidt als ETRS89-GRS80h|
-|ETRS89|4936|Geocentrisch (X, Y, Z)|Ensemble<br>Binnen INSPIRE aangeduidt als ETRS89-XYZ|
+|ETRS89|4258|Geografisch<br>GRS80 ellipsoïde (&phi;, &lambda;)|Ensemble<br>Binnen INSPIRE aangeduid als ETRS89-GRS80|
+|ETRS89|4937|Geografisch<br>GRS80 ellipsoïde (&phi;, &lambda;, h)|Ensemble<br>Binnen INSPIRE aangeduid als ETRS89-GRS80h|
+|ETRS89|4936|Geocentrisch (X, Y, Z)|Ensemble<br>Binnen INSPIRE aangeduid als ETRS89-XYZ|
 |ETRS89-LAEA|3035|Geprojecteerd<br>Lambert Equal Area projectie (y, x)|[INSPIRE projectie voor statistische data](https://inspire.ec.europa.eu/id/document/tg/rs)|
 |ETRS89-LCC|3034|Geprojecteerd<br>Lambert Conformal Conical (N, E)|[INSPIRE projectie voor kleinschalige (< 1:500 000) pan-Europese data](https://inspire.ec.europa.eu/id/document/tg/rs)|
 |ETRS89-TM31|3043|Geprojecteerd<br>Transversale Mercator projectie (N, E)|[INSPIRE projectie voor grootschalige (> 1:500 000) data voor zone 31N (0° to 6°E)](https://inspire.ec.europa.eu/id/document/tg/rs) |
@@ -33,6 +33,6 @@ Onderstaande tabel geeft de naam en EPSG-code veelgebruikte CRS-en in Nederland.
 |WGS 84 (G2139)|9755|Geografisch (&phi;, &lambda;)|WGS 84 realisatie van 3 januari 2021|
 |WGS 84 (G2139)|9754|Geografisch (&phi;, &lambda;, h)|WGS 84 realisatie van 3 januari 2021|
 |WGS 84 (G2139)|9753|Geocentrisch (X, Y, Z)|||WGS 84 realisatie van 3 januari 2021|
-|WGS 84 / Web Mercator of Pseudo Mercator|WGS 84|Gesimplifiseerde mercator projectie (x, y)|Geen geodetisch CRS, alleen geschikt eenvoudige visualisatie van onnauwkeurige data<br>Aanbevolen voor visualisatie op het web door OGC|
+|WGS 84 / Web Mercator of Pseudo Mercator|WGS 84|Gesimplificeerde  mercator projectie (x, y)|Geen geodetisch CRS, alleen geschikt eenvoudige visualisatie van onnauwkeurige data<br>Aanbevolen voor visualisatie op het web door OGC|
 |WGS 84 / UTM Zone 31N|32631|Transversale Mercator projectie (N, E)|Projectie voor UTM zone 31N (0° to 6°E)|
 |WGS 84 / UTM Zone 32N|32632|Transversale Mercator projectie (N, E)|Projectie voor UTM zone 32N (6° to 12°E)|

@@ -1,10 +1,10 @@
 ## Aandachtspunten voor CRS-gebruik
 
-Na de relevante achtergronden bij de verschillende gebruikte CRS-en in Nederland, geeft dit hoofdstuk aandachtspunten bij het op passende wijze kiezen van en omgaan met CRS-en in o.a. informatiemodellen, in uitwisselmechanismes, -formaten en -standaarden en in het ontwerp van landelijke voorzieningen. Verder bevat het voorbeelden van hoe dit in verschillende softwarepakketen mogelijk is, zowel vanuit het perspectief van ontwikkelaars als vanuit het persepctief van de gebruiker.
+Na de relevante achtergronden bij de verschillende gebruikte CRS-en in Nederland, geeft dit hoofdstuk aandachtspunten bij het op passende wijze kiezen van en omgaan met CRS-en in o.a. informatiemodellen, in uitwisselmechanismes, -formaten en -standaarden en in het ontwerp van landelijke voorzieningen. Verder bevat het voorbeelden van hoe dit in verschillende softwarepakketen mogelijk is, zowel vanuit het perspectief van ontwikkelaars als vanuit het perspectief van de gebruiker.
 
 ### CRS-keuze bij verschillende toepassingen
 
-In het [hoofstuk 2](#crs-en-in-nederland) zijn de CRS-en beschreven die worden gebruikt in Nederland. Deze paragraaf geeft voor verschillende toepassingen de mogelijke CRS-en aan.
+In het [hoofdstuk 2](#crs-en-in-nederland) zijn de CRS-en beschreven die worden gebruikt in Nederland. Deze paragraaf geeft voor verschillende toepassingen de mogelijke CRS-en aan.
 
 #### Opslag en uitwisseling van data
 
@@ -14,7 +14,7 @@ Voor opslag en uitwisseling wordt het gebruik van eenduidige CRS-en geadviseerd.
 
 Bij visualisatie in een plat vlak wordt een geprojecteerd CRS gebruikt. De keuze van de kaartprojectie is afhankelijk van de toepassing en schaal, de RD-projectie is voor veel toepassingen binnen Europees Nederland een geschikte projectie met weinig vervorming en schaaleffecten. 
 
-Het is een misverstand dat de RD-projectie niet geschikt is voor gebruik op zee, maar dat hiervoor een UTM-variant moet worden gebruikt zoals ETRS89-TM*zn*. Alleen in de meest noordwestelijke punt van de Nederlandse Exclusieve Economische Zone (EEZ) heeft de RD-projectie voor sommige toepassingen ongunstigere eigenschappen dan de ETRS89-TM*zn* projectie. ETRS89-TM*zn* heeft als nadeel dat nederland in twee zones (31 en 32) valt, de RD-projectie geeft op land en het grootste deel van de Noordzee minder vervormingen dan ETRS89-TM*zn*.
+Het is een misverstand dat de RD-projectie niet geschikt is voor gebruik op zee, maar dat hiervoor een UTM-variant moet worden gebruikt zoals ETRS89-TM*zn*. Alleen in de meest noordwestelijke punt van de Nederlandse Exclusieve Economische Zone (EEZ) heeft de RD-projectie voor sommige toepassingen ongunstigere eigenschappen dan de ETRS89-TM*zn* projectie. ETRS89-TM*zn* heeft als nadeel dat Nederland in twee zones (31 en 32) valt, de RD-projectie geeft op land en het grootste deel van de Noordzee minder vervormingen dan ETRS89-TM*zn*.
 
 ##### Visualisatie op het web
 
@@ -22,7 +22,7 @@ Voor visualisatie op het web is het uitgangspunt dat de data wordt afgebeeld op 
 
 #### Mogelijke CRS-en binnen INSPIRE
 
-Bij visualisatie in het kader van INSPIRE zijn een aantal projecties van geografisch ETRS89 gedefinieërd, namelijk ETRS89-LAEA, ETRS89-LCC en ETRS89-TM*zn*. 
+Bij visualisatie in het kader van INSPIRE zijn een aantal projecties van geografisch ETRS89 gedefinieerd, namelijk ETRS89-LAEA, ETRS89-LCC en ETRS89-TM*zn*. 
 
 Voor INSPIRE-verplichtingen mag voor data-uitwisseling van 2D vectordata zowel geografisch als geprojecteerd ETRS89 worden gebruikt. Bij uitwisseling en visualisatie van 2D rasterdata wordt volgens sectie 2.2 van [Annex II](http://data.europa.eu/eli/reg/2010/1089/oj) ETRS89-LAEA gebruikt, tenzij daar binnen de technische specificaties van wordt afgeweken. Sectie 2.2.1 van [Annex II](http://data.europa.eu/eli/reg/2010/1089/oj) geeft de definitie van de eigenschappen van het ETRS89-LAEA raster, zoals de mogelijke resoluties en de celnummering.
 
@@ -171,7 +171,7 @@ _VOORBEELD_ In de de [stelselafspraken versie 2.5 van 27 september 2021 voor het
 De relatie tussen CRS-en is vastgelegd in een [coördinaattransformatie](#coordinaattransformatie-datumtransformatie-en-coordinaatconversie). De relaties RD/NAP, ETRS89, ITRS en WGS 84 zijn weergegeven in onderstaande figuur met daarbij de organisatie die de gegevens van coördinaattransformatie beheerd.
 
 [![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFIgXG4gICAgQVtSRE5BUF1cbiAgICBCW0VUUlM4OV1cbiAgICBDW0lUUlNdXG4gICAgRFtXR1MgODRdXG4gICAgXG4gIEEtLS18XCJOU0dJIChSRE5BUFRSQU5TKVwifEJcbiAgQi0tLXxFVVJFRnxDXG4gIEMtLS18TkdBfERcbiAgIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiZ3JhcGggTFIgXG4gICAgQVtSRE5BUF1cbiAgICBCW0VUUlM4OV1cbiAgICBDW0lUUlNdXG4gICAgRFtXR1MgODRdXG4gICAgXG4gIEEtLS18XCJOU0dJIChSRE5BUFRSQU5TKVwifEJcbiAgQi0tLXxFVVJFRnxDXG4gIEMtLS18TkdBfERcbiAgIiwibWVybWFpZCI6IntcbiAgXCJ0aGVtZVwiOiBcImRlZmF1bHRcIlxufSIsInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)
-    <figcaption>Voor coördinaattransformatie van RDNAP naar WGS 84 moet eerst naar ETRS89 en dan naar ITRS worden getransformeerd. Voor de de transformatie tussen RDNAP is de NSGI verantwoordelijk. Voor de transformatie tussen ETRS89 en ITRS publiceert EUREF parameters. De relatie tussen ITRS en WGS 84 wordt beheerd door de Amerkiaanse NGA.</figcaption>
+    <figcaption>Voor coördinaattransformatie van RDNAP naar WGS 84 moet eerst naar ETRS89 en dan naar ITRS worden getransformeerd. Voor de de transformatie tussen RDNAP is de NSGI verantwoordelijk. Voor de transformatie tussen ETRS89 en ITRS publiceert EUREF parameters. De relatie tussen ITRS en WGS 84 wordt beheerd door de Amerikaanse NGA.</figcaption>
 
 In de volgende paragrafen worden de coördinaattransformatie tussen RD en ETRS89 en tussen ETRS89 en WGS 84 beschreven.
 
@@ -199,7 +199,7 @@ Het is verstandig de gekozen strategie in de metadata te vermelden.
 Wanneer de brondata in RD of ETRS89 is en het beoogd gebruik van de data bestaat uit visualisatie of combinatie met andere datasets, kan worden gekozen om WGS 84 en ETRS89 aan elkaar gelijk te stellen. Dit is de standaard implementatie in meerdere GIS-pakketten, namelijk dat zonder expliciete vermelding van de WGS 84 en ETRS89-realisaties een nultransformatie wordt gebruikt. De nauwkeurigheid van de nultransformatie is circa 2 meter. Door het toepassen van deze strategie moet het resultaat worden geïnterpreteerd als een CRS dat bestaat uit een ongedefinieerd datum met als coördinatensysteem lengte en breedte. Het voordeel van het gebruik van de nultransformatie is dat de transformatie niet tijdsafhankelijk is en coördinaten dus niet veranderen in de tijd.
 
 <div class=example>
-_VOORBEELD_ In de de [stelselafspraken voor het DSO, versie 2.5 27-09-2021](https://iplo.nl/digitaal-stelsel/documenten/architectuurdocumenten/) is gebruik van de nultransformatie als volgt vastgelegd:
+_VOORBEELD_ In de [stelselafspraken voor het DSO, versie 2.5 27-09-2021](https://iplo.nl/digitaal-stelsel/documenten/architectuurdocumenten/) is gebruik van de nultransformatie als volgt vastgelegd:
 
 *Voor de uitlevering via API’s kan ook Pseudo-Mercator op basis van WGS84 (EPSG:3857) worden ondersteund. Hiermee kan bijvoorbeeld in gebruikerstoepassingen worden voorzien die beter aansluiten op Google Maps™. Voor de transformatie van (RD via) ETRS89 naar WGS84 is de aanbeveling om tussen ETRS89 en WGS84 een nultransformatie toe te passen en de coördinaten in ETRS89 en WGS84 dus gelijk aan elkaar te stellen. Gezien de onnauwkeurigheid van WGS84 is dat een gebruikelijke keuze met een acceptabele nauwkeurigheid, waarmee tevens voorkomen wordt dat de verkregen coördinaten in WGS84 door de tijd heen veranderen als gevolg van de tektonische beweging van Europa.*
 </div>
@@ -279,7 +279,7 @@ Diverse software (bibliotheken) ondersteunen het gebruik van meerdere CRS-en. De
 
 #### De merknaam RDNAPTRANS™
 
-RDNAPTRANS™ is een beschermde merknaam. Wanneer RDNAPTRANS™ is geïmplementeerd in een applicatie kan deze worden gecertificeerd door het Kadaster. Voor deze certificering wordt een aanvraagformulier ingevuld waarbij de aanvrager aantoont dat de implementatie is gevalideerd aan de criteria van RDNAPTRANS™. Voor de validatie wordt de RDNAPTRANS™[Transformatievalidatieservice](https://www.nsgi.nl/geodetische-infrastructuur/producten/programma-rdnaptrans/transformatievalidatie) gebruikt. Na deze certificering mag de leverancier de merknaam RDNAPTRANS™ gebruiken. Of een applicatie RDNAPTRANS™ gecertificeerd is kan worden gevraagd bij de leverancier of NSGI. Voorbeelden van gecertificeerde applicaties zijn [FME](https://hub.safe.com/publishers/safe-lab/transformers/rdnaptrans2018) en [DgDialog BGT](https://bgtsoftware.nl/dg-dialog-bgt-versie-7-9-beschikbaar/).
+RDNAPTRANS™ is een beschermde merknaam. Wanneer RDNAPTRANS™ is geïmplementeerd in een applicatie kan deze worden gecertificeerd door het Kadaster. Voor deze certificering wordt een aanvraagformulier ingevuld waarbij de aanvrager aantoont dat de implementatie is gevalideerd aan de criteria van RDNAPTRANS™. Voor de validatie wordt de RDNAPTRANS™ [Transformatievalidatieservice](https://www.nsgi.nl/geodetische-infrastructuur/producten/programma-rdnaptrans/transformatievalidatie) gebruikt. Na deze certificering mag de leverancier de merknaam RDNAPTRANS™ gebruiken. Of een applicatie RDNAPTRANS™ gecertificeerd is kan worden gevraagd bij de leverancier of NSGI. Voorbeelden van gecertificeerde applicaties zijn [FME](https://hub.safe.com/publishers/safe-lab/transformers/rdnaptrans2018) en [DgDialog BGT](https://bgtsoftware.nl/dg-dialog-bgt-versie-7-9-beschikbaar/).
 
 #### Voor ontwikkelaars
 
