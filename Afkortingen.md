@@ -1,4 +1,5 @@
 ## Lijst met afkortingen
+
 | Afkorting | Omschrijving |
 |----------|--------------|
 |AGRS.NL   |Actief GNSS Referentiestelsel voor Nederland|

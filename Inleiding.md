@@ -48,6 +48,7 @@ Bij de inwinning van de BGT worden ETRS89, RD en lokale CRS-en gebruikt. Voor de
 Eenduidig gebruik van CRS-en [coördinatentransformaties](#coordinatentransformatie-datumtransformatie-en-coordinatenconversie) voorkomt systematische afwijkingen bij gebruik van meerdere datasets. Eenduidig gebruik is mogelijk door het maken van afspraken over het gebruik van eenduidige coördinatentransformaties. Bij minder precieze coördinatentransformaties kunnen (soms visueel toelaatbare) verschillen ontstaan die afhankelijk zijn van de keuze van CRS en implementatie.
 
 [Hoofdstuk 4](#aandachtspunten-voor-crs-gebruik) gaat dieper in op de aandachtspunten voor CRS-gebruik.
+
 ### Leeswijzer
 
 Deze Handreiking heeft als doel om gebruikers vanuit het GIS- / geo-informatiewerkveld te voorzien van adviezen hoe om te gaan met met CRS-en bij uitwisseling en visualisatie van geo-informatie, o.a. in de context van Landelijke Voorzieningen en vergelijkbare digitale stelsels. De Handreiking gaat niet in op de geschiktheid van CRS-en voor het uitvoeren van nauwkeurige berekeningen of de wijze waarop deze kunnen worden uitgevoerd.
