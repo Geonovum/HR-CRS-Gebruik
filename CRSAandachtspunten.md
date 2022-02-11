@@ -1,10 +1,72 @@
 ## Aandachtspunten voor CRS-gebruik
+
 Na de relevante achtergronden bij de verschillende gebruikte CRS-en in Nederland, geeft dit hoofdstuk aandachtspunten bij het op passende wijze kiezen van en omgaan met CRS-en in o.a. informatiemodellen, in uitwisselmechanismes, -formaten en -standaarden en in het ontwerp van landelijke voorzieningen. Verder bevat het voorbeelden van hoe dit in verschillende softwarepakketen mogelijk is, zowel vanuit het perspectief van ontwikkelaars als vanuit het persepctief van de gebruiker.
+
+### CRS-keuze bij verschillende toepassingen
+
+In het [hoofstuk 2](#crs-en-in-nederland) zijn de CRS-en beschreven die worden gebruikt in Nederland. Deze paragraaf geeft voor verschillende toepassingen de mogelijke CRS-en aan.
+
+#### Opslag en uitwisseling van data
+
+Voor opslag en uitwisseling wordt het gebruik van eenduidige CRS-en geadviseerd. De data hoeft voor opslag en uitwisseling niet geprojecteerd te zijn. Voor hoge nauwkeurigheid kan voor de horizontale component het [RD](#crs-op-land-rd-en-nap) geografisch of geprojecteerd [ETRS89](#europees-crs-etrs89) (bij centimeternauwkeurigheid de realisatie ETRF2000) en realisaties van het [ITRS](#itrs) (inclusief epoche) worden gebruikt. Bij 3D datasets kan [RDNAP](#crs-op-land-rd-en-nap), geografisch ETRS89 (bij centimeternauwkeurigheid de realisatie ETRF2000) of een ITRS-realisatie (inclusief epoche) worden gebruikt. Daarnaast kan een samengesteld (compound) CRS worden gebruikt voor 3D data, waarbij de geprojecteerde of geografische 2D-data wordt aangevuld met een 1D CRS zoals NAP of EVRF2019. 
+
+#### Visualisatie in een plat vlak
+
+Bij visualisatie in een plat vlak wordt een geprojecteerd CRS gebruikt. De keuze van de kaartprojectie is afhankelijk van de toepassing en schaal, de RD-projectie is voor veel toepassingen binnen Europees Nederland een geschikte projectie met weinig vervorming en schaaleffecten. 
+
+Het is een misverstand dat de RD-projectie niet geschikt is voor gebruik op zee, maar dat hiervoor een UTM-variant moet worden gebruikt zoals ETRS89-TM*zn*. Alleen in de meest noordwestelijke punt van de Nederlandse Exclusieve Economische Zone (EEZ) heeft de RD-projectie voor sommige toepassingen ongunstigere eigenschappen dan de ETRS89-TM*zn* projectie. ETRS89-TM*zn* heeft als nadeel dat nederland in twee zones (31 en 32) valt, de RD-projectie geeft op land en het grootste deel van de Noordzee minder vervormingen dan ETRS89-TM*zn*.
+
+##### Visualisatie op het web
+
+Voor visualisatie op het web is het uitgangspunt dat de data wordt afgebeeld op een plat beeldscherm. De de-facto kaartprojectie die door veel tooling wordt ondersteund is de Web-Mercator projectie op basis van WGS 84. [SDW-BP](https://www.w3.org/TR/sdw-bp/) raden aan om minimaal [WGS 84](#wgs-84) aan te bieden voor visualisatie op het web. De Web-Mercator projectie is geschikt voor visualisatie, maar niet voor het uitvoeren van berekeningen. Voor nauwkeurige visualisatie toepassingen op het web is het daarom nodig data ook aan te bieden in andere CRS-en, zoals RD, ETRS89-LAEA, ETRS89-LCC en ETRS89-TM*zn* en bij de implementatie tooling en services te gebruiken die deze CRS-en ondersteunen.
+
+#### Mogelijke CRS-en binnen INSPIRE
+
+Bij visualisatie in het kader van INSPIRE zijn een aantal projecties van geografisch ETRS89 gedefinieërd, namelijk ETRS89-LAEA, ETRS89-LCC en ETRS89-TM*zn*. 
+
+Voor INSPIRE-verplichtingen mag voor data-uitwisseling van 2D vectordata zowel geografisch als geprojecteerd ETRS89 worden gebruikt. Bij uitwisseling en visualisatie van 2D rasterdata wordt volgens sectie 2.2 van [Annex II](http://data.europa.eu/eli/reg/2010/1089/oj) ETRS89-LAEA gebruikt, tenzij daar binnen de technische specificaties van wordt afgeweken. Sectie 2.2.1 van [Annex II](http://data.europa.eu/eli/reg/2010/1089/oj) geeft de definitie van de eigenschappen van het ETRS89-LAEA raster, zoals de mogelijke resoluties en de celnummering.
+
+Voor 3D datasets gelden voor vector- en rasterdata dezelfde voorwaarden als voor 2D data. Voor 3D data kan het geografisch ETRS89-GRS80h worden gebruikt of een samengesteld CRS met als 1D CRS een EVRS-realisatie op land en op zee LAT in getijdegebied (zee en kustgebied), of MSL in gebieden waar geen significant getij aanwezig is, en als 2D CRS een geografisch of geprojecteerd INSPIRE CRS. 
+
+<div class="example">
+_VOORBEELD_
+Afhankelijk van de specifieke INSPIRE datasets kan worden afgeweken van de voorwaarde in sectie 2.2 van [Annex II](http://data.europa.eu/eli/reg/2010/1089/oj) (namelijk dat ETRS89-LAEA wordt gebruikt voor het visualisatie en uitwisseling van rasterdata) en een specifieke andere aanbeveling worden gedaan. Een voorbeeld hiervan is de [Annex III](https://eur-lex.europa.eu/eli/reg/2013/1253/oj) in paragraaf 1.7.2 voor hoogterasters. 
+
+<em>
+Eisen voor hoogteraster coverages
+
+(1) In afwijking van de eis in Paragraaf 2.2 van bijlage II, kan elk raster dat verenigbaar is met een van de
+volgende coördinatenreferentiesystemen worden gebruikt om gerasterde hoogtegegevens te leveren:
+
+— twee-dimensionale geodetische coördinaten (breedtegraad en lengtegraad) gebaseerd op een datum
+gespecificeerd in 1.2 van bijlage II en met gebruik van de parameters van de GRS80 ellipsoïde;
+
+— vlakke coördinaten met gebruik van het ETRS89 Lambert hoekgetrouwe conische coördinaatreferentiesysteem;
+
+T
+Het raster gespecificeerd in Paragraaf 2.2.1 van bijlage II moet niet worden gebruikt.
+</em>
+
+Waarbij *Het raster gespecificeerd in Paragraaf 2.2.1 van bijlage II* ETRS89-LAEA is. 
+
+In aanvulling hierop wordt in de [technische specificaties voor hoogtedata](https://inspire.ec.europa.eu/id/document/tg/el) de aanbeveling gedaan om voor uitwisseling een samengesteld CRS te gebruiken, bestaand uit geografisch of geprojecteerd ETRS89 als 2D CRS en EVRS als 1D CRS: 
+
+*Recommendation 13
+  For pan-European global Elevation datasets the compound CRS ETRS89-GRS80/EVRS is recommended for data provision, in areas within the geographical scope of ETRS89.*
+
+Voor visualisatie wordt het samengestelde CRS geprojecteerd ETRS89TM*zn* voor 2D en EVRS voor 1D aanbevolen:
+
+*Recommendation 14 
+  For regional European Elevation datasets, covering specific parts of countries, the compound CRS ETRS89-TMzn/EVRS is recommended for data provision and display, in areas within the geographical scope of ETRS89.*
+
+</em>
+</div>
 
 ### Aandachtspunten bij CRS in informatiemodel en informatieketen
 
 In een informatiemodel voor geo-informatie worden regels opgenomen voor het te gebruiken CRS(-en). 
 #### Aandachtspunten t.a.v. CRS-keuze
+
 Bij het opstellen van het informatiemodel is de aanbeveling om te inventariseren welke CRS-en al gebruikt worden in het domein en waarom. Dit kan leiden tot verschillende keuzes in de implementatie, zoals te zien in het onderstaande voorbeeld voor BGT, BRO en DSO.
 
 <div class="example">
@@ -46,9 +108,11 @@ De volgende tabel geeft de link naar voorbeelden van het specificeren van het CR
 |BRO Booronderzoek|2D: Gebruik van ETRS89 voor opslag, aanlevering toegestaan in RD, ETRS89 en WGS 84|https://docs.geostandaarden.nl/bro/bhr-g/#referentiestelsels-voor-de-horizontale-positie|
 
 #### Aandachtspunten t.a.v. dubbel opslaan of on-the-fly transformeren
+
 Bij het ontwerp van het informatiemodel, landelijke voorziening of dataportaal kan de afweging worden gemaakt om coördinaattransformaties op verschillende plaatsen in de keten te laten plaatsvinden en data dubbel op te slaan of juist de transformaties on-the-fly uit te voeren. Aandachtspunten bij deze afweging zijn onder andere de authenticiteit van gegevens, de kostenafweging tussen dubbel opslaan en (herhaaldelijk) on-the-fly transformeren en de borging van voldoende performance. 
 
 #### Nauwkeurigheid van coördinaten
+
 De nauwkeurigheid van coördinaten moet minstens de nauwkeurigheid realiseren die vermeld wordt in het informatiemodel of bijgeleverde inwinningseisen. Meestal is het aantal decimalen dat in software standaard wordt opgeleverd, groter. Deze decimalen hebben dan geen betekenis meer. Om te voorkomen dat er te grote databestanden ontstaan, wordt aanbevolen de coördinaten af te ronden op 1 decimaal meer dan de nauwkeurigheid van de dataset vereist. Hierdoor kunnen fouten bij herhaaldelijk heen en weer transformeren worden voorkomen.
 
 <div class="example">
@@ -69,6 +133,7 @@ _VOORBEELD_ zoals opgenomen in [IMOW](https://geonovum.github.io/TPOD/CIMOW/IMOW
 </div>
 
 ### Aandachtspunten bij meerdere CRS-en
+
 Bij het gebruik van meerdere CRS-en bestaat risico op introductie van fouten door onjuiste implementatie van de relaties tussen CRS-en. Eindgebruikers worden geadviseerd data waar mogelijk op te vragen in hetzelfde CRS.
 
 Aanbieders van data worden geadviseerd om data aan te bieden in de verschillende CRS-en gericht op de eindgebruikers. Hierbij is het advies zo nauwkeurig mogelijk te transformeren, omdat het niet altijd duidelijk is wie de eindgebruiker is.
@@ -78,7 +143,7 @@ Wanneer voor opslag, uitwisseling en/of visualisatie andere CRS-en worden gebrui
 - Voorkom dat te grote geometrische of topologische verschillen ontstaan
 - Maak gebruik van een eenduidige coördinaatransformatie (en leg dit vast)
 
-##### Vormvastheid
+#### Vormvastheid
 
 Een rechte lijn in werkelijkheid is meestal geen rechte lijn in een kaart, maar een lijn die licht krom loopt. Om er voor te zorgen dat een begrenzing in de kaart -ongeacht de kaartprojectie- met voldoende nauwkeurigheid eenduidig is, heeft de NSGI hiervoor een [advies](https://forum.pdok.nl/uploads/default/original/2X/c/c0795baa683bf3845c866ae4c576a880455be02a.pdf) geformuleerd. In dit advies staat dat lange lijnsegmenten van grenzen voorzien moeten worden van synthetische tussenpunten om bij coördinaatransformatie grote geometrische en topologische verandering van de data te voorkomen. De afstand tussen deze tussenpunten is afhankelijk van de acceptabele afwijking en de locatie op aarde. Voor Europees Nederland inclusief EEZ kan de volgende tabel worden gehanteerd:
 
@@ -102,6 +167,7 @@ _VOORBEELD_ In de de [stelselafspraken versie 2.5 van 27 september 2021 voor het
 </div>
 
 #### Aandachtspunten bij coördinaattransformatie
+
 De relatie tussen CRS-en is vastgelegd in een [coördinaattransformatie](#coordinaattransformatie-datumtransformatie-en-coordinaatconversie). De relaties RD/NAP, ETRS89, ITRS en WGS 84 zijn weergegeven in onderstaande figuur met daarbij de organisatie die de gegevens van coördinaattransformatie beheerd.
 
 [![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFIgXG4gICAgQVtSRE5BUF1cbiAgICBCW0VUUlM4OV1cbiAgICBDW0lUUlNdXG4gICAgRFtXR1MgODRdXG4gICAgXG4gIEEtLS18XCJOU0dJIChSRE5BUFRSQU5TKVwifEJcbiAgQi0tLXxFVVJFRnxDXG4gIEMtLS18TkdBfERcbiAgIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiZ3JhcGggTFIgXG4gICAgQVtSRE5BUF1cbiAgICBCW0VUUlM4OV1cbiAgICBDW0lUUlNdXG4gICAgRFtXR1MgODRdXG4gICAgXG4gIEEtLS18XCJOU0dJIChSRE5BUFRSQU5TKVwifEJcbiAgQi0tLXxFVVJFRnxDXG4gIEMtLS18TkdBfERcbiAgIiwibWVybWFpZCI6IntcbiAgXCJ0aGVtZVwiOiBcImRlZmF1bHRcIlxufSIsInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)
@@ -110,6 +176,7 @@ De relatie tussen CRS-en is vastgelegd in een [coördinaattransformatie](#coordi
 In de volgende paragrafen worden de coördinaattransformatie tussen RD en ETRS89 en tussen ETRS89 en WGS 84 beschreven.
 
 ##### Transformatie en conversie tussen RD/NAP en ETRS89
+
 Bij de koppeling tussen ETRS89 en RD in de jaren 1990 werden systematische verschillen gevonden. Vanwege de wens van gebruikers dat RD-coördinaten niet wijzigden bij de introductie van ETRS89, is er voor gekozen om de verschillen te modelleren in correctiegrid, dat deel uitmaakt van de coördinaattransformatie procedure tussen geprojecteerde RD-coördinaten en geografische ETRS89-coördinaten. NAP hoogten kunnen met een quasi-geoïdemodel naar ellipsoïdische hoogten in ETRS89 worden getransformeerd met een precisie die hoger is dan de ETRS89-coördinaten die met de meeste GNSS-metingen wordt verkregen. Het correctiegrid en quasi-geoïdemodel zijn onderdeel van de procedure RDNAPTRANS™. 
 
 RDNAPTRANS™ kent verschillende versies, in veel (oudere) GIS-pakketten en andere software is RDNAPTRANS™ niet volledig geïmplementeerd, wat fouten op decimeterniveau oplevert. Met de publicatie van RDNAPTRANS™ 2018 is een versie beschikbaar gekomen die voor aanbieders van GIS-software eenvoudiger te implementeren is. In de regel blijven de oudere, niet juist geïmplementeerde, versies ook beschikbaar in software, waarmee het voor gebruikers belangrijk is om goed te weten welke transformatie zij het beste kunnen gebruiken in hun software. De NSGI publiceert advies over het gebruik en de actuele procedure van RDNAPTRANS™ haar [website](https://www.nsgi.nl/rdnaptrans). Voor validatie van implementaties van RDNAPTRANS heeft de NSGI een [transformatievalidatieservice](https://www.nsgi.nl/geodetische-infrastructuur/producten/programma-rdnaptrans/transformatievalidatie) beschikbaar.  Voor de transformatie tussen RD/NAP en ETRS89 met gebruik van de RDNAPTRANS™ procedure is tevens een [transformatie-API](https://www.nsgi.nl/coordinatentransformatie-api) beschikbaar bij de NSGI. Voorbeelden van implementatie van RDNAPTRANS™ in software worden gegeven in de paragraaf [CRS in software](#crs-in-software).
@@ -119,6 +186,7 @@ _AANBEVELING_  Voor de uitwisseling van geo-informatie binnen Europa is het nadr
 </div>
 
 ##### Transformatie tussen ETRS89 en ITRS/WGS 84
+
 Wanneer na zorgvuldige afweging gebruik wordt gemaakt van WGS 84 of ITRS voor visualisatie of uitwisseling zijn verschillende strategieën mogelijk:
 
 * **[WGS 84 gelijkstellen aan ETRS89](#wgs-84-gelijkstellen-aan-etrs89)**. Dit is de juiste keuze als er geen expliciete realisatie of epoche van WGS 84 wordt gebruikt. Het beoogd gebruik van de WGS 84 coördinaten mag geen toepassing zijn die hoge nauwkeurigheid vereist, tenzij er zekerheid is dat alle data gebruikt maakt van de nultransformatie.
@@ -177,6 +245,7 @@ Niet alle uitwisselingsformaten en standaarden ondersteunen (volledig) het gebru
 De tabel laat zien dat de eenvoudige formaten HTML en GeoJSON default alleen WGS 84 ondersteunen. In het geval dat een formaat alleen WGS 84 ondersteund moet dit worden geïnterpreteerd als een ongedefinieerd CRS met geografische coördinaten en lage nauwkeurigheid, omdat bijvoorbeeld een [nultransformatie](#wgs-84-gelijkstellen-aan-etrs89) kan zijn toegepast. Voor veel toepassingen op het web voldoet deze lagere nauwkeurigheid. De andere formaten ondersteunen meerdere CRS-en, ook de CRS-en die niet in deze tabel zijn opgenomen, maar wel zijn gegeven in [Bijlage A](#bijlage-a-crs-overzicht-tabel).
 
 #### OGC API
+
 De [OGC API standaarden](https://ogcapi.ogc.org/) worden ontworpen om eenvoudig geodata op het web te publiceren. De standaarden zijn modulair opgebouwd uit API bouwblokken. Ondersteuning voor meerdere CRS-en is in de OGC API Roadmap alleen voorzien in de bouwblokken voor OGC API Features, maar er wordt naar verwezen in de [OGC API Common repository](https://github.com/opengeospatial/ogcapi-common) als deel 3 van deze bouwblokken. 
 
 De OGC API Features bevat de bouwblokken voor het creëren, bewerken en bevragen van Features. In de [deel 2 van OGC API Features](https://docs.opengeospatial.org/is/18-058/18-058.html) beschrijving wordt de [deel 1 van de OGC API Features](http://docs.opengeospatial.org/is/17-069r3/17-069r3.html), waarin WGS 84 wordt voorgeschreven, uitgebreid voor de ondersteuning van meerdere CRS-en. Met deze uitbreiding is het gebruik van meerdere CRS-en mogelijk mits er een [NTS](#naamgeving-van-crs) beschikbaar is en het CRS voldoet aan [ISO 19111:2019](https://www.iso.org/obp/ui/#iso:std:iso:19111) / [OGC Abstract Specification Topic 2: Referencing by coordinates](http://docs.opengeospatial.org/as/18-005r4/18-005r4.html) . Hiermee wordt, naast bijvoorbeeld RDNAP, ook de ontsluiting van data opgeslagen in de realisatie van een wereldwijd dynamisch CRS zoals ITRF2014 op en bepaald epoche ondersteund in OGC API Features. De OGC API Features deel 2 bevat onder andere een beschrijving over hoe:
@@ -211,6 +280,7 @@ Diverse software (bibliotheken) ondersteunen het gebruik van meerdere CRS-en. De
 #### De merknaam RDNAPTRANS™
 
 RDNAPTRANS™ is een beschermde merknaam. Wanneer RDNAPTRANS™ is geïmplementeerd in een applicatie kan deze worden gecertificeerd door het Kadaster. Voor deze certificering wordt een aanvraagformulier ingevuld waarbij de aanvrager aantoont dat de implementatie is gevalideerd aan de criteria van RDNAPTRANS™. Voor de validatie wordt de RDNAPTRANS™[Transformatievalidatieservice](https://www.nsgi.nl/geodetische-infrastructuur/producten/programma-rdnaptrans/transformatievalidatie) gebruikt. Na deze certificering mag de leverancier de merknaam RDNAPTRANS™ gebruiken. Of een applicatie RDNAPTRANS™ gecertificeerd is kan worden gevraagd bij de leverancier of NSGI. Voorbeelden van gecertificeerde applicaties zijn [FME](https://hub.safe.com/publishers/safe-lab/transformers/rdnaptrans2018) en [DgDialog BGT](https://bgtsoftware.nl/dg-dialog-bgt-versie-7-9-beschikbaar/).
+
 #### Voor ontwikkelaars
 
 ##### PROJ
