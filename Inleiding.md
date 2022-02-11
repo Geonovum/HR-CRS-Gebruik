@@ -50,7 +50,7 @@ Eenduidig gebruik van CRS-en [coördinatentransformaties](#coordinatentransforma
 [Hoofdstuk 4](#aandachtspunten-voor-crs-gebruik) gaat dieper in op de aandachtspunten voor CRS-gebruik.
 ### Leeswijzer
 
-Deze Handreiking heeft als doel om gebruikers vanuit het GIS- / geo-informatiewerkveld te voorzien van adviezen hoe om te gaan met met CRS-en bij uitwisseling en visualisatie van geo-informatie, o.a. in de context van Landelijke Voorzieningen en vergelijkbare digitale stelsels.
+Deze Handreiking heeft als doel om gebruikers vanuit het GIS- / geo-informatiewerkveld te voorzien van adviezen hoe om te gaan met met CRS-en bij uitwisseling en visualisatie van geo-informatie, o.a. in de context van Landelijke Voorzieningen en vergelijkbare digitale stelsels. De Handreiking gaat niet in op de geschiktheid van CRS-en voor het uitvoeren van nauwkeurige berekeningen of de wijze waarop deze kunnen worden uitgevoerd.
 
 <div class="example">
 _VOORBEELD_ 

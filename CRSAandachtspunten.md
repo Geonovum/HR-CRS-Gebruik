@@ -121,12 +121,13 @@ _AANBEVELING_  Voor de uitwisseling van geo-informatie binnen Europa is het nadr
 ##### Transformatie tussen ETRS89 en ITRS/WGS 84
 Wanneer na zorgvuldige afweging gebruik wordt gemaakt van WGS 84 of ITRS voor visualisatie of uitwisseling zijn verschillende strategieën mogelijk:
 
-* **[WGS 84 gelijkstellen aan ETRS89](#wgs-84-gelijkstellen-aan-etrs89)**. Dit is de juiste keuze als er geen expliciete realisatie of epoche van WGS 84 wordt gebruikt. Het beoogd gebruik van de WGS 84 coördinaten mag geen toepassing zijn die hoge nauwkeurigheid vereist.
-* **[Tijdsafhankelijke transformatie tussen ETRS89 en ITRS/WGS 84](#tijdsafhankelijke-transformatie-tussen-etrs89-en-itrs-wgs-84)**. Dit is de juiste keuze wanneer wel een expliciete realisatie én epoche van ITRS of WGS 84 worden gebruikt.
+* **[WGS 84 gelijkstellen aan ETRS89](#wgs-84-gelijkstellen-aan-etrs89)**. Dit is de juiste keuze als er geen expliciete realisatie of epoche van WGS 84 wordt gebruikt. Het beoogd gebruik van de WGS 84 coördinaten mag geen toepassing zijn die hoge nauwkeurigheid vereist, tenzij er zekerheid is dat alle data gebruikt maakt van de nultransformatie.
+* **[Tijdsafhankelijke transformatie tussen ETRS89 en ITRS/WGS 84](#tijdsafhankelijke-transformatie-tussen-etrs89-en-itrs-wgs-84)**. Dit is de juiste keuze wanneer wel een expliciete realisatie én epoche van ITRS of WGS 84 nodig is voor de toepassing.
 
 Het is verstandig de gekozen strategie in de metadata te vermelden.
 
 ###### WGS 84 gelijkstellen aan ETRS89
+
 Wanneer de brondata in RD of ETRS89 is en het beoogd gebruik van de data bestaat uit visualisatie of combinatie met andere datasets, kan worden gekozen om WGS 84 en ETRS89 aan elkaar gelijk te stellen. Dit is de standaard implementatie in meerdere GIS-pakketten, namelijk dat zonder expliciete vermelding van de WGS 84 en ETRS89-realisaties een nultransformatie wordt gebruikt. De nauwkeurigheid van de nultransformatie is circa 2 meter. Door het toepassen van deze strategie moet het resultaat worden geïnterpreteerd als een CRS dat bestaat uit een ongedefinieerd datum met als coördinatensysteem lengte en breedte. Het voordeel van het gebruik van de nultransformatie is dat de transformatie niet tijdsafhankelijk is en coördinaten dus niet veranderen in de tijd.
 
 <div class=example>
@@ -140,7 +141,8 @@ Bij gebruik van data waarbij het aangegeven CRS WGS 84 (EPSG:4326) is zonder dui
 </div>
 
 ###### Tijdsafhankelijke transformatie tussen ETRS89 en ITRS/WGS 84
-Wanneer de dataspecificatie expliciet een realisatie en epoche van WGS 84 of ITRS benoemt, of data gecombineerd wordt met de actuele locatie van de eindgebruiker, dan kan worden gekozen de transformatie tussen ETRS89 en WGS 84 uit te voeren met hoge nauwkeurigheid voor een specifieke realisatie op een specifiek epoche. Dergelijke transformaties zijn vaak niet standaard geïmplementeerd in GIS-software, waardoor de gebruiker zelf de juiste transformatie moet definiëren in de software. 
+
+Wanneer de toepassing of dataspecificatie expliciet een realisatie en epoche van WGS 84 of ITRS vraagt, of data gecombineerd wordt met de actuele locatie van de eindgebruiker, dan kan worden gekozen de transformatie tussen ETRS89 en WGS 84 uit te voeren met hoge nauwkeurigheid voor een specifieke realisatie op een specifiek epoche. Dergelijke transformaties zijn vaak niet standaard geïmplementeerd in GIS-software, waardoor de gebruiker zelf de juiste transformatie moet definiëren in de software. 
 
 Voor Nederlandse data mag voor ETRS89 de realisatie ETRF2000 worden gekozen. Wanneer de WGS 84-realisatie niet is gespecificeerd, dan wordt de meest recente realisatie gekozen (2D/3D WGS 84 (G2139)) of de realisatie van het (gemiddelde) moment van inwinning van de dataset.
 

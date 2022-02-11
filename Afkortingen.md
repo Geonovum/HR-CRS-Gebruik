@@ -2,13 +2,12 @@
 | Afkorting | Omschrijving |
 |----------|--------------|
 |AGRS.NL   |Actief GNSS Referentiestelsel voor Nederland|
-|Basisregistratie Grootschalige Topografie|
 |BKG       |Bundesamt für Kartographie und Geodäsie|
 |BGT       |Basisregistratie Grootschalige Topografie|
 |BRO       |Basisregistratie Ondergrond|
 |CRS       |Coördinaatreferentiesysteem|
 |DSO       |Digtiaal Stelsel Omgevingswet|
-|EEZ|      |Exclusieve Economische Zone|
+|EEZ       |Exclusieve Economische Zone|
 |ETRF      |European Terrestrial Reference Frame|
 |ETRS89    |European Terrestrial Reference System 1989|
 |EVRF      |European Vertical Reference Frame|

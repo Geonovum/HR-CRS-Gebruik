@@ -38,8 +38,7 @@ gespecificeerd in 1.2 van bijlage II en met gebruik van de parameters van de GRS
 
 — vlakke coördinaten met gebruik van het ETRS89 Lambert hoekgetrouwe conische coördinaatreferentiesysteem;
 
-— vlakke coördinaten met gebruik van het ETRS89 transversale Mercator coördinaatreferentiesysteem.
-
+T
 Het raster gespecificeerd in Paragraaf 2.2.1 van bijlage II moet niet worden gebruikt.
 </em>
 
