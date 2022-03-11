@@ -10,7 +10,7 @@ Onderstaande tabel geeft de naam en EPSG-code veelgebruikte CRS-en in Nederland.
 |ETRS89|4258|Geografisch<br>GRS80 ellipsoïde (&phi;, &lambda;)|Ensemble<br>Binnen INSPIRE aangeduid als ETRS89-GRS80|
 |ETRS89|4937|Geografisch<br>GRS80 ellipsoïde (&phi;, &lambda;, h)|Ensemble<br>Binnen INSPIRE aangeduid als ETRS89-GRS80h|
 |ETRS89|4936|Geocentrisch (X, Y, Z)|Ensemble<br>Binnen INSPIRE aangeduid als ETRS89-XYZ|
-|ETRS89-LAEA|3035|Geprojecteerd<br>Lambert Equal Area projectie (y, x)|[INSPIRE projectie voor statistische data](https://inspire.ec.europa.eu/id/document/tg/rs)|
+|ETRS89-LAEA|3035|Geprojecteerd<br>Lambert Equal Area projectie (Y, X)|[INSPIRE projectie voor statistische data](https://inspire.ec.europa.eu/id/document/tg/rs)|
 |ETRS89-LCC|3034|Geprojecteerd<br>Lambert Conformal Conical (N, E)|[INSPIRE projectie voor kleinschalige (< 1:500 000) pan-Europese data](https://inspire.ec.europa.eu/id/document/tg/rs)|
 |ETRS89-TM31|3043|Geprojecteerd<br>Transversale Mercator projectie (N, E)|[INSPIRE projectie voor grootschalige (> 1:500 000) data voor zone 31N (0° to 6°E)](https://inspire.ec.europa.eu/id/document/tg/rs) |
 |ETRS89-TM32|3044|Geprojecteerd<br>Transversale Mercator projectie (N, E)|[INSPIRE projectie voor grootschalige (> 1:500 000) data voor zone 32N (6° to 12°E)](https://inspire.ec.europa.eu/id/document/tg/rs) |
