@@ -47,7 +47,7 @@ Het gebruik van CRS-en in de keten van inwinning tot uitwisseling en visualisati
 Bij de inwinning van de BGT worden ETRS89, RD en lokale CRS-en gebruikt. Voor de opslag bij bronhouders, de Landelijke Voorziening en het dataplatform wordt voor de uitwisseling het CRS RD gebruikt. Voor uitwisseling tussen dataplatform en gebruiker worden het Nederlandse RD, het Europese ETRS89 en het wereldwijde  WGS 84 gebruikt. Hierbij zijn voor de visualisatie van ETRS89 en WGS 84 verschillende kaartprojecties mogelijk.
 </div>
 
-Eenduidig gebruik van CRS-en [coördinatentransformaties](#coordinatentransformatie-datumtransformatie-en-coordinatenconversie) voorkomt systematische afwijkingen bij gebruik van meerdere datasets. Eenduidig gebruik is mogelijk door het maken van afspraken over het gebruik van eenduidige coördinatentransformaties. Bij minder precieze coördinatentransformaties kunnen (soms visueel toelaatbare) verschillen ontstaan die afhankelijk zijn van de keuze van CRS en implementatie.
+Eenduidig gebruik van CRS-en [coördinatentransformaties](#coordinaattransformatie-datumtransformatie-en-coordinaatconversie) voorkomt systematische afwijkingen bij gebruik van meerdere datasets. Eenduidig gebruik is mogelijk door het maken van afspraken over het gebruik van eenduidige coördinatentransformaties. Bij minder precieze coördinatentransformaties kunnen (soms visueel toelaatbare) verschillen ontstaan die afhankelijk zijn van de keuze van CRS en implementatie.
 
 [Hoofdstuk 4](#aandachtspunten-voor-crs-gebruik) gaat dieper in op de aandachtspunten voor CRS-gebruik.
 
@@ -66,6 +66,6 @@ In het voorbeeld van de BGT gaat het dus om adviezen voor het omgaan met CRS-en 
 
 </div>
 
-Het hoofdstuk [Achtergrond: Gebruikte CRS-en in Nederland](#crs-en-in-nederland) geeft een overzicht van de huidige veel gebruikte CRS-en in Nederland en de relatie met andere CRS-en. Het hoofdstuk is gericht op nieuwkomers in de geo-wereld, data aanbieders, GIS-gebruikers en modelleurs die hun kennis willen opfrissen.
+Het hoofdstuk [Achtergrond: Gebruikte CRS-en in Nederland](#achtergrond-gebruikte-crs-en-in-nederland) geeft een overzicht van de huidige veel gebruikte CRS-en in Nederland en de relatie met andere CRS-en. Het hoofdstuk is gericht op nieuwkomers in de geo-wereld, data aanbieders, GIS-gebruikers en modelleurs die hun kennis willen opfrissen.
 
-Het hoofdstuk [CRS-gebruik bij verschillende toepassingen](#crs-gebruik-bij-verschillende-toepassingen) gaat in op de keuze, specificatie en gebruik van de in Nederland gebruikte CRS-en voor verschillende toepassingen zoals modelering, uitwisseling, INSPIRE en gebruik in software.
+Het hoofdstuk [Aandachtspunten voor CRS-gebruik](#aandachtspunten-voor-crs-gebruik) gaat in op de aandachtspunten voor de keuze, specificatie en gebruik van de in Nederland gebruikte CRS-en voor verschillende toepassingen bij modelering, uitwisseling, INSPIRE en gebruik in software.
