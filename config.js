@@ -193,10 +193,9 @@ var respecConfig =
   postProcess:[custGHPG],   //-- Optioneel voor een multi document repository
 
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
-  previousPublishDate: "2021-11-25",  	    // Format is "YYY-MM-DD"
-  previousMaturity: "CV",                   // kies 1 van deze 2 regels  	  
-  //previousMaturity: "VV",  	                // kies 1 van deze 2 regels
-
+  previousPublishDate: "2021-03-14",  	    // Format is "YYY-MM-DD"
+  previousMaturity: "GN-VV",                   // kies 1 van deze 2 regels  	  
+  
   //-- Optionele parameters:
   emailComments: "geostandaarden@geonovum.nl",  // reactie mailadres, alleen bij CV!
   //subtitle: "iets",                           // Subtitel van het document
