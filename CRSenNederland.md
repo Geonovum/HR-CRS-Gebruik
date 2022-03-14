@@ -21,16 +21,16 @@ CRS-en worden in de praktijk op verschillende manieren aangeduid. Tot nu toe zij
 
 |Type aanduiding|structuur|
 |----|----|
-|URN|urn:ogc:def:crs:_authority_:_version_:_code_|
-|NTS|http://www.opengis.net/def/crs/_authority_/_version_/_code_|
-|NTS|http://www.opengis.net/def/crs?authority=_authority_&version=_version_&code=_code_|
+|URN|`urn:ogc:def:crs:_authority_:_version_:_code_`|
+|NTS|`http://www.opengis.net/def/crs/_authority_/_version_/_code_`|
+|NTS|`http://www.opengis.net/def/crs?authority=_authority_&version=_version_&code=_code_`|
 
 In deze aanduiding wordt meestal EPSG als de-facto autoriteit gebruikt, maar ook ISO is een voorbeeld van een autoriteit. Bij gebruik van de laatste versie van de database van de authority wordt bij URN _version_ leeg gelaten, terwijl bij de NTS _version_=0 wordt gebruikt. In [Bijlage A](#bijlage-a-crs-overzicht-tabel) is een tabel opgenomen met de EPSG-codes voor veelgebruikte CRS-en in Nederland. Met behulp van deze tabel kan de URN en NTS worden afgeleid, bijvoorbeeld voor het RD (EPSG:code 28992), resulteert dit in de volgende aanduidingen.
 
 |Type aanduiding|structuur|
 |----|----|
 |URN|urn:ogc:def:crs:EPSG::28992|
-|NTS|http://www.opengis.net/def/crs/ESPG/0/28992|
+|NTS|http://www.opengis.net/def/crs/EPSG/0/28992|
 |NTS|http://www.opengis.net/def/crs?authority=EPSG&version=0&code=28992|
 
 ### Coördinaattransformatie, datumtransformatie en coördinaatconversie
