@@ -28,7 +28,7 @@ Onderstaande tabel geeft de naam en EPSG-code veelgebruikte CRS-en in Nederland.
 |ITRF2014|9000|Geografisch<br>GRS80 ellipsoïde  (&phi;, &lambda;)|Aanbevolen wereldwijd CRS door VN, IUGG en EPSG|
 |ITRF2014|7912|Geografisch<br>GRS80 ellipsoïde  (&phi;, &lambda;, h)|Aanbevolen wereldwijd CRS door VN, IUGG en EPSG|
 |ITRF2014|7789|Geocentrisch (X, Y, Z)|Aanbevolen wereldwijd CRS door VN, IUGG en EPSG|
-|WGS 84|4258|Geografisch<br>WGS 84 ellipsoïde (&phi;, &lambda;)|Ensemble<br>Aanbevolen wereldwijd CRS voor toepassingen op het web door OGC|
+|WGS 84|4326|Geografisch<br>WGS 84 ellipsoïde (&phi;, &lambda;)|Ensemble<br>Aanbevolen wereldwijd CRS voor toepassingen op het web door OGC|
 |WGS 84|4979|Geografisch<br>WGS 84 ellipsoïde  (&phi;, &lambda;, h)|Ensemble<br>Aanbevolen wereldwijd CRS voor toepassingen op het web door OGC|
 |WGS 84 (G2139)|9755|Geografisch (&phi;, &lambda;)|WGS 84 realisatie van 3 januari 2021|
 |WGS 84 (G2139)|9754|Geografisch (&phi;, &lambda;, h)|WGS 84 realisatie van 3 januari 2021|
