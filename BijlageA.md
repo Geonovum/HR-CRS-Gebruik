@@ -33,6 +33,6 @@ Onderstaande tabel geeft de naam en EPSG-code veelgebruikte CRS-en in Nederland.
 |WGS 84 (G2139)|9755|Geografisch (&phi;, &lambda;)|WGS 84 realisatie van 3 januari 2021|
 |WGS 84 (G2139)|9754|Geografisch (&phi;, &lambda;, h)|WGS 84 realisatie van 3 januari 2021|
 |WGS 84 (G2139)|9753|Geocentrisch (X, Y, Z)|||WGS 84 realisatie van 3 januari 2021|
-|WGS 84 / Web Mercator of Pseudo Mercator|WGS 84|Gesimplificeerde  mercator projectie (x, y)|Geen geodetisch CRS, alleen geschikt eenvoudige visualisatie van onnauwkeurige data<br>Aanbevolen voor visualisatie op het web door OGC|
+|WGS 84 / Web Mercator of Pseudo Mercator|3857|Gesimplificeerde  mercator projectie (x, y)|Geen geodetisch CRS, alleen geschikt eenvoudige visualisatie van onnauwkeurige data<br>Aanbevolen voor visualisatie op het web door OGC|
 |WGS 84 / UTM Zone 31N|32631|Transversale Mercator projectie (N, E)|Projectie voor UTM zone 31N (0° to 6°E)|
 |WGS 84 / UTM Zone 32N|32632|Transversale Mercator projectie (N, E)|Projectie voor UTM zone 32N (6° to 12°E)|
