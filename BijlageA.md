@@ -28,7 +28,9 @@ Onderstaande tabel geeft de naam en EPSG-code veelgebruikte CRS-en in Nederland.
 |ITRF2014|EPSG:9000|Geografisch<br>GRS80 ellipsoïde  (&phi;, &lambda;)|Aanbevolen wereldwijd CRS door VN, IUGG en EPSG|
 |ITRF2014|EPSG:7912|Geografisch<br>GRS80 ellipsoïde  (&phi;, &lambda;, h)|Aanbevolen wereldwijd CRS door VN, IUGG en EPSG|
 |ITRF2014|EPSG:7789|Geocentrisch (X, Y, Z)|Aanbevolen wereldwijd CRS door VN, IUGG en EPSG|
-|WGS 84|EPSG:4326|Geografisch<br>WGS 84 ellipsoïde (&phi;, &lambda;)|Ensemble<br>Aanbevolen wereldwijd CRS voor toepassingen op het web door OGC|
+|WGS 84|EPSG:4326|Geografisch<br>WGS 84 ellipsoïde (&phi;, &lambda;)|Ensemble<br>CRS van het Amerkiaanse GPS-systeem, vaak gebruikt in minder nauwkeurige toepassingen en visualisaties.|
+|CRS84|OGC:CRS84|Geografisch<br>WGS 84 ellipsoïde (&lambda;, &phi;)|Aanbevolen wereldwijd CRS voor toepassingen op het web door OGC. Verschil met WGS 84 is de volgorde van de coördinaten (lengte, breedte in plaats van breedte, lengte)|
+|CRS84h|OGC:CRS84h|Geografisch<br>WGS 84 ellipsoïde (&lambda;, &phi;)|Aanbevolen wereldwijd CRS voor 3D toepassingen op het web door OGC. Verschil met WGS 84 is de volgorde van de coördinaten (lengte, breedte, hoogte in plaats van breedte, lengte)|
 |WGS 84|EPSG:4979|Geografisch<br>WGS 84 ellipsoïde  (&phi;, &lambda;, h)|Ensemble<br>Aanbevolen wereldwijd CRS voor toepassingen op het web door OGC|
 |WGS 84 (G2139)|EPSG:9755|Geografisch (&phi;, &lambda;)|WGS 84 realisatie van 3 januari 2021|
 |WGS 84 (G2139)|EPSG:9754|Geografisch (&phi;, &lambda;, h)|WGS 84 realisatie van 3 januari 2021|
