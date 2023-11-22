@@ -25,13 +25,24 @@ CRS-en worden in de praktijk op verschillende manieren aangeduid. Tot nu toe zij
 |NTS|`http://www.opengis.net/def/crs/_authority_/_version_/_code_`|
 |NTS|`http://www.opengis.net/def/crs?authority=_authority_&version=_version_&code=_code_`|
 
-In deze aanduiding wordt meestal EPSG als de-facto autoriteit gebruikt, maar ook ISO is een voorbeeld van een autoriteit. Bij gebruik van de laatste versie van de database van de authority wordt bij URN _version_ leeg gelaten, terwijl bij de NTS _version_=0 wordt gebruikt. In [Bijlage A](#bijlage-a-crs-overzicht-tabel) is een tabel opgenomen met de EPSG-codes voor veelgebruikte CRS-en in Nederland. Met behulp van deze tabel kan de URN en NTS worden afgeleid, bijvoorbeeld voor het RD (EPSG:code 28992), resulteert dit in de volgende aanduidingen.
+In deze aanduiding wordt meestal EPSG als de-facto autoriteit gebruikt, maar ook ISO is een voorbeeld van een autoriteit. Bij gebruik van de laatste versie van de database van de authority wordt bij URN _version_ leeg gelaten, terwijl bij de NTS _version_=0 wordt gebruikt. In [Bijlage A](#bijlage-a-crs-overzicht-tabel) is een tabel opgenomen met de EPSG-codes voor veelgebruikte CRS-en in Nederland, aan de EPSG-codes is in de table de NTS als link gekoppelt. Voor het RD (EPSG:code 28992), zijn de URN en NTS bijvoorbeeld.
 
 |Type aanduiding|structuur|
 |----|----|
 |URN|urn:ogc:def:crs:EPSG::28992|
 |NTS|http://www.opengis.net/def/crs/EPSG/0/28992|
 |NTS|http://www.opengis.net/def/crs?authority=EPSG&version=0&code=28992|
+
+
+<div class="advisement">
+_AANBEVELING_  
+Gebruik de officiële namen voor CRS-en en voeg waar nodig de URN of NTS toe. Voor RD en NAP kan dat als volgt:
+- RD-stelsel of RD ([EPSG:28992](https://urldefense.com/v3/__https://www.opengis.net/def/crs/EPSG/9.9.1/28992))
+- NAP-hoogte of NAP [(]EPSG:5709](https://urldefense.com/v3/__https://www.opengis.net/def/crs/EPSG/9.9.1/5709))
+- Samengesteld: RDNAP ([EPSG:7415](https://urldefense.com/v3/__https://www.opengis.net/def/crs/EPSG/9.9.1/7415))
+
+N.B. In EPSG is voor het RD-stelsel de naam ‘Amersfoort / RD New’ gekozen. Dit zijn geen officiële namen, probeer het gebruik van ‘Amersfoort’ en ‘New’ zoveel mogelijk te voorkomen.
+</div>
 
 ### Coördinaattransformatie, datumtransformatie en coördinaatconversie
 
@@ -69,6 +80,12 @@ Het World Geodetic System 1984 (WGS 84) is het wereldwijde driedimensionale CRS 
 Voor de realisaties van WGS 84 zijn in het verleden verschillende strategieën gebruikt, waarbij een beperkt aantal stations wereldwijd zijn gebruikt. Hierdoor zijn er verschillen van twee meter tussen de eerste en latere realisaties en op decimeterniveau tussen de latere realisaties. Voor nauwkeurige, eenduidige definitie van het CRS is het daarom nodig om een specifieke realisatie van WGS 84 te vermelden (bijvoorbeeld 3D WGS 84 (G2139)). Sinds 1994 zijn WGS 84-realisaties gekoppeld aan een ITRS-realisatie. WGS 84- en ITRS-realisaties op hetzelfde epoche komen momenteel op centimeterniveau overeen, zo kan [volgens de NGA](https://earth-info.nga.mil/php/download.php?file=(U)WGS%2084(G2139).pdf) bijvoorbeeld WGS 84 (G2139) worden gelijkgesteld aan ITRF2014 voor plaatsbepaling en navigatie. 
 
 Doordat de specificatie 'WGS 84' zonder vermelding van realisatie en epoche niet eenduidig is, wordt WGS 84 vanuit geodetisch perspectief niet aanbevolen voor uitwisseling van nauwkeurige data. Vanuit informatiekundig perspectief raadt de  [Spatial Data on the Web Best Practices (SDW-BP)](https://www.w3.org/TR/sdw-bp/) aan om geodata, zodra je het aanbiedt op het web, in ieder geval altijd in WGS 84 te publiceren, en daarnaast in één of meer andere CRS-en als daar expliciete behoefte aan is. Voor visualisatie op het web ondersteunt de tooling vaak direct de Web-Mercator kaartprojectie op basis van _"WGS 84"_. Web-Mercator is een projectie die geschikt is voor visualisatie, maar niet voor het berekenen van bijvoorbeeld afstanden en oppervlakten. In de context van niet-nauwkeurige toepassingen op het web kan WGS 84 het best worden opgevat als een ongedefinieerd datum met als coördinatensysteem geografische coördinaten. 
+
+##### CRS84
+
+Het [CRS84](https://www.opengis.net/def/crs/OGC/1.3/CRS84) is het standaard CRS voor diverse uitwisselingsstandaarden. CRS84 wordt door OGC gedefinieerd als een wereldwijd tweedimensionaal geografisch CRS dat gebruik maakt van het WGS 84 datum en ellispoïdische coördinaten in de volgorde lengte (&lambda;) en breedte (&phi;). De volgorde van de ellipsoïdische coördinaten is bij CRS84 en WGS 84 dus andersom. De driedimensionale variant van CRS84 is [CRS84h](https://www.opengis.net/def/crs/OGC/1.3/CRS84h) met de coördinaten in de volgorde lengte (&lambda;), breedte (&phi;) en hoogte (h).
+
+CRS84 is in feite identiek aan WGS 84, er zijn geen aparte realisaties van CRS84 of CRS84h. Hierdoor geldt voor CRS84 en CRS84h, net als voor enkel de specificatie 'WGS 84', dat deze niet eenduidig is. Vanuit geodetische en informatiekundig perspectief geldt voor CRS84 en CRS84h hetzelfde als beschreven bij [WGS 84](#wgs-84).  
 
 #### Europese CRS-en: ETRS89 en EVRS
 
