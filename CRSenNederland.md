@@ -37,11 +37,11 @@ In deze aanduiding wordt meestal EPSG als de-facto autoriteit gebruikt, maar ook
 <div class="advisement">
 _AANBEVELING_  
 Gebruik de officiële namen voor CRS-en en voeg waar nodig de URN of NTS toe. Voor RD en NAP kan dat als volgt:
-- RD-stelsel of RD ([EPSG:28992](https://urldefense.com/v3/__https://www.opengis.net/def/crs/EPSG/9.9.1/28992))
-- NAP-hoogte of NAP [(]EPSG:5709](https://urldefense.com/v3/__https://www.opengis.net/def/crs/EPSG/9.9.1/5709))
-- Samengesteld: RDNAP ([EPSG:7415](https://urldefense.com/v3/__https://www.opengis.net/def/crs/EPSG/9.9.1/7415))
+- RD-stelsel of RD ([EPSG:28992](https://www.opengis.net/def/crs/EPSG/9.9.1/28992))
+- NAP-hoogte of NAP ([EPSG:5709](https://www.opengis.net/def/crs/EPSG/9.9.1/5709))
+- Samengesteld: RDNAP ([EPSG:7415](https://www.opengis.net/def/crs/EPSG/9.9.1/7415))
 
-N.B. In EPSG is voor het RD-stelsel de naam ‘Amersfoort / RD New’ gekozen. Dit zijn geen officiële namen, probeer het gebruik van ‘Amersfoort’ en ‘New’ zoveel mogelijk te voorkomen.
+N.B. In EPSG is voor het RD-stelsel de naam ‘Amersfoort / RD New’ gekozen. Dit is niet de officiële naam, probeer het gebruik van ‘Amersfoort’ en ‘New’ zoveel mogelijk te voorkomen.
 </div>
 
 ### Coördinaattransformatie, datumtransformatie en coördinaatconversie
@@ -85,7 +85,7 @@ Doordat de specificatie 'WGS 84' zonder vermelding van realisatie en epoche niet
 
 Het [CRS84](https://www.opengis.net/def/crs/OGC/1.3/CRS84) is het standaard CRS voor diverse uitwisselingsstandaarden. CRS84 wordt door OGC gedefinieerd als een wereldwijd tweedimensionaal geografisch CRS dat gebruik maakt van het WGS 84 datum en ellispoïdische coördinaten in de volgorde lengte (&lambda;) en breedte (&phi;). De volgorde van de ellipsoïdische coördinaten is bij CRS84 en WGS 84 dus andersom. De driedimensionale variant van CRS84 is [CRS84h](https://www.opengis.net/def/crs/OGC/1.3/CRS84h) met de coördinaten in de volgorde lengte (&lambda;), breedte (&phi;) en hoogte (h).
 
-CRS84 is in feite identiek aan WGS 84, er zijn geen aparte realisaties van CRS84 of CRS84h. Hierdoor geldt voor CRS84 en CRS84h, net als voor enkel de specificatie 'WGS 84', dat deze niet eenduidig is. Vanuit geodetische en informatiekundig perspectief geldt voor CRS84 en CRS84h hetzelfde als beschreven bij [WGS 84](#wgs-84).  
+CRS84 is, behalve de volgorde van de coördinaten, in feite identiek aan WGS 84, er zijn geen aparte realisaties van CRS84 of CRS84h. Hierdoor geldt voor CRS84 en CRS84h, net als voor enkel de specificatie 'WGS 84', dat deze niet eenduidig is. Vanuit geodetische en informatiekundig perspectief geldt voor CRS84 en CRS84h hetzelfde als beschreven bij [WGS 84](#wgs-84).  
 
 #### Europese CRS-en: ETRS89 en EVRS
 

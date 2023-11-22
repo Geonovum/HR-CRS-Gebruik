@@ -236,11 +236,11 @@ In het informatiemodel van de BRO is gekozen voor het opnemen van het attribuut 
 Niet alle uitwisselingsformaten en standaarden ondersteunen (volledig) het gebruik van meerdere CRS-en. De [Handreiking Geometrie in uitwisselingsformaten](https://geonovum.github.io/geox/) geeft een keuzehulp van gebruik van uitwisselingsformaten voor 2D vector bestanden, waarin ook de ondersteuning van CRS-en is opgenomen. De tabel hieronder geeft een samenvatting van de ondersteuning van CRS-en voor deze formaten.
 
 |CRS|[HTML](https://geonovum.github.io/geox/#html)|[GeoJSON](https://geonovum.github.io/geox/#geojson)|[GeoPackage](https://geonovum.github.io/geox/#geopackage)|[GML](https://geonovum.github.io/geox/#gml)|[RDF](https://geonovum.github.io/geox/#rdf)|
-|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|
 |RD|<span id="kruisje">&#10005;|<span id="tilde">&#65374;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
 |ETRS89|<span id="kruisje">&#10005;|<span id="tilde">&#65374;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
-|WGS 84|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="tilde">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
-|CRS84|<span id="tilde">&#10003;|<span id="vinkje">&#10003;|<span id="tilde">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
+|WGS 84|<span id="vinkje">&#10003;|<span id="tilde">&#65374;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
+|CRS84|<span id="tilde">&#65374;|<span id="vinkje">&#10003;|<span id="tilde">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
 |Web-Mercator|<span id="kruisje">&#10005;|<span id="tilde">&#65374;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|<span id="vinkje">&#10003;|
 
 De tabel laat zien dat de eenvoudige formaten HTML en GeoJSON default alleen WGS 84 of CRS84 ondersteunen. In het geval dat een formaat alleen WGS 84 ondersteund moet dit worden geïnterpreteerd als een ongedefinieerd CRS met geografische coördinaten en lage nauwkeurigheid, omdat bijvoorbeeld een [nultransformatie](#wgs-84-gelijkstellen-aan-etrs89-nultransformatie) kan zijn toegepast. Voor veel toepassingen op het web voldoet deze lagere nauwkeurigheid. De andere formaten ondersteunen meerdere CRS-en, ook de CRS-en die niet in deze tabel zijn opgenomen, maar wel zijn gegeven in [Bijlage A](#bijlage-a-crs-overzicht-tabel).
