@@ -20,7 +20,7 @@ Onderstaande tabel geeft de naam en EPSG-code veelgebruikte CRS-en in Nederland.
 |EVRF2007|[EPSG:5621](https://www.opengis.net/def/crs/EPSG/9.9.1/5621)|Vertikaal<br>Normaal hoogte (H)|
 |EVRF2019 mean-tide|[EPSG:9390](https://www.opengis.net/def/crs/EPSG/9.9.1/9390)|Vertikaal<br>Normaal hoogte (H)|[EVRS-realisatie voor plaatsbepaling](https://evrs.bkg.bund.de/Subsites/EVRS/EN/EVRF2019/evrf2019.html)
 |RDNAP|[EPSG:7415](https://www.opengis.net/def/crs/EPSG/9.9.1/7415)|Samengesteld<br>RD en NAP|
-|ETRS89 + NAP|[EPSG:7432](https://www.opengis.net/def/crs/EPSG/9.9.1/7432)|Samengesteld<br>ETRS89-GRS80 en NAP|ETRS89=Ensemble
+|ETRS89 + NAP|[EPSG:9286](https://www.opengis.net/def/crs/EPSG/9.9.1/9286)|Samengesteld<br>ETRS89-GRS80 en NAP|ETRS89=Ensemble
 |ETRS89 + EVRF2007|[EPSG:7423](https://www.opengis.net/def/crs/EPSG/9.9.1/7423)|Samengesteld<br>ETRS89-GRS80 en EVRF2007|ETRS89=Ensemble
 |ETRS89 + EVRF2019 mean-tide|[EPSG:9423](https://www.opengis.net/def/crs/EPSG/9.9.1/9423)|Samengesteld<br>ETRS89-GRS80 en EVRF2019|ETRS89=Ensemble
 |ETRS89 + LAT-NL|[EPSG:9289](https://www.opengis.net/def/crs/EPSG/9.9.1/9289)|Samengesteld<br>ETRS89-GRS80 en LAT-NL|ETRS89=Ensemble
