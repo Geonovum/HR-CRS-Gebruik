@@ -25,7 +25,7 @@ CRS-en worden in de praktijk op verschillende manieren aangeduid. Tot nu toe zij
 |NTS|`http://www.opengis.net/def/crs/_authority_/_version_/_code_`|
 |NTS|`http://www.opengis.net/def/crs?authority=_authority_&version=_version_&code=_code_`|
 
-In deze aanduiding wordt meestal EPSG als de-facto autoriteit gebruikt, maar ook ISO is een voorbeeld van een autoriteit. Bij gebruik van de laatste versie van de database van de authority wordt bij URN _version_ leeg gelaten, terwijl bij de NTS _version_=0 wordt gebruikt. In [Bijlage A](#bijlage-a-crs-overzicht-tabel) is een tabel opgenomen met de EPSG-codes voor veelgebruikte CRS-en in Nederland, aan de EPSG-codes is in de table de NTS als link gekoppelt. Voor het RD (EPSG:code 28992), zijn de URN en NTS bijvoorbeeld.
+In deze aanduiding wordt meestal EPSG als de-facto autoriteit gebruikt, maar ook ISO is een voorbeeld van een autoriteit. Bij gebruik van de laatste versie van de database van de authority wordt bij URN _version_ leeg gelaten, terwijl bij de NTS _version_=0 wordt gebruikt. In [Bijlage A](#bijlage-a-crs-overzicht-tabel) is een tabel opgenomen met de EPSG-codes voor veelgebruikte CRS-en in Nederland, aan de EPSG-codes is in de table de NTS als link gekoppelt. Voor het RD (EPSG:code 28992), zijn de URN en NTS bijvoorbeeld:
 
 |Type aanduiding|structuur|
 |----|----|
@@ -83,9 +83,9 @@ Doordat de specificatie 'WGS 84' zonder vermelding van realisatie en epoche niet
 
 ##### CRS84
 
-Het [CRS84](https://www.opengis.net/def/crs/OGC/1.3/CRS84) is het standaard CRS voor diverse uitwisselingsstandaarden. CRS84 wordt door OGC gedefinieerd als een wereldwijd tweedimensionaal geografisch CRS dat gebruik maakt van het WGS 84 datum en ellispoïdische coördinaten in de volgorde lengte (&lambda;) en breedte (&phi;). De volgorde van de ellipsoïdische coördinaten is bij CRS84 en WGS 84 dus andersom. De driedimensionale variant van CRS84 is [CRS84h](https://www.opengis.net/def/crs/OGC/1.3/CRS84h) met de coördinaten in de volgorde lengte (&lambda;), breedte (&phi;) en hoogte (h).
+Het [CRS84](https://www.opengis.net/def/crs/OGC/1.3/CRS84) is het standaard CRS voor diverse uitwisselingsstandaarden. CRS84 wordt door OGC gedefinieerd als een wereldwijd tweedimensionaal geografisch CRS dat gebruik maakt van het WGS 84 datum en ellipsoïdische coördinaten in de volgorde lengte (&lambda;) en breedte (&phi;). De volgorde van de ellipsoïdische coördinaten is bij CRS84 en WGS 84 dus andersom. De driedimensionale variant van CRS84 is [CRS84h](https://www.opengis.net/def/crs/OGC/1.3/CRS84h) met de coördinaten in de volgorde lengte (&lambda;), breedte (&phi;) en hoogte (h).
 
-CRS84 is, behalve de volgorde van de coördinaten, in feite identiek aan WGS 84, er zijn geen aparte realisaties van CRS84 of CRS84h. Hierdoor geldt voor CRS84 en CRS84h, net als voor enkel de specificatie 'WGS 84', dat deze niet eenduidig is. Vanuit geodetische en informatiekundig perspectief geldt voor CRS84 en CRS84h hetzelfde als beschreven bij [WGS 84](#wgs-84).  
+CRS84 is, behalve de volgorde van de coördinaten, in feite identiek aan WGS 84, er zijn geen aparte realisaties van CRS84 of CRS84h. Hierdoor geldt voor CRS84 en CRS84h, net als voor enkel de specificatie 'WGS 84', dat deze niet eenduidig is. Vanuit geodetisch en informatiekundig perspectief geldt voor CRS84 en CRS84h hetzelfde als beschreven bij [WGS 84](#wgs-84).  
 
 #### Europese CRS-en: ETRS89 en EVRS
 
