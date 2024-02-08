@@ -2,7 +2,7 @@
 
 Onderstaande tabel geeft de naam en EPSG-code veelgebruikte CRS-en in Nederland. Een ensemble CRS groepeert volgens EPSG en ISO 19111:2019 individuele realisaties van CRS-en en kan worden gebruikt waneer voor de beoogde toepassing en nauwkeurigheid het verschil tussen de individuele relaties niet significant is. Voor het WGS 84 ensemble zijn de verschillen tussen realisaties circa 2 meter, voor ETRS89 realisaties zijn de verschillen minder dan 0,1 meter.
 
-|CRS-naam|Authority:Code (URN als link)           |CRS-type          | Opmerkingen|
+|CRS-naam|Authority:Code (NTS als link)           |CRS-type          | Opmerkingen|
 |--------|---------------------|------------------|------|
 |RD|[EPSG:28992](https://www.opengis.net/def/crs/EPSG/9.9.1/28992)|Geprojecteerd<br>Stereografische projectie (x, y)|[Horizontaal CRS voor Nederland](https://www.nsgi.nl/geodetische-infrastructuur/referentiestelsels)
 |NAP|[EPSG:5709](https://www.opengis.net/def/crs/EPSG/9.9.1/5709)|Vertikaal<br>hoogte (H)|[Vertikaal CRS voor Nederland](https://www.nsgi.nl/geodetische-infrastructuur/referentiestelsels)
