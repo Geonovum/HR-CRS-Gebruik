@@ -7,10 +7,12 @@ Voor uitwisseling en visualisatie kunnen in Nederland meerdere CRS-en worden geb
 Een CRS is opgebouwd uit een datum en een coördinatensysteem. Het coördinatensysteem definieert hoe coördinaten worden uitgedrukt, bijvoorbeeld cartesisch of geografisch. Het datum geeft de relatie van het coördinatensysteem met de aarde. Geografische en geprojecteerde CRS-en maken gebruik van geodetische datums die de gebruikte ellipsoïde en nulmeridiaan definiëren. Vertikale CRS-en maken gebruik van verticale datums. RD en NAP zijn beide een CRS, de combinatie van RD en NAP is een samengesteld (Engels: compound) CRS.
 
 <div class="example">
+
 _VOORBEELD_ 3D ETRS89 is een geografisch CRS, ETRS89-LAEA een geprojecteerd CRS en RDNAP is het samengestelde CRS uit het geprojecteerde CRS RD en verticale CRS NAP. Schematisch wordt dit als volgt weergegeven:
 
 [![](https://mermaid.ink/img/pako:eNq1k8FOwkAQhl9lsweiCUQpF62GpIHSQ4kH8KChHJbuYNd027rdHpDwTN58AV7M2bJQMIaYGC-d2e7Xf2b-Sdc0zjlQl74oViQkyqKMkLJa2COdxglIRvzHyfTmtjP2fC-iBjmC7F2Az-vdFSHeLKLOkASQI7MUZZyQwWR6v1D9HR3R-QHtIosgB11znOlKNqTJLvw0FUWZbz84uKQudHms4KDCIN9-Ki4ypiErV6UGMCLkqt98a-R37x5yzbRArVaRiDsy47Kct0krZXLBmT0fCkDGf564dqO-CesRCpW_QoyVFT-d1vpm9cKz7Q6Y0lA2rT6TmcTenkxoJHooETJEbU0BptoY-welifcuZKUTlhL_rcKnp4B9H6cOZ5dd-5zs1z3Cir3fbDT44z6Df9lmmyQnDh4sMOmo0-kEXRsdY4uHmde10dnF0KChSRwbe7RNJSjJBMc_aF2LUY0eQkRdTDksWZVqY-EG0apAL8DnQueKukuWltCmrNL5dJXF1NWqgj00FAxtlpbafAGx_C2G)](https://mermaid-js.github.io/mermaid-live-editor/edit/#pako:eNq1k8FOwkAQhl9lsweiCUQpF62GpIHSQ4kH8KChHJbuYNd027rdHpDwTN58AV7M2bJQMIaYGC-d2e7Xf2b-Sdc0zjlQl74oViQkyqKMkLJa2COdxglIRvzHyfTmtjP2fC-iBjmC7F2Az-vdFSHeLKLOkASQI7MUZZyQwWR6v1D9HR3R-QHtIosgB11znOlKNqTJLvw0FUWZbz84uKQudHms4KDCIN9-Ki4ypiErV6UGMCLkqt98a-R37x5yzbRArVaRiDsy47Kct0krZXLBmT0fCkDGf564dqO-CesRCpW_QoyVFT-d1vpm9cKz7Q6Y0lA2rT6TmcTenkxoJHooETJEbU0BptoY-welifcuZKUTlhL_rcKnp4B9H6cOZ5dd-5zs1z3Cir3fbDT44z6Df9lmmyQnDh4sMOmo0-kEXRsdY4uHmde10dnF0KChSRwbe7RNJSjJBMc_aF2LUY0eQkRdTDksWZVqY-EG0apAL8DnQueKukuWltCmrNL5dJXF1NWqgj00FAxtlpbafAGx_C2G)
 [![](https://mermaid.ink/img/pako:eNqFU8FKw0AQ_ZVhD6LQIikeJEqhTaQFQcSCl7SHbXZqVpNs2N2ARfwmb_6AP-ZM025LKUoOeTPz8mbebPZD5EahiMWLlU0B8xrAtcsumOUFVhKSpxk8pQ-jRy4CjLK56EKx6DLhAy70x-gclnPR1QDG2SCFCRqirLTLC9a7XVq4HAbyInAjEieuQr-hKunb6ohM4fD8rix148zPl8IYujxE11fRRRiKxAYklpifb6t0LT3Wbu084lZvr8CdutyD8dJrUjxrCn0DmarcogdnpayWSoa4gKxahD5YqxNb2NtPswk21rxiTr2tOnQfJk3Z9r2U1m-ZGtnlzKPd7w0hFA9Mpn-aTEgS3QmD7-yht_7XyeaYd72S7Bmt129SlnsbxICpMS8ew0wJ29lQc6YeHOLhX0O8bnZzcvRO82js6fHA_OJgO_uo3--PdyBhMOZMFNBgh1IGCbOigDbFlItRQJTjR_REhbaSWtFV-eDqXHi6HXQUMUGFK9mWnlf1SdS2Ic94p7Q3VsQrWTrsCdl6M1vXuYi9bXFHSrWkXVdb1ucvGJ0fVg)](https://mermaid-js.github.io/mermaid-live-editor/edit/#pako:eNqFU8FKw0AQ_ZVhD6LQIikeJEqhTaQFQcSCl7SHbXZqVpNs2N2ARfwmb_6AP-ZM025LKUoOeTPz8mbebPZD5EahiMWLlU0B8xrAtcsumOUFVhKSpxk8pQ-jRy4CjLK56EKx6DLhAy70x-gclnPR1QDG2SCFCRqirLTLC9a7XVq4HAbyInAjEieuQr-hKunb6ohM4fD8rix148zPl8IYujxE11fRRRiKxAYklpifb6t0LT3Wbu084lZvr8CdutyD8dJrUjxrCn0DmarcogdnpayWSoa4gKxahD5YqxNb2NtPswk21rxiTr2tOnQfJk3Z9r2U1m-ZGtnlzKPd7w0hFA9Mpn-aTEgS3QmD7-yht_7XyeaYd72S7Bmt129SlnsbxICpMS8ew0wJ29lQc6YeHOLhX0O8bnZzcvRO82js6fHA_OJgO_uo3--PdyBhMOZMFNBgh1IGCbOigDbFlItRQJTjR_REhbaSWtFV-eDqXHi6HXQUMUGFK9mWnlf1SdS2Ic94p7Q3VsQrWTrsCdl6M1vXuYi9bXFHSrWkXVdb1ucvGJ0fVg)
+
 </div>
 
 Het coördinatensysteem van een CRS bepaald ook de volgorde waarin de coördinaten worden genoteerd. In bovenstaande figuur is te zien dat voor ETRS89-LAEA de volgorde van de coördinaten Noord-Zuid (Y) en dan Oost-West (X) is, terwijl voor RD de volgorde Oost-West (x) en Noord-Zuid (y) wordt gehanteerd. In uitwisselingsstandaarden wordt soms een andere volgorde voorgeschreven. Er zijn diverse standaarden waarbij altijd eerst Oost-West (x, E of geografische lengte) en dan Noord-Zuid (y, N of geografische breedte) wordt voorgeschreven. 
@@ -35,13 +37,16 @@ In deze aanduiding wordt meestal EPSG als de-facto autoriteit gebruikt, maar ook
 
 
 <div class="advisement">
+
 _AANBEVELING_  
+
 Gebruik de officiële namen voor CRS-en en voeg waar nodig de URN of NTS toe. Voor RD en NAP kan dat als volgt:
 - RD-stelsel of RD ([EPSG:28992](https://www.opengis.net/def/crs/EPSG/9.9.1/28992))
 - NAP-hoogte of NAP ([EPSG:5709](https://www.opengis.net/def/crs/EPSG/9.9.1/5709))
 - Samengesteld: RDNAP ([EPSG:7415](https://www.opengis.net/def/crs/EPSG/9.9.1/7415))
 
 N.B. In EPSG is voor het RD-stelsel de naam ‘Amersfoort / RD New’ gekozen. Dit is niet de officiële naam, probeer het gebruik van ‘Amersfoort’ en ‘New’ zoveel mogelijk te voorkomen.
+
 </div>
 
 ### Coördinaattransformatie, datumtransformatie en coördinaatconversie
@@ -111,6 +116,7 @@ Van het [EVRS](http://www.euref.eu/euref_egrs.html) bestaan inmiddels drie reali
 Voor inwinning van geo-informatie met GNSS-metingen (GPS, Galileo, GLONASS en BeiDou) publiceert de NSGI informatie over GNSS-punten en certificeert de NSGI GNSS-dienstverleners. Het gebruik van deze geodetische infrastructuur geeft zekerheid dat de metingen direct eenduidig gekoppeld zijn aan ETRF2000 volgens de actuele AGRS.NL realisatie. Het verplicht gebruik van aansluiting aan de geodetische infrastructuur wordt vaak opgenomen in productspecificaties, bestekken en handboeken.
 
 <div class="example">
+
 _VOORBEELD_ In de [aanbesteding Beeldmateriaal 5](https://www.tenderned.nl/tenderned-tap/aankondigingen/199678) is door Het Waterschapshuis de volgende passage opgenomen om zekerheid te hebben over aansluiting van de ingewonnen data aan het Nederlandse CRS:
 
 *Voor het inmeten van coördinaten met een GNSS-techniek moet voor de aansluiting aan het Nederlandse driedimensionale coördinatenstelsel gebruik gemaakt worden van één van de volgende referenties:*
@@ -118,8 +124,9 @@ _VOORBEELD_ In de [aanbesteding Beeldmateriaal 5](https://www.tenderned.nl/tende
 - *NETPOS*
 - *Een door het Kadaster gecertificeerde GNSS-dienstverlener*
 - *GNSS-kernnetpunt(en) met een actualiteit van maximaal vijf jaar*
-</em>
+
 Opmerking: In bovenstaand citaat wordt met *coördinatenstelsel* in de context van deze handreiking *CRS* bedoeld.
+
 </div>
 
 #### CRS op land: RD en NAP

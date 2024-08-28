@@ -12,7 +12,9 @@ In de laatste jaren zien we dit veranderen: het volstaat niet langer om alleen a
 Hiermee is een geodetisch onderwerp als CRS in toenemende mate ook een geo-informatie / GIS-onderwerp aan het worden, wat betekent dat er aandacht nodig is voor hoe je op passende wijze omgaat met dit onderwerp in informatiemodellen, in uitwisselmechanismes en -formaten en in het ontwerp van landelijke voorzieningen. Hiermee is aandacht voor het goed omgaan met CRS-vraagstukken onderdeel geworden van het werk van Geonovum, waarbij adviezen van de NSGI en aanbevelingen uit de Spatial Data on the Web Best Practices de basis vormen. In deze Handreiking richten we ons op eenieder die actief is op de onderwerpen uitwisseling en gebruik van geo-informatie en daarbij -mogelijk- rekening moet houden met CRS gebruik. Op deze manier willen we adviezen van de NSGI, aanbevelingen uit de Spatial Data on the Web Best Practices en inzichten die recent binnen o.a. DSO en BRO op dit vlak opgedaan zijn, aan elkaar relateren en breed toegankelijk maken. De Handreiking is niet al omvattend en voor sommige onderdelen is de scope beperkt tot 2D-vector data.
 
 <div class="advisement">
+
 _AANBEVELING_ Wanneer er na het lezen van deze Handreiking nog onduidelijkheden bestaan of er bijvoorbeeld vragen over CRS-en zijn die buiten de scope van de Handreiking vallen, raden we sterk aan om contact te zoeken met Geonovum én de experts van de [Nederlandse Samenwerking Geodetische Infrastructuur](https://www.nsgi.nl/).
+
 </div>
 
 ### Introductie coördinaatreferentiesystemen (CRS)
@@ -39,12 +41,15 @@ De definitie van een CRS geeft een verzameling afspraken over bijvoorbeeld de oo
 In de praktijk worden voor een dataset in de verschillende stappen van de keten (inwinning, verwerking, uitwisseling en visualisatie) regelmatig verschillende CRS-en gebruikt. De keuze van het meest geschikte CRS hangt af van de toepassing en het gebied waarop de data betrekking heeft. Voor afbeelding van geo-data van alleen Nederland is een ander CRS geschikt dan voor afbeelding van heel Europa of de hele wereld. In veel gevallen wordt de dataset opgeslagen in één CRS. Bij uitwisseling en visualisatie van geo-informatie is het dus van belang om een CRS te kiezen dat geschikt is voor de (gebruikers)toepassing. [Spatial Data on the Web Best Practices (SDW-BP)](https://www.w3.org/TR/sdw-bp/) raden aan om data voor visualisatie ook te publiceren in wereldwijd bruikbare CRS-en, omdat de gebruikerstoepassing niet altijd bekend is. Vanuit informatiekundig oogpunt gezien, heeft het toepassen van wereldwijd bruikbare CRS-en als voordeel dat data op deze manier eenvoudiger bruikbaar wordt voor visualisatie door niet-geospecialisten. Maar deze CRS-en zijn bedoeld voor gebruik op kleine (wereldwijde) schaal en niet voor hoognauwkeurige, grootschalige toepassingen. Vanuit geodetisch oogpunt gezien, kleven aan het gebruik van deze wereldwijde CRS-en daarom risico's op systematische afwijkingen of inconsistenties, wanneer de data niet alleen gebruikt wordt voor visualisatie of wanneer datasets worden gecombineerd, zie ook de paragraaf over [transformatie tussen ETRS89 en ITRS/WGS 84](#transformatie-tussen-etrs89-en-itrs-wgs-84). Eenvoudige berekening van afstanden en oppervlakten is bijvoorbeeld niet mogelijk bij gebruik van de aanbevolen wereldwijd bruikbare CRS-en. Aangezien beide invalshoeken valide argumenten aanvoeren, ligt het voor de hand om bij het aanbieden van data te kiezen voor een en-en benadering: faciliteer zowel het laagdrempelige gebruik als het nauwkeurigere gebruik.
 
 <div class="example">
+
 _VOORBEELD_ 
+
 Het gebruik van CRS-en in de keten van inwinning tot uitwisseling en visualisatie van de Basisregistratie Grootschalige Topografie (BGT) kan als volgt worden samengevat:
 
 [![](https://mermaid.ink/img/pako:eNqFk8tuwjAQRX9l5BWViqoAixZVSESJUFX6UELpImFh4oG4JHbkOEUt8O91HqBCQd3d3Dm-nhkrGxJJhqRPlopmMYy9UADkxbz-tJUUsSwYqiP7Qay5EFwsSxdgaAUhcSeef3sH93M1gNbo2ffb3uTxKiQzqKEK7BjQcxpoXESxXkgtS6pJ6hpgLFeUJg00oVH8laJWHGvnCVHPqWD7QyjYUW9TVGtUK9OcKYHM8oQ2bdqB5_w-cnrS3GxyMeEfK4SplOqbYzUkOcFeqlAYT-sKgGP9G-1QTbOEmnlVCq1X56XczfncsnhI_id4hHNV8NXJ-4RkhBJ8VJ88wnyf5VpB_UjNst3OPtzobvA-8uG2N7vQvlyLRFIGrWHGb4ZZdnVI7Z1vcWi12wO7Up2D6u6VbcT2jes1z3OzcbHcOlbpO9bfQuX_sV3rgt-54Hcv-D1yTVJUKeXM_AabkgqJjjHFkPSNZLigRaLLeXcGLTJGNbqMa6lIf0GTHK8JLbT0v0R0MGrK4dQsMG3c3Q9UrBut)](https://mermaid-js.github.io/mermaid-live-editor/edit/#pako:eNqFk8tuwjAQRX9l5BWViqoAixZVSESJUFX6UELpImFh4oG4JHbkOEUt8O91HqBCQd3d3Dm-nhkrGxJJhqRPlopmMYy9UADkxbz-tJUUsSwYqiP7Qay5EFwsSxdgaAUhcSeef3sH93M1gNbo2ffb3uTxKiQzqKEK7BjQcxpoXESxXkgtS6pJ6hpgLFeUJg00oVH8laJWHGvnCVHPqWD7QyjYUW9TVGtUK9OcKYHM8oQ2bdqB5_w-cnrS3GxyMeEfK4SplOqbYzUkOcFeqlAYT-sKgGP9G-1QTbOEmnlVCq1X56XczfncsnhI_id4hHNV8NXJ-4RkhBJ8VJ88wnyf5VpB_UjNst3OPtzobvA-8uG2N7vQvlyLRFIGrWHGb4ZZdnVI7Z1vcWi12wO7Up2D6u6VbcT2jes1z3OzcbHcOlbpO9bfQuX_sV3rgt-54Hcv-D1yTVJUKeXM_AabkgqJjjHFkPSNZLigRaLLeXcGLTJGNbqMa6lIf0GTHK8JLbT0v0R0MGrK4dQsMG3c3Q9UrBut)
 
 Bij de inwinning van de BGT worden ETRS89, RD en lokale CRS-en gebruikt. Voor de opslag bij bronhouders, de Landelijke Voorziening en het dataplatform wordt voor de uitwisseling het CRS RD gebruikt. Voor uitwisseling tussen dataplatform en gebruiker worden het Nederlandse RD, het Europese ETRS89 en het wereldwijde  WGS 84 gebruikt. Hierbij zijn voor de visualisatie van ETRS89 en WGS 84 verschillende kaartprojecties mogelijk.
+
 </div>
 
 Eenduidig gebruik van CRS-en [coördinatentransformaties](#coordinaattransformatie-datumtransformatie-en-coordinaatconversie) voorkomt systematische afwijkingen bij gebruik van meerdere datasets. Eenduidig gebruik is mogelijk door het maken van afspraken over het gebruik van eenduidige coördinatentransformaties. Bij minder precieze coördinatentransformaties kunnen (soms visueel toelaatbare) verschillen ontstaan die afhankelijk zijn van de keuze van CRS en implementatie.
@@ -56,7 +61,9 @@ Eenduidig gebruik van CRS-en [coördinatentransformaties](#coordinaattransformat
 Deze Handreiking heeft als doel om gebruikers vanuit het GIS- / geo-informatiewerkveld te voorzien van adviezen hoe om te gaan met met CRS-en bij uitwisseling en visualisatie van geo-informatie, o.a. in de context van Landelijke Voorzieningen en vergelijkbare digitale stelsels. De Handreiking gaat niet in op de geschiktheid van CRS-en voor het uitvoeren van nauwkeurige berekeningen of de wijze waarop deze kunnen worden uitgevoerd.
 
 <div class="example">
+
 _VOORBEELD_ 
+
 In het voorbeeld van de BGT gaat het dus om adviezen voor het omgaan met CRS-en bij:
 
 * uitwisseling tussen Bronhouder, Landelijke Voorziening en Dataplatform;

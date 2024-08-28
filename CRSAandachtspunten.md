@@ -29,7 +29,9 @@ Voor INSPIRE-verplichtingen mag voor data-uitwisseling van 2D vectordata zowel g
 Voor 3D datasets gelden voor vector- en rasterdata dezelfde voorwaarden als voor 2D data. Voor 3D data kan het geografisch ETRS89-GRS80h worden gebruikt of een samengesteld CRS met als 1D CRS een EVRS-realisatie op land en op zee LAT in getijdegebied (zee en kustgebied), of MSL in gebieden waar geen significant getij aanwezig is, en als 2D CRS een geografisch of geprojecteerd INSPIRE CRS. 
 
 <div class="example">
+
 _VOORBEELD_
+
 Afhankelijk van de specifieke INSPIRE datasets kan worden afgeweken van de voorwaarde in sectie 2.2 van [Annex II](http://data.europa.eu/eli/reg/2010/1089/oj) (namelijk dat ETRS89-LAEA wordt gebruikt voor het visualisatie en uitwisseling van rasterdata) en een specifieke andere aanbeveling worden gedaan. Een voorbeeld hiervan is de [Annex III](https://eur-lex.europa.eu/eli/reg/2013/1253/oj) in paragraaf 1.7.2 voor hoogterasters. 
 
 <em>
@@ -59,7 +61,6 @@ Voor visualisatie wordt het samengestelde CRS geprojecteerd ETRS89TM*zn* voor 2D
 *Recommendation 14 
   For regional European Elevation datasets, covering specific parts of countries, the compound CRS ETRS89-TMzn/EVRS is recommended for data provision and display, in areas within the geographical scope of ETRS89.*
 
-</em>
 </div>
 
 ### Aandachtspunten bij CRS in informatiemodel en informatieketen
@@ -70,7 +71,9 @@ In een informatiemodel voor geo-informatie worden regels opgenomen voor het te g
 Bij het opstellen van het informatiemodel is de aanbeveling om te inventariseren welke CRS-en al gebruikt worden in het domein en waarom. Dit kan leiden tot verschillende keuzes in de implementatie, zoals te zien in het onderstaande voorbeeld voor BGT, BRO en DSO.
 
 <div class="example">
+
 _VOORBEELD_ 
+
 Het gebruik van CRS-en in de keten van inwinning tot uitwisseling en visualisatie van de Basisregistratie Grootschalige Topografie (BGT) kan als volgt worden geïnterpreteerd:
 
 [![](https://mermaid.ink/img/pako:eNqFk8tuwjAQRX9l5BWViqoAixZVSESJUFX6UELpImFh4oG4JHbkOEUt8O91HqBCQd3d3Dm-nhkrGxJJhqRPlopmMYy9UADkxbz-tJUUsSwYqiP7Qay5EFwsSxdgaAUhcSeef3sH93M1gNbo2ffb3uTxKiQzqKEK7BjQcxpoXESxXkgtS6pJ6hpgLFeUJg00oVH8laJWHGvnCVHPqWD7QyjYUW9TVGtUK9OcKYHM8oQ2bdqB5_w-cnrS3GxyMeEfK4SplOqbYzUkOcFeqlAYT-sKgGP9G-1QTbOEmnlVCq1X56XczfncsnhI_id4hHNV8NXJ-4RkhBJ8VJ88wnyf5VpB_UjNst3OPtzobvA-8uG2N7vQvlyLRFIGrWHGb4ZZdnVI7Z1vcWi12wO7Up2D6u6VbcT2jes1z3OzcbHcOlbpO9bfQuX_sV3rgt-54Hcv-D1yTVJUKeXM_AabkgqJjjHFkPSNZLigRaLLeXcGLTJGNbqMa6lIf0GTHK8JLbT0v0R0MGrK4dQsMG3c3Q9UrBut)](https://mermaid-js.github.io/mermaid-live-editor/edit/#pako:eNqFk8tuwjAQRX9l5BWViqoAixZVSESJUFX6UELpImFh4oG4JHbkOEUt8O91HqBCQd3d3Dm-nhkrGxJJhqRPlopmMYy9UADkxbz-tJUUsSwYqiP7Qay5EFwsSxdgaAUhcSeef3sH93M1gNbo2ffb3uTxKiQzqKEK7BjQcxpoXESxXkgtS6pJ6hpgLFeUJg00oVH8laJWHGvnCVHPqWD7QyjYUW9TVGtUK9OcKYHM8oQ2bdqB5_w-cnrS3GxyMeEfK4SplOqbYzUkOcFeqlAYT-sKgGP9G-1QTbOEmnlVCq1X56XczfncsnhI_id4hHNV8NXJ-4RkhBJ8VJ88wnyf5VpB_UjNst3OPtzobvA-8uG2N7vQvlyLRFIGrWHGb4ZZdnVI7Z1vcWi12wO7Up2D6u6VbcT2jes1z3OzcbHcOlbpO9bfQuX_sV3rgt-54Hcv-D1yTVJUKeXM_AabkgqJjjHFkPSNZLigRaLLeXcGLTJGNbqMa6lIf0GTHK8JLbT0v0R0MGrK4dQsMG3c3Q9UrBut)
@@ -116,6 +119,7 @@ Bij het ontwerp van het informatiemodel, landelijke voorziening of dataportaal k
 De nauwkeurigheid van coördinaten moet minstens de nauwkeurigheid realiseren die vermeld wordt in het informatiemodel of bijgeleverde inwinningseisen. Meestal is het aantal decimalen dat in software standaard wordt opgeleverd groter. Deze decimalen hebben dan geen betekenis meer. Om te voorkomen dat er te grote databestanden ontstaan, wordt aanbevolen de coördinaten af te ronden op 1 decimaal meer dan de nauwkeurigheid van de dataset vereist. Hierdoor kunnen fouten bij herhaaldelijk heen en weer transformeren worden voorkomen.
 
 <div class="example">
+
 _VOORBEELD_ zoals opgenomen in [IMOW](https://geonovum.github.io/TPOD/CIMOW/IMOW_v2.0.0.pdf#page=15) en het [model Basisgeometrie](https://docs.geostandaarden.nl/nen3610/def-st-basisgeometrie-20200930/#nauwkeurigheid-van-coordinaten)
 
 *Coördinaten opgenomen bij een geometrie worden standaard uitgewisseld met een getalsnauwkeurigheid van 1 mm of het equivalent daarvan in graden. Voor RD, NAP en ETRS89 komt dat overeen met de volgende nauwkeurigheden:*
@@ -130,6 +134,7 @@ _VOORBEELD_ zoals opgenomen in [IMOW](https://geonovum.github.io/TPOD/CIMOW/IMOW
 
 - *0,0015 -\> 0,002;*
 - *0,0014 -\> 0,001.*
+
 </div>
 
 ### Aandachtspunten bij meerdere CRS-en
@@ -159,11 +164,15 @@ Een rechte lijn in werkelijkheid is meestal geen rechte lijn in een kaart, maar 
 Voor een nauwkeurigheid van 1 mm zijn dus punten met 200 m tussenafstand nodig voor de in Nederland gangbare projecties. Voor het genereren van synthetische tussenpunten kan afhankelijk van wat bedoeld is, gekozen worden tussen punten op een rechte lijn in de kaart of een rechte lijn in werkelijkheid (geodetische lijn in ETRS89).
 
 <div class="advisement">
+
 _ADVIES_ Wanneer lijnen worden getransformeerd met behulp van RDNAPTRANS™ gebruik dan geen lijnsegmenten die langer zijn dan 200 meter om de lijnen eenduidig te transformeren met de nauwkeurigheid van RDNAPTRANS™.
+
 </div>
 
 <div class="example">
+
 _VOORBEELD_ In de de [stelselafspraken versie 2.5 van 27 september 2021 voor het DSO](https://iplo.nl/publish/library/219/dso_architectuur_stelselafspraken_versie-2-5.pdf) is het langelijnenadvies opgenomen als kader opgenomen voor de aanlevering van geometrieën.
+
 </div>
 
 #### Aandachtspunten bij coördinaattransformatie
@@ -182,7 +191,9 @@ Bij de koppeling tussen ETRS89 en RD in de jaren 1990 werden systematische versc
 RDNAPTRANS™ kent verschillende versies, in veel (oudere) GIS-pakketten en andere software is RDNAPTRANS™ niet volledig geïmplementeerd, wat fouten op decimeterniveau oplevert. Met de publicatie van RDNAPTRANS™ 2018 is een versie beschikbaar gekomen die voor aanbieders van GIS-software eenvoudiger te implementeren is. In de regel blijven de oudere, niet juist geïmplementeerde, versies ook beschikbaar in software, waarmee het voor gebruikers belangrijk is om goed te weten welke transformatie zij het beste kunnen gebruiken in hun software. De NSGI publiceert advies over het gebruik en de actuele procedure van RDNAPTRANS™ haar [website](https://www.nsgi.nl/rdnaptrans). Voor validatie van implementaties van RDNAPTRANS™ heeft de NSGI een [transformatievalidatieservice](https://www.nsgi.nl/geodetische-infrastructuur/producten/programma-rdnaptrans/transformatievalidatie) beschikbaar.  De transformatie tussen RDNAP en ETRS89 met gebruik van de RDNAPTRANS™ procedure is tevens geïmplementeerd in de [transformatie-API](https://www.nsgi.nl/coordinatentransformatie-api) beschikbaar bij de NSGI. Voorbeelden van implementatie van RDNAPTRANS™ in software worden gegeven in de paragraaf [Aandachtspunten bij toepassing in software](#aandachtspunten-bij-toepassing-in-software).
 
 <div class="advisement">
+
 _AANBEVELING_  Voor de uitwisseling van geo-informatie binnen Europa is het nadrukkelijke advies om altijd de weg via ETRS89 te kiezen. Bij gebruik van de actuele RDNAPTRANS™ procedure is daarbij voor het Nederlandse deel een nauwkeurigheid op centimeterniveau gewaarborgd. 
+
 </div>
 
 ##### Transformatie tussen ETRS89 en ITRS/WGS 84
@@ -199,13 +210,17 @@ Het is verstandig de gekozen strategie in de metadata te vermelden.
 Wanneer de brondata in RD of ETRS89 is en het beoogd gebruik van de data bestaat uit visualisatie of combinatie met andere datasets, kan worden gekozen om WGS 84 en ETRS89 aan elkaar gelijk te stellen. Dit is de standaard implementatie in meerdere GIS-pakketten, namelijk dat zonder expliciete vermelding van de WGS 84 en ETRS89-realisaties een nultransformatie wordt gebruikt. De nauwkeurigheid van de nultransformatie is circa 2 meter. Door het toepassen van deze strategie moet het resultaat worden geïnterpreteerd als een CRS dat bestaat uit een ongedefinieerd datum met als coördinatensysteem lengte en breedte. Het voordeel van het gebruik van de nultransformatie is dat de transformatie niet tijdsafhankelijk is en coördinaten dus niet veranderen in de tijd.
 
 <div class=example>
+
 _VOORBEELD_ In de [stelselafspraken voor het DSO, versie 2.5 27-09-2021](https://iplo.nl/digitaal-stelsel/documenten/architectuurdocumenten/) is gebruik van de nultransformatie als volgt vastgelegd:
 
 *Voor de uitlevering via API’s kan ook Pseudo-Mercator op basis van WGS84 (EPSG:3857) worden ondersteund. Hiermee kan bijvoorbeeld in gebruikerstoepassingen worden voorzien die beter aansluiten op Google Maps™. Voor de transformatie van (RD via) ETRS89 naar WGS84 is de aanbeveling om tussen ETRS89 en WGS84 een nultransformatie toe te passen en de coördinaten in ETRS89 en WGS84 dus gelijk aan elkaar te stellen. Gezien de onnauwkeurigheid van WGS84 is dat een gebruikelijke keuze met een acceptabele nauwkeurigheid, waarmee tevens voorkomen wordt dat de verkregen coördinaten in WGS84 door de tijd heen veranderen als gevolg van de tektonische beweging van Europa.*
+
 </div>
 
 <div class="note">
+
 Bij gebruik van data waarbij het aangegeven CRS WGS 84 (EPSG:4326) is zonder duidelijke informatie over het CRS van de brondata, de gebruikte transformaties, realisatie en/of het epoche moet de gebruiker er rekening mee houden dat de data systematische fouten in de orde van meters kan bevatten. De toepassing bepaalt of dit acceptabel is of niet. 
+
 </div>
 
 ###### Tijdsafhankelijke transformatie tussen ETRS89 en ITRS/WGS 84
@@ -217,18 +232,25 @@ Voor Nederlandse data mag voor ETRS89 de realisatie ETRF2000 worden gekozen. Wan
 Om te kunnen transformeren worden de door EUREF gepubliceerde tijdsafhankelijke [transformatieparameters tussen ETRF2000 en ITRS gebruikt](http://etrs89.ensg.ign.fr/pub/EUREF-TN-1.pdf) die ook in EPSG zijn opgenomen. Bij deze transformatie wordt de WGS 84-realisatie dan gelijkgesteld aan de bijbehorende ITRS-realisatie (ITRF2020 voor WGS 84 (G2296)). De keuze van het epoche kan voortkomen uit de datum van inwinning, publicatiedatum of een expliciete specificatie en kan indien noodzakelijk per geometrie verschillend zijn.
 
 <div class=example>
+
 _VOORBEELD_ Voor de uitwisseling van terrein- en obstakelgegevens voor de luchtvaart in Europa [specificeert Eurocontrol](https://www.eurocontrol.int/sites/default/files/2021-07/eurocontrol-tod-manual-ed-3-0.pdf#page=125) dat het horizontale referentiesysteem WGS 84 is. In de [handreiking bij deze specificatie](https://www.eurocontrol.int/sites/default/files/publication/files/20130204-do-spec-vol.2-v1.0.pdf#page=16) wordt aangegeven dat WGS 84 voor deze toepassing wordt gelijkgesteld aan ITRF2000 op epoche 2000.0.
+
 </div>
 
 Indien de publicatiedatum van de dataset wordt gekozen als epoche voor de transformatie worden bij regelmatige updates (bijvoorbeeld jaarlijks) de WGS 84/ITRS coördinaten bijgesteld als gevolg van de platentektoniek. Wanneer als epoche de (gemiddelde) datum van de inwinning van de dataset, komen de coördinaten gemiddeld het best overeen met de WGS 84/ITRS coördinaten op het moment van inwinning. 
 
 <div class="advisement">
+
 _AANBEVELING_ Wanneer een coördinaattransformatie plaatsvindt in de keten van inwinning tot gebruik is het advies de gekozen transformatieprocedure in het model en/of metadata op te nemen. Bij tijdsafhankelijke transformaties, zoals van ETRS89 naar WGS 84 moet dan ook het referentieepoche worden opgenomen. Tussen RDNAP en ETRS89 is het van belang gebruik te maken van de RDNAPTRANS™ procedure. 
+
 </div>
 
 <div class="example">
+
 _VOORBEELD_
+
 In het informatiemodel van de BRO is gekozen voor het opnemen van het attribuut [Coördinaattransformatie](https://docs.geostandaarden.nl/bro/bhr-g/#detail_class_Model_Cordinaattransformatie) waarin in de waardelijst de mogelijke transformaties zijn vastgelegd.
+
 </div>
 
 ### CRS bij uitwisselingsformaten en standaarden
@@ -260,8 +282,11 @@ De OGC API Features bevat de bouwblokken voor het creëren, bewerken en bevragen
 Voor GeoJSON zijn in de [tabel met uitwisselingsformaten](#crs-bij-uitwisselingsformaten-en-standaarden) tildes (&#65374;) aangegeven voor andere CRS-en dan WGS 84. GeoJSON ondersteunt default alleen WGS 84, echter de standaard biedt de optie voor gebruik van andere CRS-en, mits door de ontvangende en leverende partij vooraf is afgesproken welk CRS wordt uitgewisseld. Deze ruimte in de GeoJSON-specificatie wordt bijvoorbeeld in de [DSO API-strategie](https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/api-en-uri-strategie/) gebruikt door het aangeboden en gevraagde CRS te specificeren in de header van een REST-API aanroep.
 
 <div class=example>
+
 _VOORBEELD_ 
+
 In een aanroep naar de REST-API van de DSO-LV moet het gebruikte CRS voor de geometrie in de aanroep expliciet worden aangegeven door middel van de `Content-Crs` header. Het CRS waarin de geometrie in het antwoord is gewenst wordt opgegeven via de `Accept-Crs` header.
+
 </div>
 
 #### OGC Features and Geometries JSON
@@ -294,6 +319,7 @@ Het is onmogelijk om een volledig overzicht te geven hoe gebruikers in elk geogr
 [QGIS](https://www.qgis.org/) is een open source GIS-software. De ondersteuning van datumtransformaties en coördinaatconversies is gebaseerd op PROJ. QGIS kan ook worden gebruikt om conform het langelijnenadvies tussenpunten volgens een rechte lijn in de kaartprojectie te berekenen. Het berekenen van tussenpunten volgens een rechte lijn in werkelijkheid (geodetische lijn) volgens het [langelijnenadvies](#vormvastheid) is minder eenvoudig, maar kan wel met een speciale functie van PROJ.
 
 <div class="example">
+
 _VOORBEELD_ QGIS 3.20 bevat diverse implementaties van de transformatie tussen RD en ETRS89 die zijn opgenomen in de EPSG-database. Zodra in een project RD en ETRS89 worden gebruikt verschijnt een pop-up met de vraag welke transformatie moet worden gebruikt, behalve wanneer de gebruiker al een default heeft geconfigureerd. De meest nauwkeurige transformatie, in het geval van QGIS 3.20 is dat de 2D-implementatie van RDNAPTRANS™, wordt als eerste getoond. In onderstaande figuur wordt het pop-up scherm getoond.
 
 <figure id="plaatjeQGIS">
@@ -302,6 +328,7 @@ _VOORBEELD_ QGIS 3.20 bevat diverse implementaties van de transformatie tussen R
 </figure>
 
 De in rood omleidende elementen in de pop-up duiden hier op het gebruik van RDNAPTRANS™, bijvoorbeeld de hoge nauwkeurigheid van de transformatie (0.001 m), de verwijzing naar RDNAPTRANS™2018 in de omschrijving en het gebruik van het correctiegrid in de PROJ-string.
+
 </div>
 
 ##### Voorbeeld: ArcGIS Pro
@@ -309,6 +336,7 @@ De in rood omleidende elementen in de pop-up duiden hier op het gebruik van RDNA
 Het Esri softwarepakket [ArcGIS Pro](https://www.esri.nl/nl-nl/producten/arcgis-pro/home) biedt ondersteuning voor coördinaattransformaties, waaronder de transformatie tussen RD en ETRS89. Lange tijd is dit de [verbeterde benaderde transformatie](https://dehollandsecirkel.courant.nu/issue/INFO/2014-09-01/edition/null/page/20?query=) op basis van de procedure uit 2008 geweest, sinds een paar jaar wordt ook RDNAPTRANS™2018 ondersteund. In versie ArcGIS Pro 2.9, welke in 2021 beschikbaar is gekomen, is ook de transformatie in het verticale vlak, ETRS89 en NAP, geïntroduceerd.
 
 <div class="example">
+
 _VOORBEELD_ In ArcGIS Pro worden CRS-en en coördinaattransformaties van verschillende bronnen gebruikt, de bron wordt aangeduid met een ‘Authority’, meestal EPSG of Esri. Ieder CRS en coördinaatransformatie heeft een eigen zogenaamde Wel-Known ID (WKID), wanneer de ‘Authority’ EPSG is komt de WKID overeen met de EPSG-code.
 
 Zodra er in een in ArcGIS Pro 2D-data van meerdere CRS-en wordt gebruikt dan wordt automatisch de meest nauwkeurige beschikbare transformatie ingesteld. Voor de 2D-transformatie van RD (WKID:28992) naar ETRS89-GRS80 (WKID:4258) is dat in 2021 conform RDNAPTRANS™2018 de ‘Amersfoort To ETRS 1989 9’ (WKID:9282) transformatie. Eventuele oude (minder nauwkeurige) transformaties, bijvoorbeeld gebaseerd op benaderingen van eerdere RDNAPTRANS™-versies kunnen door de gebruiker ook nog ingesteld worden.
