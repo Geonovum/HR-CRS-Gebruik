@@ -40,10 +40,10 @@ var respecConfig =
 {
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
   //specStatus: "GN-BASIS",             // Basis Document
-  specStatus: "GN-WV",              // Werk Versie
-  //specStatus: "GN-CV",              // Consultatie Versie
-  //specStatus: "GN-VV",              // Vaststellings Versie
-  //specStatus: "GN-DEF",             // Definitieve Versie
+  //specStatus: "wv",              // Werk Versie
+  //specStatus: "cv",              // Consultatie Versie
+  //specStatus: "vv",              // Vaststellings Versie
+  specStatus: "def",             // Definitieve Versie
   //-- specType -----------------------------------------------------------------------
   //specType: "NO",                   // Norm
   //specType: "ST",                   // Standaard
@@ -56,7 +56,7 @@ var respecConfig =
   format: "markdown",                 // altijd "markdown"     
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
-  //publishDate: "2021-11-25",  	    // Format is "YYYY-MM-DD"
+  publishDate: "2024-08-28",  	    // Format is "YYYY-MM-DD"
   //-- Repositorynaam op GitHub -------------------------------------------------------
   github: "https://github.com/geonovum/HR-CRS-Gebruik",
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
@@ -65,6 +65,7 @@ var respecConfig =
   edDraftURI: "https://geonovum.github.io/HR-CRS-Gebruik",
   //-- de namen van de Editor(s) ------------------------------------------------------
   //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
+  title: "Handreiking Gebruik coördinaatreferentiesystemen bij uitwisseling en visualisatie van geo-informatie",
   editors: 
  [
     {
@@ -193,8 +194,8 @@ var respecConfig =
   postProcess:[custGHPG],   //-- Optioneel voor een multi document repository
 
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
-  previousPublishDate: "2021-03-14",  	    // Format is "YYY-MM-DD"
-  previousMaturity: "GN-VV",                   // kies 1 van deze 2 regels  	  
+  previousPublishDate: "2022-03-14",  	    // Format is "YYY-MM-DD"
+  previousMaturity: "def",                 // kies 1 van deze 2 regels  	  
   
   //-- Optionele parameters:
   emailComments: "geostandaarden@geonovum.nl",  // reactie mailadres, alleen bij CV!
