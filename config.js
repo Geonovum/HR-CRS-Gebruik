@@ -56,7 +56,7 @@ var respecConfig =
   format: "markdown",                 // altijd "markdown"     
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
-  //publishDate: "2024-08-28",  	    // Format is "YYYY-MM-DD"
+  //publishDate: "2024-09-18",  	    // Format is "YYYY-MM-DD"
   //-- Repositorynaam op GitHub -------------------------------------------------------
   github: "https://github.com/geonovum/HR-CRS-Gebruik",
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
