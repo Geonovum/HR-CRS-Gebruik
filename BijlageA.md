@@ -12,19 +12,19 @@ Onderstaande tabel geeft de naam en EPSG-code van veelgebruikte CRS-en in Nederl
 |ETRS89|[EPSG:4937](https://www.opengis.net/def/crs/EPSG/0/4937)|Geografisch<br>GRS80-ellipsoïde (&phi;, &lambda;, h)|Ensemble<br>Binnen INSPIRE aangeduid als ETRS89-GRS80h
 |ETRS89|[EPSG:4936](https://www.opengis.net/def/crs/EPSG/0/4936)|Geocentrisch (X, Y, Z)|Ensemble<br>Binnen INSPIRE aangeduid als ETRS89-XYZ
 |ETRS89-LAEA|[EPSG:3035](https://www.opengis.net/def/crs/EPSG/0/3035)|Geprojecteerd<br>Lambert Equal Area-projectie (Y, X)|[INSPIRE-projectie voor statistische data](https://inspire.ec.europa.eu/id/document/tg/rs)
-|ETRS89-LCC|[EPSG:3034](https://www.opengis.net/def/crs/EPSG/0/3034)|Geprojecteerd<br>Lambert Conformal Conical-projectie (N, E)|[INSPIRE-projectie voor kleinschalige (< 1:500 000) pan-Europese data](https://inspire.ec.europa.eu/id/document/tg/rs)
-|ETRS89-TM31|[EPSG:3043](https://www.opengis.net/def/crs/EPSG/0/3043)|Geprojecteerd<br>Transversale Mercator-projectie (N, E)|[INSPIRE-projectie voor grootschalige (> 1:500 000) data voor zone 31N (0° tot 6° OL)](https://inspire.ec.europa.eu/id/document/tg/rs) 
-|ETRS89-UTM31|[EPSG:25831](https://www.opengis.net/def/crs/EPSG/0/25831)|Geprojecteerd<br>Transversale Mercator-projectie (E, N)|Alternatief voor EPSG:3043 voor grootschalige (> 1:500 000) data voor zone 31N (0° tot 6° OL) met volgorde van coördinaten als oost-west, noord-zuid
-|ETRS89-TM32|[EPSG:3044](https://www.opengis.net/def/crs/EPSG/0/3044)|Geprojecteerd<br>Transversale Mercator-projectie (N, E)|[INSPIRE-projectie voor grootschalige (> 1:500 000) data voor zone 32N (6° tot 12° OL)](https://inspire.ec.europa.eu/id/document/tg/rs) 
-|ETRS89-UTM32|[EPSG:25832](https://www.opengis.net/def/crs/EPSG/0/25832)|Geprojecteerd<br>Transversale Mercator-projectie (E, N)|Alternatief voor EPSG:3044 voor grootschalige (> 1:500 000) data voor zone 32N (6° tot 12° OL) met volgorde van coördinaten als oost-west, noord-zuid
+|ETRS89-LCC|[EPSG:3034](https://www.opengis.net/def/crs/EPSG/0/3034)|Geprojecteerd<br>Lambert Conformal Conical-projectie (N, E)|[INSPIRE-projectie voor kleinschalige (<&nbsp;1:500&nbsp;000) pan-Europese data](https://inspire.ec.europa.eu/id/document/tg/rs)
+|ETRS89-TM31|[EPSG:3043](https://www.opengis.net/def/crs/EPSG/0/3043)|Geprojecteerd<br>Transversale Mercator-projectie (N, E)|[INSPIRE-projectie voor grootschalige (>&nbsp;1:500&nbsp;000) data voor zone 31N (0° tot 6° OL)](https://inspire.ec.europa.eu/id/document/tg/rs) 
+|ETRS89-UTM31|[EPSG:25831](https://www.opengis.net/def/crs/EPSG/0/25831)|Geprojecteerd<br>Transversale Mercator-projectie (E, N)|Alternatief voor EPSG:3043 voor grootschalige (>&nbsp;1:500&nbsp;000) data voor zone 31N (0° tot 6° OL) met volgorde van coördinaten als oost-west, noord-zuid
+|ETRS89-TM32|[EPSG:3044](https://www.opengis.net/def/crs/EPSG/0/3044)|Geprojecteerd<br>Transversale Mercator-projectie (N, E)|[INSPIRE-projectie voor grootschalige (>&nbsp;1:500&nbsp;000) data voor zone 32N (6° tot 12° OL)](https://inspire.ec.europa.eu/id/document/tg/rs) 
+|ETRS89-UTM32|[EPSG:25832](https://www.opengis.net/def/crs/EPSG/0/25832)|Geprojecteerd<br>Transversale Mercator-projectie (E, N)|Alternatief voor EPSG:3044 voor grootschalige (>&nbsp;1:500&nbsp;000) data voor zone 32N (6° tot 12° OL) met volgorde van coördinaten als oost-west, noord-zuid
 |ETRF2000|[EPSG:9067](https://www.opengis.net/def/crs/EPSG/0/9067)|Geografisch<br>GRS80-ellipsoïde (&phi;, &lambda;)|[Aanbevolen ETRS89-realisatie voor geo-informatie door EUREF](http://etrs89.ensg.ign.fr/pub/EUREF-TN-1.pdf)
 |ETRF2000|[EPSG:7931](https://www.opengis.net/def/crs/EPSG/0/7931)|Geografisch<br>GRS80-ellipsoïde (&phi;, &lambda;, h)|[Aanbevolen ETRS89-realisatie voor geo-informatie door EUREF](http://etrs89.ensg.ign.fr/pub/EUREF-TN-1.pdf)
-|ETRF2000|[EPSG:7930](https://www.opengis.net/def/crs/EPSG/0/7930)|Geocentrisch (X, Y ,Z)|[Aanbevolen ETRS89-realisatie voor geo-informatie door EUREF](http://etrs89.ensg.ign.fr/pub/EUREF-TN-1.pdf)
-|EVRF2019 mean-tide|[EPSG:9390](https://www.opengis.net/def/crs/EPSG/0/9390)|Verticaal<br>Normaal hoogte (H)|[EVRS-realisatie voor plaatsbepaling](https://evrs.bkg.bund.de/Subsites/EVRS/EN/EVRF2019/evrf2019.html)
+|ETRF2000|[EPSG:7930](https://www.opengis.net/def/crs/EPSG/0/7930)|Geocentrisch (X, Y, Z)|[Aanbevolen ETRS89-realisatie voor geo-informatie door EUREF](http://etrs89.ensg.ign.fr/pub/EUREF-TN-1.pdf)
+|EVRF2019 mean-tide|[EPSG:9390](https://www.opengis.net/def/crs/EPSG/0/9390)|Verticaal<br>Normaalhoogte (H)|[EVRS-realisatie voor plaatsbepaling](https://evrs.bkg.bund.de/Subsites/EVRS/EN/EVRF2019/evrf2019.html)
 |ETRS89 + NAP|[EPSG:9286](https://www.opengis.net/def/crs/EPSG/0/9286)|Samengesteld<br>ETRS89 en NAP|ETRS89=Ensemble
 |ETRS89 + EVRF2019 mean-tide|[EPSG:9423](https://www.opengis.net/def/crs/EPSG/0/9423)|Samengesteld<br>ETRS89 en EVRF2019|ETRS89=Ensemble
 |ETRS89 + NLLAT|[EPSG:9289](https://www.opengis.net/def/crs/EPSG/0/9289)|Samengesteld<br>ETRS89 en NLLAT|ETRS89=Ensemble
-|ETRF2000 + NAP||Samengesteld<br>Geografisch ETRF2000 en NAP|
+|ETRF2000 + NAP||Samengesteld<br>ETRF2000 en NAP|
 |ITRF2020|[EPSG:9990](https://www.opengis.net/def/crs/EPSG/0/9990)|Geografisch<br>GRS80-ellipsoïde  (&phi;, &lambda;)|Aanbevolen wereldwijd CRS door VN, IUGG en EPSG
 |ITRF2020|[EPSG:9989](https://www.opengis.net/def/crs/EPSG/0/9989)|Geografisch<br>GRS80-ellipsoïde  (&phi;, &lambda;, h)|Aanbevolen wereldwijd CRS door VN, IUGG en EPSG
 |ITRF2020|[EPSG:9988](https://www.opengis.net/def/crs/EPSG/0/9988)|Geocentrisch (X, Y, Z)|Aanbevolen wereldwijd CRS door VN, IUGG en EPSG
