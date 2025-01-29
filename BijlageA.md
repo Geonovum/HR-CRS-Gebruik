@@ -21,16 +21,16 @@ Onderstaande tabel geeft de naam en EPSG-code van veelgebruikte CRS-en in Nederl
 |ETRF2000|[EPSG:7931](https://www.opengis.net/def/crs/EPSG/0/7931)|Geografisch<br>GRS80-ellipsoïde (&phi;, &lambda;, h)|[Aanbevolen ETRS89-realisatie voor geo-informatie door EUREF](http://etrs89.ensg.ign.fr/pub/EUREF-TN-1.pdf)
 |ETRF2000|[EPSG:7930](https://www.opengis.net/def/crs/EPSG/0/7930)|Geocentrisch (X, Y ,Z)|[Aanbevolen ETRS89-realisatie voor geo-informatie door EUREF](http://etrs89.ensg.ign.fr/pub/EUREF-TN-1.pdf)
 |EVRF2019 mean-tide|[EPSG:9390](https://www.opengis.net/def/crs/EPSG/0/9390)|Verticaal<br>Normaal hoogte (H)|[EVRS-realisatie voor plaatsbepaling](https://evrs.bkg.bund.de/Subsites/EVRS/EN/EVRF2019/evrf2019.html)
-|ETRS89 + NAP|[EPSG:9286](https://www.opengis.net/def/crs/EPSG/0/9286)|Samengesteld<br>ETRS89-GRS80 en NAP|ETRS89=Ensemble
-|ETRS89 + EVRF2019 mean-tide|[EPSG:9423](https://www.opengis.net/def/crs/EPSG/0/9423)|Samengesteld<br>ETRS89-GRS80 en EVRF2019|ETRS89=Ensemble
-|ETRS89 + NLLAT|[EPSG:9289](https://www.opengis.net/def/crs/EPSG/0/9289)|Samengesteld<br>ETRS89-GRS80 en NLLAT|ETRS89=Ensemble
+|ETRS89 + NAP|[EPSG:9286](https://www.opengis.net/def/crs/EPSG/0/9286)|Samengesteld<br>ETRS89 en NAP|ETRS89=Ensemble
+|ETRS89 + EVRF2019 mean-tide|[EPSG:9423](https://www.opengis.net/def/crs/EPSG/0/9423)|Samengesteld<br>ETRS89 en EVRF2019|ETRS89=Ensemble
+|ETRS89 + NLLAT|[EPSG:9289](https://www.opengis.net/def/crs/EPSG/0/9289)|Samengesteld<br>ETRS89 en NLLAT|ETRS89=Ensemble
 |ETRF2000 + NAP||Samengesteld<br>Geografisch ETRF2000 en NAP|
 |ITRF2020|[EPSG:9990](https://www.opengis.net/def/crs/EPSG/0/9990)|Geografisch<br>GRS80-ellipsoïde  (&phi;, &lambda;)|Aanbevolen wereldwijd CRS door VN, IUGG en EPSG
 |ITRF2020|[EPSG:9989](https://www.opengis.net/def/crs/EPSG/0/9989)|Geografisch<br>GRS80-ellipsoïde  (&phi;, &lambda;, h)|Aanbevolen wereldwijd CRS door VN, IUGG en EPSG
 |ITRF2020|[EPSG:9988](https://www.opengis.net/def/crs/EPSG/0/9988)|Geocentrisch (X, Y, Z)|Aanbevolen wereldwijd CRS door VN, IUGG en EPSG
-|WGS 84|[EPSG:4326](https://www.opengis.net/def/crs/EPSG/0/4326)|Geografisch<br>WGS 84-ellipsoïde (&phi;, &lambda;)|Ensemble<br>CRS van het Amerkiaanse GPS-systeem, vaak gebruikt in minder nauwkeurige toepassingen en visualisaties.
+|WGS 84|[EPSG:4326](https://www.opengis.net/def/crs/EPSG/0/4326)|Geografisch<br>WGS 84-ellipsoïde (&phi;, &lambda;)|Ensemble<br>CRS van het Amerikaanse GPS-systeem, vaak gebruikt in minder nauwkeurige toepassingen en visualisaties.
 |CRS84|[OGC:CRS84](https://www.opengis.net/def/crs/OGC/0/CRS84)|Geografisch<br>WGS 84-ellipsoïde (&lambda;, &phi;)|Aanbevolen wereldwijd CRS voor toepassingen op het web door OGC. Verschil met WGS 84 is de volgorde van de coördinaten (lengte, breedte in plaats van breedte, lengte)
-|WGS 84|[EPSG:4979](https://www.opengis.net/def/crs/EPSG/0/4979)|Geografisch<br>WGS 84-ellipsoïde  (&phi;, &lambda;, h)|Ensemble<br>CRS van het Amerkiaanse GPS-systeem, vaak gebruikt in minder nauwkeurige toepassingen en visualisaties.
+|WGS 84|[EPSG:4979](https://www.opengis.net/def/crs/EPSG/0/4979)|Geografisch<br>WGS 84-ellipsoïde  (&phi;, &lambda;, h)|Ensemble<br>CRS van het Amerikaanse GPS-systeem, vaak gebruikt in minder nauwkeurige toepassingen en visualisaties.
 |CRS84h|[OGC:CRS84h](https://www.opengis.net/def/crs/OGC/0/CRS84h)|Geografisch<br>WGS 84-ellipsoïde (&lambda;, &phi;, h)|Aanbevolen wereldwijd CRS voor 3D toepassingen op het web door OGC. Verschil met WGS 84 is de volgorde van de coördinaten (lengte, breedte, hoogte in plaats van breedte, lengte, hoogte)
 |WGS 84 / Web Mercator of Pseudo Mercator|[EPSG:3857](https://www.opengis.net/def/crs/EPSG/0/3857)|Gesimplificeerde Mercator-projectie (x, y)|Geen geodetisch CRS, alleen geschikt eenvoudige visualisatie van onnauwkeurige data<br>Aanbevolen voor visualisatie op het web door OGC
 |WGS 84 / UTM Zone 31N|[EPSG:32631](https://www.opengis.net/def/crs/EPSG/0/32631)|Transversale Mercator-projectie (E, N)|Projectie voor UTM zone 31N (0° tot 6° OL)
