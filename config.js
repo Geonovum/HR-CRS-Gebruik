@@ -56,7 +56,7 @@ var respecConfig =
   format: "markdown",                 // altijd "markdown"     
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
-  //publishDate: "2024-09-18",  	    // Format is "YYYY-MM-DD"
+  //publishDate: "2025-02-11",  	    // Format is "YYYY-MM-DD"
   //-- Repositorynaam op GitHub -------------------------------------------------------
   github: "https://github.com/geonovum/HR-CRS-Gebruik",
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
@@ -194,7 +194,7 @@ var respecConfig =
   postProcess:[custGHPG],   //-- Optioneel voor een multi document repository
 
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
-  previousPublishDate: "2024-08-28",  	    // Format is "YYY-MM-DD"
+  previousPublishDate: "2025-02-11",  	    // Format is "YYY-MM-DD"
   previousMaturity: "def",                 // kies 1 van deze 2 regels  	  
   
   //-- Optionele parameters:
