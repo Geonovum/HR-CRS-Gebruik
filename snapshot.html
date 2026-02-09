@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="nl"><head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
-<meta name="generator" content="ReSpec 35.1.1">
+<meta name="generator" content="ReSpec 35.4.1">
 <style>
 .issue-label{text-transform:initial}
 .warning>p:first-child{margin-top:0}
@@ -71,7 +71,7 @@ a.bibref{text-decoration:none}
 .respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
 }
 #references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
-cite .bibref{font-style:normal}
+cite .bibref{font-style:italic}
 a[href].orcid{padding-left:4px;padding-right:4px}
 a[href].orcid>svg{margin-bottom:-2px}
 ol.tof,ul.tof{list-style:none outside none}
@@ -99,8 +99,9 @@ dd{margin-left:0}
 }
 </style>
 <style id="respec-nlgov">
-img.license{float:left;padding-right:5px}
+img.license{float:left;padding-right:5px;background:0 0}
 </style>
+<meta name="color-scheme" content="light">
 <meta name="description" content="Een geodetisch onderwerp als CRS is in toenemende mate ook een geo-informatie / GIS-onderwerp aan het worden, wat betekent dat er aandacht nodig is voor hoe je op passende wijze omgaat met dit onderwerp in informatiemodellen, in uitwisselmechanismes en -formaten en in het ontwerp van landelijke voorzieningen.">
 <style>
 
@@ -114,15 +115,16 @@ img.license{float:left;padding-right:5px}
     color: white;
     white-space: nowrap;
     z-index: 1;
-    background-color: #045D9F;
+    background-color: #FF0000;
   }
 </style>
 <script id="initialUserConfig" type="application/json">{
   "nl_organisationName": "Geonovum",
+  "nl_organisationStylesURL": "https://tools.geostandaarden.nl/respec/style/",
   "nl_organisationPublishURL": "https://docs.geostandaarden.nl/",
   "logos": [
     {
-      "src": "https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg",
+      "src": "https://docs.geostandaarden.nl/media/Geonovum.svg",
       "alt": "Geonovum",
       "id": "Geonovum",
       "height": 67,
@@ -209,7 +211,7 @@ img.license{float:left;padding-right:5px}
       "sotd": "Status van dit document",
       "def": "Dit is de definitieve versie van dit document. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.",
       "wv": "Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.",
-      "cv": "Dit is een consultatieversie. Commentaar over dit document kan gestuurd worden naar ",
+      "cv": "Dit is een consultatieversie.",
       "vv": "Dit is de definitieve conceptversie van dit document. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.",
       "basis": "Dit is een document zonder officiële status.",
       "ld": "Dit is een levend document dat regelmatig gewijzigd wordt."
@@ -218,7 +220,7 @@ img.license{float:left;padding-right:5px}
       "sotd": "Status of this document",
       "def": "This is the definitive version of this document. Edits resulting from consultations have been applied.",
       "wv": "This is a working draft that can be changed, removed or replaced by other documents at any time. It is not a stable document.",
-      "cv": "This is a stable draft, published for public comment. Comments regarding this document may be sent to ",
+      "cv": "This is a stable draft, published for public comment.",
       "vv": "This is the final draft of this document. Edits resulting from consultations have been applied.",
       "basis": "This document has no official standing.",
       "ld": "This is a living document, which is updated regularly."
@@ -237,19 +239,19 @@ img.license{float:left;padding-right:5px}
       "name": "Creative Commons 0 Public Domain Dedication",
       "short": "CC0",
       "url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "image": "https://tools.geostandaarden.nl/respec/style/logos/CC-Licentie.svg"
+      "image": "https://docs.geostandaarden.nl/media/CC-Licentie.svg"
     },
     "cc-by": {
       "name": "Creative Commons Attribution 4.0 International Public License",
       "short": "CC-BY",
       "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
-      "image": "https://tools.geostandaarden.nl/respec/style/logos/cc-by.svg"
+      "image": "https://docs.geostandaarden.nl/media/cc-by.svg"
     },
     "cc-by-nd": {
       "name": "Creative Commons Naamsvermelding-GeenAfgeleideWerken 4.0 Internationaal",
       "short": "CC-BY-ND",
       "url": "https://creativecommons.org/licenses/by-nd/4.0/legalcode.nl",
-      "image": "https://tools.geostandaarden.nl/respec/style/logos/cc-by-nd.svg"
+      "image": "https://docs.geostandaarden.nl/media/cc-by-nd.svg"
     }
   },
   "localBiblio": {
@@ -313,10 +315,9 @@ img.license{float:left;padding-right:5px}
       "href": "https://www.defensie.nl/onderwerpen/hydrografie/coordinatenstelsels-op-zee/dieptebepaling-op-zee"
     }
   },
-  "specStatus": "def",
+  "specStatus": "wv",
   "specType": "HR",
   "format": "markdown",
-  "publishDate": "2025-02-11",
   "github": "https://github.com/geonovum/HR-CRS-Gebruik",
   "issueBase": "https://github.com/geonovum/HR-CRS-Gebruik/issues",
   "edDraftURI": "https://geonovum.github.io/HR-CRS-Gebruik",
@@ -336,34 +337,30 @@ img.license{float:left;padding-right:5px}
   "shortName": "crs",
   "pubDomain": "crs",
   "licence": "cc-by",
-  "previousPublishDate": "2024-09-18",
+  "previousPublishDate": "2025-02-11",
   "previousMaturity": "def",
   "emailComments": "geostandaarden@geonovum.nl"
 }</script>
-<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css"></head>
+<link rel="stylesheet" href="https://tools.geostandaarden.nl/respec/style/base.css"></head>
   
   
-    <body class="h-entry informative"><div class="head">
-    <a class="logo" href="https://www.geonovum.nl/geo-standaarden"><img alt="Geonovum" height="67" id="Geonovum" src="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg" width="132">
+    <body class="h-entry informative toc-inline"><div class="head">
+    <a class="logo" href="https://www.geonovum.nl/geo-standaarden"><img alt="Geonovum" height="67" id="Geonovum" src="https://docs.geostandaarden.nl/media/Geonovum.svg" width="132">
   </a> <h1 id="title" class="title">Handreiking Gebruik coördinaatreferentiesystemen bij uitwisseling en visualisatie van geo-informatie</h1>
     
     <h2>
       Geonovum Handreiking<br>
-      Vastgestelde versie
-      <time class="dt-published" datetime="2025-02-11">11 februari 2025</time>
+      Werkversie
+      <time class="dt-published" datetime="2026-02-09">09 februari 2026</time>
     </h2>
     <dl>
-      <dt>Deze versie:</dt><dd class="status">
-              <a class="u-url status" href="https://docs.geostandaarden.nl/crs/def-hr-crs-20250211">https://docs.geostandaarden.nl/crs/def-hr-crs-20250211</a>
-            </dd>
-      <dt>Laatst gepubliceerde versie:</dt><dd>
-              <a href="https://docs.geostandaarden.nl/crs/crs/">https://docs.geostandaarden.nl/crs/crs/</a>
-            </dd>
+      
+      
       <dt>Laatste werkversie:</dt><dd><a href="https://geonovum.github.io/HR-CRS-Gebruik">https://geonovum.github.io/HR-CRS-Gebruik</a></dd>
       
       
       
-      <dt>Vorige versie:</dt><dd><a href="https://docs.geostandaarden.nl/crs/def-hr-crs-20240918">https://docs.geostandaarden.nl/crs/def-hr-crs-20240918</a></dd>
+      
       
       <dt>Redacteurs:</dt>
       <dd class="editor p-author h-card vcard">
@@ -387,9 +384,9 @@ img.license{float:left;padding-right:5px}
     
     
     <p class="copyright">
-          Dit document valt onder de volgende licentie: 
-          <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode" class="subfoot"><img class="license" src="https://tools.geostandaarden.nl/respec/style/logos/cc-by.svg" alt="Logo Creative Commons Attribution 4.0 International Public License"><br> Creative Commons Attribution 4.0 International Public License</a>
-        </p>
+            Dit document valt onder de volgende licentie: 
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode" class="subfoot"><img class="license" src="https://docs.geostandaarden.nl/media/cc-by.svg" alt="Logo Creative Commons Attribution 4.0 International Public License"><br> Creative Commons Attribution 4.0 International Public License</a>
+          </p>
     <hr title="Separator for header">
   </div>
 
@@ -415,7 +412,7 @@ img.license{float:left;padding-right:5px}
         
         
         
-        <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is de definitieve versie van dit document. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#inleiding"><bdi class="secno">1. </bdi>Inleiding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#vooraf-waarom-een-geonovum-handreiking-over-crs"><bdi class="secno">1.1 </bdi>Vooraf: waarom een Geonovum Handreiking over CRS</a></li><li class="tocline"><a class="tocxref" href="#introductie-coordinaatreferentiesystemen-crs"><bdi class="secno">1.2 </bdi>Introductie coördinaatreferentiesystemen (CRS)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#indeling-van-crs-en"><bdi class="secno">1.2.1 </bdi>Indeling van CRS-en</a></li><li class="tocline"><a class="tocxref" href="#realisatie-van-het-crs"><bdi class="secno">1.2.2 </bdi>Realisatie van het CRS</a></li><li class="tocline"><a class="tocxref" href="#gebruik-en-keuze-van-het-crs-in-de-praktijk"><bdi class="secno">1.2.3 </bdi>Gebruik en keuze van het CRS in de praktijk</a></li></ol></li><li class="tocline"><a class="tocxref" href="#leeswijzer"><bdi class="secno">1.3 </bdi>Leeswijzer</a></li></ol></li><li class="tocline"><a class="tocxref" href="#achtergrond-gebruikte-crs-en-in-nederland"><bdi class="secno">2. </bdi>Achtergrond: Gebruikte CRS-en in Nederland</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#opbouw-van-crs"><bdi class="secno">2.1 </bdi>Opbouw van CRS</a></li><li class="tocline"><a class="tocxref" href="#naamgeving-van-crs"><bdi class="secno">2.2 </bdi>Naamgeving van CRS</a></li><li class="tocline"><a class="tocxref" href="#coordinaattransformatie-datumtransformatie-en-coordinaatconversie"><bdi class="secno">2.3 </bdi>Coördinaattransformatie, datumtransformatie en coördinaatconversie</a></li><li class="tocline"><a class="tocxref" href="#indeling-van-crs-en-0"><bdi class="secno">2.4 </bdi>Indeling van CRS-en</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#wereldwijde-crs-en"><bdi class="secno">2.4.1 </bdi>Wereldwijde CRS-en</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#itrs"><bdi class="secno">2.4.1.1 </bdi>ITRS</a></li><li class="tocline"><a class="tocxref" href="#wgs-84"><bdi class="secno">2.4.1.2 </bdi>WGS 84</a></li><li class="tocline"><a class="tocxref" href="#crs84"><bdi class="secno">2.4.1.3 </bdi>CRS84</a></li></ol></li><li class="tocline"><a class="tocxref" href="#europese-crs-en-etrs89-en-evrs"><bdi class="secno">2.4.2 </bdi>Europese CRS-en: ETRS89 en EVRS</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#realisaties-van-etrs89-en-evrs"><bdi class="secno">2.4.2.1 </bdi>Realisaties van ETRS89 en EVRS</a></li><li class="tocline"><a class="tocxref" href="#aansluiting-bij-geodetische-infrastructuur-voor-eenduidig-crs-bij-inwinning"><bdi class="secno">2.4.2.2 </bdi>Aansluiting bij geodetische infrastructuur voor eenduidig CRS bij inwinning</a></li></ol></li><li class="tocline"><a class="tocxref" href="#crs-op-land-rd-en-nap"><bdi class="secno">2.4.3 </bdi>CRS op land: RD en NAP</a></li><li class="tocline"><a class="tocxref" href="#crs-op-zee-lat-en-msl"><bdi class="secno">2.4.4 </bdi>CRS op zee: LAT en MSL</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#aandachtspunten-voor-crs-gebruik"><bdi class="secno">3. </bdi>Aandachtspunten voor CRS-gebruik</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#crs-keuze-bij-verschillende-toepassingen"><bdi class="secno">3.1 </bdi>CRS-keuze bij verschillende toepassingen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#opslag-en-uitwisseling-van-data"><bdi class="secno">3.1.1 </bdi>Opslag en uitwisseling van data</a></li><li class="tocline"><a class="tocxref" href="#visualisatie-in-een-plat-vlak"><bdi class="secno">3.1.2 </bdi>Visualisatie in een plat vlak</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#visualisatie-op-het-web"><bdi class="secno">3.1.2.1 </bdi>Visualisatie op het web</a></li></ol></li><li class="tocline"><a class="tocxref" href="#mogelijke-crs-en-binnen-inspire"><bdi class="secno">3.1.3 </bdi>Mogelijke CRS-en binnen INSPIRE</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aandachtspunten-bij-crs-in-informatiemodel-en-informatieketen"><bdi class="secno">3.2 </bdi>Aandachtspunten bij CRS in informatiemodel en informatieketen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#aandachtspunten-t-a-v-crs-keuze"><bdi class="secno">3.2.1 </bdi>Aandachtspunten t.a.v. CRS-keuze</a></li><li class="tocline"><a class="tocxref" href="#aandachtspunten-t-a-v-informatie-over-crs-en"><bdi class="secno">3.2.2 </bdi>Aandachtspunten t.a.v. informatie over CRS-en</a></li><li class="tocline"><a class="tocxref" href="#aandachtspunten-t-a-v-dubbel-opslaan-of-on-the-fly-transformeren"><bdi class="secno">3.2.3 </bdi>Aandachtspunten t.a.v. dubbel opslaan of on-the-fly transformeren</a></li><li class="tocline"><a class="tocxref" href="#nauwkeurigheid-van-coordinaten"><bdi class="secno">3.2.4 </bdi>Nauwkeurigheid van coördinaten</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aandachtspunten-bij-meerdere-crs-en"><bdi class="secno">3.3 </bdi>Aandachtspunten bij meerdere CRS-en</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#vormvastheid"><bdi class="secno">3.3.1 </bdi>Vormvastheid</a></li><li class="tocline"><a class="tocxref" href="#aandachtspunten-bij-coordinaattransformatie"><bdi class="secno">3.3.2 </bdi>Aandachtspunten bij coördinaattransformatie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#transformatie-en-conversie-tussen-rdnap-en-etrs89"><bdi class="secno">3.3.2.1 </bdi>Transformatie en conversie tussen RDNAP en ETRS89</a></li><li class="tocline"><a class="tocxref" href="#transformatie-tussen-etrs89-en-itrs-wgs-84"><bdi class="secno">3.3.2.2 </bdi>Transformatie tussen ETRS89 en ITRS/WGS 84</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#wgs-84-gelijkstellen-aan-etrs89-nultransformatie"><bdi class="secno">3.3.2.2.1 </bdi>WGS 84 gelijkstellen aan ETRS89 (nultransformatie)</a></li><li class="tocline"><a class="tocxref" href="#tijdsafhankelijke-transformatie-tussen-etrs89-en-itrs-wgs-84"><bdi class="secno">3.3.2.2.2 </bdi>Tijdsafhankelijke transformatie tussen ETRS89 en ITRS/WGS 84</a></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#crs-bij-uitwisselingsformaten-en-standaarden"><bdi class="secno">3.4 </bdi>CRS bij uitwisselingsformaten en standaarden</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ogc-api"><bdi class="secno">3.4.1 </bdi>OGC API</a></li><li class="tocline"><a class="tocxref" href="#gebruik-van-andere-crs-en-in-geojson"><bdi class="secno">3.4.2 </bdi>Gebruik van andere CRS-en in GeoJSON</a></li><li class="tocline"><a class="tocxref" href="#ogc-features-and-geometries-json"><bdi class="secno">3.4.3 </bdi>OGC Features and Geometries JSON</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aandachtspunten-bij-toepassing-in-software"><bdi class="secno">3.5 </bdi>Aandachtspunten  bij toepassing in software</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#de-merknaam-rdnaptrans"><bdi class="secno">3.5.1 </bdi>De merknaam RDNAPTRANS™</a></li><li class="tocline"><a class="tocxref" href="#voor-ontwikkelaars"><bdi class="secno">3.5.2 </bdi>Voor ontwikkelaars</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#proj"><bdi class="secno">3.5.2.1 </bdi>PROJ</a></li></ol></li><li class="tocline"><a class="tocxref" href="#voor-gebruikers"><bdi class="secno">3.5.3 </bdi>Voor gebruikers</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#voorbeeld-qgis"><bdi class="secno">3.5.3.1 </bdi>Voorbeeld: QGIS</a></li><li class="tocline"><a class="tocxref" href="#voorbeeld-arcgis-pro"><bdi class="secno">3.5.3.2 </bdi>Voorbeeld: ArcGIS Pro</a></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#tot-slot"><bdi class="secno">4. </bdi>Tot slot</a></li><li class="tocline"><a class="tocxref" href="#lijst-met-afkortingen"><bdi class="secno">5. </bdi>Lijst met afkortingen</a></li><li class="tocline"><a class="tocxref" href="#bijlage-a-crs-overzichttabel"><bdi class="secno">6. </bdi>Bijlage A: CRS-overzichttabel</a></li></ol></nav>
+        <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#inleiding"><bdi class="secno">1. </bdi>Inleiding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#vooraf-waarom-een-geonovum-handreiking-over-crs"><bdi class="secno">1.1 </bdi>Vooraf: waarom een Geonovum Handreiking over CRS</a></li><li class="tocline"><a class="tocxref" href="#introductie-coordinaatreferentiesystemen-crs"><bdi class="secno">1.2 </bdi>Introductie coördinaatreferentiesystemen (CRS)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#indeling-van-crs-en"><bdi class="secno">1.2.1 </bdi>Indeling van CRS-en</a></li><li class="tocline"><a class="tocxref" href="#realisatie-van-het-crs"><bdi class="secno">1.2.2 </bdi>Realisatie van het CRS</a></li><li class="tocline"><a class="tocxref" href="#gebruik-en-keuze-van-het-crs-in-de-praktijk"><bdi class="secno">1.2.3 </bdi>Gebruik en keuze van het CRS in de praktijk</a></li></ol></li><li class="tocline"><a class="tocxref" href="#leeswijzer"><bdi class="secno">1.3 </bdi>Leeswijzer</a></li></ol></li><li class="tocline"><a class="tocxref" href="#achtergrond-gebruikte-crs-en-in-nederland"><bdi class="secno">2. </bdi>Achtergrond: Gebruikte CRS-en in Nederland</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#opbouw-van-crs"><bdi class="secno">2.1 </bdi>Opbouw van CRS</a></li><li class="tocline"><a class="tocxref" href="#naamgeving-van-crs"><bdi class="secno">2.2 </bdi>Naamgeving van CRS</a></li><li class="tocline"><a class="tocxref" href="#coordinaattransformatie-datumtransformatie-en-coordinaatconversie"><bdi class="secno">2.3 </bdi>Coördinaattransformatie, datumtransformatie en coördinaatconversie</a></li><li class="tocline"><a class="tocxref" href="#indeling-van-crs-en-0"><bdi class="secno">2.4 </bdi>Indeling van CRS-en</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#wereldwijde-crs-en"><bdi class="secno">2.4.1 </bdi>Wereldwijde CRS-en</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#itrs"><bdi class="secno">2.4.1.1 </bdi>ITRS</a></li><li class="tocline"><a class="tocxref" href="#wgs-84"><bdi class="secno">2.4.1.2 </bdi>WGS 84</a></li><li class="tocline"><a class="tocxref" href="#crs84"><bdi class="secno">2.4.1.3 </bdi>CRS84</a></li></ol></li><li class="tocline"><a class="tocxref" href="#europese-crs-en-etrs89-en-evrs"><bdi class="secno">2.4.2 </bdi>Europese CRS-en: ETRS89 en EVRS</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#realisaties-van-etrs89-en-evrs"><bdi class="secno">2.4.2.1 </bdi>Realisaties van ETRS89 en EVRS</a></li><li class="tocline"><a class="tocxref" href="#aansluiting-bij-geodetische-infrastructuur-voor-eenduidig-crs-bij-inwinning"><bdi class="secno">2.4.2.2 </bdi>Aansluiting bij geodetische infrastructuur voor eenduidig CRS bij inwinning</a></li></ol></li><li class="tocline"><a class="tocxref" href="#crs-op-land-rd-en-nap"><bdi class="secno">2.4.3 </bdi>CRS op land: RD en NAP</a></li><li class="tocline"><a class="tocxref" href="#crs-op-zee-lat-en-msl"><bdi class="secno">2.4.4 </bdi>CRS op zee: LAT en MSL</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#aandachtspunten-voor-crs-gebruik"><bdi class="secno">3. </bdi>Aandachtspunten voor CRS-gebruik</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#crs-keuze-bij-verschillende-toepassingen"><bdi class="secno">3.1 </bdi>CRS-keuze bij verschillende toepassingen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#opslag-en-uitwisseling-van-data"><bdi class="secno">3.1.1 </bdi>Opslag en uitwisseling van data</a></li><li class="tocline"><a class="tocxref" href="#visualisatie-in-een-plat-vlak"><bdi class="secno">3.1.2 </bdi>Visualisatie in een plat vlak</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#visualisatie-op-het-web"><bdi class="secno">3.1.2.1 </bdi>Visualisatie op het web</a></li></ol></li><li class="tocline"><a class="tocxref" href="#mogelijke-crs-en-binnen-inspire"><bdi class="secno">3.1.3 </bdi>Mogelijke CRS-en binnen INSPIRE</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aandachtspunten-bij-crs-in-informatiemodel-en-informatieketen"><bdi class="secno">3.2 </bdi>Aandachtspunten bij CRS in informatiemodel en informatieketen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#aandachtspunten-t-a-v-crs-keuze"><bdi class="secno">3.2.1 </bdi>Aandachtspunten t.a.v. CRS-keuze</a></li><li class="tocline"><a class="tocxref" href="#aandachtspunten-t-a-v-informatie-over-crs-en"><bdi class="secno">3.2.2 </bdi>Aandachtspunten t.a.v. informatie over CRS-en</a></li><li class="tocline"><a class="tocxref" href="#aandachtspunten-t-a-v-dubbel-opslaan-of-on-the-fly-transformeren"><bdi class="secno">3.2.3 </bdi>Aandachtspunten t.a.v. dubbel opslaan of on-the-fly transformeren</a></li><li class="tocline"><a class="tocxref" href="#nauwkeurigheid-van-coordinaten"><bdi class="secno">3.2.4 </bdi>Nauwkeurigheid van coördinaten</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aandachtspunten-bij-meerdere-crs-en"><bdi class="secno">3.3 </bdi>Aandachtspunten bij meerdere CRS-en</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#vormvastheid"><bdi class="secno">3.3.1 </bdi>Vormvastheid</a></li><li class="tocline"><a class="tocxref" href="#aandachtspunten-bij-coordinaattransformatie"><bdi class="secno">3.3.2 </bdi>Aandachtspunten bij coördinaattransformatie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#transformatie-en-conversie-tussen-rdnap-en-etrs89"><bdi class="secno">3.3.2.1 </bdi>Transformatie en conversie tussen RDNAP en ETRS89</a></li><li class="tocline"><a class="tocxref" href="#transformatie-tussen-etrs89-en-itrs-wgs-84"><bdi class="secno">3.3.2.2 </bdi>Transformatie tussen ETRS89 en ITRS/WGS 84</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#wgs-84-gelijkstellen-aan-etrs89-nultransformatie"><bdi class="secno">3.3.2.2.1 </bdi>WGS 84 gelijkstellen aan ETRS89 (nultransformatie)</a></li><li class="tocline"><a class="tocxref" href="#tijdsafhankelijke-transformatie-tussen-etrs89-en-itrs-wgs-84"><bdi class="secno">3.3.2.2.2 </bdi>Tijdsafhankelijke transformatie tussen ETRS89 en ITRS/WGS 84</a></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#crs-bij-uitwisselingsformaten-en-standaarden"><bdi class="secno">3.4 </bdi>CRS bij uitwisselingsformaten en standaarden</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ogc-api"><bdi class="secno">3.4.1 </bdi>OGC API</a></li><li class="tocline"><a class="tocxref" href="#gebruik-van-andere-crs-en-in-geojson"><bdi class="secno">3.4.2 </bdi>Gebruik van andere CRS-en in GeoJSON</a></li><li class="tocline"><a class="tocxref" href="#ogc-features-and-geometries-json"><bdi class="secno">3.4.3 </bdi>OGC Features and Geometries JSON</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aandachtspunten-bij-toepassing-in-software"><bdi class="secno">3.5 </bdi>Aandachtspunten  bij toepassing in software</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#de-merknaam-rdnaptrans"><bdi class="secno">3.5.1 </bdi>De merknaam RDNAPTRANS™</a></li><li class="tocline"><a class="tocxref" href="#voor-ontwikkelaars"><bdi class="secno">3.5.2 </bdi>Voor ontwikkelaars</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#proj"><bdi class="secno">3.5.2.1 </bdi>PROJ</a></li></ol></li><li class="tocline"><a class="tocxref" href="#voor-gebruikers"><bdi class="secno">3.5.3 </bdi>Voor gebruikers</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#voorbeeld-qgis"><bdi class="secno">3.5.3.1 </bdi>Voorbeeld: QGIS</a></li><li class="tocline"><a class="tocxref" href="#voorbeeld-arcgis-pro"><bdi class="secno">3.5.3.2 </bdi>Voorbeeld: ArcGIS Pro</a></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#tot-slot"><bdi class="secno">4. </bdi>Tot slot</a></li><li class="tocline"><a class="tocxref" href="#lijst-met-afkortingen"><bdi class="secno">5. </bdi>Lijst met afkortingen</a></li><li class="tocline"><a class="tocxref" href="#bijlage-a-crs-overzichttabel"><bdi class="secno">6. </bdi>Bijlage A: CRS-overzichttabel</a></li></ol></nav>
 
         
         
@@ -1288,44 +1285,6 @@ Het raster gespecificeerd in Paragraaf 2.2.1 van bijlage II moet niet worden geb
         
         
     
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-
  
         
 
@@ -1553,4 +1512,4 @@ function hidePanel(panel) {
   panel.hidden = true;
   panel.classList.remove("docked");
 }
-})()</script><div class="sidelabel">Geonovum Handreiking - Vastgestelde versie</div><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
+})()</script><div class="sidelabel">Geonovum Handreiking - Werkversie</div><script src="https://gitdocumentatie.logius.nl/publicatie/respec/fixup.js"></script></body></html>
